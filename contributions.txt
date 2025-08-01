@@ -578,3 +578,4 @@ Commit on 2026-06-30T10:25:02: fix: prevent duplicate form submission on rapid c
 Commit on 2026-06-30T18:26:50: chore: update dependencies and internal scripts
 Commit on 2026-06-30T18:11:49: docs: update EXIF metadata guide section
 Commit on 2025-08-01T17:59:13: style: tweak typography hierarchy for blog headings
+Commit on 2025-08-01T13:45:52: docs: update README with recent feature notes
