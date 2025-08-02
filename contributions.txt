@@ -582,3 +582,4 @@ Commit on 2025-08-01T13:45:52: docs: update README with recent feature notes
 Commit on 2025-08-01T10:14:34: refactor: clean up unused helper functions
 Commit on 2025-08-02T09:49:39: perf: reduce DOM manipulation overhead
 Commit on 2025-08-02T16:08:56: fix: resolve edge case handling in location lookup
+Commit on 2025-08-02T21:27:39: fix: resolve edge case handling in location lookup
