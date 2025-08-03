@@ -591,3 +591,4 @@ Commit on 2025-08-02T15:00:55: chore: audit and remove unused asset references
 Commit on 2025-08-03T11:34:44: style: align footer navigation elements
 Commit on 2025-08-03T19:20:45: docs: update README with recent feature notes
 Commit on 2025-08-03T21:07:34: docs: update README with recent feature notes
+Commit on 2025-08-03T15:18:48: chore: clean up internal log statements
