@@ -593,3 +593,4 @@ Commit on 2025-08-03T19:20:45: docs: update README with recent feature notes
 Commit on 2025-08-03T21:07:34: docs: update README with recent feature notes
 Commit on 2025-08-03T15:18:48: chore: clean up internal log statements
 Commit on 2025-08-03T09:24:03: fix: scroll restoration on back navigation
+Commit on 2025-08-03T15:09:57: style: adjust card padding for mobile screens
