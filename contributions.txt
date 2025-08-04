@@ -599,3 +599,4 @@ Commit on 2025-08-03T15:36:09: fix: scroll restoration on back navigation
 Commit on 2025-08-04T17:40:39: style: tweak typography hierarchy for blog headings
 Commit on 2025-08-04T14:19:59: feat: improve metadata parsing efficiency
 Commit on 2025-08-04T09:59:35: feat: add keyboard shortcut support for map zooming
+Commit on 2025-08-04T15:29:33: refactor: extract reusable modal components
