@@ -597,3 +597,4 @@ Commit on 2025-08-03T15:09:57: style: adjust card padding for mobile screens
 Commit on 2025-08-03T15:05:57: feat: refine error message clarity for invalid coordinates
 Commit on 2025-08-03T15:36:09: fix: scroll restoration on back navigation
 Commit on 2025-08-04T17:40:39: style: tweak typography hierarchy for blog headings
+Commit on 2025-08-04T14:19:59: feat: improve metadata parsing efficiency
