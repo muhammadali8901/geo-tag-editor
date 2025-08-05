@@ -603,3 +603,4 @@ Commit on 2025-08-04T15:29:33: refactor: extract reusable modal components
 Commit on 2025-08-04T21:24:48: feat: improve metadata parsing efficiency
 Commit on 2025-08-04T21:24:58: fix: resolve edge case handling in location lookup
 Commit on 2025-08-05T19:01:09: docs: update README with recent feature notes
+Commit on 2025-08-05T10:28:06: style: tweak typography hierarchy for blog headings
