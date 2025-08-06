@@ -607,3 +607,4 @@ Commit on 2025-08-05T10:28:06: style: tweak typography hierarchy for blog headin
 Commit on 2025-08-05T13:53:24: chore: update dependencies and internal scripts
 Commit on 2025-08-05T19:30:29: feat: add keyboard shortcut support for map zooming
 Commit on 2025-08-05T11:05:29: style: tweak typography hierarchy for blog headings
+Commit on 2025-08-06T19:42:31: style: tweak typography hierarchy for blog headings
