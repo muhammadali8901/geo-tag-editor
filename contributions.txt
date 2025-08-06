@@ -612,3 +612,4 @@ Commit on 2025-08-06T16:16:08: perf: memoize expensive image transform operation
 Commit on 2025-08-06T19:11:28: chore: audit and remove unused asset references
 Commit on 2025-08-06T17:06:54: refactor: extract reusable modal components
 Commit on 2025-08-06T16:57:43: fix: scroll restoration on back navigation
+Commit on 2025-08-06T17:44:59: refactor: clean up unused helper functions
