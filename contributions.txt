@@ -618,3 +618,4 @@ Commit on 2025-08-07T20:37:27: docs: improve inline code documentation
 Commit on 2025-08-07T19:03:01: perf: reduce DOM manipulation overhead
 Commit on 2025-08-07T10:32:42: style: adjust card padding for mobile screens
 Commit on 2025-08-07T15:45:46: perf: optimize web worker message passing
+Commit on 2025-08-07T18:48:40: docs: update README with recent feature notes
