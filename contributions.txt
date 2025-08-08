@@ -622,3 +622,4 @@ Commit on 2025-08-07T18:48:40: docs: update README with recent feature notes
 Commit on 2025-08-07T15:12:37: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-08-08T17:18:59: perf: reduce DOM manipulation overhead
 Commit on 2025-08-08T20:13:47: docs: update EXIF metadata guide section
+Commit on 2025-08-08T18:52:06: feat: add keyboard shortcut support for map zooming
