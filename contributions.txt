@@ -625,3 +625,4 @@ Commit on 2025-08-08T20:13:47: docs: update EXIF metadata guide section
 Commit on 2025-08-08T18:52:06: feat: add keyboard shortcut support for map zooming
 Commit on 2025-08-08T14:25:27: docs: update sitemap generator comments
 Commit on 2025-08-08T17:55:45: refactor: extract reusable modal components
+Commit on 2025-08-08T12:09:42: style: tweak typography hierarchy for blog headings
