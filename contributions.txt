@@ -631,3 +631,4 @@ Commit on 2025-08-09T14:09:23: refactor: optimize image loading routines
 Commit on 2025-08-09T16:37:27: docs: update EXIF metadata guide section
 Commit on 2025-08-09T11:32:06: chore: update dependencies and internal scripts
 Commit on 2025-08-09T17:34:09: feat: improve metadata parsing efficiency
+Commit on 2025-08-09T21:09:59: docs: expand metadata dictionary table descriptions
