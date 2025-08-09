@@ -634,3 +634,4 @@ Commit on 2025-08-09T17:34:09: feat: improve metadata parsing efficiency
 Commit on 2025-08-09T21:09:59: docs: expand metadata dictionary table descriptions
 Commit on 2025-08-09T19:57:25: style: tweak typography hierarchy for blog headings
 Commit on 2025-08-09T11:48:50: feat: improve metadata parsing efficiency
+Commit on 2025-08-09T09:33:04: feat: add keyboard shortcut support for map zooming
