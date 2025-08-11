@@ -636,3 +636,4 @@ Commit on 2025-08-09T19:57:25: style: tweak typography hierarchy for blog headin
 Commit on 2025-08-09T11:48:50: feat: improve metadata parsing efficiency
 Commit on 2025-08-09T09:33:04: feat: add keyboard shortcut support for map zooming
 Commit on 2025-08-10T10:24:57: style: adjust card padding for mobile screens
+Commit on 2025-08-11T16:08:41: style: update color variables for dark mode contrast
