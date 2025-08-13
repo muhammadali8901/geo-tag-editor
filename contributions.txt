@@ -647,3 +647,4 @@ Commit on 2025-08-12T16:56:41: feat: improve metadata parsing efficiency
 Commit on 2025-08-13T11:48:44: fix: handle missing geolocation permissions gracefully
 Commit on 2025-08-13T17:06:00: style: minor spacing adjustment in navigation bar
 Commit on 2025-08-13T17:52:42: chore: clean up internal log statements
+Commit on 2025-08-13T19:46:48: fix: handle missing geolocation permissions gracefully
