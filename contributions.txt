@@ -657,3 +657,4 @@ Commit on 2025-08-14T09:22:24: fix: tooltip display glitch on mobile view
 Commit on 2025-08-14T20:32:29: style: minor spacing adjustment in navigation bar
 Commit on 2025-08-14T12:01:20: perf: memoize expensive image transform operations
 Commit on 2025-08-14T09:09:07: fix: scroll restoration on back navigation
+Commit on 2025-08-15T11:30:03: fix: handle missing geolocation permissions gracefully
