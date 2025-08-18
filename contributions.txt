@@ -661,3 +661,4 @@ Commit on 2025-08-15T11:30:03: fix: handle missing geolocation permissions grace
 Commit on 2025-08-15T16:41:36: style: update button hover effects
 Commit on 2025-08-16T13:38:18: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-08-17T13:31:28: feat: refine error message clarity for invalid coordinates
+Commit on 2025-08-18T09:46:43: style: update color variables for dark mode contrast
