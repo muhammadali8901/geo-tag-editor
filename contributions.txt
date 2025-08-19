@@ -669,3 +669,4 @@ Commit on 2025-08-18T19:21:56: docs: improve inline code documentation
 Commit on 2025-08-19T20:29:23: feat: refine error message clarity for invalid coordinates
 Commit on 2025-08-19T14:55:38: refactor: optimize image loading routines
 Commit on 2025-08-19T09:43:11: refactor: optimize image loading routines
+Commit on 2025-08-19T15:18:18: fix: scroll restoration on back navigation
