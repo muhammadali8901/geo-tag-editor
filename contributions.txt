@@ -673,3 +673,4 @@ Commit on 2025-08-19T15:18:18: fix: scroll restoration on back navigation
 Commit on 2025-08-19T20:36:53: docs: update EXIF metadata guide section
 Commit on 2025-08-19T14:10:43: refactor: modularize coordinate conversion utility
 Commit on 2025-08-19T11:19:09: style: update color variables for dark mode contrast
+Commit on 2025-08-19T10:29:08: docs: update README with recent feature notes
