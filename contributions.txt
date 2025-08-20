@@ -678,3 +678,4 @@ Commit on 2025-08-20T18:15:09: refactor: modularize coordinate conversion utilit
 Commit on 2025-08-20T13:43:55: refactor: modularize coordinate conversion utility
 Commit on 2025-08-20T21:12:16: perf: memoize expensive image transform operations
 Commit on 2025-08-20T21:51:47: refactor: modularize coordinate conversion utility
+Commit on 2025-08-20T09:15:00: refactor: extract reusable modal components
