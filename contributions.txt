@@ -684,3 +684,4 @@ Commit on 2025-08-21T18:44:46: docs: update README with recent feature notes
 Commit on 2025-08-21T18:15:52: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-08-21T18:20:18: docs: update sitemap generator comments
 Commit on 2025-08-21T21:38:07: refactor: clean up unused helper functions
+Commit on 2025-08-21T20:24:19: chore: audit and remove unused asset references
