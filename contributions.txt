@@ -681,3 +681,4 @@ Commit on 2025-08-20T21:51:47: refactor: modularize coordinate conversion utilit
 Commit on 2025-08-20T09:15:00: refactor: extract reusable modal components
 Commit on 2025-08-21T18:47:47: docs: improve inline code documentation
 Commit on 2025-08-21T18:44:46: docs: update README with recent feature notes
+Commit on 2025-08-21T18:15:52: fix: prevent duplicate form submission on rapid clicks
