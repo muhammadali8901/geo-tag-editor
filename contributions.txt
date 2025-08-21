@@ -685,3 +685,4 @@ Commit on 2025-08-21T18:15:52: fix: prevent duplicate form submission on rapid c
 Commit on 2025-08-21T18:20:18: docs: update sitemap generator comments
 Commit on 2025-08-21T21:38:07: refactor: clean up unused helper functions
 Commit on 2025-08-21T20:24:19: chore: audit and remove unused asset references
+Commit on 2025-08-21T21:45:28: docs: update README with recent feature notes
