@@ -687,3 +687,4 @@ Commit on 2025-08-21T21:38:07: refactor: clean up unused helper functions
 Commit on 2025-08-21T20:24:19: chore: audit and remove unused asset references
 Commit on 2025-08-21T21:45:28: docs: update README with recent feature notes
 Commit on 2025-08-22T21:11:40: fix: scroll restoration on back navigation
+Commit on 2025-08-22T13:37:03: fix: scroll restoration on back navigation
