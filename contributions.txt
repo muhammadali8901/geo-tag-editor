@@ -694,3 +694,4 @@ Commit on 2025-08-22T15:55:42: perf: reduce DOM manipulation overhead
 Commit on 2025-08-22T13:58:23: perf: memoize expensive image transform operations
 Commit on 2025-08-23T21:30:16: fix: scroll restoration on back navigation
 Commit on 2025-08-23T12:30:21: chore: clean up internal log statements
+Commit on 2025-08-23T20:29:07: fix: handle missing geolocation permissions gracefully
