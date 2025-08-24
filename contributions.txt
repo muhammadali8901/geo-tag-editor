@@ -703,3 +703,4 @@ Commit on 2025-08-24T18:27:37: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-08-24T20:11:07: fix: resolve edge case handling in location lookup
 Commit on 2025-08-24T16:51:45: docs: update README with recent feature notes
 Commit on 2025-08-24T19:09:48: style: tweak typography hierarchy for blog headings
+Commit on 2025-08-24T09:53:55: chore: audit and remove unused asset references
