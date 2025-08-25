@@ -707,3 +707,4 @@ Commit on 2025-08-24T09:53:55: chore: audit and remove unused asset references
 Commit on 2025-08-24T20:23:36: style: adjust card padding for mobile screens
 Commit on 2025-08-25T20:43:18: refactor: extract reusable modal components
 Commit on 2025-08-25T17:03:03: chore: update dependencies and internal scripts
+Commit on 2025-08-25T21:01:56: docs: improve inline code documentation
