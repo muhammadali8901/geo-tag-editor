@@ -714,3 +714,4 @@ Commit on 2025-08-26T11:57:08: fix: scroll restoration on back navigation
 Commit on 2025-08-26T14:56:30: refactor: optimize image loading routines
 Commit on 2025-08-26T19:53:34: perf: reduce DOM manipulation overhead
 Commit on 2025-08-26T18:17:32: style: align footer navigation elements
+Commit on 2025-08-26T19:33:29: docs: update sitemap generator comments
