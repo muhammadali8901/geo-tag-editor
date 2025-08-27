@@ -717,3 +717,4 @@ Commit on 2025-08-26T18:17:32: style: align footer navigation elements
 Commit on 2025-08-26T19:33:29: docs: update sitemap generator comments
 Commit on 2025-08-26T14:06:32: perf: reduce DOM manipulation overhead
 Commit on 2025-08-26T17:38:30: style: adjust card padding for mobile screens
+Commit on 2025-08-27T16:14:10: feat: refine error message clarity for invalid coordinates
