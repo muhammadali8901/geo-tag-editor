@@ -724,3 +724,4 @@ Commit on 2025-08-29T11:49:33: docs: update EXIF metadata guide section
 Commit on 2025-08-29T20:16:44: docs: expand metadata dictionary table descriptions
 Commit on 2025-08-29T15:23:25: feat: add keyboard shortcut support for map zooming
 Commit on 2025-08-29T14:33:11: style: minor spacing adjustment in navigation bar
+Commit on 2025-08-29T15:37:13: fix: tooltip display glitch on mobile view
