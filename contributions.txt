@@ -720,3 +720,4 @@ Commit on 2025-08-26T17:38:30: style: adjust card padding for mobile screens
 Commit on 2025-08-27T16:14:10: feat: refine error message clarity for invalid coordinates
 Commit on 2025-08-27T09:39:06: docs: update EXIF metadata guide section
 Commit on 2025-08-27T11:06:01: docs: expand metadata dictionary table descriptions
+Commit on 2025-08-29T11:49:33: docs: update EXIF metadata guide section
