@@ -726,3 +726,4 @@ Commit on 2025-08-29T15:23:25: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-08-29T14:33:11: style: minor spacing adjustment in navigation bar
 Commit on 2025-08-29T15:37:13: fix: tooltip display glitch on mobile view
 Commit on 2025-08-29T11:42:00: docs: expand metadata dictionary table descriptions
+Commit on 2025-08-30T19:57:54: style: update button hover effects
