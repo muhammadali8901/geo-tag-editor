@@ -731,3 +731,4 @@ Commit on 2025-08-31T11:10:24: docs: expand metadata dictionary table descriptio
 Commit on 2025-08-31T20:42:08: docs: expand metadata dictionary table descriptions
 Commit on 2025-08-31T15:36:44: fix: scroll restoration on back navigation
 Commit on 2025-08-31T20:38:13: docs: expand metadata dictionary table descriptions
+Commit on 2025-08-31T14:51:33: perf: memoize expensive image transform operations
