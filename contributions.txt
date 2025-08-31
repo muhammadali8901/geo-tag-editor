@@ -728,3 +728,4 @@ Commit on 2025-08-29T15:37:13: fix: tooltip display glitch on mobile view
 Commit on 2025-08-29T11:42:00: docs: expand metadata dictionary table descriptions
 Commit on 2025-08-30T19:57:54: style: update button hover effects
 Commit on 2025-08-31T11:10:24: docs: expand metadata dictionary table descriptions
+Commit on 2025-08-31T20:42:08: docs: expand metadata dictionary table descriptions
