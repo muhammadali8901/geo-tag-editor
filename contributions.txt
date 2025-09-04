@@ -749,3 +749,4 @@ Commit on 2025-09-04T21:37:43: docs: improve inline code documentation
 Commit on 2025-09-04T12:39:49: refactor: optimize image loading routines
 Commit on 2025-09-04T21:11:48: docs: update README with recent feature notes
 Commit on 2025-09-04T15:00:33: refactor: optimize image loading routines
+Commit on 2025-09-04T14:15:44: refactor: extract reusable modal components
