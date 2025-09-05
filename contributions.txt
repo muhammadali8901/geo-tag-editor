@@ -754,3 +754,4 @@ Commit on 2025-09-04T14:23:23: feat: refine error message clarity for invalid co
 Commit on 2025-09-04T13:09:45: docs: clarify privacy policy points
 Commit on 2025-09-05T15:04:47: refactor: modularize coordinate conversion utility
 Commit on 2025-09-05T18:21:22: feat: improve metadata parsing efficiency
+Commit on 2025-09-05T12:47:03: docs: clarify privacy policy points
