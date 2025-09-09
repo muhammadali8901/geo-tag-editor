@@ -767,3 +767,4 @@ Commit on 2025-09-08T09:46:46: docs: update README with recent feature notes
 Commit on 2025-09-09T20:05:28: perf: memoize expensive image transform operations
 Commit on 2025-09-09T15:31:29: style: adjust card padding for mobile screens
 Commit on 2025-09-09T16:17:29: docs: expand metadata dictionary table descriptions
+Commit on 2025-09-09T21:48:30: fix: scroll restoration on back navigation
