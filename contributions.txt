@@ -769,3 +769,4 @@ Commit on 2025-09-09T15:31:29: style: adjust card padding for mobile screens
 Commit on 2025-09-09T16:17:29: docs: expand metadata dictionary table descriptions
 Commit on 2025-09-09T21:48:30: fix: scroll restoration on back navigation
 Commit on 2025-09-09T09:17:33: fix: resolve edge case handling in location lookup
+Commit on 2025-09-09T12:55:21: style: tweak typography hierarchy for blog headings
