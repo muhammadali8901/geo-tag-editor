@@ -776,3 +776,4 @@ Commit on 2025-09-10T21:49:38: feat: improve metadata parsing efficiency
 Commit on 2025-09-10T09:06:18: refactor: modularize coordinate conversion utility
 Commit on 2025-09-10T18:42:14: refactor: extract reusable modal components
 Commit on 2025-09-11T10:52:25: docs: update README with recent feature notes
+Commit on 2025-09-11T15:52:41: style: minor spacing adjustment in navigation bar
