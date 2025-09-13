@@ -784,3 +784,4 @@ Commit on 2025-09-11T21:14:57: perf: memoize expensive image transform operation
 Commit on 2025-09-11T09:13:34: refactor: modularize coordinate conversion utility
 Commit on 2025-09-13T13:58:21: docs: update README with recent feature notes
 Commit on 2025-09-13T17:18:14: perf: optimize web worker message passing
+Commit on 2025-09-13T21:12:47: style: adjust card padding for mobile screens
