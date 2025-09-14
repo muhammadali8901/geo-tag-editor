@@ -790,3 +790,4 @@ Commit on 2025-09-13T20:10:32: refactor: clean up unused helper functions
 Commit on 2025-09-13T15:03:26: docs: update EXIF metadata guide section
 Commit on 2025-09-13T19:27:29: perf: reduce DOM manipulation overhead
 Commit on 2025-09-13T20:44:47: docs: update EXIF metadata guide section
+Commit on 2025-09-14T19:54:59: docs: update EXIF metadata guide section
