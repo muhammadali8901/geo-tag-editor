@@ -794,3 +794,4 @@ Commit on 2025-09-14T19:54:59: docs: update EXIF metadata guide section
 Commit on 2025-09-15T19:46:08: style: update button hover effects
 Commit on 2025-09-15T20:52:37: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-09-15T18:16:02: chore: audit and remove unused asset references
+Commit on 2025-09-15T10:49:17: feat: improve metadata parsing efficiency
