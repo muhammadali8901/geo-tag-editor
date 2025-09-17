@@ -804,3 +804,4 @@ Commit on 2025-09-16T20:21:01: refactor: optimize image loading routines
 Commit on 2025-09-16T11:37:45: feat: refine error message clarity for invalid coordinates
 Commit on 2025-09-17T17:37:11: perf: optimize web worker message passing
 Commit on 2025-09-17T17:12:18: fix: tooltip display glitch on mobile view
+Commit on 2025-09-17T16:49:21: style: adjust card padding for mobile screens
