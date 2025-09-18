@@ -807,3 +807,4 @@ Commit on 2025-09-17T17:12:18: fix: tooltip display glitch on mobile view
 Commit on 2025-09-17T16:49:21: style: adjust card padding for mobile screens
 Commit on 2025-09-17T17:39:38: chore: clean up internal log statements
 Commit on 2025-09-17T17:53:50: docs: update sitemap generator comments
+Commit on 2025-09-18T11:57:05: feat: refine error message clarity for invalid coordinates
