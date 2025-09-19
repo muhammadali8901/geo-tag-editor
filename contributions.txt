@@ -810,3 +810,4 @@ Commit on 2025-09-17T17:53:50: docs: update sitemap generator comments
 Commit on 2025-09-18T11:57:05: feat: refine error message clarity for invalid coordinates
 Commit on 2025-09-19T09:08:38: refactor: clean up unused helper functions
 Commit on 2025-09-19T20:11:56: fix: prevent duplicate form submission on rapid clicks
+Commit on 2025-09-19T21:32:58: fix: handle missing geolocation permissions gracefully
