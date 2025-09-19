@@ -812,3 +812,4 @@ Commit on 2025-09-19T09:08:38: refactor: clean up unused helper functions
 Commit on 2025-09-19T20:11:56: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-09-19T21:32:58: fix: handle missing geolocation permissions gracefully
 Commit on 2025-09-19T18:45:36: feat: improve metadata parsing efficiency
+Commit on 2025-09-19T11:12:58: fix: handle missing geolocation permissions gracefully
