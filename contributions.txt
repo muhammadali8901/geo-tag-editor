@@ -819,3 +819,4 @@ Commit on 2025-09-20T10:18:09: docs: update sitemap generator comments
 Commit on 2025-09-20T18:29:49: docs: expand metadata dictionary table descriptions
 Commit on 2025-09-20T18:42:52: refactor: clean up unused helper functions
 Commit on 2025-09-20T12:12:51: docs: expand metadata dictionary table descriptions
+Commit on 2025-09-20T18:03:20: docs: improve inline code documentation
