@@ -824,3 +824,4 @@ Commit on 2025-09-20T10:36:40: fix: prevent duplicate form submission on rapid c
 Commit on 2025-09-21T20:45:09: style: minor spacing adjustment in navigation bar
 Commit on 2025-09-21T19:53:09: fix: scroll restoration on back navigation
 Commit on 2025-09-21T16:54:38: docs: update EXIF metadata guide section
+Commit on 2025-09-21T14:10:16: style: align footer navigation elements
