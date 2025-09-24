@@ -836,3 +836,4 @@ Commit on 2025-09-23T09:05:05: perf: optimize web worker message passing
 Commit on 2025-09-23T16:39:23: docs: update README with recent feature notes
 Commit on 2025-09-23T21:47:50: chore: update dependencies and internal scripts
 Commit on 2025-09-23T09:31:44: style: adjust card padding for mobile screens
+Commit on 2025-09-24T14:40:57: docs: update README with recent feature notes
