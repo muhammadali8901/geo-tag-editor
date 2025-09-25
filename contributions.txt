@@ -839,3 +839,4 @@ Commit on 2025-09-23T09:31:44: style: adjust card padding for mobile screens
 Commit on 2025-09-24T14:40:57: docs: update README with recent feature notes
 Commit on 2025-09-24T13:35:15: fix: tooltip display glitch on mobile view
 Commit on 2025-09-24T14:16:22: docs: update EXIF metadata guide section
+Commit on 2025-09-25T18:11:06: feat: improve metadata parsing efficiency
