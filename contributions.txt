@@ -855,3 +855,4 @@ Commit on 2025-09-27T12:38:55: feat: improve metadata parsing efficiency
 Commit on 2025-09-27T19:15:42: perf: reduce DOM manipulation overhead
 Commit on 2025-09-27T16:45:39: perf: memoize expensive image transform operations
 Commit on 2025-09-27T16:16:44: style: align footer navigation elements
+Commit on 2025-09-27T12:53:32: feat: refine error message clarity for invalid coordinates
