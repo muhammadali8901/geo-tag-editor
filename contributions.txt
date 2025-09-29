@@ -865,3 +865,4 @@ Commit on 2025-09-28T15:19:25: fix: prevent duplicate form submission on rapid c
 Commit on 2025-09-28T12:38:25: style: tweak typography hierarchy for blog headings
 Commit on 2025-09-28T16:29:48: style: update color variables for dark mode contrast
 Commit on 2025-09-28T20:07:43: refactor: extract reusable modal components
+Commit on 2025-09-29T21:51:51: style: update color variables for dark mode contrast
