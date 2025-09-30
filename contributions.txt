@@ -880,3 +880,4 @@ Commit on 2025-09-30T14:28:34: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-09-30T16:37:27: refactor: optimize image loading routines
 Commit on 2025-09-30T10:41:51: style: update button hover effects
 Commit on 2025-09-30T19:43:48: refactor: extract reusable modal components
+Commit on 2025-09-30T13:39:44: chore: clean up internal log statements
