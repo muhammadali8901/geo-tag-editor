@@ -884,3 +884,4 @@ Commit on 2025-09-30T13:39:44: chore: clean up internal log statements
 Commit on 2025-10-01T14:43:31: style: update color variables for dark mode contrast
 Commit on 2025-10-01T15:47:53: docs: improve inline code documentation
 Commit on 2025-10-01T12:27:12: style: update button hover effects
+Commit on 2025-10-01T10:55:39: refactor: clean up unused helper functions
