@@ -888,3 +888,4 @@ Commit on 2025-10-01T10:55:39: refactor: clean up unused helper functions
 Commit on 2025-10-02T13:40:51: style: update button hover effects
 Commit on 2025-10-02T16:37:37: chore: clean up internal log statements
 Commit on 2025-10-02T16:02:29: feat: refine error message clarity for invalid coordinates
+Commit on 2025-10-03T12:46:39: docs: update README with recent feature notes
