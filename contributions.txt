@@ -892,3 +892,4 @@ Commit on 2025-10-03T12:46:39: docs: update README with recent feature notes
 Commit on 2025-10-03T21:15:46: style: align footer navigation elements
 Commit on 2025-10-03T16:15:00: chore: update dependencies and internal scripts
 Commit on 2025-10-03T14:57:06: docs: update EXIF metadata guide section
+Commit on 2025-10-03T21:29:24: feat: add keyboard shortcut support for map zooming
