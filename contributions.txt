@@ -897,3 +897,4 @@ Commit on 2025-10-04T17:50:32: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-10-04T17:30:00: perf: memoize expensive image transform operations
 Commit on 2025-10-04T17:58:52: perf: reduce DOM manipulation overhead
 Commit on 2025-10-04T15:09:30: docs: update README with recent feature notes
+Commit on 2025-10-04T16:55:06: chore: audit and remove unused asset references
