@@ -898,3 +898,4 @@ Commit on 2025-10-04T17:30:00: perf: memoize expensive image transform operation
 Commit on 2025-10-04T17:58:52: perf: reduce DOM manipulation overhead
 Commit on 2025-10-04T15:09:30: docs: update README with recent feature notes
 Commit on 2025-10-04T16:55:06: chore: audit and remove unused asset references
+Commit on 2025-10-04T16:36:02: chore: clean up internal log statements
