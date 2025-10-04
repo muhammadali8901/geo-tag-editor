@@ -895,3 +895,4 @@ Commit on 2025-10-03T14:57:06: docs: update EXIF metadata guide section
 Commit on 2025-10-03T21:29:24: feat: add keyboard shortcut support for map zooming
 Commit on 2025-10-04T17:50:32: feat: add keyboard shortcut support for map zooming
 Commit on 2025-10-04T17:30:00: perf: memoize expensive image transform operations
+Commit on 2025-10-04T17:58:52: perf: reduce DOM manipulation overhead
