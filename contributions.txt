@@ -904,3 +904,4 @@ Commit on 2025-10-05T12:16:29: fix: prevent duplicate form submission on rapid c
 Commit on 2025-10-05T10:18:14: fix: tooltip display glitch on mobile view
 Commit on 2025-10-05T14:07:33: chore: audit and remove unused asset references
 Commit on 2025-10-05T12:22:35: fix: tooltip display glitch on mobile view
+Commit on 2025-10-05T17:19:23: docs: update README with recent feature notes
