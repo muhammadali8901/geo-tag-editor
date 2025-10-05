@@ -906,3 +906,4 @@ Commit on 2025-10-05T14:07:33: chore: audit and remove unused asset references
 Commit on 2025-10-05T12:22:35: fix: tooltip display glitch on mobile view
 Commit on 2025-10-05T17:19:23: docs: update README with recent feature notes
 Commit on 2025-10-05T19:36:23: feat: improve metadata parsing efficiency
+Commit on 2025-10-05T14:39:16: fix: resolve edge case handling in location lookup
