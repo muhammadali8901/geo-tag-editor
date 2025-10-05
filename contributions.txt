@@ -903,3 +903,4 @@ Commit on 2025-10-04T16:34:10: refactor: clean up unused helper functions
 Commit on 2025-10-05T12:16:29: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-10-05T10:18:14: fix: tooltip display glitch on mobile view
 Commit on 2025-10-05T14:07:33: chore: audit and remove unused asset references
+Commit on 2025-10-05T12:22:35: fix: tooltip display glitch on mobile view
