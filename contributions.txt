@@ -908,3 +908,4 @@ Commit on 2025-10-05T17:19:23: docs: update README with recent feature notes
 Commit on 2025-10-05T19:36:23: feat: improve metadata parsing efficiency
 Commit on 2025-10-05T14:39:16: fix: resolve edge case handling in location lookup
 Commit on 2025-10-06T20:42:39: style: update color variables for dark mode contrast
+Commit on 2025-10-06T12:10:16: feat: improve metadata parsing efficiency
