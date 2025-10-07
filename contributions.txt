@@ -915,3 +915,4 @@ Commit on 2025-10-06T21:26:56: style: update color variables for dark mode contr
 Commit on 2025-10-06T13:49:47: docs: expand metadata dictionary table descriptions
 Commit on 2025-10-06T16:48:14: docs: clarify privacy policy points
 Commit on 2025-10-07T13:09:19: refactor: optimize image loading routines
+Commit on 2025-10-07T14:18:21: chore: clean up internal log statements
