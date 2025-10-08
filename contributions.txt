@@ -920,3 +920,4 @@ Commit on 2025-10-07T11:44:11: docs: improve inline code documentation
 Commit on 2025-10-07T15:38:35: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-10-07T10:14:12: fix: resolve edge case handling in location lookup
 Commit on 2025-10-07T09:57:08: refactor: modularize coordinate conversion utility
+Commit on 2025-10-08T16:35:35: docs: update README with recent feature notes
