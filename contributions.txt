@@ -922,3 +922,4 @@ Commit on 2025-10-07T10:14:12: fix: resolve edge case handling in location looku
 Commit on 2025-10-07T09:57:08: refactor: modularize coordinate conversion utility
 Commit on 2025-10-08T16:35:35: docs: update README with recent feature notes
 Commit on 2025-10-08T16:46:45: docs: update README with recent feature notes
+Commit on 2025-10-10T16:57:57: style: update color variables for dark mode contrast
