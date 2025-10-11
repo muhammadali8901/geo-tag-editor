@@ -927,3 +927,4 @@ Commit on 2025-10-10T19:08:07: style: tweak typography hierarchy for blog headin
 Commit on 2025-10-10T13:33:04: fix: tooltip display glitch on mobile view
 Commit on 2025-10-10T13:01:16: style: minor spacing adjustment in navigation bar
 Commit on 2025-10-11T11:15:33: perf: optimize web worker message passing
+Commit on 2025-10-11T14:59:25: fix: tooltip display glitch on mobile view
