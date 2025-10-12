@@ -938,3 +938,4 @@ Commit on 2025-10-12T18:21:45: style: update color variables for dark mode contr
 Commit on 2025-10-12T12:31:25: docs: improve inline code documentation
 Commit on 2025-10-12T21:52:08: feat: add keyboard shortcut support for map zooming
 Commit on 2025-10-12T09:49:58: docs: update sitemap generator comments
+Commit on 2025-10-12T10:06:48: style: minor spacing adjustment in navigation bar
