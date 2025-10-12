@@ -935,3 +935,4 @@ Commit on 2025-10-11T19:56:21: style: align footer navigation elements
 Commit on 2025-10-11T10:58:29: style: align footer navigation elements
 Commit on 2025-10-12T20:11:03: docs: expand metadata dictionary table descriptions
 Commit on 2025-10-12T18:21:45: style: update color variables for dark mode contrast
+Commit on 2025-10-12T12:31:25: docs: improve inline code documentation
