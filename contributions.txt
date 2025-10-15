@@ -950,3 +950,4 @@ Commit on 2025-10-14T21:54:24: chore: audit and remove unused asset references
 Commit on 2025-10-14T09:54:36: fix: handle missing geolocation permissions gracefully
 Commit on 2025-10-14T18:08:28: style: update button hover effects
 Commit on 2025-10-14T18:47:44: feat: refine error message clarity for invalid coordinates
+Commit on 2025-10-15T12:26:41: fix: scroll restoration on back navigation
