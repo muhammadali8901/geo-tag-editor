@@ -960,3 +960,4 @@ Commit on 2025-10-16T09:50:47: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-10-16T13:11:41: docs: update EXIF metadata guide section
 Commit on 2025-10-16T09:20:07: style: align footer navigation elements
 Commit on 2025-10-16T11:39:01: fix: prevent duplicate form submission on rapid clicks
+Commit on 2025-10-16T14:36:48: fix: prevent duplicate form submission on rapid clicks
