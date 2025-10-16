@@ -959,3 +959,4 @@ Commit on 2025-10-16T16:29:50: docs: improve inline code documentation
 Commit on 2025-10-16T09:50:47: feat: add keyboard shortcut support for map zooming
 Commit on 2025-10-16T13:11:41: docs: update EXIF metadata guide section
 Commit on 2025-10-16T09:20:07: style: align footer navigation elements
+Commit on 2025-10-16T11:39:01: fix: prevent duplicate form submission on rapid clicks
