@@ -955,3 +955,4 @@ Commit on 2025-10-15T18:53:31: docs: update EXIF metadata guide section
 Commit on 2025-10-15T12:33:14: docs: update README with recent feature notes
 Commit on 2025-10-15T16:26:16: docs: improve inline code documentation
 Commit on 2025-10-16T15:34:05: feat: refine error message clarity for invalid coordinates
+Commit on 2025-10-16T16:29:50: docs: improve inline code documentation
