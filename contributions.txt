@@ -967,3 +967,4 @@ Commit on 2025-10-17T13:38:01: style: update button hover effects
 Commit on 2025-10-17T21:40:58: style: align footer navigation elements
 Commit on 2025-10-17T12:28:47: perf: reduce DOM manipulation overhead
 Commit on 2025-10-17T19:26:24: refactor: optimize image loading routines
+Commit on 2025-10-17T15:09:56: docs: expand metadata dictionary table descriptions
