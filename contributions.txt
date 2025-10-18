@@ -975,3 +975,4 @@ Commit on 2025-10-18T16:20:47: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-10-18T12:42:04: refactor: modularize coordinate conversion utility
 Commit on 2025-10-18T10:54:16: docs: clarify privacy policy points
 Commit on 2025-10-18T17:22:19: docs: update README with recent feature notes
+Commit on 2025-10-18T10:07:49: style: minor spacing adjustment in navigation bar
