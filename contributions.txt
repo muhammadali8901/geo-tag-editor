@@ -983,3 +983,4 @@ Commit on 2025-10-19T19:12:37: docs: update sitemap generator comments
 Commit on 2025-10-19T12:58:36: perf: optimize web worker message passing
 Commit on 2025-10-19T17:38:21: style: update button hover effects
 Commit on 2025-10-19T20:33:28: docs: clarify privacy policy points
+Commit on 2025-10-19T14:42:57: chore: audit and remove unused asset references
