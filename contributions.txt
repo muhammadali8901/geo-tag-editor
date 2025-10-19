@@ -980,3 +980,4 @@ Commit on 2025-10-18T19:04:41: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-10-19T12:38:36: style: update button hover effects
 Commit on 2025-10-19T14:05:51: style: minor spacing adjustment in navigation bar
 Commit on 2025-10-19T19:12:37: docs: update sitemap generator comments
+Commit on 2025-10-19T12:58:36: perf: optimize web worker message passing
