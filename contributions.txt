@@ -997,3 +997,4 @@ Commit on 2025-10-23T20:30:44: fix: handle missing geolocation permissions grace
 Commit on 2025-10-23T09:15:41: perf: memoize expensive image transform operations
 Commit on 2025-10-23T10:03:06: refactor: clean up unused helper functions
 Commit on 2025-10-23T15:33:22: fix: scroll restoration on back navigation
+Commit on 2025-10-23T12:18:40: feat: add keyboard shortcut support for map zooming
