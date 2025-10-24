@@ -1000,3 +1000,4 @@ Commit on 2025-10-23T15:33:22: fix: scroll restoration on back navigation
 Commit on 2025-10-23T12:18:40: feat: add keyboard shortcut support for map zooming
 Commit on 2025-10-24T21:46:45: refactor: clean up unused helper functions
 Commit on 2025-10-24T18:43:08: docs: clarify privacy policy points
+Commit on 2025-10-24T15:17:29: refactor: clean up unused helper functions
