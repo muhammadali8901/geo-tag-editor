@@ -1009,3 +1009,4 @@ Commit on 2025-10-25T21:05:13: chore: clean up internal log statements
 Commit on 2025-10-25T15:58:38: style: adjust card padding for mobile screens
 Commit on 2025-10-25T19:24:45: feat: improve metadata parsing efficiency
 Commit on 2025-10-25T17:34:59: docs: update sitemap generator comments
+Commit on 2025-10-25T15:14:22: docs: clarify privacy policy points
