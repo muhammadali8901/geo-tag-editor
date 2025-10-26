@@ -1011,3 +1011,4 @@ Commit on 2025-10-25T19:24:45: feat: improve metadata parsing efficiency
 Commit on 2025-10-25T17:34:59: docs: update sitemap generator comments
 Commit on 2025-10-25T15:14:22: docs: clarify privacy policy points
 Commit on 2025-10-25T18:38:46: feat: add keyboard shortcut support for map zooming
+Commit on 2025-10-26T18:32:31: fix: resolve edge case handling in location lookup
