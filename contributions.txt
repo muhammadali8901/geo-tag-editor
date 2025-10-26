@@ -1015,3 +1015,4 @@ Commit on 2025-10-26T18:32:31: fix: resolve edge case handling in location looku
 Commit on 2025-10-26T16:23:44: docs: update EXIF metadata guide section
 Commit on 2025-10-26T13:09:42: style: tweak typography hierarchy for blog headings
 Commit on 2025-10-26T10:30:38: chore: audit and remove unused asset references
+Commit on 2025-10-26T16:34:51: docs: improve inline code documentation
