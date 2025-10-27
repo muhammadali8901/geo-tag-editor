@@ -1022,3 +1022,4 @@ Commit on 2025-10-27T12:47:36: docs: improve inline code documentation
 Commit on 2025-10-27T19:22:57: style: tweak typography hierarchy for blog headings
 Commit on 2025-10-27T18:58:04: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-10-27T16:52:03: style: minor spacing adjustment in navigation bar
+Commit on 2025-10-27T17:20:52: feat: add keyboard shortcut support for map zooming
