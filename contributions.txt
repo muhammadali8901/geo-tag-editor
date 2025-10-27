@@ -1019,3 +1019,4 @@ Commit on 2025-10-26T16:34:51: docs: improve inline code documentation
 Commit on 2025-10-26T20:40:02: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-10-26T10:05:52: refactor: optimize image loading routines
 Commit on 2025-10-27T12:47:36: docs: improve inline code documentation
+Commit on 2025-10-27T19:22:57: style: tweak typography hierarchy for blog headings
