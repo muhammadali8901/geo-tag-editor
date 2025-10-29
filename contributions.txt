@@ -1027,3 +1027,4 @@ Commit on 2025-10-27T18:59:00: docs: expand metadata dictionary table descriptio
 Commit on 2025-10-27T17:53:34: feat: improve metadata parsing efficiency
 Commit on 2025-10-28T10:42:43: perf: reduce DOM manipulation overhead
 Commit on 2025-10-29T19:28:55: docs: improve inline code documentation
+Commit on 2025-10-29T18:53:36: feat: refine error message clarity for invalid coordinates
