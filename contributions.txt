@@ -1035,3 +1035,4 @@ Commit on 2025-10-29T12:53:33: feat: improve metadata parsing efficiency
 Commit on 2025-10-30T18:29:27: perf: memoize expensive image transform operations
 Commit on 2025-10-30T12:06:59: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-10-30T09:39:59: fix: tooltip display glitch on mobile view
+Commit on 2025-10-30T14:57:10: refactor: extract reusable modal components
