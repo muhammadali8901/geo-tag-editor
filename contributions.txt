@@ -1038,3 +1038,4 @@ Commit on 2025-10-30T09:39:59: fix: tooltip display glitch on mobile view
 Commit on 2025-10-30T14:57:10: refactor: extract reusable modal components
 Commit on 2025-10-30T16:14:04: chore: audit and remove unused asset references
 Commit on 2025-10-31T12:26:53: fix: resolve edge case handling in location lookup
+Commit on 2025-10-31T18:11:07: style: adjust card padding for mobile screens
