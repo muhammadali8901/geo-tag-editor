@@ -1041,3 +1041,4 @@ Commit on 2025-10-31T12:26:53: fix: resolve edge case handling in location looku
 Commit on 2025-10-31T18:11:07: style: adjust card padding for mobile screens
 Commit on 2025-10-31T16:00:10: perf: memoize expensive image transform operations
 Commit on 2025-10-31T14:54:26: refactor: modularize coordinate conversion utility
+Commit on 2025-10-31T15:13:39: feat: refine error message clarity for invalid coordinates
