@@ -1053,3 +1053,4 @@ Commit on 2025-11-02T10:16:03: perf: reduce DOM manipulation overhead
 Commit on 2025-11-02T14:37:19: refactor: extract reusable modal components
 Commit on 2025-11-02T13:01:49: feat: add keyboard shortcut support for map zooming
 Commit on 2025-11-03T12:31:54: docs: clarify privacy policy points
+Commit on 2025-11-03T11:51:42: style: update color variables for dark mode contrast
