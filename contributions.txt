@@ -1083,3 +1083,4 @@ Commit on 2025-11-08T15:45:13: refactor: modularize coordinate conversion utilit
 Commit on 2025-11-09T20:48:26: perf: optimize web worker message passing
 Commit on 2025-11-09T21:52:15: style: minor spacing adjustment in navigation bar
 Commit on 2025-11-09T20:07:52: perf: memoize expensive image transform operations
+Commit on 2025-11-09T17:22:44: refactor: extract reusable modal components
