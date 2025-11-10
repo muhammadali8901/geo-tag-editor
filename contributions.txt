@@ -1086,3 +1086,4 @@ Commit on 2025-11-09T20:07:52: perf: memoize expensive image transform operation
 Commit on 2025-11-09T17:22:44: refactor: extract reusable modal components
 Commit on 2025-11-09T10:10:38: docs: update sitemap generator comments
 Commit on 2025-11-10T13:47:31: style: update button hover effects
+Commit on 2025-11-10T17:18:19: style: update color variables for dark mode contrast
