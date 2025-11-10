@@ -1089,3 +1089,4 @@ Commit on 2025-11-10T13:47:31: style: update button hover effects
 Commit on 2025-11-10T17:18:19: style: update color variables for dark mode contrast
 Commit on 2025-11-10T10:34:16: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-11-10T10:21:50: docs: update README with recent feature notes
+Commit on 2025-11-10T15:58:19: docs: update README with recent feature notes
