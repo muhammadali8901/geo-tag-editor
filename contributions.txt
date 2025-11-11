@@ -1093,3 +1093,4 @@ Commit on 2025-11-10T15:58:19: docs: update README with recent feature notes
 Commit on 2025-11-11T18:31:43: chore: audit and remove unused asset references
 Commit on 2025-11-11T20:32:02: fix: scroll restoration on back navigation
 Commit on 2025-11-11T21:48:37: perf: reduce DOM manipulation overhead
+Commit on 2025-11-11T12:25:36: feat: refine error message clarity for invalid coordinates
