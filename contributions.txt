@@ -1095,3 +1095,4 @@ Commit on 2025-11-11T20:32:02: fix: scroll restoration on back navigation
 Commit on 2025-11-11T21:48:37: perf: reduce DOM manipulation overhead
 Commit on 2025-11-11T12:25:36: feat: refine error message clarity for invalid coordinates
 Commit on 2025-11-11T10:54:14: style: tweak typography hierarchy for blog headings
+Commit on 2025-11-11T18:57:28: fix: handle missing geolocation permissions gracefully
