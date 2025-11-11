@@ -1090,3 +1090,4 @@ Commit on 2025-11-10T17:18:19: style: update color variables for dark mode contr
 Commit on 2025-11-10T10:34:16: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-11-10T10:21:50: docs: update README with recent feature notes
 Commit on 2025-11-10T15:58:19: docs: update README with recent feature notes
+Commit on 2025-11-11T18:31:43: chore: audit and remove unused asset references
