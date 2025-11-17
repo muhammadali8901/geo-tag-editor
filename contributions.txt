@@ -1114,3 +1114,4 @@ Commit on 2025-11-15T17:12:34: refactor: modularize coordinate conversion utilit
 Commit on 2025-11-15T21:18:19: refactor: optimize image loading routines
 Commit on 2025-11-17T11:01:04: feat: add keyboard shortcut support for map zooming
 Commit on 2025-11-17T16:12:52: docs: update README with recent feature notes
+Commit on 2025-11-17T11:06:50: style: minor spacing adjustment in navigation bar
