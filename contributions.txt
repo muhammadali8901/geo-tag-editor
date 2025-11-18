@@ -1116,3 +1116,4 @@ Commit on 2025-11-17T11:01:04: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-11-17T16:12:52: docs: update README with recent feature notes
 Commit on 2025-11-17T11:06:50: style: minor spacing adjustment in navigation bar
 Commit on 2025-11-17T18:37:33: style: adjust card padding for mobile screens
+Commit on 2025-11-18T16:15:42: refactor: modularize coordinate conversion utility
