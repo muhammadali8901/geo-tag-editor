@@ -1120,3 +1120,4 @@ Commit on 2025-11-18T16:15:42: refactor: modularize coordinate conversion utilit
 Commit on 2025-11-19T17:07:41: refactor: modularize coordinate conversion utility
 Commit on 2025-11-19T19:35:29: feat: improve metadata parsing efficiency
 Commit on 2025-11-19T10:53:40: perf: reduce DOM manipulation overhead
+Commit on 2025-11-20T18:05:33: fix: tooltip display glitch on mobile view
