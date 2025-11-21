@@ -1128,3 +1128,4 @@ Commit on 2025-11-20T11:47:45: style: adjust card padding for mobile screens
 Commit on 2025-11-21T21:39:42: refactor: clean up unused helper functions
 Commit on 2025-11-21T12:05:01: fix: handle missing geolocation permissions gracefully
 Commit on 2025-11-21T19:56:03: refactor: optimize image loading routines
+Commit on 2025-11-21T15:37:54: feat: add keyboard shortcut support for map zooming
