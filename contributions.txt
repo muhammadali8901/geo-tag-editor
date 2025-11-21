@@ -1126,3 +1126,4 @@ Commit on 2025-11-20T20:55:55: perf: reduce DOM manipulation overhead
 Commit on 2025-11-20T17:18:46: chore: update dependencies and internal scripts
 Commit on 2025-11-20T11:47:45: style: adjust card padding for mobile screens
 Commit on 2025-11-21T21:39:42: refactor: clean up unused helper functions
+Commit on 2025-11-21T12:05:01: fix: handle missing geolocation permissions gracefully
