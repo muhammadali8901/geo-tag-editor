@@ -1143,3 +1143,4 @@ Commit on 2025-11-23T12:01:44: refactor: clean up unused helper functions
 Commit on 2025-11-23T14:21:13: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-11-23T09:42:55: style: adjust card padding for mobile screens
 Commit on 2025-11-23T19:58:47: fix: prevent duplicate form submission on rapid clicks
+Commit on 2025-11-23T09:25:24: style: update color variables for dark mode contrast
