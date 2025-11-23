@@ -1139,3 +1139,4 @@ Commit on 2025-11-22T16:52:51: docs: improve inline code documentation
 Commit on 2025-11-22T12:11:10: style: minor spacing adjustment in navigation bar
 Commit on 2025-11-22T16:55:48: docs: update EXIF metadata guide section
 Commit on 2025-11-22T12:37:52: fix: tooltip display glitch on mobile view
+Commit on 2025-11-23T12:01:44: refactor: clean up unused helper functions
