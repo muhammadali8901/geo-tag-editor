@@ -1158,3 +1158,4 @@ Commit on 2025-11-25T10:47:25: docs: update README with recent feature notes
 Commit on 2025-11-25T21:35:40: style: minor spacing adjustment in navigation bar
 Commit on 2025-11-25T16:01:16: fix: scroll restoration on back navigation
 Commit on 2025-11-25T09:20:01: docs: clarify privacy policy points
+Commit on 2025-11-25T13:46:04: feat: improve metadata parsing efficiency
