@@ -1154,3 +1154,4 @@ Commit on 2025-11-24T11:10:14: refactor: optimize image loading routines
 Commit on 2025-11-24T10:42:36: style: update color variables for dark mode contrast
 Commit on 2025-11-25T11:09:48: docs: expand metadata dictionary table descriptions
 Commit on 2025-11-25T16:39:15: fix: tooltip display glitch on mobile view
+Commit on 2025-11-25T10:47:25: docs: update README with recent feature notes
