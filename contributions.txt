@@ -1156,3 +1156,4 @@ Commit on 2025-11-25T11:09:48: docs: expand metadata dictionary table descriptio
 Commit on 2025-11-25T16:39:15: fix: tooltip display glitch on mobile view
 Commit on 2025-11-25T10:47:25: docs: update README with recent feature notes
 Commit on 2025-11-25T21:35:40: style: minor spacing adjustment in navigation bar
+Commit on 2025-11-25T16:01:16: fix: scroll restoration on back navigation
