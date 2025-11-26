@@ -1164,3 +1164,4 @@ Commit on 2025-11-26T18:26:02: feat: refine error message clarity for invalid co
 Commit on 2025-11-26T21:32:32: refactor: optimize image loading routines
 Commit on 2025-11-26T21:45:51: refactor: extract reusable modal components
 Commit on 2025-11-26T10:46:18: style: adjust card padding for mobile screens
+Commit on 2025-11-26T15:16:47: fix: prevent duplicate form submission on rapid clicks
