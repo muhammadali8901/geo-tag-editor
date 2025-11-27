@@ -1168,3 +1168,4 @@ Commit on 2025-11-26T15:16:47: fix: prevent duplicate form submission on rapid c
 Commit on 2025-11-26T10:09:30: docs: update sitemap generator comments
 Commit on 2025-11-26T16:58:49: docs: update EXIF metadata guide section
 Commit on 2025-11-26T10:12:50: style: adjust card padding for mobile screens
+Commit on 2025-11-27T19:12:36: docs: improve inline code documentation
