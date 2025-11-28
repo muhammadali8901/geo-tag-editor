@@ -1180,3 +1180,4 @@ Commit on 2025-11-28T18:53:45: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-11-28T17:39:41: fix: prevent duplicate form submission on rapid clicks
 Commit on 2025-11-28T16:57:26: refactor: extract reusable modal components
 Commit on 2025-11-28T17:11:49: refactor: modularize coordinate conversion utility
+Commit on 2025-11-28T17:41:56: docs: improve inline code documentation
