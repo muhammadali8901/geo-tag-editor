@@ -1175,3 +1175,4 @@ Commit on 2025-11-27T20:41:03: style: update button hover effects
 Commit on 2025-11-27T12:09:51: refactor: modularize coordinate conversion utility
 Commit on 2025-11-27T10:40:46: fix: scroll restoration on back navigation
 Commit on 2025-11-27T09:13:13: docs: expand metadata dictionary table descriptions
+Commit on 2025-11-28T14:39:16: fix: scroll restoration on back navigation
