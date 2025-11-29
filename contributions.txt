@@ -1184,3 +1184,4 @@ Commit on 2025-11-28T17:41:56: docs: improve inline code documentation
 Commit on 2025-11-29T21:56:11: perf: reduce DOM manipulation overhead
 Commit on 2025-11-29T14:08:26: chore: clean up internal log statements
 Commit on 2025-11-29T16:28:59: refactor: modularize coordinate conversion utility
+Commit on 2025-11-29T11:46:06: fix: scroll restoration on back navigation
