@@ -1193,3 +1193,4 @@ Commit on 2025-11-30T14:24:12: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-11-30T20:20:17: style: align footer navigation elements
 Commit on 2025-11-30T19:27:20: fix: handle missing geolocation permissions gracefully
 Commit on 2025-11-30T12:16:54: refactor: optimize image loading routines
+Commit on 2025-11-30T13:47:46: style: update color variables for dark mode contrast
