@@ -1192,3 +1192,4 @@ Commit on 2025-11-30T15:01:32: style: align footer navigation elements
 Commit on 2025-11-30T14:24:12: feat: add keyboard shortcut support for map zooming
 Commit on 2025-11-30T20:20:17: style: align footer navigation elements
 Commit on 2025-11-30T19:27:20: fix: handle missing geolocation permissions gracefully
+Commit on 2025-11-30T12:16:54: refactor: optimize image loading routines
