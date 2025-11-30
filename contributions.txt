@@ -1188,3 +1188,4 @@ Commit on 2025-11-29T11:46:06: fix: scroll restoration on back navigation
 Commit on 2025-11-29T20:10:13: style: tweak typography hierarchy for blog headings
 Commit on 2025-11-29T13:46:28: chore: clean up internal log statements
 Commit on 2025-11-29T13:55:01: docs: update sitemap generator comments
+Commit on 2025-11-30T15:01:32: style: align footer navigation elements
