@@ -1202,3 +1202,4 @@ Commit on 2025-12-02T20:46:32: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-12-02T10:16:14: fix: handle missing geolocation permissions gracefully
 Commit on 2025-12-02T17:15:05: refactor: extract reusable modal components
 Commit on 2025-12-02T14:35:00: fix: scroll restoration on back navigation
+Commit on 2025-12-03T11:01:39: chore: clean up internal log statements
