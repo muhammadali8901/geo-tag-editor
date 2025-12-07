@@ -1228,3 +1228,4 @@ Commit on 2025-12-06T10:20:12: perf: memoize expensive image transform operation
 Commit on 2025-12-06T09:16:34: chore: update dependencies and internal scripts
 Commit on 2025-12-07T20:56:27: fix: handle missing geolocation permissions gracefully
 Commit on 2025-12-07T11:25:30: feat: refine error message clarity for invalid coordinates
+Commit on 2025-12-07T17:51:00: fix: handle missing geolocation permissions gracefully
