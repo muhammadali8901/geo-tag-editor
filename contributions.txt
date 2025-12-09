@@ -1241,3 +1241,4 @@ Commit on 2025-12-09T09:09:20: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-12-09T16:55:32: refactor: optimize image loading routines
 Commit on 2025-12-09T19:51:30: docs: update README with recent feature notes
 Commit on 2025-12-09T17:47:45: fix: tooltip display glitch on mobile view
+Commit on 2025-12-09T16:37:36: refactor: extract reusable modal components
