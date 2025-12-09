@@ -1239,3 +1239,4 @@ Commit on 2025-12-09T17:16:12: refactor: clean up unused helper functions
 Commit on 2025-12-09T19:45:46: refactor: extract reusable modal components
 Commit on 2025-12-09T09:09:20: feat: add keyboard shortcut support for map zooming
 Commit on 2025-12-09T16:55:32: refactor: optimize image loading routines
+Commit on 2025-12-09T19:51:30: docs: update README with recent feature notes
