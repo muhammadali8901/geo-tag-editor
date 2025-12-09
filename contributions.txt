@@ -1237,3 +1237,4 @@ Commit on 2025-12-08T17:44:40: feat: refine error message clarity for invalid co
 Commit on 2025-12-09T16:00:33: fix: tooltip display glitch on mobile view
 Commit on 2025-12-09T17:16:12: refactor: clean up unused helper functions
 Commit on 2025-12-09T19:45:46: refactor: extract reusable modal components
+Commit on 2025-12-09T09:09:20: feat: add keyboard shortcut support for map zooming
