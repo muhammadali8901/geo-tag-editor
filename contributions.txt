@@ -1246,3 +1246,4 @@ Commit on 2025-12-10T10:32:53: docs: improve inline code documentation
 Commit on 2025-12-10T20:00:19: docs: clarify privacy policy points
 Commit on 2025-12-10T16:06:22: docs: update README with recent feature notes
 Commit on 2025-12-10T17:05:02: refactor: optimize image loading routines
+Commit on 2025-12-10T14:07:43: refactor: modularize coordinate conversion utility
