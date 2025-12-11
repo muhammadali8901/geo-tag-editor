@@ -1250,3 +1250,4 @@ Commit on 2025-12-10T14:07:43: refactor: modularize coordinate conversion utilit
 Commit on 2025-12-10T15:54:37: docs: clarify privacy policy points
 Commit on 2025-12-10T09:48:59: style: adjust card padding for mobile screens
 Commit on 2025-12-10T09:52:32: fix: resolve edge case handling in location lookup
+Commit on 2025-12-11T20:41:01: feat: refine error message clarity for invalid coordinates
