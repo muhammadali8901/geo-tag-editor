@@ -1259,3 +1259,4 @@ Commit on 2025-12-11T17:29:31: fix: prevent duplicate form submission on rapid c
 Commit on 2025-12-11T13:20:32: chore: clean up internal log statements
 Commit on 2025-12-12T09:29:11: perf: reduce DOM manipulation overhead
 Commit on 2025-12-12T16:56:57: docs: update README with recent feature notes
+Commit on 2025-12-12T21:46:27: fix: resolve edge case handling in location lookup
