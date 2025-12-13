@@ -1263,3 +1263,4 @@ Commit on 2025-12-12T21:46:27: fix: resolve edge case handling in location looku
 Commit on 2025-12-12T09:59:38: perf: memoize expensive image transform operations
 Commit on 2025-12-12T15:15:58: chore: clean up internal log statements
 Commit on 2025-12-12T21:21:45: refactor: optimize image loading routines
+Commit on 2025-12-13T20:29:56: docs: expand metadata dictionary table descriptions
