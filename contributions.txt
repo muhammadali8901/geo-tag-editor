@@ -1273,3 +1273,4 @@ Commit on 2025-12-14T14:19:38: style: update button hover effects
 Commit on 2025-12-14T17:01:30: fix: resolve edge case handling in location lookup
 Commit on 2025-12-14T13:08:01: fix: tooltip display glitch on mobile view
 Commit on 2025-12-14T17:55:11: fix: prevent duplicate form submission on rapid clicks
+Commit on 2025-12-14T21:10:52: docs: update sitemap generator comments
