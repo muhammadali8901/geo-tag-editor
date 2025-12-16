@@ -1278,3 +1278,4 @@ Commit on 2025-12-14T15:37:27: perf: reduce DOM manipulation overhead
 Commit on 2025-12-14T15:50:58: docs: update sitemap generator comments
 Commit on 2025-12-16T17:45:53: style: align footer navigation elements
 Commit on 2025-12-16T09:29:23: perf: reduce DOM manipulation overhead
+Commit on 2025-12-16T13:58:48: refactor: extract reusable modal components
