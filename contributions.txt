@@ -1285,3 +1285,4 @@ Commit on 2025-12-18T18:31:39: fix: handle missing geolocation permissions grace
 Commit on 2025-12-18T16:24:24: style: adjust card padding for mobile screens
 Commit on 2025-12-18T16:49:35: feat: improve metadata parsing efficiency
 Commit on 2025-12-18T18:12:50: refactor: extract reusable modal components
+Commit on 2025-12-18T12:36:21: perf: optimize web worker message passing
