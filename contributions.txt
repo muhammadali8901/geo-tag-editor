@@ -1283,3 +1283,4 @@ Commit on 2025-12-16T12:30:58: fix: prevent duplicate form submission on rapid c
 Commit on 2025-12-17T11:40:57: docs: update README with recent feature notes
 Commit on 2025-12-18T18:31:39: fix: handle missing geolocation permissions gracefully
 Commit on 2025-12-18T16:24:24: style: adjust card padding for mobile screens
+Commit on 2025-12-18T16:49:35: feat: improve metadata parsing efficiency
