@@ -1292,3 +1292,4 @@ Commit on 2025-12-19T10:19:14: feat: add keyboard shortcut support for map zoomi
 Commit on 2025-12-19T18:26:42: fix: scroll restoration on back navigation
 Commit on 2025-12-19T18:43:52: refactor: clean up unused helper functions
 Commit on 2025-12-19T17:30:58: refactor: modularize coordinate conversion utility
+Commit on 2025-12-19T10:46:09: refactor: clean up unused helper functions
