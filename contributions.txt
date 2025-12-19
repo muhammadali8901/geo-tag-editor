@@ -1288,3 +1288,4 @@ Commit on 2025-12-18T18:12:50: refactor: extract reusable modal components
 Commit on 2025-12-18T12:36:21: perf: optimize web worker message passing
 Commit on 2025-12-18T11:25:14: refactor: optimize image loading routines
 Commit on 2025-12-19T09:41:39: style: update button hover effects
+Commit on 2025-12-19T10:19:14: feat: add keyboard shortcut support for map zooming
