@@ -1296,3 +1296,4 @@ Commit on 2025-12-19T10:46:09: refactor: clean up unused helper functions
 Commit on 2025-12-20T18:59:33: docs: update EXIF metadata guide section
 Commit on 2025-12-20T19:00:03: fix: handle missing geolocation permissions gracefully
 Commit on 2025-12-20T20:44:58: chore: clean up internal log statements
+Commit on 2025-12-20T20:20:38: style: adjust card padding for mobile screens
