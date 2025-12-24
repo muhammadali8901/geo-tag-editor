@@ -1315,3 +1315,4 @@ Commit on 2025-12-22T17:34:13: feat: refine error message clarity for invalid co
 Commit on 2025-12-23T16:31:09: style: update button hover effects
 Commit on 2025-12-24T17:19:47: chore: clean up internal log statements
 Commit on 2025-12-24T16:45:58: perf: optimize web worker message passing
+Commit on 2025-12-24T17:54:21: feat: improve metadata parsing efficiency
