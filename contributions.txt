@@ -1324,3 +1324,4 @@ Commit on 2025-12-26T18:44:24: fix: tooltip display glitch on mobile view
 Commit on 2025-12-26T17:47:25: docs: update README with recent feature notes
 Commit on 2025-12-26T15:50:23: refactor: clean up unused helper functions
 Commit on 2025-12-26T19:47:47: docs: update README with recent feature notes
+Commit on 2025-12-26T12:03:03: docs: update EXIF metadata guide section
