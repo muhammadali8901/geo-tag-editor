@@ -1330,3 +1330,4 @@ Commit on 2025-12-27T16:10:59: fix: scroll restoration on back navigation
 Commit on 2025-12-27T20:34:51: refactor: modularize coordinate conversion utility
 Commit on 2025-12-27T16:30:13: docs: update sitemap generator comments
 Commit on 2025-12-27T20:16:13: chore: clean up internal log statements
+Commit on 2025-12-27T11:31:57: fix: tooltip display glitch on mobile view
