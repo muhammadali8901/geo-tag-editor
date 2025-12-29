@@ -1334,3 +1334,4 @@ Commit on 2025-12-27T11:31:57: fix: tooltip display glitch on mobile view
 Commit on 2025-12-28T18:38:58: style: update button hover effects
 Commit on 2025-12-29T15:38:07: fix: scroll restoration on back navigation
 Commit on 2025-12-29T19:42:32: fix: tooltip display glitch on mobile view
+Commit on 2025-12-29T18:18:51: style: align footer navigation elements
