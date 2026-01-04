@@ -1354,3 +1354,4 @@ Commit on 2026-01-02T18:48:29: fix: resolve edge case handling in location looku
 Commit on 2026-01-02T20:28:14: perf: optimize web worker message passing
 Commit on 2026-01-02T15:04:44: docs: improve inline code documentation
 Commit on 2026-01-03T13:17:56: fix: prevent duplicate form submission on rapid clicks
+Commit on 2026-01-04T14:05:48: style: tweak typography hierarchy for blog headings
