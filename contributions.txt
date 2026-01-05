@@ -1363,3 +1363,4 @@ Commit on 2026-01-05T10:07:05: perf: memoize expensive image transform operation
 Commit on 2026-01-05T15:35:39: refactor: modularize coordinate conversion utility
 Commit on 2026-01-05T13:24:09: docs: update sitemap generator comments
 Commit on 2026-01-05T11:20:25: fix: prevent duplicate form submission on rapid clicks
+Commit on 2026-01-05T20:35:36: docs: expand metadata dictionary table descriptions
