@@ -1371,3 +1371,4 @@ Commit on 2026-01-06T18:18:32: refactor: extract reusable modal components
 Commit on 2026-01-06T15:10:01: docs: update sitemap generator comments
 Commit on 2026-01-06T13:46:20: refactor: clean up unused helper functions
 Commit on 2026-01-06T16:24:52: fix: handle missing geolocation permissions gracefully
+Commit on 2026-01-06T20:24:46: style: tweak typography hierarchy for blog headings
