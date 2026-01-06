@@ -1367,3 +1367,4 @@ Commit on 2026-01-05T20:35:36: docs: expand metadata dictionary table descriptio
 Commit on 2026-01-06T10:18:24: docs: clarify privacy policy points
 Commit on 2026-01-06T17:43:38: fix: tooltip display glitch on mobile view
 Commit on 2026-01-06T12:39:11: style: minor spacing adjustment in navigation bar
+Commit on 2026-01-06T18:18:32: refactor: extract reusable modal components
