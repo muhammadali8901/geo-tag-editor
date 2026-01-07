@@ -1375,3 +1375,4 @@ Commit on 2026-01-06T20:24:46: style: tweak typography hierarchy for blog headin
 Commit on 2026-01-07T19:17:23: docs: update sitemap generator comments
 Commit on 2026-01-07T09:10:49: docs: clarify privacy policy points
 Commit on 2026-01-07T14:40:37: style: adjust card padding for mobile screens
+Commit on 2026-01-07T14:15:06: fix: tooltip display glitch on mobile view
