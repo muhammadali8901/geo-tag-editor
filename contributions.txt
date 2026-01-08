@@ -1381,3 +1381,4 @@ Commit on 2026-01-08T17:07:22: fix: prevent duplicate form submission on rapid c
 Commit on 2026-01-08T18:48:29: feat: refine error message clarity for invalid coordinates
 Commit on 2026-01-08T12:14:46: fix: tooltip display glitch on mobile view
 Commit on 2026-01-08T15:42:50: style: minor spacing adjustment in navigation bar
+Commit on 2026-01-08T17:59:45: refactor: extract reusable modal components
