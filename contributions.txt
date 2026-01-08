@@ -1377,3 +1377,4 @@ Commit on 2026-01-07T09:10:49: docs: clarify privacy policy points
 Commit on 2026-01-07T14:40:37: style: adjust card padding for mobile screens
 Commit on 2026-01-07T14:15:06: fix: tooltip display glitch on mobile view
 Commit on 2026-01-07T17:52:29: docs: update README with recent feature notes
+Commit on 2026-01-08T17:07:22: fix: prevent duplicate form submission on rapid clicks
