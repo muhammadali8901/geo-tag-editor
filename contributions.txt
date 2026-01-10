@@ -1388,3 +1388,4 @@ Commit on 2026-01-09T20:15:06: refactor: optimize image loading routines
 Commit on 2026-01-09T11:28:54: chore: update dependencies and internal scripts
 Commit on 2026-01-09T10:10:01: refactor: extract reusable modal components
 Commit on 2026-01-09T14:04:27: perf: reduce DOM manipulation overhead
+Commit on 2026-01-10T16:13:25: docs: clarify privacy policy points
