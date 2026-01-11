@@ -1390,3 +1390,4 @@ Commit on 2026-01-09T10:10:01: refactor: extract reusable modal components
 Commit on 2026-01-09T14:04:27: perf: reduce DOM manipulation overhead
 Commit on 2026-01-10T16:13:25: docs: clarify privacy policy points
 Commit on 2026-01-11T10:11:14: feat: add keyboard shortcut support for map zooming
+Commit on 2026-01-11T18:45:00: refactor: modularize coordinate conversion utility
