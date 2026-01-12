@@ -1392,3 +1392,4 @@ Commit on 2026-01-10T16:13:25: docs: clarify privacy policy points
 Commit on 2026-01-11T10:11:14: feat: add keyboard shortcut support for map zooming
 Commit on 2026-01-11T18:45:00: refactor: modularize coordinate conversion utility
 Commit on 2026-01-11T21:29:34: perf: memoize expensive image transform operations
+Commit on 2026-01-12T14:37:08: docs: clarify privacy policy points
