@@ -1397,3 +1397,4 @@ Commit on 2026-01-12T20:24:36: fix: handle missing geolocation permissions grace
 Commit on 2026-01-12T18:40:39: refactor: optimize image loading routines
 Commit on 2026-01-12T13:41:02: refactor: modularize coordinate conversion utility
 Commit on 2026-01-12T16:12:36: chore: clean up internal log statements
+Commit on 2026-01-12T20:26:45: refactor: extract reusable modal components
