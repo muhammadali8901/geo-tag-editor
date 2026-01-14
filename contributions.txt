@@ -1405,3 +1405,4 @@ Commit on 2026-01-14T16:27:46: feat: refine error message clarity for invalid co
 Commit on 2026-01-14T21:48:16: refactor: modularize coordinate conversion utility
 Commit on 2026-01-14T09:34:04: chore: audit and remove unused asset references
 Commit on 2026-01-14T19:41:32: fix: resolve edge case handling in location lookup
+Commit on 2026-01-14T14:27:44: style: tweak typography hierarchy for blog headings
