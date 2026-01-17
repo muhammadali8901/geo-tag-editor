@@ -1426,3 +1426,4 @@ Commit on 2026-01-17T17:48:50: style: adjust card padding for mobile screens
 Commit on 2026-01-17T14:03:05: fix: prevent duplicate form submission on rapid clicks
 Commit on 2026-01-17T15:37:17: refactor: clean up unused helper functions
 Commit on 2026-01-17T15:29:29: style: tweak typography hierarchy for blog headings
+Commit on 2026-01-17T10:35:40: feat: refine error message clarity for invalid coordinates
