@@ -1421,3 +1421,4 @@ Commit on 2026-01-16T09:31:29: fix: handle missing geolocation permissions grace
 Commit on 2026-01-16T19:36:56: docs: expand metadata dictionary table descriptions
 Commit on 2026-01-16T19:50:37: style: align footer navigation elements
 Commit on 2026-01-17T17:06:00: fix: handle missing geolocation permissions gracefully
+Commit on 2026-01-17T11:24:13: style: update color variables for dark mode contrast
