@@ -1438,3 +1438,4 @@ Commit on 2026-01-19T16:49:17: fix: tooltip display glitch on mobile view
 Commit on 2026-01-19T20:40:51: feat: improve metadata parsing efficiency
 Commit on 2026-01-19T10:53:42: refactor: extract reusable modal components
 Commit on 2026-01-19T17:45:06: style: update button hover effects
+Commit on 2026-01-19T12:17:03: docs: update EXIF metadata guide section
