@@ -1446,3 +1446,4 @@ Commit on 2026-01-20T21:37:21: perf: memoize expensive image transform operation
 Commit on 2026-01-20T14:56:14: refactor: optimize image loading routines
 Commit on 2026-01-20T15:17:28: docs: update EXIF metadata guide section
 Commit on 2026-01-20T13:25:18: feat: refine error message clarity for invalid coordinates
+Commit on 2026-01-20T18:32:48: feat: refine error message clarity for invalid coordinates
