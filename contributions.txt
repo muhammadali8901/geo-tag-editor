@@ -1444,3 +1444,4 @@ Commit on 2026-01-20T14:05:58: fix: tooltip display glitch on mobile view
 Commit on 2026-01-20T20:50:59: feat: refine error message clarity for invalid coordinates
 Commit on 2026-01-20T21:37:21: perf: memoize expensive image transform operations
 Commit on 2026-01-20T14:56:14: refactor: optimize image loading routines
+Commit on 2026-01-20T15:17:28: docs: update EXIF metadata guide section
