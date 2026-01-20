@@ -1440,3 +1440,4 @@ Commit on 2026-01-19T10:53:42: refactor: extract reusable modal components
 Commit on 2026-01-19T17:45:06: style: update button hover effects
 Commit on 2026-01-19T12:17:03: docs: update EXIF metadata guide section
 Commit on 2026-01-20T20:34:36: docs: improve inline code documentation
+Commit on 2026-01-20T14:05:58: fix: tooltip display glitch on mobile view
