@@ -1448,3 +1448,4 @@ Commit on 2026-01-20T15:17:28: docs: update EXIF metadata guide section
 Commit on 2026-01-20T13:25:18: feat: refine error message clarity for invalid coordinates
 Commit on 2026-01-20T18:32:48: feat: refine error message clarity for invalid coordinates
 Commit on 2026-01-21T21:36:01: style: adjust card padding for mobile screens
+Commit on 2026-01-21T19:16:34: docs: expand metadata dictionary table descriptions
