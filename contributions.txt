@@ -1456,3 +1456,4 @@ Commit on 2026-01-23T15:06:10: style: adjust card padding for mobile screens
 Commit on 2026-01-23T09:41:03: style: minor spacing adjustment in navigation bar
 Commit on 2026-01-23T17:01:16: docs: update EXIF metadata guide section
 Commit on 2026-01-23T17:45:59: feat: add keyboard shortcut support for map zooming
+Commit on 2026-01-23T19:01:57: fix: handle missing geolocation permissions gracefully
