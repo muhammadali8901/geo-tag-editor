@@ -1460,3 +1460,4 @@ Commit on 2026-01-23T19:01:57: fix: handle missing geolocation permissions grace
 Commit on 2026-01-23T14:14:55: perf: reduce DOM manipulation overhead
 Commit on 2026-01-23T12:03:29: feat: add keyboard shortcut support for map zooming
 Commit on 2026-01-23T19:54:41: refactor: extract reusable modal components
+Commit on 2026-01-24T15:04:20: docs: update README with recent feature notes
