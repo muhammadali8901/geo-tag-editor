@@ -1462,3 +1462,4 @@ Commit on 2026-01-23T12:03:29: feat: add keyboard shortcut support for map zoomi
 Commit on 2026-01-23T19:54:41: refactor: extract reusable modal components
 Commit on 2026-01-24T15:04:20: docs: update README with recent feature notes
 Commit on 2026-01-24T11:35:40: fix: resolve edge case handling in location lookup
+Commit on 2026-01-24T18:30:36: perf: optimize web worker message passing
