@@ -1467,3 +1467,4 @@ Commit on 2026-01-24T17:38:17: docs: expand metadata dictionary table descriptio
 Commit on 2026-01-24T18:30:39: style: update button hover effects
 Commit on 2026-01-24T15:35:34: docs: expand metadata dictionary table descriptions
 Commit on 2026-01-24T15:05:40: fix: prevent duplicate form submission on rapid clicks
+Commit on 2026-01-25T16:44:56: docs: update EXIF metadata guide section
