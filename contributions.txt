@@ -1473,3 +1473,4 @@ Commit on 2026-01-25T18:08:02: docs: update EXIF metadata guide section
 Commit on 2026-01-25T20:25:22: fix: scroll restoration on back navigation
 Commit on 2026-01-25T12:11:55: style: minor spacing adjustment in navigation bar
 Commit on 2026-01-25T18:06:28: style: align footer navigation elements
+Commit on 2026-01-26T16:46:44: docs: clarify privacy policy points
