@@ -1476,3 +1476,4 @@ Commit on 2026-01-25T18:06:28: style: align footer navigation elements
 Commit on 2026-01-26T16:46:44: docs: clarify privacy policy points
 Commit on 2026-01-26T14:32:07: fix: handle missing geolocation permissions gracefully
 Commit on 2026-01-26T09:10:03: docs: update EXIF metadata guide section
+Commit on 2026-01-26T09:04:15: refactor: clean up unused helper functions
