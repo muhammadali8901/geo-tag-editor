@@ -1483,3 +1483,4 @@ Commit on 2026-01-26T14:57:53: style: update button hover effects
 Commit on 2026-01-26T11:33:01: docs: update README with recent feature notes
 Commit on 2026-01-27T09:13:01: style: tweak typography hierarchy for blog headings
 Commit on 2026-01-27T15:29:38: style: adjust card padding for mobile screens
+Commit on 2026-01-27T17:01:13: fix: resolve edge case handling in location lookup
