@@ -1507,3 +1507,4 @@ Commit on 2026-01-31T18:57:49: feat: improve metadata parsing efficiency
 Commit on 2026-01-31T11:23:55: docs: expand metadata dictionary table descriptions
 Commit on 2026-01-31T10:28:37: fix: prevent duplicate form submission on rapid clicks
 Commit on 2026-01-31T11:48:58: refactor: optimize image loading routines
+Commit on 2026-02-01T21:16:14: docs: update sitemap generator comments
