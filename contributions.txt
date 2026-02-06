@@ -1522,3 +1522,4 @@ Commit on 2026-02-06T12:15:30: perf: optimize web worker message passing
 Commit on 2026-02-06T14:11:44: fix: scroll restoration on back navigation
 Commit on 2026-02-06T10:49:04: feat: improve metadata parsing efficiency
 Commit on 2026-02-06T09:32:19: style: minor spacing adjustment in navigation bar
+Commit on 2026-02-06T15:29:33: docs: improve inline code documentation
