@@ -1534,3 +1534,4 @@ Commit on 2026-02-07T10:02:32: style: tweak typography hierarchy for blog headin
 Commit on 2026-02-07T16:07:31: fix: handle missing geolocation permissions gracefully
 Commit on 2026-02-08T13:55:54: fix: scroll restoration on back navigation
 Commit on 2026-02-08T20:32:40: docs: update sitemap generator comments
+Commit on 2026-02-08T18:37:31: style: adjust card padding for mobile screens
