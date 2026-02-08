@@ -1532,3 +1532,4 @@ Commit on 2026-02-07T13:20:33: style: update color variables for dark mode contr
 Commit on 2026-02-07T14:57:24: docs: improve inline code documentation
 Commit on 2026-02-07T10:02:32: style: tweak typography hierarchy for blog headings
 Commit on 2026-02-07T16:07:31: fix: handle missing geolocation permissions gracefully
+Commit on 2026-02-08T13:55:54: fix: scroll restoration on back navigation
