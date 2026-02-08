@@ -1533,3 +1533,4 @@ Commit on 2026-02-07T14:57:24: docs: improve inline code documentation
 Commit on 2026-02-07T10:02:32: style: tweak typography hierarchy for blog headings
 Commit on 2026-02-07T16:07:31: fix: handle missing geolocation permissions gracefully
 Commit on 2026-02-08T13:55:54: fix: scroll restoration on back navigation
+Commit on 2026-02-08T20:32:40: docs: update sitemap generator comments
