@@ -1546,3 +1546,4 @@ Commit on 2026-02-09T11:34:39: style: tweak typography hierarchy for blog headin
 Commit on 2026-02-10T16:57:44: docs: update README with recent feature notes
 Commit on 2026-02-10T16:41:37: perf: reduce DOM manipulation overhead
 Commit on 2026-02-10T21:02:10: fix: tooltip display glitch on mobile view
+Commit on 2026-02-10T09:44:24: chore: audit and remove unused asset references
