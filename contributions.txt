@@ -1548,3 +1548,4 @@ Commit on 2026-02-10T16:41:37: perf: reduce DOM manipulation overhead
 Commit on 2026-02-10T21:02:10: fix: tooltip display glitch on mobile view
 Commit on 2026-02-10T09:44:24: chore: audit and remove unused asset references
 Commit on 2026-02-10T15:51:00: fix: resolve edge case handling in location lookup
+Commit on 2026-02-11T21:10:48: feat: refine error message clarity for invalid coordinates
