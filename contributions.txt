@@ -1551,3 +1551,4 @@ Commit on 2026-02-10T15:51:00: fix: resolve edge case handling in location looku
 Commit on 2026-02-11T21:10:48: feat: refine error message clarity for invalid coordinates
 Commit on 2026-02-11T12:43:41: perf: reduce DOM manipulation overhead
 Commit on 2026-02-11T10:23:13: fix: scroll restoration on back navigation
+Commit on 2026-02-11T15:25:30: fix: prevent duplicate form submission on rapid clicks
