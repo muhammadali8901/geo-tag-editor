@@ -1553,3 +1553,4 @@ Commit on 2026-02-11T12:43:41: perf: reduce DOM manipulation overhead
 Commit on 2026-02-11T10:23:13: fix: scroll restoration on back navigation
 Commit on 2026-02-11T15:25:30: fix: prevent duplicate form submission on rapid clicks
 Commit on 2026-02-11T11:38:55: style: align footer navigation elements
+Commit on 2026-02-12T16:57:11: refactor: extract reusable modal components
