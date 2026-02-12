@@ -1559,3 +1559,4 @@ Commit on 2026-02-12T11:59:13: fix: scroll restoration on back navigation
 Commit on 2026-02-12T12:04:46: refactor: clean up unused helper functions
 Commit on 2026-02-12T12:14:29: chore: clean up internal log statements
 Commit on 2026-02-12T13:45:37: feat: refine error message clarity for invalid coordinates
+Commit on 2026-02-12T20:50:54: docs: update README with recent feature notes
