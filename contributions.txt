@@ -1557,3 +1557,4 @@ Commit on 2026-02-12T16:57:11: refactor: extract reusable modal components
 Commit on 2026-02-12T18:26:30: feat: add keyboard shortcut support for map zooming
 Commit on 2026-02-12T11:59:13: fix: scroll restoration on back navigation
 Commit on 2026-02-12T12:04:46: refactor: clean up unused helper functions
+Commit on 2026-02-12T12:14:29: chore: clean up internal log statements
