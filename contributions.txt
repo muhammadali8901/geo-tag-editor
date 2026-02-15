@@ -1572,3 +1572,4 @@ Commit on 2026-02-14T19:26:58: feat: improve metadata parsing efficiency
 Commit on 2026-02-14T11:33:12: style: align footer navigation elements
 Commit on 2026-02-14T15:26:20: perf: reduce DOM manipulation overhead
 Commit on 2026-02-14T21:43:06: docs: clarify privacy policy points
+Commit on 2026-02-15T13:06:29: docs: update EXIF metadata guide section
