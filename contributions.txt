@@ -1576,3 +1576,4 @@ Commit on 2026-02-15T13:06:29: docs: update EXIF metadata guide section
 Commit on 2026-02-15T21:32:42: perf: optimize web worker message passing
 Commit on 2026-02-16T20:05:13: docs: update README with recent feature notes
 Commit on 2026-02-16T15:18:12: style: align footer navigation elements
+Commit on 2026-02-16T18:01:35: perf: reduce DOM manipulation overhead
