@@ -1581,3 +1581,4 @@ Commit on 2026-02-16T18:39:06: chore: audit and remove unused asset references
 Commit on 2026-02-17T18:59:48: docs: expand metadata dictionary table descriptions
 Commit on 2026-02-17T13:53:41: style: adjust card padding for mobile screens
 Commit on 2026-02-17T18:44:17: style: minor spacing adjustment in navigation bar
+Commit on 2026-02-17T16:12:09: fix: prevent duplicate form submission on rapid clicks
