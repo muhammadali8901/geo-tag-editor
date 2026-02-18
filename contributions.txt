@@ -1586,3 +1586,4 @@ Commit on 2026-02-17T21:55:36: feat: improve metadata parsing efficiency
 Commit on 2026-02-17T18:45:47: chore: update dependencies and internal scripts
 Commit on 2026-02-18T12:50:39: fix: handle missing geolocation permissions gracefully
 Commit on 2026-02-18T15:42:08: docs: update EXIF metadata guide section
+Commit on 2026-02-18T09:57:16: style: adjust card padding for mobile screens
