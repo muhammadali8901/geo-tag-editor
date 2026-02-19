@@ -1594,3 +1594,4 @@ Commit on 2026-02-19T10:24:15: refactor: extract reusable modal components
 Commit on 2026-02-19T13:58:33: perf: memoize expensive image transform operations
 Commit on 2026-02-19T20:50:12: perf: memoize expensive image transform operations
 Commit on 2026-02-19T18:32:43: docs: update EXIF metadata guide section
+Commit on 2026-02-19T19:10:35: style: update color variables for dark mode contrast
