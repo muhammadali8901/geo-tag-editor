@@ -1590,3 +1590,4 @@ Commit on 2026-02-18T09:57:16: style: adjust card padding for mobile screens
 Commit on 2026-02-18T15:32:50: style: update button hover effects
 Commit on 2026-02-19T17:48:01: style: update button hover effects
 Commit on 2026-02-19T15:54:36: style: minor spacing adjustment in navigation bar
+Commit on 2026-02-19T10:24:15: refactor: extract reusable modal components
