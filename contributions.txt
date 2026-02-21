@@ -1597,3 +1597,4 @@ Commit on 2026-02-19T18:32:43: docs: update EXIF metadata guide section
 Commit on 2026-02-19T19:10:35: style: update color variables for dark mode contrast
 Commit on 2026-02-20T21:45:55: style: adjust card padding for mobile screens
 Commit on 2026-02-21T11:30:14: docs: update EXIF metadata guide section
+Commit on 2026-02-21T12:10:00: refactor: clean up unused helper functions
