@@ -1605,3 +1605,4 @@ Commit on 2026-02-21T16:51:48: docs: update EXIF metadata guide section
 Commit on 2026-02-21T16:57:33: fix: prevent duplicate form submission on rapid clicks
 Commit on 2026-02-22T14:12:27: fix: resolve edge case handling in location lookup
 Commit on 2026-02-22T15:22:26: refactor: optimize image loading routines
+Commit on 2026-02-22T17:16:32: perf: memoize expensive image transform operations
