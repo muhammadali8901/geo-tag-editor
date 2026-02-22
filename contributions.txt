@@ -1603,3 +1603,4 @@ Commit on 2026-02-21T11:08:09: style: update button hover effects
 Commit on 2026-02-21T20:36:36: style: update color variables for dark mode contrast
 Commit on 2026-02-21T16:51:48: docs: update EXIF metadata guide section
 Commit on 2026-02-21T16:57:33: fix: prevent duplicate form submission on rapid clicks
+Commit on 2026-02-22T14:12:27: fix: resolve edge case handling in location lookup
