@@ -1613,3 +1613,4 @@ Commit on 2026-02-22T17:55:11: perf: optimize web worker message passing
 Commit on 2026-02-22T11:41:42: docs: expand metadata dictionary table descriptions
 Commit on 2026-02-24T20:48:29: style: align footer navigation elements
 Commit on 2026-02-24T09:38:32: refactor: clean up unused helper functions
+Commit on 2026-02-24T15:37:44: refactor: modularize coordinate conversion utility
