@@ -1611,3 +1611,4 @@ Commit on 2026-02-22T16:01:41: refactor: extract reusable modal components
 Commit on 2026-02-22T15:15:50: docs: update EXIF metadata guide section
 Commit on 2026-02-22T17:55:11: perf: optimize web worker message passing
 Commit on 2026-02-22T11:41:42: docs: expand metadata dictionary table descriptions
+Commit on 2026-02-24T20:48:29: style: align footer navigation elements
