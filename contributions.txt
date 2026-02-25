@@ -1622,3 +1622,4 @@ Commit on 2026-02-25T21:06:42: chore: clean up internal log statements
 Commit on 2026-02-25T12:57:29: refactor: extract reusable modal components
 Commit on 2026-02-25T17:56:44: chore: clean up internal log statements
 Commit on 2026-02-25T17:42:50: chore: clean up internal log statements
+Commit on 2026-02-25T11:04:29: docs: update sitemap generator comments
