@@ -1629,3 +1629,4 @@ Commit on 2026-02-26T20:39:31: fix: resolve edge case handling in location looku
 Commit on 2026-02-26T20:35:23: docs: expand metadata dictionary table descriptions
 Commit on 2026-02-26T17:54:23: fix: prevent duplicate form submission on rapid clicks
 Commit on 2026-02-26T09:30:18: docs: update EXIF metadata guide section
+Commit on 2026-02-26T13:09:13: chore: audit and remove unused asset references
