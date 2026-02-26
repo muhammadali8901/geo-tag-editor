@@ -1627,3 +1627,4 @@ Commit on 2026-02-26T14:20:53: docs: clarify privacy policy points
 Commit on 2026-02-26T13:10:56: fix: tooltip display glitch on mobile view
 Commit on 2026-02-26T20:39:31: fix: resolve edge case handling in location lookup
 Commit on 2026-02-26T20:35:23: docs: expand metadata dictionary table descriptions
+Commit on 2026-02-26T17:54:23: fix: prevent duplicate form submission on rapid clicks
