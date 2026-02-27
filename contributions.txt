@@ -1631,3 +1631,4 @@ Commit on 2026-02-26T17:54:23: fix: prevent duplicate form submission on rapid c
 Commit on 2026-02-26T09:30:18: docs: update EXIF metadata guide section
 Commit on 2026-02-26T13:09:13: chore: audit and remove unused asset references
 Commit on 2026-02-27T21:52:56: docs: expand metadata dictionary table descriptions
+Commit on 2026-02-27T16:47:02: perf: reduce DOM manipulation overhead
