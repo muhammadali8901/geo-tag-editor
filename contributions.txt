@@ -1636,3 +1636,4 @@ Commit on 2026-02-27T14:16:23: docs: improve inline code documentation
 Commit on 2026-02-27T17:22:10: refactor: modularize coordinate conversion utility
 Commit on 2026-02-27T10:42:29: chore: update dependencies and internal scripts
 Commit on 2026-02-27T12:14:52: style: adjust card padding for mobile screens
+Commit on 2026-02-27T18:56:44: chore: audit and remove unused asset references
