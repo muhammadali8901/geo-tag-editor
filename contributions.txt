@@ -1640,3 +1640,4 @@ Commit on 2026-02-27T18:56:44: chore: audit and remove unused asset references
 Commit on 2026-02-27T14:39:49: docs: clarify privacy policy points
 Commit on 2026-02-28T20:22:16: style: tweak typography hierarchy for blog headings
 Commit on 2026-02-28T15:26:57: docs: update README with recent feature notes
+Commit on 2026-02-28T14:06:51: chore: audit and remove unused asset references
