@@ -1645,3 +1645,4 @@ Commit on 2026-02-28T20:27:40: docs: clarify privacy policy points
 Commit on 2026-02-28T11:44:02: style: tweak typography hierarchy for blog headings
 Commit on 2026-02-28T10:29:39: refactor: optimize image loading routines
 Commit on 2026-02-28T09:32:54: perf: optimize web worker message passing
+Commit on 2026-02-28T14:26:57: docs: expand metadata dictionary table descriptions
