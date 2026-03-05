@@ -8,7 +8,7 @@
   const SITE = {
     name: 'GeoTagPro',
     tagline: 'Free Online Geo Tag Editor',
-    domain: 'https://www.geotagpro.com',
+    domain: 'https://geotagseditor.online',
     year: new Date().getFullYear()
   };
 
