@@ -19,18 +19,48 @@
   </svg>`;
 
   function getRelPath() {
-    const path = window.location.pathname;
-    if (path.includes('/blog/') && !path.endsWith('/blog/')) return '../../';
-    if (path.includes('/blog')) return '../';
+    var path = window.location.pathname.replace(/\\/g, '/');
+    var parts = path.split('/').filter(Boolean);
+    var file = parts[parts.length - 1] || '';
+    var dir = parts[parts.length - 2] || '';
+    if (dir === 'blog' && file.endsWith('.html') && file !== 'blog.html') return '../';
     return '';
   }
 
   function isActive(href) {
-    const current = window.location.pathname.replace(/\/$/, '').split('/').pop() || 'index';
-    const target = href.replace('.html', '').split('/').pop() || 'index';
+    var path = window.location.pathname.replace(/\\/g, '/');
+    var current = path.replace(/\/$/, '').split('/').pop() || 'index';
+    current = current.replace('.html', '');
+    var target = href.replace('.html', '').split('/').pop() || 'index';
     if (current === target) return true;
     if (current === 'index' && (target === '' || target === 'index')) return true;
+    if (path.includes('/blog') && target === 'blog') return true;
     return false;
+  }
+
+  function injectSkipLink() {
+    if (document.querySelector('.skip-link')) return;
+    var skip = document.createElement('a');
+    skip.href = '#main-content';
+    skip.className = 'skip-link';
+    skip.textContent = 'Skip to main content';
+    document.body.insertBefore(skip, document.body.firstChild);
+  }
+
+  function wrapMain() {
+    var header = document.getElementById('site-header');
+    var footer = document.getElementById('site-footer');
+    if (!header || !footer || document.getElementById('main-content')) return;
+    var main = document.createElement('main');
+    main.id = 'main-content';
+    main.setAttribute('role', 'main');
+    var sibling = header.nextSibling;
+    while (sibling && sibling !== footer) {
+      var next = sibling.nextSibling;
+      main.appendChild(sibling);
+      sibling = next;
+    }
+    header.parentNode.insertBefore(main, footer);
   }
 
   function injectHeader() {
@@ -48,11 +78,12 @@
       `<li><a href="${l.href}" class="${isActive(l.href) ? 'active' : ''}">${l.label}</a></li>`
     ).join('');
 
+    header.setAttribute('role', 'banner');
     header.innerHTML = `
       <div class="header-inner">
         <a href="${r}index.html" class="logo" aria-label="${SITE.name} Home">${logoSVG}<span>${SITE.name}</span></a>
         <nav aria-label="Main navigation">
-          <ul class="nav-links" id="navLinks">
+          <ul class="nav-links" id="navLinks" role="menubar">
             ${navItems}
             <li><a href="${r}geo-tag-editor.html" class="nav-cta">Try Free Tool</a></li>
           </ul>
@@ -86,6 +117,7 @@
   function injectFooter() {
     const footer = document.getElementById('site-footer');
     if (!footer) return;
+    footer.setAttribute('role', 'contentinfo');
     const r = getRelPath();
 
     footer.innerHTML = `
@@ -141,8 +173,10 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    injectSkipLink();
     injectHeader();
     injectFooter();
+    wrapMain();
   });
 
   window.GTP = { showToast, SITE };
