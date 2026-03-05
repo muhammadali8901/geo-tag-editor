@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geo Tag Editor — Add, Edit & Remove GPS EXIF Data Online | GeoTagPro</title>
+<meta name="description" content="Free online geo tag editor tool. Add GPS coordinates to photos, edit existing geotag metadata, remove location data, and download updated JPEG images. 100% browser-based.">
+<meta name="keywords" content="geo tag editor, geotag editor online, add gps to photo, edit image gps location, remove geotag, image metadata editor, photo gps editor, update exif location, free geotag tool">
+<link rel="canonical" href="https://www.geotagpro.com/geo-tag-editor.html">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Geo Tag Editor — Add, Edit & Remove GPS EXIF Data Online">
+<meta property="og:description" content="Free online tool to add, edit, or remove GPS geotag metadata from JPEG photos. Pick location on map, download updated image.">
+<meta property="og:url" content="https://www.geotagpro.com/geo-tag-editor.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Geo Tag Editor — Add, Edit & Remove GPS EXIF Data Online">
+<meta name="twitter:description" content="Free online tool to add, edit, or remove GPS geotag metadata from JPEG photos.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GeoTagPro Geo Tag Editor",
+  "url": "https://www.geotagpro.com/geo-tag-editor.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Free online geo tag editor to add, edit, or remove GPS coordinates from JPEG images directly in the browser."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.geotagpro.com/"},
+    {"@type":"ListItem","position":2,"name":"Geo Tag Editor","item":"https://www.geotagpro.com/geo-tag-editor.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How do I add GPS coordinates to a photo?","acceptedAnswer":{"@type":"Answer","text":"Upload your JPEG image to GeoTagPro, enter latitude and longitude values or pick a location on the map, click Apply Coordinates, then download your geotagged image."}},
+    {"@type":"Question","name":"Can I edit existing geotag data in a photo?","acceptedAnswer":{"@type":"Answer","text":"Yes. When you upload an image with existing GPS data, the tool automatically reads and displays the current coordinates. You can then modify them and save the updated image."}},
+    {"@type":"Question","name":"Is it safe to use this geo tag editor?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. All processing happens in your browser. No images are uploaded to any server. Your files remain on your device throughout the entire process."}},
+    {"@type":"Question","name":"What is EXIF GPS metadata?","acceptedAnswer":{"@type":"Answer","text":"EXIF GPS metadata is location information embedded within digital photo files. It includes latitude, longitude, and sometimes altitude data that records where a photo was taken."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<!-- BREADCRUMB -->
+<nav class="container breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>/</span><strong>Geo Tag Editor</strong>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Free Online <span class="gradient-text">Geo Tag Editor</span></h1>
+    <p>Add, edit, or remove GPS coordinates from your JPEG photos. Pick a location on the map or enter coordinates manually.</p>
+  </div>
+</section>
+
+<!-- TOOL -->
+<section class="section" style="padding-top:40px">
+  <div class="container" style="max-width:800px">
+    <div class="tool-card">
+      <div class="tool-steps">
+        <button class="tool-step-tab active" id="tabUpload">&#128193; Upload</button>
+        <button class="tool-step-tab" id="tabEdit">&#9998; Edit GPS</button>
+        <button class="tool-step-tab" id="tabDownload">&#11015; Download</button>
+      </div>
+      <div class="tool-body">
+
+        <!-- UPLOAD SECTION -->
+        <div id="uploadSection">
+          <div class="drop-zone" id="dropZone">
+            <input type="file" id="fileInput" accept=".jpg,.jpeg,image/jpeg">
+            <span class="dz-icon">&#128247;</span>
+            <p>Drag &amp; drop your JPEG image here<br>or <span class="browse">click to browse</span></p>
+          </div>
+        </div>
+
+        <!-- EDIT SECTION -->
+        <div id="editSection" class="hidden">
+          <div class="preview-area visible" id="previewArea">
+            <div class="preview-img-wrap">
+              <img id="previewImg" alt="Uploaded image preview">
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+              <div>
+                <strong id="fileName" style="font-size:.9rem"></strong>
+                <span id="fileSize" style="font-size:.82rem;color:var(--text-muted);margin-left:8px"></span>
+              </div>
+              <button class="btn btn-danger btn-sm" id="removeBtn">&#10005; Remove</button>
+            </div>
+          </div>
+
+          <details open style="margin-top:16px">
+            <summary style="font-weight:600;cursor:pointer;margin-bottom:12px;font-size:.95rem">EXIF Metadata</summary>
+            <table class="meta-table">
+              <tbody id="metaBody"></tbody>
+            </table>
+          </details>
+
+          <div class="coord-form">
+            <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px">Set GPS Coordinates</h3>
+            <div class="coord-grid">
+              <div class="field">
+                <label for="latInput">Latitude</label>
+                <input type="number" id="latInput" step="any" min="-90" max="90" placeholder="e.g. 48.8566">
+                <p class="hint">Range: -90 to 90 (negative = South)</p>
+              </div>
+              <div class="field">
+                <label for="lngInput">Longitude</label>
+                <input type="number" id="lngInput" step="any" min="-180" max="180" placeholder="e.g. 2.3522">
+                <p class="hint">Range: -180 to 180 (negative = West)</p>
+              </div>
+            </div>
+
+            <h3 style="font-size:1rem;font-weight:600;margin:24px 0 8px">Pick Location on Map</h3>
+            <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:8px">Click anywhere on the map or drag the marker to set coordinates.</p>
+            <div class="map-container" id="mapContainer"></div>
+          </div>
+
+          <div class="tool-actions">
+            <button class="btn btn-primary" id="applyBtn" disabled>&#128205; Apply Coordinates</button>
+            <button class="btn btn-danger" id="removeGpsBtn">&#128465; Remove Geotag</button>
+          </div>
+
+          <div class="result-banner" id="resultBanner">
+            <span id="resultText"></span>
+          </div>
+        </div>
+
+        <!-- DOWNLOAD SECTION -->
+        <div id="downloadSection" class="hidden">
+          <div style="text-align:center;padding:20px 0">
+            <div style="font-size:3rem;margin-bottom:12px">&#9989;</div>
+            <h3 style="margin-bottom:8px">Image Ready for Download</h3>
+            <p style="color:var(--text-secondary);margin-bottom:20px;font-size:.95rem">Your image has been updated with the new GPS metadata. Preview it below and download when ready.</p>
+            <div class="preview-img-wrap" style="margin-bottom:20px;max-height:300px">
+              <img id="dlPreviewImg" alt="Updated image preview" style="max-height:300px">
+            </div>
+            <button class="btn btn-success" id="downloadBtn" style="min-width:220px">&#11015; Download Geotagged Image</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO CONTENT -->
+<section class="section" style="background:var(--gradient-soft)">
+  <div class="container" style="max-width:800px">
+    <h2 style="font-size:1.6rem;font-weight:700;margin-bottom:16px">What Is a Geo Tag Editor?</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">A geo tag editor is a specialized tool designed to manage the GPS location metadata embedded within digital photographs. Every time you take a photo with a GPS-enabled camera or smartphone, the device can record the exact latitude and longitude coordinates where the image was captured. This information is stored within the image file as part of the EXIF (Exchangeable Image File Format) data.</p>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">Our free online geo tag editor gives you complete control over this location data. Whether you need to add GPS coordinates to images that were taken without location services, correct inaccurate coordinates, or remove sensitive location information before sharing photos online, GeoTagPro handles it all without requiring any software installation.</p>
+
+    <h2 style="font-size:1.4rem;font-weight:700;margin:32px 0 16px">Why Edit GPS Metadata in Images?</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">There are several important reasons to edit the GPS geotag data in your photos:</p>
+    <ul style="color:var(--text-secondary);margin:0 0 16px 20px;line-height:1.8">
+      <li><strong>Local SEO Optimization:</strong> Adding accurate GPS coordinates to images used on business websites helps search engines associate your content with a specific location, improving local search rankings.</li>
+      <li><strong>Privacy Protection:</strong> Removing GPS data before sharing photos on social media or websites prevents others from determining where you live, work, or frequently visit.</li>
+      <li><strong>Photo Organization:</strong> Adding location data to scanned photos, studio shots, or images taken with GPS-disabled devices helps you organize your photo library by location.</li>
+      <li><strong>Real Estate Marketing:</strong> Property photos with embedded GPS data can appear in location-based image searches, driving more visibility to listings.</li>
+      <li><strong>Correcting Errors:</strong> GPS sensors aren't always accurate. If your photo's location is wrong, you can correct it to reflect the actual shooting location.</li>
+    </ul>
+
+    <h2 style="font-size:1.4rem;font-weight:700;margin:32px 0 16px">How Does the Geo Tag Editor Work?</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">GeoTagPro works entirely within your web browser using JavaScript. When you upload a JPEG image, the tool reads the binary EXIF data structure within the file. It parses the GPS IFD (Image File Directory) to extract any existing latitude and longitude values stored as degrees, minutes, and seconds (DMS) format.</p>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">When you enter new coordinates or pick a location on the map, the tool converts your decimal degree values into the DMS format required by the EXIF specification. It then writes these values back into the GPS IFD of the image binary, producing a new JPEG file with the updated metadata. The entire process happens locally — no data leaves your browser.</p>
+
+    <h2 style="font-size:1.4rem;font-weight:700;margin:32px 0 16px">Geotagging for Local SEO: A Powerful Strategy</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">Search engines like Google can read EXIF metadata from images. When your website images contain GPS coordinates that match your business location, it sends a strong local relevance signal. This is why many SEO professionals use geo tag editors as part of their local SEO workflow.</p>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">For maximum impact, geotag all images on your Google Business Profile, website, and social media accounts with your business's precise coordinates. Combined with other local SEO practices like consistent NAP (Name, Address, Phone) information, geotagged images can help your business rank higher in local search results and Google Maps.</p>
+
+    <h2 style="font-size:1.4rem;font-weight:700;margin:32px 0 16px">Features of Our Free Geo Tag Editor</h2>
+    <div class="grid-2" style="margin-top:20px">
+      <div class="card">
+        <h3 style="font-size:.95rem;margin-bottom:6px">&#128205; Add New GPS Data</h3>
+        <p style="font-size:.88rem;color:var(--text-secondary)">Embed latitude and longitude coordinates into images that don't have existing GPS metadata.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.95rem;margin-bottom:6px">&#9998; Edit Existing Coordinates</h3>
+        <p style="font-size:.88rem;color:var(--text-secondary)">Modify the GPS values in photos that already contain location EXIF data.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.95rem;margin-bottom:6px">&#128465; Remove Geotag</h3>
+        <p style="font-size:.88rem;color:var(--text-secondary)">Strip all GPS data from images for privacy before sharing online.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.95rem;margin-bottom:6px">&#128506; Map Location Picker</h3>
+        <p style="font-size:.88rem;color:var(--text-secondary)">Visually select locations on an interactive map with click or marker drag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL PAGE FAQ -->
+<section class="section">
+  <div class="container" style="max-width:800px">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list" id="faqList2">
+      <div class="faq-item">
+        <button class="faq-question">How do I add GPS coordinates to a photo?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Upload your JPEG image to GeoTagPro using drag-and-drop or the file browser. Enter the latitude and longitude values in the coordinate fields, or click on the interactive map to set your desired location. Click the "Apply Coordinates" button, and then download your image with the GPS data embedded in its EXIF metadata.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I edit existing geotag data in a photo?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. When you upload an image that already contains GPS coordinates, GeoTagPro automatically detects and displays the existing latitude and longitude values. The coordinate fields are pre-filled with the current values, and the map marker is positioned at the existing location. You can then modify these values and save the updated image.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is it safe to use this geo tag editor?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Absolutely. GeoTagPro processes all images entirely within your web browser using client-side JavaScript. No image data is ever transmitted to any server. Your files remain on your local device throughout the entire editing process. This approach ensures maximum privacy and security for your photos.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What is EXIF GPS metadata?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">EXIF (Exchangeable Image File Format) GPS metadata is location information stored within digital photo files. It includes GPS latitude, longitude, altitude, and reference direction data that records where a photograph was taken. Most modern cameras and smartphones automatically embed this data when location services are enabled. EXIF metadata can be read by various software, image viewers, and even search engines.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="padding-top:0">
+  <div class="container" style="max-width:800px">
+    <div class="cta-banner">
+      <h2>Start Geotagging Your Images</h2>
+      <p>Upload a photo now and add precise GPS coordinates in seconds. No sign-up required.</p>
+      <a href="#" onclick="document.querySelector('.tool-card').scrollIntoView({behavior:'smooth'});return false;" class="btn">Scroll to Tool</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/piexifjs@1.0.6/piexif.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/common.js"></script>
+<script src="js/tool.js"></script>
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const item = this.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+    item.closest('.faq-list').querySelectorAll('.faq-item').forEach(function(i) {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = null;
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+</body>
+</html>
