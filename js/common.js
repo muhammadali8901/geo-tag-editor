@@ -53,7 +53,6 @@
     if (!header || !footer || document.getElementById('main-content')) return;
     var main = document.createElement('main');
     main.id = 'main-content';
-    main.setAttribute('role', 'main');
     var sibling = header.nextSibling;
     while (sibling && sibling !== footer) {
       var next = sibling.nextSibling;
@@ -78,17 +77,16 @@
       `<li><a href="${l.href}" class="${isActive(l.href) ? 'active' : ''}">${l.label}</a></li>`
     ).join('');
 
-    header.setAttribute('role', 'banner');
     header.innerHTML = `
       <div class="header-inner">
         <a href="${r}index.html" class="logo" aria-label="${SITE.name} Home">${logoSVG}<span>${SITE.name}</span></a>
         <nav aria-label="Main navigation">
-          <ul class="nav-links" id="navLinks" role="menubar">
+          <ul class="nav-links" id="navLinks">
             ${navItems}
             <li><a href="${r}geo-tag-editor.html" class="nav-cta">Try Free Tool</a></li>
           </ul>
         </nav>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
       </div>`;
@@ -98,11 +96,19 @@
     hamburger.addEventListener('click', function () {
       const open = navLinks.classList.toggle('open');
       hamburger.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', open);
+      hamburger.setAttribute('aria-expanded', String(open));
     });
 
     document.addEventListener('click', function (e) {
       if (!header.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
         navLinks.classList.remove('open');
         hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
@@ -117,7 +123,6 @@
   function injectFooter() {
     const footer = document.getElementById('site-footer');
     if (!footer) return;
-    footer.setAttribute('role', 'contentinfo');
     const r = getRelPath();
 
     footer.innerHTML = `
@@ -127,7 +132,7 @@
           <p>${SITE.name} is a free online tool that lets you add, edit, or remove GPS geotag metadata from your JPEG images. Fast, private, and entirely browser-based.</p>
         </div>
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <p class="footer-title">Quick Links</p>
           <ul>
             <li><a href="${r}index.html">Home</a></li>
             <li><a href="${r}geo-tag-editor.html">Geo Tag Editor</a></li>
@@ -137,7 +142,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Resources</h4>
+          <p class="footer-title">Resources</p>
           <ul>
             <li><a href="${r}blog/how-to-add-gps-location-to-photos.html">Add GPS to Photos</a></li>
             <li><a href="${r}blog/why-geotagging-matters-for-local-seo.html">Geotagging &amp; SEO</a></li>
@@ -145,7 +150,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
+          <p class="footer-title">Legal</p>
           <ul>
             <li><a href="${r}privacy-policy.html">Privacy Policy</a></li>
             <li><a href="${r}terms.html">Terms &amp; Conditions</a></li>

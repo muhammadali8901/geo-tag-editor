@@ -8,7 +8,7 @@
 <meta name="keywords" content="geo tag editor, geotag editor online, edit image gps location, add gps location to photo, remove geotag from image, image metadata editor, photo gps editor, free geotag tool">
 <link rel="canonical" href="https://geotagseditor.online/">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0ea5e9">
+<meta name="theme-color" content="#0369a1">
 <meta name="author" content="GeoTagPro">
 
 <meta property="og:type" content="website">
@@ -19,10 +19,16 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GeoTagPro — Free Online Geo Tag Editor">
 <meta name="twitter:description" content="Add, edit, or remove GPS geotag metadata from your photos online. Fast, free, and private.">
+<meta property="og:image" content="https://geotagseditor.online/android-chrome-512x512.png">
+<meta name="twitter:image" content="https://geotagseditor.online/android-chrome-512x512.png">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0369a1">
+<link rel="preload" href="css/style.css" as="style">
 <link rel="stylesheet" href="css/style.css">
 
 <script type="application/ld+json">
@@ -55,10 +61,19 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "GeoTagPro",
+  "url": "https://geotagseditor.online",
+  "description": "Free online geo tag editor to add, edit, or remove GPS location metadata from JPEG photos."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Organization",
   "name": "GeoTagPro",
   "url": "https://geotagseditor.online",
-  "logo": "https://geotagseditor.online/images/logo.png",
+  "logo": "https://geotagseditor.online/apple-touch-icon.png",
   "sameAs": []
 }
 </script>
@@ -77,7 +92,7 @@
     <p>The fastest free online geo tag editor. Modify image GPS coordinates, update EXIF location metadata, or strip geotags for privacy — all directly in your browser.</p>
     <div class="hero-buttons">
       <a href="geo-tag-editor.html" class="btn btn-primary">Open Geo Tag Editor</a>
-      <a href="#how-it-works" class="btn btn-outline">How It Works</a>
+      <a href="#how-it-works" class="btn btn-outline" data-scroll-target="#how-it-works">How It Works</a>
     </div>
   </div>
 </section>
@@ -125,32 +140,32 @@
     </div>
     <div class="grid-3">
       <div class="card">
-        <div class="card-icon blue">&#128205;</div>
+        <div class="card-icon blue" aria-hidden="true">&#128205;</div>
         <h3>Add GPS Location</h3>
         <p>Add precise GPS coordinates to photos that don't have location data. Perfect for photographers and businesses.</p>
       </div>
       <div class="card">
-        <div class="card-icon purple">&#9998;</div>
+        <div class="card-icon purple" aria-hidden="true">&#9998;</div>
         <h3>Edit Existing Geotag</h3>
         <p>Modify incorrect or outdated GPS coordinates in your images. Update latitude and longitude with precision.</p>
       </div>
       <div class="card">
-        <div class="card-icon green">&#128506;</div>
+        <div class="card-icon green" aria-hidden="true">&#128506;</div>
         <h3>Interactive Map Picker</h3>
         <p>Use the built-in OpenStreetMap to visually select a location. Click or drag the marker to set coordinates.</p>
       </div>
       <div class="card">
-        <div class="card-icon orange">&#128274;</div>
+        <div class="card-icon orange" aria-hidden="true">&#128274;</div>
         <h3>Remove Geotag for Privacy</h3>
         <p>Strip all GPS metadata from your images before sharing them online to protect your location privacy.</p>
       </div>
       <div class="card">
-        <div class="card-icon blue">&#128196;</div>
+        <div class="card-icon blue" aria-hidden="true">&#128196;</div>
         <h3>Read EXIF Metadata</h3>
         <p>View complete EXIF information including camera make, model, date, dimensions, and GPS data.</p>
       </div>
       <div class="card">
-        <div class="card-icon purple">&#9889;</div>
+        <div class="card-icon purple" aria-hidden="true">&#9889;</div>
         <h3>100% Client-Side</h3>
         <p>All processing happens in your browser. No files are uploaded to any server, ensuring total privacy.</p>
       </div>
@@ -168,27 +183,27 @@
     </div>
     <div class="use-case-grid">
       <div class="use-case">
-        <span class="uc-icon">&#128247;</span>
+        <span class="uc-icon" aria-hidden="true">&#128247;</span>
         <h3>Photographers</h3>
         <p>Organize photo libraries by location and add missing GPS data to studio or scanned images.</p>
       </div>
       <div class="use-case">
-        <span class="uc-icon">&#127968;</span>
+        <span class="uc-icon" aria-hidden="true">&#127968;</span>
         <h3>Real Estate Agents</h3>
         <p>Geotag property photos to appear in local image searches and Google Maps results.</p>
       </div>
       <div class="use-case">
-        <span class="uc-icon">&#128200;</span>
+        <span class="uc-icon" aria-hidden="true">&#128200;</span>
         <h3>SEO Agencies</h3>
         <p>Boost local SEO by embedding accurate GPS data into client website images.</p>
       </div>
       <div class="use-case">
-        <span class="uc-icon">&#127970;</span>
+        <span class="uc-icon" aria-hidden="true">&#127970;</span>
         <h3>Local Businesses</h3>
         <p>Tag product and storefront photos with your business location for better local visibility.</p>
       </div>
       <div class="use-case">
-        <span class="uc-icon">&#128241;</span>
+        <span class="uc-icon" aria-hidden="true">&#128241;</span>
         <h3>Social Media Users</h3>
         <p>Remove geotags before posting to protect your privacy, or add them for location-based content.</p>
       </div>
@@ -254,23 +269,7 @@
 
 <footer class="site-footer" id="site-footer"></footer>
 
-<script src="js/common.js"></script>
-<script>
-document.querySelectorAll('.faq-question').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    const item = this.parentElement;
-    const answer = item.querySelector('.faq-answer');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(function(i) {
-      i.classList.remove('open');
-      i.querySelector('.faq-answer').style.maxHeight = null;
-    });
-    if (!isOpen) {
-      item.classList.add('open');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
-  });
-});
-</script>
+<script src="js/common.js" defer></script>
+<script src="js/site.js" defer></script>
 </body>
 </html>

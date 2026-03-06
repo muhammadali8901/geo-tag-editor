@@ -8,7 +8,7 @@
 <meta name="keywords" content="geo tag editor, geotag editor online, add gps to photo, edit image gps location, remove geotag, image metadata editor, photo gps editor, update exif location, free geotag tool">
 <link rel="canonical" href="https://geotagseditor.online/geo-tag-editor.html">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0ea5e9">
+<meta name="theme-color" content="#0369a1">
 <meta name="author" content="GeoTagPro">
 
 <meta property="og:type" content="website">
@@ -19,12 +19,17 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Geo Tag Editor — Add, Edit & Remove GPS EXIF Data Online">
 <meta name="twitter:description" content="Free online tool to add, edit, or remove GPS geotag metadata from JPEG photos.">
+<meta property="og:image" content="https://geotagseditor.online/android-chrome-512x512.png">
+<meta name="twitter:image" content="https://geotagseditor.online/android-chrome-512x512.png">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0369a1">
+<link rel="preload" href="css/style.css" as="style">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
 <script type="application/ld+json">
 {
@@ -83,25 +88,25 @@
 <!-- TOOL -->
 <section class="section" style="padding-top:40px">
   <div class="container" style="max-width:800px">
-    <div class="tool-card">
-      <div class="tool-steps">
-        <button class="tool-step-tab active" id="tabUpload">&#128193; Upload</button>
-        <button class="tool-step-tab" id="tabEdit">&#9998; Edit GPS</button>
-        <button class="tool-step-tab" id="tabDownload">&#11015; Download</button>
+    <div class="tool-card" id="tool-card">
+      <div class="tool-steps" role="tablist" aria-label="Geo tag editor steps">
+        <button class="tool-step-tab active" id="tabUpload" role="tab" aria-controls="uploadSection" aria-selected="true" tabindex="0">&#128193; Upload</button>
+        <button class="tool-step-tab" id="tabEdit" role="tab" aria-controls="editSection" aria-selected="false" tabindex="-1">&#9998; Edit GPS</button>
+        <button class="tool-step-tab" id="tabDownload" role="tab" aria-controls="downloadSection" aria-selected="false" tabindex="-1">&#11015; Download</button>
       </div>
       <div class="tool-body">
 
         <!-- UPLOAD SECTION -->
-        <div id="uploadSection">
+        <div id="uploadSection" role="tabpanel" aria-labelledby="tabUpload">
           <div class="drop-zone" id="dropZone">
             <input type="file" id="fileInput" accept=".jpg,.jpeg,image/jpeg">
-            <span class="dz-icon">&#128247;</span>
+            <span class="dz-icon" aria-hidden="true">&#128247;</span>
             <p>Drag &amp; drop your JPEG image here<br>or <span class="browse">click to browse</span></p>
           </div>
         </div>
 
         <!-- EDIT SECTION -->
-        <div id="editSection" class="hidden">
+        <div id="editSection" class="hidden" role="tabpanel" aria-labelledby="tabEdit" hidden>
           <div class="preview-area visible" id="previewArea">
             <div class="preview-img-wrap">
               <img id="previewImg" alt="Uploaded image preview">
@@ -153,7 +158,7 @@
         </div>
 
         <!-- DOWNLOAD SECTION -->
-        <div id="downloadSection" class="hidden">
+        <div id="downloadSection" class="hidden" role="tabpanel" aria-labelledby="tabDownload" hidden>
           <div style="text-align:center;padding:20px 0">
             <div style="font-size:3rem;margin-bottom:12px">&#9989;</div>
             <h3 style="margin-bottom:8px">Image Ready for Download</h3>
@@ -250,33 +255,15 @@
     <div class="cta-banner">
       <h2>Start Geotagging Your Images</h2>
       <p>Upload a photo now and add precise GPS coordinates in seconds. No sign-up required.</p>
-      <a href="#" onclick="document.querySelector('.tool-card').scrollIntoView({behavior:'smooth'});return false;" class="btn">Scroll to Tool</a>
+      <a href="#tool-card" class="btn" data-scroll-target="#tool-card">Scroll to Tool</a>
     </div>
   </div>
 </section>
 
 <footer class="site-footer" id="site-footer"></footer>
 
-<script src="https://cdn.jsdelivr.net/npm/piexifjs@1.0.6/piexif.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="js/common.js"></script>
-<script src="js/tool.js"></script>
-<script>
-document.querySelectorAll('.faq-question').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    const item = this.parentElement;
-    const answer = item.querySelector('.faq-answer');
-    const isOpen = item.classList.contains('open');
-    item.closest('.faq-list').querySelectorAll('.faq-item').forEach(function(i) {
-      i.classList.remove('open');
-      i.querySelector('.faq-answer').style.maxHeight = null;
-    });
-    if (!isOpen) {
-      item.classList.add('open');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
-  });
-});
-</script>
+<script src="js/common.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/tool.js" defer></script>
 </body>
 </html>
