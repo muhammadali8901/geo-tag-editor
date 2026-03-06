@@ -1,6 +1,6 @@
 {
-  "name": "GeoTagPro",
-  "short_name": "GeoTagPro",
+  "name": "Geo Tags Editor",
+  "short_name": "Geo Tags Editor",
   "description": "Fast, private geo tag editor for JPEG EXIF GPS metadata.",
   "start_url": "/",
   "scope": "/",

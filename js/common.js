@@ -1,12 +1,12 @@
 /* ============================================
-   GeoTagPro — Shared Components & Utilities
+   Geo Tags Editor — Shared Components & Utilities
    ============================================ */
 
 (function () {
   'use strict';
 
   const SITE = {
-    name: 'GeoTagPro',
+    name: 'Geo Tags Editor',
     tagline: 'Free Online Geo Tag Editor',
     domain: 'https://geotagseditor.online',
     year: new Date().getFullYear()

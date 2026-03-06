@@ -1,5 +1,5 @@
 /* ============================================
-   GeoTagPro — Geo Tag Editor Tool Logic
+   Geo Tags Editor — Geo Tag Editor Tool Logic
    ============================================ */
 (function () {
   'use strict';
