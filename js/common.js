@@ -18,23 +18,11 @@
     <defs><linearGradient id="g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#6366f1"/></linearGradient></defs>
   </svg>`;
 
-  function getRelPath() {
-    var path = window.location.pathname.replace(/\\/g, '/');
-    var parts = path.split('/').filter(Boolean);
-    var file = parts[parts.length - 1] || '';
-    var dir = parts[parts.length - 2] || '';
-    if (dir === 'blog' && file.endsWith('.html') && file !== 'blog.html') return '../';
-    return '';
-  }
-
   function isActive(href) {
-    var path = window.location.pathname.replace(/\\/g, '/');
-    var current = path.replace(/\/$/, '').split('/').pop() || 'index';
-    current = current.replace('.html', '');
-    var target = href.replace('.html', '').split('/').pop() || 'index';
-    if (current === target) return true;
-    if (current === 'index' && (target === '' || target === 'index')) return true;
-    if (path.includes('/blog') && target === 'blog') return true;
+    var path = window.location.pathname.replace(/\\/g, '/').replace(/\/$/, '') || '/';
+    var target = (href || '/').replace(/\/$/, '') || '/';
+    if (path === target) return true;
+    if (path.startsWith(target + '/')) return true;
     return false;
   }
 
@@ -65,13 +53,12 @@
   function injectHeader() {
     const header = document.getElementById('site-header');
     if (!header) return;
-    const r = getRelPath();
     const links = [
-      { label: 'Home', href: r + 'index.html' },
-      { label: 'Geo Tag Editor', href: r + 'geo-tag-editor.html' },
-      { label: 'Blog', href: r + 'blog.html' },
-      { label: 'About', href: r + 'about.html' },
-      { label: 'Contact', href: r + 'contact.html' }
+      { label: 'Home', href: '/' },
+      { label: 'Geo Tag Editor', href: '/geo-tag-editor/' },
+      { label: 'Blog', href: '/blog/' },
+      { label: 'About', href: '/about/' },
+      { label: 'Contact', href: '/contact/' }
     ];
     const navItems = links.map(l =>
       `<li><a href="${l.href}" class="${isActive(l.href) ? 'active' : ''}">${l.label}</a></li>`
@@ -79,11 +66,11 @@
 
     header.innerHTML = `
       <div class="header-inner">
-        <a href="${r}index.html" class="logo" aria-label="${SITE.name} Home">${logoSVG}<span>${SITE.name}</span></a>
+        <a href="/" class="logo" aria-label="${SITE.name} Home">${logoSVG}<span>${SITE.name}</span></a>
         <nav aria-label="Main navigation">
           <ul class="nav-links" id="navLinks">
             ${navItems}
-            <li><a href="${r}geo-tag-editor.html" class="nav-cta">Try Free Tool</a></li>
+            <li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>
           </ul>
         </nav>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -123,7 +110,6 @@
   function injectFooter() {
     const footer = document.getElementById('site-footer');
     if (!footer) return;
-    const r = getRelPath();
 
     footer.innerHTML = `
       <div class="footer-grid">
@@ -134,28 +120,28 @@
         <div class="footer-col">
           <p class="footer-title">Quick Links</p>
           <ul>
-            <li><a href="${r}index.html">Home</a></li>
-            <li><a href="${r}geo-tag-editor.html">Geo Tag Editor</a></li>
-            <li><a href="${r}blog.html">Blog</a></li>
-            <li><a href="${r}about.html">About Us</a></li>
-            <li><a href="${r}contact.html">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <p class="footer-title">Resources</p>
           <ul>
-            <li><a href="${r}blog/how-to-add-gps-location-to-photos.html">Add GPS to Photos</a></li>
-            <li><a href="${r}blog/why-geotagging-matters-for-local-seo.html">Geotagging &amp; SEO</a></li>
-            <li><a href="${r}blog/how-to-remove-metadata-from-images.html">Remove Metadata</a></li>
+            <li><a href="/blog/how-to-add-gps-location-to-photos/">Add GPS to Photos</a></li>
+            <li><a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging &amp; SEO</a></li>
+            <li><a href="/blog/how-to-remove-metadata-from-images/">Remove Metadata</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <p class="footer-title">Legal</p>
           <ul>
-            <li><a href="${r}privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="${r}terms.html">Terms &amp; Conditions</a></li>
-            <li><a href="${r}disclaimer.html">Disclaimer</a></li>
-            <li><a href="${r}sitemap-page.html">Sitemap</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms &amp; Conditions</a></li>
+            <li><a href="/disclaimer/">Disclaimer</a></li>
+            <li><a href="/sitemap/">Sitemap</a></li>
           </ul>
         </div>
       </div>

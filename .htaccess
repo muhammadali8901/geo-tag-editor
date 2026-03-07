@@ -1,0 +1,23 @@
+# Geo Tags Editor — 301 Redirects to Clean Folder-Based URLs
+# Apache/cPanel compatible
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Redirect index.html to /
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Root-level .html to folder/
+RewriteRule ^about\.html$ /about/ [R=301,L]
+RewriteRule ^contact\.html$ /contact/ [R=301,L]
+RewriteRule ^geo-tag-editor\.html$ /geo-tag-editor/ [R=301,L]
+RewriteRule ^blog\.html$ /blog/ [R=301,L]
+RewriteRule ^privacy-policy\.html$ /privacy-policy/ [R=301,L]
+RewriteRule ^terms\.html$ /terms/ [R=301,L]
+RewriteRule ^disclaimer\.html$ /disclaimer/ [R=301,L]
+RewriteRule ^sitemap-page\.html$ /sitemap/ [R=301,L]
+
+# Blog article .html to /blog/slug/
+RewriteRule ^blog/([a-z0-9-]+)\.html$ /blog/$1/ [R=301,L]
+</IfModule>
