@@ -99,25 +99,19 @@
         <!-- UPLOAD SECTION -->
         <div id="uploadSection" role="tabpanel" aria-labelledby="tabUpload">
           <div class="drop-zone" id="dropZone">
-            <input type="file" id="fileInput" accept=".jpg,.jpeg,image/jpeg">
+            <input type="file" id="fileInput" accept=".jpg,.jpeg,image/jpeg" multiple>
             <span class="dz-icon" aria-hidden="true"><svg class="icon"><use href="/images/icons.svg#icon-image"></use></svg></span>
-            <p>Drag &amp; drop your JPEG image here<br>or <span class="browse">click to browse</span></p>
+            <p>Drag &amp; drop your JPEG images here (max 3)<br>or <span class="browse">click to browse</span></p>
           </div>
+          <div id="uploadedImagesPreview" style="margin-top:20px;display:none"></div>
+          <button class="btn btn-outline btn-sm" id="addMoreBtn" style="margin-top:16px;display:none"><svg class="icon"><use href="/images/icons.svg#icon-upload"></use></svg> Add More Images</button>
         </div>
 
         <!-- EDIT SECTION -->
         <div id="editSection" class="hidden" role="tabpanel" aria-labelledby="tabEdit" hidden>
           <div class="preview-area visible" id="previewArea">
-            <div class="preview-img-wrap">
-              <img id="previewImg" alt="Uploaded image preview">
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-              <div>
-                <strong id="fileName" style="font-size:.9rem"></strong>
-                <span id="fileSize" style="font-size:.82rem;color:var(--text-muted);margin-left:8px"></span>
-              </div>
-              <button class="btn btn-danger btn-sm" id="removeBtn"><svg class="icon icon-sm"><use href="/images/icons.svg#icon-close"></use></svg> Remove</button>
-            </div>
+            <div id="imagesPreviewContainer"></div>
+            <button class="btn btn-danger btn-sm" id="removeBtn" style="margin-top:12px"><svg class="icon icon-sm"><use href="/images/icons.svg#icon-close"></use></svg> Remove All Images</button>
           </div>
 
           <details open style="margin-top:16px">
@@ -155,6 +149,8 @@
           <div class="result-banner" id="resultBanner">
             <span id="resultText"></span>
           </div>
+
+          <div id="processedImagesContainer" style="margin-top:24px;display:none"></div>
         </div>
 
         <!-- DOWNLOAD SECTION -->

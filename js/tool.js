@@ -8,10 +8,9 @@
   const PIEXIF_URL = 'https://cdn.jsdelivr.net/npm/piexifjs@1.0.6/piexif.min.js';
   const LEAFLET_JS_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
   const LEAFLET_CSS_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+  const MAX_IMAGES = 3;
 
-  let originalDataURL = null;
-  let modifiedDataURL = null;
-  let currentFileName = 'image.jpg';
+  let uploadedImages = [];
   let map = null;
   let marker = null;
   let piexifPromise = null;
@@ -21,10 +20,11 @@
 
   function cacheEls() {
     [
-      'dropZone', 'fileInput', 'previewArea', 'previewImg', 'fileName', 'fileSize',
-      'removeBtn', 'metaBody', 'latInput', 'lngInput', 'applyBtn', 'removeGpsBtn',
-      'downloadBtn', 'resultBanner', 'resultText', 'mapContainer', 'tabUpload',
-      'tabEdit', 'tabDownload', 'editSection', 'downloadSection', 'uploadSection'
+      'dropZone', 'fileInput', 'previewArea', 'removeBtn', 'metaBody', 'latInput', 
+      'lngInput', 'applyBtn', 'removeGpsBtn', 'downloadBtn', 'resultBanner', 
+      'resultText', 'mapContainer', 'tabUpload', 'tabEdit', 'tabDownload', 
+      'editSection', 'downloadSection', 'uploadSection', 'imagesPreviewContainer',
+      'processedImagesContainer', 'uploadedImagesPreview', 'addMoreBtn'
     ].forEach(function (id) {
       els[id] = $(id);
     });
@@ -226,49 +226,109 @@
     map.setView([lat, lng], map.getZoom());
   }
 
-  function handleFile(file) {
-    if (!file) return;
-    if (!file.type.match(/image\/jpe?g/i)) {
-      GTP.showToast('Please upload a JPEG or JPG image file.');
+  function handleFiles(files) {
+    if (!files || files.length === 0) return;
+
+    const newFiles = Array.from(files).filter(function(file) {
+      return file.type.match(/image\/jpe?g/i);
+    });
+
+    if (newFiles.length === 0) {
+      GTP.showToast('Please upload JPEG or JPG images only.');
       return;
     }
 
-    currentFileName = file.name;
-    modifiedDataURL = null;
+    if (uploadedImages.length + newFiles.length > MAX_IMAGES) {
+      GTP.showToast('You can upload a maximum of ' + MAX_IMAGES + ' images at a time.');
+      return;
+    }
+
     hideResult();
     renderMapStatus('Loading image metadata tools...', false);
 
     ensurePiexif()
       .then(function () {
-        const reader = new FileReader();
-        reader.onload = function (event) {
-          originalDataURL = event.target.result;
-          els.previewImg.src = originalDataURL;
-          els.previewImg.width = 1200;
-          els.previewImg.height = 900;
-          els.fileName.textContent = file.name;
-          els.fileSize.textContent = formatBytes(file.size);
-          els.previewArea.classList.add('visible');
-          els.dropZone.style.display = 'none';
-
-          readExif(originalDataURL);
-          setTab('edit');
-        };
-        reader.readAsDataURL(file);
+        let processed = 0;
+        newFiles.forEach(function(file) {
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            uploadedImages.push({
+              name: file.name,
+              size: file.size,
+              dataURL: event.target.result,
+              modifiedDataURL: null
+            });
+            processed++;
+            
+            if (processed === newFiles.length) {
+              updateUploadPreview();
+              if (uploadedImages.length === 1) {
+                readExifFromFirstImage();
+                setTab('edit');
+              }
+            }
+          };
+          reader.readAsDataURL(file);
+        });
       })
       .catch(function () {
         showResult('Could not load the EXIF editor. Please check your connection and try again.', 'error');
       });
   }
 
-  function readExif(dataURL) {
+  function updateUploadPreview() {
+    if (uploadedImages.length === 0) {
+      els.uploadedImagesPreview.style.display = 'none';
+      els.addMoreBtn.style.display = 'none';
+      els.dropZone.style.display = '';
+      return;
+    }
+
+    els.dropZone.style.display = 'none';
+    els.uploadedImagesPreview.style.display = 'block';
+    els.uploadedImagesPreview.innerHTML = '<p style="font-size:.9rem;font-weight:600;margin-bottom:12px">' + uploadedImages.length + ' image(s) uploaded</p>' +
+      uploadedImages.map(function(img, idx) {
+        return '<div style="display:flex;align-items:center;gap:12px;padding:8px;background:var(--bg);border-radius:var(--radius-sm);margin-bottom:8px">' +
+          '<svg class="icon" style="width:20px;height:20px;color:var(--success)"><use href="/images/icons.svg#icon-check"></use></svg>' +
+          '<span style="font-size:.88rem">' + img.name + ' (' + formatBytes(img.size) + ')</span>' +
+          '</div>';
+      }).join('');
+
+    if (uploadedImages.length < MAX_IMAGES) {
+      els.addMoreBtn.style.display = 'inline-flex';
+    } else {
+      els.addMoreBtn.style.display = 'none';
+    }
+
+    updateImagesPreview();
+  }
+
+  function updateImagesPreview() {
+    if (uploadedImages.length === 0) return;
+
+    els.imagesPreviewContainer.innerHTML = uploadedImages.map(function(img, idx) {
+      return '<div style="margin-bottom:20px">' +
+        '<div class="preview-img-wrap">' +
+        '<img src="' + img.dataURL + '" alt="Image ' + (idx + 1) + ' preview" style="max-height:250px">' +
+        '</div>' +
+        '<div style="margin-top:8px">' +
+        '<strong style="font-size:.9rem">' + img.name + '</strong>' +
+        '<span style="font-size:.82rem;color:var(--text-muted);margin-left:8px">' + formatBytes(img.size) + '</span>' +
+        '</div>' +
+        '</div>';
+    }).join('');
+  }
+
+  function readExifFromFirstImage() {
+    if (uploadedImages.length === 0) return;
+
     let lat = 40.7128;
     let lng = -74.0060;
     let hasGPS = false;
     const rows = [];
 
     try {
-      const exif = piexif.load(dataURL);
+      const exif = piexif.load(uploadedImages[0].dataURL);
       const zeroth = exif['0th'] || {};
       const exifData = exif.Exif || {};
       const gps = exif.GPS || {};
@@ -322,104 +382,134 @@
   }
 
   function applyGPS() {
-    if (!originalDataURL) {
-      GTP.showToast('Upload an image first.');
+    if (uploadedImages.length === 0) {
+      GTP.showToast('Upload images first.');
       return;
     }
 
     if (!validateCoords()) {
-      GTP.showToast('Enter valid coordinates.');
+      showResult('Please enter both Latitude and Longitude.', 'error');
       return;
     }
 
     const lat = parseFloat(els.latInput.value);
     const lng = parseFloat(els.lngInput.value);
 
-    try {
-      let exif;
+    showResult('Processing images... Applying coordinates...', 'success');
+
+    setTimeout(function() {
       try {
-        exif = piexif.load(originalDataURL);
-      } catch (_) {
-        exif = { '0th': {}, Exif: {}, GPS: {}, Interop: {}, '1st': {} };
+        uploadedImages.forEach(function(img) {
+          let exif;
+          try {
+            exif = piexif.load(img.dataURL);
+          } catch (_) {
+            exif = { '0th': {}, Exif: {}, GPS: {}, Interop: {}, '1st': {} };
+          }
+
+          exif.GPS[piexif.GPSIFD.GPSVersionID] = [2, 3, 0, 0];
+          exif.GPS[piexif.GPSIFD.GPSLatitude] = decimalToDMS(lat);
+          exif.GPS[piexif.GPSIFD.GPSLatitudeRef] = lat >= 0 ? 'N' : 'S';
+          exif.GPS[piexif.GPSIFD.GPSLongitude] = decimalToDMS(lng);
+          exif.GPS[piexif.GPSIFD.GPSLongitudeRef] = lng >= 0 ? 'E' : 'W';
+
+          img.modifiedDataURL = piexif.insert(piexif.dump(exif), img.dataURL);
+        });
+
+        showResult('GPS coordinates applied successfully to all images. Latitude: ' + lat + ', Longitude: ' + lng + '.', 'success');
+        displayProcessedImages();
+        GTP.showToast('GPS metadata saved to all images.');
+      } catch (error) {
+        showResult('Error writing EXIF data. Please try another image.', 'error');
+        GTP.showToast('Failed to write EXIF data.');
       }
-
-      exif.GPS[piexif.GPSIFD.GPSVersionID] = [2, 3, 0, 0];
-      exif.GPS[piexif.GPSIFD.GPSLatitude] = decimalToDMS(lat);
-      exif.GPS[piexif.GPSIFD.GPSLatitudeRef] = lat >= 0 ? 'N' : 'S';
-      exif.GPS[piexif.GPSIFD.GPSLongitude] = decimalToDMS(lng);
-      exif.GPS[piexif.GPSIFD.GPSLongitudeRef] = lng >= 0 ? 'E' : 'W';
-
-      modifiedDataURL = piexif.insert(piexif.dump(exif), originalDataURL);
-      showResult('GPS coordinates applied successfully. Latitude: ' + lat + ', Longitude: ' + lng + '.', 'success');
-      setTab('download');
-      $('dlPreviewImg').src = modifiedDataURL;
-      $('dlPreviewImg').width = 1200;
-      $('dlPreviewImg').height = 900;
-      GTP.showToast('GPS metadata saved.');
-    } catch (error) {
-      showResult('Error writing EXIF data. Please try another image.', 'error');
-      GTP.showToast('Failed to write EXIF data.');
-    }
+    }, 100);
   }
 
-  function removeGPS() {
-    if (!originalDataURL) {
-      GTP.showToast('Upload an image first.');
-      return;
-    }
+  function displayProcessedImages() {
+    els.processedImagesContainer.style.display = 'block';
+    els.processedImagesContainer.innerHTML = '<h3 style="font-size:1.1rem;font-weight:600;margin-bottom:16px">Processed Images</h3>' +
+      uploadedImages.map(function(img, idx) {
+        const dataURL = img.modifiedDataURL || img.dataURL;
+        return '<div style="margin-bottom:24px;padding:20px;background:var(--bg);border-radius:var(--radius);border:1px solid var(--border)">' +
+          '<div class="preview-img-wrap" style="margin-bottom:12px">' +
+          '<img src="' + dataURL + '" alt="Processed image ' + (idx + 1) + '" style="max-height:250px">' +
+          '</div>' +
+          '<div style="display:flex;justify-content:space-between;align-items:center">' +
+          '<strong style="font-size:.9rem">' + img.name + '</strong>' +
+          '<button class="btn btn-success btn-sm download-single-btn" data-index="' + idx + '">' +
+          '<svg class="icon"><use href="/images/icons.svg#icon-download"></use></svg> Download Geo Tagged Image' +
+          '</button>' +
+          '</div>' +
+          '</div>';
+      }).join('');
 
-    try {
-      let exif;
-      try {
-        exif = piexif.load(originalDataURL);
-      } catch (_) {
-        GTP.showToast('No EXIF data to remove.');
-        return;
-      }
-
-      exif.GPS = {};
-      modifiedDataURL = piexif.insert(piexif.dump(exif), originalDataURL);
-      els.latInput.value = '';
-      els.lngInput.value = '';
-      showResult('GPS geotag removed successfully.', 'success');
-      setTab('download');
-      $('dlPreviewImg').src = modifiedDataURL;
-      $('dlPreviewImg').width = 1200;
-      $('dlPreviewImg').height = 900;
-      GTP.showToast('GPS metadata removed.');
-    } catch (_) {
-      showResult('Error removing GPS metadata. Please try another image.', 'error');
-    }
+    document.querySelectorAll('.download-single-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const idx = parseInt(this.getAttribute('data-index'));
+        downloadSingleImage(idx);
+      });
+    });
   }
 
-  function downloadImage() {
-    const data = modifiedDataURL || originalDataURL;
-    if (!data) return;
+  function downloadSingleImage(idx) {
+    if (!uploadedImages[idx]) return;
+    const img = uploadedImages[idx];
+    const data = img.modifiedDataURL || img.dataURL;
 
     const link = document.createElement('a');
-    const dotIndex = currentFileName.lastIndexOf('.');
-    const baseName = dotIndex > 0 ? currentFileName.substring(0, dotIndex) : currentFileName;
+    const dotIndex = img.name.lastIndexOf('.');
+    const baseName = dotIndex > 0 ? img.name.substring(0, dotIndex) : img.name;
 
     link.href = data;
     link.download = baseName + '_geotagged.jpg';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    GTP.showToast('Download started.');
+    GTP.showToast('Download started for ' + img.name);
+  }
+
+  function removeGPS() {
+    if (uploadedImages.length === 0) {
+      GTP.showToast('Upload images first.');
+      return;
+    }
+
+    try {
+      uploadedImages.forEach(function(img) {
+        let exif;
+        try {
+          exif = piexif.load(img.dataURL);
+        } catch (_) {
+          return;
+        }
+
+        exif.GPS = {};
+        img.modifiedDataURL = piexif.insert(piexif.dump(exif), img.dataURL);
+      });
+
+      els.latInput.value = '';
+      els.lngInput.value = '';
+      showResult('GPS geotag removed successfully from all images.', 'success');
+      displayProcessedImages();
+      GTP.showToast('GPS metadata removed from all images.');
+    } catch (_) {
+      showResult('Error removing GPS metadata. Please try another image.', 'error');
+    }
   }
 
   function resetTool() {
-    originalDataURL = null;
-    modifiedDataURL = null;
-    els.previewArea.classList.remove('visible');
-    els.dropZone.style.display = '';
+    uploadedImages = [];
     els.fileInput.value = '';
     els.latInput.value = '';
     els.lngInput.value = '';
     els.metaBody.innerHTML = '';
+    els.processedImagesContainer.style.display = 'none';
+    els.processedImagesContainer.innerHTML = '';
     hideResult();
+    updateUploadPreview();
     setTab('upload');
-    renderMapStatus('Upload an image to load the interactive map.', false);
+    renderMapStatus('Upload images to load the interactive map.', false);
     if (map) {
       map.remove();
       map = null;
@@ -433,8 +523,8 @@
 
     els.resultBanner.setAttribute('hidden', '');
     els.resultBanner.setAttribute('aria-live', 'polite');
-    els.fileInput.setAttribute('aria-label', 'Upload a JPEG image');
-    renderMapStatus('Upload an image to load the interactive map.', false);
+    els.fileInput.setAttribute('aria-label', 'Upload JPEG images');
+    renderMapStatus('Upload images to load the interactive map.', false);
 
     ['dragenter', 'dragover'].forEach(function (eventName) {
       els.dropZone.addEventListener(eventName, function (event) {
@@ -451,17 +541,20 @@
 
     els.dropZone.addEventListener('drop', function (event) {
       event.preventDefault();
-      handleFile(event.dataTransfer.files[0]);
+      handleFiles(event.dataTransfer.files);
     });
 
     els.fileInput.addEventListener('change', function () {
-      handleFile(this.files[0]);
+      handleFiles(this.files);
+    });
+
+    els.addMoreBtn.addEventListener('click', function() {
+      els.fileInput.click();
     });
 
     els.removeBtn.addEventListener('click', resetTool);
     els.applyBtn.addEventListener('click', applyGPS);
     els.removeGpsBtn.addEventListener('click', removeGPS);
-    els.downloadBtn.addEventListener('click', downloadImage);
 
     els.latInput.addEventListener('input', function () {
       validateCoords();
@@ -474,15 +567,11 @@
     });
 
     els.tabUpload.addEventListener('click', function () {
-      if (!originalDataURL) setTab('upload');
+      if (uploadedImages.length === 0) setTab('upload');
     });
 
     els.tabEdit.addEventListener('click', function () {
-      if (originalDataURL) setTab('edit');
-    });
-
-    els.tabDownload.addEventListener('click', function () {
-      if (modifiedDataURL) setTab('download');
+      if (uploadedImages.length > 0) setTab('edit');
     });
 
     setTab('upload');
