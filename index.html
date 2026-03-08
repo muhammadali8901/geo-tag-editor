@@ -12,9 +12,9 @@
 </script>
 <meta charset="UTF-8"><meta name="google-site-verification" content="GX7E3WwTMpMblI_s7KutApuKm_lCuKQzkQHUs0xGRx8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Geo Tag Editor — Free GPS Photo Editor Online | Add Geotag to Photos</title>
-<meta name="description" content="Free GPS photo editor online. Add, edit, or remove geotags from photos instantly. Professional geo tagging editor for JPEG images. No upload required — 100% browser-based. Geotag photos online free with our GPS image editor.">
-<meta name="keywords" content="geo tag editor, gps photo editor online, gps image editor online, geo tagging editor, gps editor online, geotag photo editor, gps photo editor online free, geotag photos online free, gps editor online free, how to add geotag to existing photos">
+<title>Geo Tag Editor — GPS Editor Online Free | Geo Tagging Editor India</title>
+<meta name="description" content="Best geo tag editor and GPS editor online free for India. Add, edit, or remove geotags from photos instantly. Professional geo tagging editor and online geotag tool for JPEG images. Geo tag photo editor with geo tag generator — 100% browser-based.">
+<meta name="keywords" content="geo tag editor, gps editor online, geo tagging editor, online geotag, online gps editor, geo tag photo editor, geo tag generator, gps editor online free, geo tag editor india, online geotag tool, gps photo editor, geotag editor online">
 <link rel="canonical" href="https://geotagseditor.online/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0284c7">
@@ -37,6 +37,9 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0284c7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" href="/css/style.css" as="style">
 <link rel="stylesheet" href="/css/style.css">
 
@@ -98,11 +101,98 @@
 <section class="hero">
   <div class="container">
     <span class="section-label">Free Online Tool</span>
-    <h1>GPS Photo Editor Online — <span class="gradient-text">Add Geotag to Photos</span> Instantly</h1>
-    <p>The fastest free geo tag editor for professionals. Add GPS location to photos, edit existing geotags, or remove metadata for privacy. A complete GPS image editor online — no software installation, no uploads, 100% secure.</p>
+    <h1>Geo Tag Editor — <span class="gradient-text">GPS Editor Online Free</span> for India</h1>
+    <p>The best geo tagging editor and online geotag tool for India. Add GPS location to photos, edit existing geotags, or remove metadata for privacy. Complete geo tag photo editor with geo tag generator — no software installation, no uploads, 100% secure.</p>
+    <div style="display:flex;gap:32px;justify-content:center;margin:24px 0;flex-wrap:wrap">
+      <div style="text-align:center">
+        <div style="font-size:2rem;font-weight:800;color:var(--primary)">10M+</div>
+        <div style="font-size:.9rem;color:var(--text-secondary)">Photos Processed</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-size:2rem;font-weight:800;color:var(--primary)">1M+</div>
+        <div style="font-size:.9rem;color:var(--text-secondary)">Happy Users</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-size:2rem;font-weight:800;color:var(--primary)">195+</div>
+        <div style="font-size:.9rem;color:var(--text-secondary)">Countries</div>
+      </div>
+    </div>
     <div class="hero-buttons">
-      <a href="/geo-tag-editor/" class="btn btn-primary">Open Geo Tag Editor</a>
+      <a href="#tool-card" class="btn btn-primary" data-scroll-target="#tool-card">Start Editing Now</a>
       <a href="#how-it-works" class="btn btn-outline" data-scroll-target="#how-it-works">How It Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL -->
+<section class="section" style="padding-top:40px">
+  <div class="container" style="max-width:800px">
+    <div class="tool-card" id="tool-card">
+      <div class="tool-steps" role="tablist" aria-label="Geo tag editor steps">
+        <button class="tool-step-tab active" id="tabUpload" role="tab" aria-controls="uploadSection" aria-selected="true" tabindex="0"><svg class="icon"><use href="/images/icons.svg#icon-upload"></use></svg> Upload</button>
+        <button class="tool-step-tab" id="tabEdit" role="tab" aria-controls="editSection" aria-selected="false" tabindex="-1"><svg class="icon"><use href="/images/icons.svg#icon-edit"></use></svg> Edit GPS</button>
+        <button class="tool-step-tab" id="tabDownload" role="tab" aria-controls="downloadSection" aria-selected="false" tabindex="-1"><svg class="icon"><use href="/images/icons.svg#icon-download"></use></svg> Download</button>
+      </div>
+      <div class="tool-body">
+        <div id="uploadSection" role="tabpanel" aria-labelledby="tabUpload">
+          <div class="drop-zone" id="dropZone">
+            <input type="file" id="fileInput" accept=".jpg,.jpeg,image/jpeg" multiple>
+            <span class="dz-icon" aria-hidden="true"><svg class="icon"><use href="/images/icons.svg#icon-image"></use></svg></span>
+            <p>Drag &amp; drop your JPEG images here (max 3)<br>or <span class="browse">click to browse</span></p>
+          </div>
+          <div id="uploadedImagesPreview" style="margin-top:20px;display:none"></div>
+          <button class="btn btn-outline btn-sm" id="addMoreBtn" style="margin-top:16px;display:none"><svg class="icon"><use href="/images/icons.svg#icon-upload"></use></svg> Add More Images</button>
+        </div>
+        <div id="editSection" class="hidden" role="tabpanel" aria-labelledby="tabEdit" hidden>
+          <div class="preview-area visible" id="previewArea">
+            <div id="imagesPreviewContainer"></div>
+            <button class="btn btn-danger btn-sm" id="removeBtn" style="margin-top:12px"><svg class="icon icon-sm"><use href="/images/icons.svg#icon-close"></use></svg> Remove All Images</button>
+          </div>
+          <details open style="margin-top:16px">
+            <summary style="font-weight:600;cursor:pointer;margin-bottom:12px;font-size:.95rem;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1em;height:1em"><use href="/images/icons.svg#icon-metadata"></use></svg> EXIF Metadata</summary>
+            <table class="meta-table">
+              <tbody id="metaBody"></tbody>
+            </table>
+          </details>
+          <div class="coord-form">
+            <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-location"></use></svg> Set GPS Coordinates</h3>
+            <div class="coord-grid">
+              <div class="field">
+                <label for="latInput">Latitude</label>
+                <input type="number" id="latInput" step="any" min="-90" max="90" placeholder="e.g. 48.8566">
+                <p class="hint">Range: -90 to 90 (negative = South)</p>
+              </div>
+              <div class="field">
+                <label for="lngInput">Longitude</label>
+                <input type="number" id="lngInput" step="any" min="-180" max="180" placeholder="e.g. 2.3522">
+                <p class="hint">Range: -180 to 180 (negative = West)</p>
+              </div>
+            </div>
+            <h3 style="font-size:1rem;font-weight:600;margin:24px 0 8px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-map"></use></svg> Pick Location on Map</h3>
+            <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:8px">Click anywhere on the map or drag the marker to set coordinates.</p>
+            <div class="map-container" id="mapContainer"></div>
+          </div>
+          <div class="tool-actions">
+            <button class="btn btn-primary" id="applyBtn" disabled><svg class="icon"><use href="/images/icons.svg#icon-location"></use></svg> Apply Coordinates</button>
+            <button class="btn btn-danger" id="removeGpsBtn"><svg class="icon"><use href="/images/icons.svg#icon-shield"></use></svg> Remove Geotag</button>
+          </div>
+          <div class="result-banner" id="resultBanner">
+            <span id="resultText"></span>
+          </div>
+          <div id="processedImagesContainer" style="margin-top:24px;display:none"></div>
+        </div>
+        <div id="downloadSection" class="hidden" role="tabpanel" aria-labelledby="tabDownload" hidden>
+          <div style="text-align:center;padding:20px 0">
+            <div style="margin-bottom:12px"><svg class="icon" style="width:48px;height:48px;color:var(--success);display:block;margin:0 auto"><use href="/images/icons.svg#icon-check"></use></svg></div>
+            <h3 style="margin-bottom:8px">Image Ready for Download</h3>
+            <p style="color:var(--text-secondary);margin-bottom:20px;font-size:.95rem">Your image has been updated with the new GPS metadata. Preview it below and download when ready.</p>
+            <div class="preview-img-wrap" style="margin-bottom:20px;max-height:300px">
+              <img id="dlPreviewImg" alt="Updated image preview" style="max-height:300px">
+            </div>
+            <button class="btn btn-success" id="downloadBtn" style="min-width:220px"><svg class="icon"><use href="/images/icons.svg#icon-download"></use></svg> Download Geotagged Image</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -353,5 +443,6 @@
 
 <script src="/js/common.js" defer></script>
 <script src="/js/site.js" defer></script>
+<script src="/js/tool.js" defer></script>
 </body>
 </html>
