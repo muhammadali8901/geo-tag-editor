@@ -262,10 +262,6 @@
             
             if (processed === newFiles.length) {
               updateUploadPreview();
-              if (uploadedImages.length === 1) {
-                readExifFromFirstImage();
-                setTab('edit');
-              }
             }
           };
           reader.readAsDataURL(file);
@@ -286,13 +282,21 @@
 
     els.dropZone.style.display = 'none';
     els.uploadedImagesPreview.style.display = 'block';
-    els.uploadedImagesPreview.innerHTML = '<p style="font-size:.9rem;font-weight:600;margin-bottom:12px">' + uploadedImages.length + ' image(s) uploaded</p>' +
-      uploadedImages.map(function(img, idx) {
-        return '<div style="display:flex;align-items:center;gap:12px;padding:8px;background:var(--bg);border-radius:var(--radius-sm);margin-bottom:8px">' +
-          '<svg class="icon" style="width:20px;height:20px;color:var(--success)"><use href="/images/icons.svg#icon-check"></use></svg>' +
-          '<span style="font-size:.88rem">' + img.name + ' (' + formatBytes(img.size) + ')</span>' +
-          '</div>';
-      }).join('');
+    
+    let statusHTML = '<p style="font-size:.9rem;font-weight:600;margin-bottom:12px">' + uploadedImages.length + ' image(s) uploaded</p>';
+    
+    statusHTML += uploadedImages.map(function(img, idx) {
+      return '<div style="display:flex;align-items:center;gap:12px;padding:8px;background:var(--bg);border-radius:var(--radius-sm);margin-bottom:8px">' +
+        '<svg class="icon" style="width:20px;height:20px;color:var(--success)"><use href="/images/icons.svg#icon-check"></use></svg>' +
+        '<span style="font-size:.88rem">' + img.name + ' (' + formatBytes(img.size) + ')</span>' +
+        '</div>';
+    }).join('');
+
+    if (uploadedImages.length >= MAX_IMAGES) {
+      statusHTML += '<p style="font-size:.85rem;color:var(--text-muted);margin-top:12px;padding:10px;background:var(--info-bg);border-radius:var(--radius-sm);border:1px solid var(--border)">✓ Maximum ' + MAX_IMAGES + ' images uploaded. Remove images to upload different ones.</p>';
+    }
+
+    els.uploadedImagesPreview.innerHTML = statusHTML;
 
     if (uploadedImages.length < MAX_IMAGES) {
       els.addMoreBtn.style.display = 'inline-flex';
@@ -571,7 +575,10 @@
     });
 
     els.tabEdit.addEventListener('click', function () {
-      if (uploadedImages.length > 0) setTab('edit');
+      if (uploadedImages.length > 0) {
+        readExifFromFirstImage();
+        setTab('edit');
+      }
     });
 
     setTab('upload');
