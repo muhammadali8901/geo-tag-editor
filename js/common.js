@@ -12,11 +12,7 @@
     year: new Date().getFullYear()
   };
 
-  const logoSVG = `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="32" height="32" rx="8" fill="url(#g)"/>
-    <path d="M16 7c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="#fff"/>
-    <defs><linearGradient id="g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#0284c7"/><stop offset="1" stop-color="#6366f1"/></linearGradient></defs>
-  </svg>`;
+  const logoHTML = `<img src="/images/logo.png" alt="${SITE.name}" style="height:32px;width:auto">`;
 
   function isActive(href) {
     var path = window.location.pathname.replace(/\\/g, '/').replace(/\/$/, '') || '/';
@@ -66,7 +62,7 @@
 
     header.innerHTML = `
       <div class="header-inner">
-        <a href="/" class="logo" aria-label="${SITE.name} Home">${logoSVG}<span>${SITE.name}</span></a>
+        <a href="/" class="logo" aria-label="${SITE.name} Home">${logoHTML}<span>${SITE.name}</span></a>
         <nav aria-label="Main navigation">
           <ul class="nav-links" id="navLinks">
             ${navItems}
@@ -114,7 +110,7 @@
     footer.innerHTML = `
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo">${logoSVG}<span>${SITE.name}</span></div>
+          <div class="logo">${logoHTML}<span>${SITE.name}</span></div>
           <p>${SITE.name} is a free online tool that lets you add, edit, or remove GPS geotag metadata from your JPEG images. Fast, private, and entirely browser-based.</p>
         </div>
         <div class="footer-col">
