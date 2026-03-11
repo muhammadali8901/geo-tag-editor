@@ -16,11 +16,12 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# Block access to admin areas (if any)
+# Block access to admin areas and private files
 Disallow: /admin/
 Disallow: /private/
 Disallow: /.git/
 Disallow: /node_modules/
+Disallow: /website-report-adsense-application.txt
 
 # Allow important files
 Allow: /images/
@@ -29,3 +30,5 @@ Allow: /js/
 Allow: /favicon.ico
 Allow: /robots.txt
 Allow: /sitemap.xml
+Allow: /browserconfig.xml
+Allow: /site.webmanifest
