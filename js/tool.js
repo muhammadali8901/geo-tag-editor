@@ -8,7 +8,7 @@
   const PIEXIF_URL = 'https://cdn.jsdelivr.net/npm/piexifjs@1.0.6/piexif.min.js';
   const LEAFLET_JS_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
   const LEAFLET_CSS_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-  const MAX_IMAGES = 3;
+  const MAX_IMAGES = 1;
 
   let uploadedImages = [];
   let map = null;
@@ -238,8 +238,8 @@
       return;
     }
 
-    if (uploadedImages.length + newFiles.length > MAX_IMAGES) {
-      GTP.showToast('You can upload a maximum of ' + MAX_IMAGES + ' images at a time.');
+    if (uploadedImages.length >= MAX_IMAGES) {
+      GTP.showToast('You can only upload one image at a time.');
       return;
     }
 
@@ -262,6 +262,11 @@
             
             if (processed === newFiles.length) {
               updateUploadPreview();
+              // Auto-switch to edit tab after upload
+              setTimeout(function() {
+                readExifFromFirstImage();
+                setTab('edit');
+              }, 500);
             }
           };
           reader.readAsDataURL(file);
@@ -420,14 +425,32 @@
           img.modifiedDataURL = piexif.insert(piexif.dump(exif), img.dataURL);
         });
 
-        showResult('GPS coordinates applied successfully to all images. Latitude: ' + lat + ', Longitude: ' + lng + '.', 'success');
+        showResult('GPS coordinates applied successfully. Latitude: ' + lat + ', Longitude: ' + lng + '.', 'success');
         displayProcessedImages();
-        GTP.showToast('GPS metadata saved to all images.');
+        GTP.showToast('GPS metadata saved successfully.');
+        
+        // Auto-switch to download tab after processing
+        setTimeout(function() {
+          setTab('download');
+          updateDownloadPreview();
+        }, 1000);
       } catch (error) {
         showResult('Error writing EXIF data. Please try another image.', 'error');
         GTP.showToast('Failed to write EXIF data.');
       }
     }, 100);
+  }
+
+  function updateDownloadPreview() {
+    if (uploadedImages.length === 0) return;
+    
+    const img = uploadedImages[0];
+    const dataURL = img.modifiedDataURL || img.dataURL;
+    const previewImg = $('dlPreviewImg');
+    
+    if (previewImg && dataURL) {
+      previewImg.src = dataURL;
+    }
   }
 
   function displayProcessedImages() {
@@ -578,6 +601,12 @@
       if (uploadedImages.length > 0) {
         readExifFromFirstImage();
         setTab('edit');
+      }
+    });
+
+    els.downloadBtn.addEventListener('click', function() {
+      if (uploadedImages.length > 0) {
+        downloadSingleImage(0);
       }
     });
 

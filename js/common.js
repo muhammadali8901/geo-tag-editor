@@ -124,11 +124,13 @@
           </ul>
         </div>
         <div class="footer-col">
-          <p class="footer-title">Resources</p>
+          <p class="footer-title">Articles & Guides</p>
           <ul>
+            <li><a href="/blog/how-to-add-geotag-to-existing-photos/">Add Geotag to Existing Photos</a></li>
+            <li><a href="/blog/remove-geotag-from-photo/">Remove Geotag from Photo</a></li>
+            <li><a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging for Local SEO</a></li>
+            <li><a href="/blog/how-to-remove-metadata-from-images/">Remove Image Metadata</a></li>
             <li><a href="/blog/how-to-add-gps-location-to-photos/">Add GPS to Photos</a></li>
-            <li><a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging &amp; SEO</a></li>
-            <li><a href="/blog/how-to-remove-metadata-from-images/">Remove Metadata</a></li>
           </ul>
         </div>
         <div class="footer-col">
