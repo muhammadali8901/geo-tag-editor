@@ -130,6 +130,7 @@
             <li><a href="/blog/remove-geotag-from-photo/">Remove Geotag from Photo</a></li>
             <li><a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging for Local SEO</a></li>
             <li><a href="/blog/how-to-remove-metadata-from-images/">Remove Image Metadata</a></li>
+            <li><a href="/blog/how-to-remove-gps-location-data-from-photos/">Remove GPS Location Data From Photos</a></li>
             <li><a href="/blog/how-to-add-gps-location-to-photos/">Add GPS to Photos</a></li>
           </ul>
         </div>
