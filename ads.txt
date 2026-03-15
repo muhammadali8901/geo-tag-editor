@@ -1,3 +1,7 @@
 # ads.txt file for geotagseditor.online
-# Add your AdSense publisher ID here after approval
-# Example: google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# Google AdSense publisher ID placeholder
+# Update with your actual publisher ID after AdSense approval
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Additional ad networks can be added here
+# Format: domain.com, publisher-id, RELATIONSHIP, cert-authority-id

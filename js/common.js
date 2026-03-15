@@ -51,6 +51,8 @@
     if (!header) return;
     const links = [
       { label: 'Home', href: '/' },
+      { label: 'Add GPS', href: '/add-gps-to-photo-online.html' },
+      { label: 'Remove GPS', href: '/remove-geotag-from-photo-online.html' },
       { label: 'Geo Tag Editor', href: '/geo-tag-editor/' },
       { label: 'Blog', href: '/blog/' },
       { label: 'About', href: '/about/' },
@@ -117,6 +119,8 @@
           <p class="footer-title">Quick Links</p>
           <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/add-gps-to-photo-online.html">Add GPS</a></li>
+            <li><a href="/remove-geotag-from-photo-online.html">Remove GPS</a></li>
             <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/about/">About Us</a></li>

@@ -1,0 +1,88 @@
+<!-- AdSense Placement Examples for Geo Tags Editor
+This file contains HTML snippets for AdSense ad placements
+Copy and paste these sections into your pages where you want ads to appear
+-->
+
+<!-- Header Banner Ad (728x90) - Place after site header -->
+<div style="text-align:center; margin:20px 0; background:#f8f9fa; padding:10px; border:1px solid #dee2e6; border-radius:4px;">
+  <!-- AdSense Code - Replace with your actual ad code -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-0000000000000000"
+       data-ad-slot="header-banner"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<!-- Sidebar Ad (300x250) - Place in sidebars or narrow columns -->
+<div style="margin:20px 0; background:#f8f9fa; padding:10px; border:1px solid #dee2e6; border-radius:4px;">
+  <!-- AdSense Code - Replace with your actual ad code -->
+  <ins class="adsbygoogle"
+       style="display:block;width:300px;height:250px"
+       data-ad-client="ca-pub-0000000000000000"
+       data-ad-slot="sidebar-rectangle"
+       data-ad-format="rectangle"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<!-- In-Content Ad (336x280) - Place within article content -->
+<div style="text-align:center; margin:30px 0; clear:both;">
+  <!-- AdSense Code - Replace with your actual ad code -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:336px;height:280px"
+       data-ad-client="ca-pub-0000000000000000"
+       data-ad-slot="in-content-large"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<!-- Responsive Ad - Works on all screen sizes -->
+<div style="text-align:center; margin:30px 0;">
+  <!-- AdSense Code - Replace with your actual ad code -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0000000000000000"
+       data-ad-slot="responsive-ad"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<!-- Sticky Footer Ad (320x50) - Fixed at bottom on mobile -->
+<div id="sticky-ad" style="position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;padding:10px;text-align:center;z-index:1000;display:none;">
+  <!-- AdSense Code - Replace with your actual ad code -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client="ca-pub-0000000000000000"
+       data-ad-slot="mobile-footer"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <button onclick="document.getElementById('sticky-ad').style.display='none'" style="position:absolute;top:5px;right:5px;background:none;border:none;font-size:16px;cursor:pointer;">×</button>
+</div>
+
+<script>
+// Show sticky ad on mobile devices only
+if(window.innerWidth <= 768) {
+  document.getElementById('sticky-ad').style.display = 'block';
+}
+</script>
+
+<!-- Link Units (468x15) - For navigation areas -->
+<div style="text-align:center; margin:15px 0;">
+  <!-- AdSense Code - Replace with your actual ad code -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:468px;height:15px"
+       data-ad-client="ca-pub-0000000000000000"
+       data-ad-slot="link-unit"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
