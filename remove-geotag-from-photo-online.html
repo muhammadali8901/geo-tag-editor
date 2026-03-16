@@ -24,9 +24,14 @@
     <meta name="twitter:image" content="https://geotagseditor.online/images/remove-geotag-twitter.jpg">
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="images/icons.svg" as="image" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -153,30 +158,10 @@
     </script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="Geo Tags Editor Logo" width="40" height="40">
-                        <span>Geo Tags Editor</span>
-                    </a>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="add-gps-to-photo-online.html">Add GPS</a></li>
-                    <li><a href="geo-tag-editor/index.html">GPS Editor</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-                <button class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </nav>
-    </header>
+
+<noscript><div class="noscript-banner">JavaScript is required for this website to function properly. Please enable JavaScript in your browser.</div></noscript>
+
+<header class="site-header" id="site-header"></header>
 
     <main>
         <section class="page-hero">
@@ -241,28 +226,28 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <img src="icons/privacy.svg" alt="Privacy Protection" loading="lazy">
+                            <svg class="icon"><use href="images/icons.svg#icon-shield"></use></svg>
                         </div>
                         <h3>Complete Privacy</h3>
                         <p>All processing happens in your browser. Your photos never leave your device.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <img src="icons/shield.svg" alt="Secure Removal" loading="lazy">
+                            <svg class="icon"><use href="images/icons.svg#icon-shield"></use></svg>
                         </div>
                         <h3>Secure Removal</h3>
                         <p>Completely removes all GPS metadata including coordinates, altitude, and location data.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <img src="icons/batch.svg" alt="Batch Processing" loading="lazy">
+                            <svg class="icon"><use href="images/icons.svg#icon-upload"></use></svg>
                         </div>
                         <h3>Batch Processing</h3>
                         <p>Remove GPS data from multiple photos at once to save time.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <img src="icons/free.svg" alt="Free Forever" loading="lazy">
+                            <svg class="icon"><use href="images/icons.svg#icon-check"></use></svg>
                         </div>
                         <h3>Completely Free</h3>
                         <p>No hidden costs, no subscriptions, no watermarks. Always free.</p>
@@ -438,28 +423,28 @@
                 <div class="use-cases-grid">
                     <div class="use-case">
                         <div class="use-case-icon">
-                            <img src="icons/social.svg" alt="Social Media Users" loading="lazy">
+                            <svg class="icon"><use href="images/icons.svg#icon-share"></use></svg>
                         </div>
                         <h3>Social Media Users</h3>
                         <p>Remove location data before sharing photos on Instagram, Facebook, and other platforms to protect privacy.</p>
                     </div>
                     <div class="use-case">
                         <div class="use-case-icon">
-                            <img src="icons/parents.svg" alt="Parents" loading="lazy">
+                            <svg class="icon"><use href="images/icons.svg#icon-users"></use></svg>
                         </div>
                         <h3>Parents</h3>
                         <p>Protect children's privacy by removing GPS data from photos before sharing online.</p>
                     </div>
                     <div class="use-case">
                         <div class="use-case-icon">
-                            <img src="icons/business.svg" alt="Business" loading="lazy">
+                            <svg class="icon"><use href="images/icons.svg#icon-briefcase"></use></svg>
                         </div>
                         <h3>Business</h3>
                         <p>Remove sensitive business locations from photos before sharing with clients or publicly.</p>
                     </div>
                     <div class="use-case">
                         <div class="use-case-icon">
-                            <img src="icons/photography.svg" alt="Photographers" loading="lazy">
+                            <svg class="icon"><use href="images/icons.svg#icon-camera"></use></svg>
                         </div>
                         <h3>Photographers</h3>
                         <p>Remove client locations from portfolio photos to protect privacy and maintain professionalism.</p>
@@ -523,44 +508,12 @@
     </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>Product</h4>
-                <ul>
-                    <li><a href="geo-tag-editor/index.html">GPS Photo Editor</a></li>
-                    <li><a href="add-gps-to-photo-online.html">Add GPS to Photo</a></li>
-                    <li><a href="remove-geotag-from-photo-online.html">Remove GPS from Photo</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="blog/how-to-add-geotag-to-existing-photos/">How to Add Geotag</a></li>
-                    <li><a href="blog/remove-geotag-from-photo/">Remove Geotag Guide</a></li>
-                    <li><a href="blog/how-to-remove-metadata-from-images/">Metadata Removal</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Geo Tags Editor. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
+</footer>
 
-    <script src="js/common.js"></script>
+<script src="js/common.js"></script>
+<script>
+if('fonts' in document){document.fonts.load("600 1em Outfit").then(function(){var l=document.createElement('link');l.href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap';l.rel='stylesheet';document.head.appendChild(l);});}
+</script>
 </body>
 </html>
