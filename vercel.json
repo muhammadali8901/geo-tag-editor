@@ -1,23 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": true,
-  "routes": [
-    { "src": "/add-gps-to-photo-online/?", "dest": "/add-gps-to-photo-online/index.html" },
-    { "src": "/remove-geotag-from-photo-online/?", "dest": "/remove-geotag-from-photo-online/index.html" },
-    { "src": "/geo-tag-editor/?", "dest": "/geo-tag-editor/index.html" },
-    { "src": "/blog/?", "dest": "/blog/index.html" },
-    { "src": "/about/?", "dest": "/about/index.html" },
-    { "src": "/contact/?", "dest": "/contact/index.html" },
-    { "src": "/privacy-policy/?", "dest": "/privacy-policy/index.html" },
-    { "src": "/terms/?", "dest": "/terms/index.html" },
-    { "src": "/disclaimer/?", "dest": "/disclaimer/index.html" },
-    { "src": "/sitemap/?", "dest": "/sitemap/index.html" },
-    { "src": "/features/?", "dest": "/features/index.html" },
-    { "src": "/blog/how-to-add-geotag-to-existing-photos/?", "dest": "/blog/how-to-add-geotag-to-existing-photos/index.html" },
-    { "src": "/blog/remove-geotag-from-photo/?", "dest": "/blog/remove-geotag-from-photo/index.html" },
-    { "src": "/blog/why-geotagging-matters-for-local-seo/?", "dest": "/blog/why-geotagging-matters-for-local-seo/index.html" },
-    { "src": "/blog/how-to-remove-metadata-from-images/?", "dest": "/blog/how-to-remove-metadata-from-images/index.html" },
-    { "src": "/blog/how-to-remove-gps-location-data-from-photos/?", "dest": "/blog/how-to-remove-gps-location-data-from-photos/index.html" },
-    { "src": "/blog/how-to-add-gps-location-to-photos/?", "dest": "/blog/how-to-add-gps-location-to-photos/index.html" }
-  ]
+  "trailingSlash": true
 }
