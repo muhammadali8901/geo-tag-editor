@@ -49,6 +49,7 @@
   function injectHeader() {
     const header = document.getElementById('site-header');
     if (!header) return;
+
     const links = [
       { label: 'Home', href: '/' },
       { label: 'Add GPS', href: '/add-gps-to-photo-online/' },
@@ -58,46 +59,89 @@
       { label: 'About', href: '/about/' },
       { label: 'Contact', href: '/contact/' }
     ];
-    const navItems = links.map(l =>
+
+    const desktopNavItems = links.map(l =>
+      `<li><a href="${l.href}" class="${isActive(l.href) ? 'active' : ''}">${l.label}</a></li>`
+    ).join('');
+
+    const sidebarNavItems = links.map(l =>
       `<li><a href="${l.href}" class="${isActive(l.href) ? 'active' : ''}">${l.label}</a></li>`
     ).join('');
 
     header.innerHTML = `
       <div class="header-inner">
         <a href="/" class="logo" aria-label="${SITE.name} Home">${logoHTML}<span>${SITE.name}</span></a>
-        <nav aria-label="Main navigation">
+        <nav class="desktop-nav" aria-label="Main navigation">
           <ul class="nav-links" id="navLinks">
-            ${navItems}
+            ${desktopNavItems}
             <li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>
           </ul>
         </nav>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar">
           <span></span><span></span><span></span>
         </button>
       </div>`;
 
+    // Inject sidebar + overlay into body
+    if (!document.getElementById('mobileSidebar')) {
+      const overlay = document.createElement('div');
+      overlay.className = 'sidebar-overlay';
+      overlay.id = 'sidebarOverlay';
+
+      const sidebar = document.createElement('aside');
+      sidebar.className = 'mobile-sidebar';
+      sidebar.id = 'mobileSidebar';
+      sidebar.setAttribute('aria-label', 'Mobile navigation');
+      sidebar.innerHTML = `
+        <div class="sidebar-header">
+          <a href="/" class="logo" aria-label="${SITE.name} Home">${logoHTML}<span>${SITE.name}</span></a>
+          <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <nav aria-label="Mobile navigation">
+          <ul class="sidebar-nav">
+            ${sidebarNavItems}
+          </ul>
+        </nav>
+        <div class="sidebar-cta">
+          <a href="/geo-tag-editor/" class="btn btn-primary" style="width:100%;justify-content:center;">Try Free Tool</a>
+        </div>`;
+
+      document.body.appendChild(overlay);
+      document.body.appendChild(sidebar);
+    }
+
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
+    const sidebar = document.getElementById('mobileSidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const closeBtn = document.getElementById('sidebarClose');
+
+    function openSidebar() {
+      sidebar.classList.add('open');
+      overlay.classList.add('open');
+      hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
     hamburger.addEventListener('click', function () {
-      const open = navLinks.classList.toggle('open');
-      hamburger.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(open));
+      sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
     });
 
-    document.addEventListener('click', function (e) {
-      if (!header.contains(e.target)) {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
+      if (e.key === 'Escape') closeSidebar();
     });
 
     window.addEventListener('scroll', function () {
