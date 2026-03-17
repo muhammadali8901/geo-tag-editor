@@ -8,13 +8,15 @@
   const PIEXIF_URL = 'https://cdn.jsdelivr.net/npm/piexifjs@1.0.6/piexif.min.js';
   const LEAFLET_JS_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
   const LEAFLET_CSS_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-  const MAX_IMAGES = 1;
+  const JSZIP_URL = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+  const MAX_IMAGES = 20;
 
   let uploadedImages = [];
   let map = null;
   let marker = null;
   let piexifPromise = null;
   let leafletPromise = null;
+  let jszipPromise = null;
 
   const els = {};
 
@@ -103,6 +105,14 @@
       leafletPromise = loadScript(LEAFLET_JS_URL, function () { return !!window.L; });
     }
     return leafletPromise;
+  }
+
+  function ensureJSZip() {
+    if (window.JSZip) return Promise.resolve();
+    if (!jszipPromise) {
+      jszipPromise = loadScript(JSZIP_URL, function () { return !!window.JSZip; });
+    }
+    return jszipPromise;
   }
 
   function setTab(active) {
@@ -239,8 +249,14 @@
     }
 
     if (uploadedImages.length >= MAX_IMAGES) {
-      GTP.showToast('You can only upload one image at a time.');
+      GTP.showToast('You can only upload up to ' + MAX_IMAGES + ' images.');
       return;
+    }
+
+    const availableSlots = MAX_IMAGES - uploadedImages.length;
+    const filesToAdd = newFiles.slice(0, availableSlots);
+    if (newFiles.length > availableSlots) {
+      GTP.showToast('Only first ' + availableSlots + ' images added to reach limit of ' + MAX_IMAGES + '.');
     }
 
     hideResult();
@@ -249,18 +265,19 @@
     ensurePiexif()
       .then(function () {
         let processed = 0;
-        newFiles.forEach(function(file) {
+        filesToAdd.forEach(function(file) {
           const reader = new FileReader();
           reader.onload = function (event) {
             uploadedImages.push({
               name: file.name,
               size: file.size,
               dataURL: event.target.result,
-              modifiedDataURL: null
+              modifiedDataURL: null,
+              action: null
             });
             processed++;
             
-            if (processed === newFiles.length) {
+            if (processed === filesToAdd.length) {
               updateUploadPreview();
               // Auto-switch to edit tab after upload
               setTimeout(function() {
@@ -423,6 +440,7 @@
           exif.GPS[piexif.GPSIFD.GPSLongitudeRef] = lng >= 0 ? 'E' : 'W';
 
           img.modifiedDataURL = piexif.insert(piexif.dump(exif), img.dataURL);
+          img.action = 'geotagged';
         });
 
         showResult('GPS coordinates applied successfully. Latitude: ' + lat + ', Longitude: ' + lng + '.', 'success');
@@ -465,7 +483,7 @@
           '<div style="display:flex;justify-content:space-between;align-items:center">' +
           '<strong style="font-size:.9rem">' + img.name + '</strong>' +
           '<button class="btn btn-success btn-sm download-single-btn" data-index="' + idx + '">' +
-          '<svg class="icon"><use href="/images/icons.svg#icon-download"></use></svg> Download Geo Tagged Image' +
+          '<svg class="icon"><use href="/images/icons.svg#icon-download"></use></svg> Download Processed Image' +
           '</button>' +
           '</div>' +
           '</div>';
@@ -477,6 +495,15 @@
         downloadSingleImage(idx);
       });
     });
+    
+    // Update main download button text based on count
+    if (els.downloadBtn) {
+      if (uploadedImages.length > 1) {
+        els.downloadBtn.innerHTML = '<svg class="icon"><use href="/images/icons.svg#icon-download"></use></svg> Download All Processed Images';
+      } else {
+        els.downloadBtn.innerHTML = '<svg class="icon"><use href="/images/icons.svg#icon-download"></use></svg> Download Processed Image';
+      }
+    }
   }
 
   function downloadSingleImage(idx) {
@@ -487,9 +514,10 @@
     const link = document.createElement('a');
     const dotIndex = img.name.lastIndexOf('.');
     const baseName = dotIndex > 0 ? img.name.substring(0, dotIndex) : img.name;
+    const suffix = img.action === 'cleaned' ? '_cleaned.jpg' : '_geotagged.jpg';
 
     link.href = data;
-    link.download = baseName + '_geotagged.jpg';
+    link.download = baseName + suffix;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -513,6 +541,7 @@
 
         exif.GPS = {};
         img.modifiedDataURL = piexif.insert(piexif.dump(exif), img.dataURL);
+        img.action = 'cleaned';
       });
 
       els.latInput.value = '';
@@ -594,7 +623,7 @@
     });
 
     els.tabUpload.addEventListener('click', function () {
-      if (uploadedImages.length === 0) setTab('upload');
+      setTab('upload');
     });
 
     els.tabEdit.addEventListener('click', function () {
@@ -605,9 +634,54 @@
     });
 
     els.downloadBtn.addEventListener('click', function() {
-      if (uploadedImages.length > 0) {
+      if (uploadedImages.length === 0) return;
+      
+      if (uploadedImages.length === 1) {
         downloadSingleImage(0);
+        return;
       }
+      
+      showResult('Preparing download...', 'success');
+      GTP.showToast('Bundling images into ZIP...');
+      
+      ensureJSZip()
+        .then(function() {
+          var zip = new JSZip();
+          var imgFolder = zip.folder("processed_images");
+          
+          uploadedImages.forEach(function(img) {
+            var dataURL = img.modifiedDataURL || img.dataURL;
+            var base64Data = dataURL.split(',')[1];
+            var dotIndex = img.name.lastIndexOf('.');
+            var baseName = dotIndex > 0 ? img.name.substring(0, dotIndex) : img.name;
+            var suffix = img.action === 'cleaned' ? '_cleaned.jpg' : '_geotagged.jpg';
+            var fileName = baseName + suffix;
+            
+            imgFolder.file(fileName, base64Data, {base64: true});
+          });
+          
+          zip.generateAsync({type:"blob"})
+            .then(function(content) {
+              var url = window.URL.createObjectURL(content);
+              var link = document.createElement('a');
+              link.href = url;
+              link.download = "processed_images.zip";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+              window.URL.revokeObjectURL(url);
+              hideResult();
+            })
+            .catch(function(err) {
+              showResult('Error creating ZIP file.', 'error');
+            });
+        })
+        .catch(function() {
+          showResult('Error loading JSZip. Downloading individually...', 'warning');
+          uploadedImages.forEach(function(_, idx) {
+            setTimeout(function() { downloadSingleImage(idx); }, idx * 500);
+          });
+        });
     });
 
     setTab('upload');
