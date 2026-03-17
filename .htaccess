@@ -18,8 +18,29 @@ RewriteRule ^terms\.html$ /terms/ [R=301,L]
 RewriteRule ^disclaimer\.html$ /disclaimer/ [R=301,L]
 RewriteRule ^sitemap-page\.html$ /sitemap/ [R=301,L]
 
+# New GPS pages - redirect .html to clean URLs
+RewriteRule ^add-gps-to-photo-online\.html$ /add-gps-to-photo-online/ [R=301,L]
+RewriteRule ^remove-geotag-from-photo-online\.html$ /remove-geotag-from-photo-online/ [R=301,L]
+
 # Blog article .html to /blog/slug/
 RewriteRule ^blog/([a-z0-9-]+)\.html$ /blog/$1/ [R=301,L]
+
+# Internal rewrites - serve .html files for clean URLs
+RewriteRule ^about/$ about.html [L]
+RewriteRule ^contact/$ contact.html [L]
+RewriteRule ^geo-tag-editor/$ geo-tag-editor/index.html [L]
+RewriteRule ^blog/$ blog/index.html [L]
+RewriteRule ^privacy-policy/$ privacy-policy/index.html [L]
+RewriteRule ^terms/$ terms/index.html [L]
+RewriteRule ^disclaimer/$ disclaimer/index.html [L]
+RewriteRule ^sitemap/$ sitemap-page.html [L]
+
+# New GPS pages - internal rewrites
+RewriteRule ^add-gps-to-photo-online/$ add-gps-to-photo-online.html [L]
+RewriteRule ^remove-geotag-from-photo-online/$ remove-geotag-from-photo-online.html [L]
+
+# Blog articles - internal rewrites
+RewriteRule ^blog/([a-z0-9-]+)/$ blog/$1/index.html [L]
 </IfModule>
 
 # Enable GZIP Compression
