@@ -22,6 +22,10 @@
     <meta name="twitter:description" content="Remove your location from images before sharing them on social media. 100% Secure.">
     <meta name="twitter:image" content="https://geotagseditor.online/images/remove-geotag-twitter.jpg">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="preload" href="/css/style.css" as="style" importance="high">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preload" href="/images/icons.svg" as="image" type="image/svg+xml" importance="high">
@@ -323,5 +327,8 @@
     <script src="/js/common.js"></script>
     <script src="/js/site.js"></script>
     <script src="/js/tool.js"></script>
+    <script>
+    if('fonts' in document){document.fonts.load("600 1em Outfit").then(function(){var l=document.createElement('link');l.href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap';l.rel='stylesheet';l.crossOrigin='anonymous';document.head.appendChild(l);});}
+    </script>
 </body>
 </html>
