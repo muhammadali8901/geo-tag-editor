@@ -1,4 +1,38 @@
 {
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/disclaimer",
+      "destination": "/disclaimer/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms/index.html"
+    },
+    {
+      "source": "/add-gps-to-photo-online",
+      "destination": "/add-gps-to-photo-online/index.html"
+    },
+    {
+      "source": "/remove-geotag-from-photo-online",
+      "destination": "/remove-geotag-from-photo-online/index.html"
+    },
+    {
+      "source": "/geo-tag-editor",
+      "destination": "/geo-tag-editor/index.html"
+    }
+  ]
 }
