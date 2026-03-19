@@ -2,6 +2,14 @@
    Geo Tags Editor — Shared Components & Utilities
    ============================================ */
 
+// Load protection script first
+(function() {
+    var protectionScript = document.createElement('script');
+    protectionScript.src = '/js/protection.js';
+    protectionScript.async = true;
+    document.head.appendChild(protectionScript);
+})();
+
 (function () {
   'use strict';
 

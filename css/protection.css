@@ -1,0 +1,237 @@
+/* Complete Website Protection CSS */
+
+/* Disable text selection globally */
+* {
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* Allow selection for input fields and textareas */
+input, textarea, [contenteditable] {
+    -webkit-user-select: text !important;
+    -khtml-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+
+/* Disable drag */
+* {
+    -webkit-user-drag: none !important;
+    -khtml-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -o-user-drag: none !important;
+    user-drag: none !important;
+}
+
+/* Disable image right-click */
+img {
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    pointer-events: none !important;
+}
+
+/* Allow pointer events for buttons and links */
+button, a, input, textarea, select, [onclick], [role="button"] {
+    pointer-events: auto !important;
+}
+
+/* Disable text selection for all elements except form inputs */
+body *:not(input):not(textarea):not(select):not([contenteditable]) {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* Disable cursor text style */
+body {
+    cursor: default !important;
+}
+
+/* Allow cursor pointer for clickable elements */
+button, a, input[type="button"], input[type="submit"], [role="button"], [onclick] {
+    cursor: pointer !important;
+}
+
+/* Allow cursor text for text inputs */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    cursor: text !important;
+}
+
+/* Disable print styles */
+@media print {
+    body * {
+        visibility: hidden !important;
+    }
+    
+    body:after {
+        content: "This content is protected and cannot be printed." !important;
+        visibility: visible !important;
+        display: block !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        font-size: 24px !important;
+        color: red !important;
+    }
+}
+
+/* Disable save page attempts */
+@page {
+    size: auto;
+    margin: 0;
+}
+
+/* Watermark overlay */
+body::before {
+    content: "© Geo Tags Editor - Protected Content";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+    z-index: 999999;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* Disable highlight */
+::selection {
+    background: transparent !important;
+    color: transparent !important;
+}
+
+::-moz-selection {
+    background: transparent !important;
+    color: transparent !important;
+}
+
+/* Disable right-click cursor */
+.context-menu-disabled {
+    cursor: not-allowed !important;
+}
+
+/* Protection overlay */
+.protection-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+    display: none !important;
+    z-index: 9999999 !important;
+    text-align: center !important;
+    padding-top: 20% !important;
+    font-size: 24px !important;
+}
+
+/* Hide scrollbars for protection */
+.protection-active {
+    overflow: hidden !important;
+}
+
+/* Disable developer tools detection */
+.dev-tools-warning {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: red !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 10px !important;
+    z-index: 9999999 !important;
+    display: none !important;
+}
+
+/* Copy protection message */
+.copy-protection-msg {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    background: rgba(255, 0, 0, 0.9) !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    z-index: 9999999 !important;
+    display: none !important;
+    font-size: 14px !important;
+}
+
+/* Disable text selection for specific elements */
+h1, h2, h3, h4, h5, h6, p, span, div, li, td, th {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* Allow selection for specific elements if needed */
+.allow-select {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+
+/* Disable drag for images */
+img, svg {
+    -webkit-user-drag: none !important;
+    -khtml-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -o-user-drag: none !important;
+    user-drag: none !important;
+    pointer-events: none !important;
+}
+
+/* Allow pointer events for specific images */
+img[onclick], img[role="button"], img.button {
+    pointer-events: auto !important;
+}
+
+/* Protection for code blocks */
+code, pre {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* Disable text selection for blog content */
+.article-content *, .blog-post * {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+/* Allow form inputs to work */
+form input, form textarea, form select {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+    pointer-events: auto !important;
+}
+
+/* Disable copy paste globally */
+.no-copy-paste {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
