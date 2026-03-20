@@ -268,40 +268,43 @@
       GTP.showToast('Only first ' + availableSlots + ' images added to reach limit of ' + MAX_IMAGES + '.');
     }
 
-    hideResult();
-    renderMapStatus('Loading image metadata tools...', false);
-
-    ensurePiexif()
-      .then(function () {
-        let processed = 0;
-        filesToAdd.forEach(function(file) {
-          const reader = new FileReader();
-          reader.onload = function (event) {
-            uploadedImages.push({
+  ensurePiexif()
+    .then(function () {
+      if (files.length > 0) {
+        var file = files[0];
+        var reader = new FileReader();
+        
+        reader.onload = function() {
+          var img = new Image();
+          img.onload = function() {
+            uploadedImages = [{
               name: file.name,
-              size: file.size,
-              dataURL: event.target.result,
-              modifiedDataURL: null,
-              action: null
-            });
-            processed++;
+              dataURL: reader.result,
+              originalDataURL: reader.result,
+              action: 'uploaded',
+              img: img
+            }];
             
-            if (processed === filesToAdd.length) {
-              updateUploadPreview();
-              // Auto-switch to edit tab after upload
-              setTimeout(function() {
-                readExifFromFirstImage();
-                setTab('edit');
-              }, 500);
-            }
+            // Auto-switch to edit tab after upload
+            setTab('edit');
+            readExifFromFirstImage();
+            
+            GTP.showToast('Image uploaded successfully. GPS editing tab is now active.', 'success');
           };
-          reader.readAsDataURL(file);
-        });
-      })
-      .catch(function () {
-        showResult('Could not load the EXIF editor. Please check your connection and try again.', 'error');
-      });
-  }
+          img.src = reader.result;
+        };
+        
+        reader.readAsDataURL(file);
+      } else {
+        // If no image uploaded, still show edit tab
+        setTab('edit');
+        GTP.showToast('Please upload an image to edit GPS coordinates.', 'warning');
+      }
+    })
+    .catch(function () {
+      showResult('Could not load the EXIF editor. Please check your connection and try again.', 'error');
+    });
+}
 
   function updateUploadPreview() {
     if (uploadedImages.length === 0) {
@@ -639,6 +642,9 @@
       if (uploadedImages.length > 0) {
         readExifFromFirstImage();
         setTab('edit');
+      } else {
+        setTab('edit');
+        showResult('Please upload an image first to edit GPS coordinates.', 'warning');
       }
     });
 
