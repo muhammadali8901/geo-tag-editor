@@ -455,6 +455,7 @@
     const lat = parseFloat(els.latInput.value);
     const lng = parseFloat(els.lngInput.value);
 
+    console.log('Applying GPS coordinates:', lat, lng); // Debug log
     showResult('Processing images... Applying coordinates...', 'success');
 
     setTimeout(function() {
@@ -475,17 +476,21 @@
 
           img.modifiedDataURL = piexif.insert(piexif.dump(exif), img.dataURL);
           img.action = 'geotagged';
+          
+          console.log('GPS applied to image:', img.name); // Debug log
         });
 
         showResult('GPS coordinates applied successfully. Latitude: ' + lat + ', Longitude: ' + lng + '.', 'success');
         displayProcessedImages();
-        GTP.showToast('GPS metadata saved successfully.');
+        GTP.showToast('GPS metadata saved successfully. Redirecting to download...');
         
         // Auto-switch to download tab after processing
         setTimeout(function() {
+          console.log('Switching to download tab'); // Debug log
           setTab('download');
           updateDownloadPreview();
-        }, 1000);
+          GTP.showToast('Ready to download! Your images now have GPS coordinates.');
+        }, 1500); // Increased delay for better UX
       } catch (error) {
         showResult('Error writing EXIF data. Please try another image.', 'error');
         GTP.showToast('Failed to write EXIF data.');
@@ -496,12 +501,20 @@
   function updateDownloadPreview() {
     if (uploadedImages.length === 0) return;
     
+    console.log('Updating download preview for', uploadedImages.length, 'images'); // Debug log
+    
     const img = uploadedImages[0];
     const dataURL = img.modifiedDataURL || img.dataURL;
     const previewImg = $('dlPreviewImg');
     
+    console.log('Preview image element:', previewImg); // Debug log
+    console.log('DataURL available:', !!dataURL); // Debug log
+    
     if (previewImg && dataURL) {
       previewImg.src = dataURL;
+      console.log('Download preview updated'); // Debug log
+    } else {
+      console.log('Failed to update download preview'); // Debug log
     }
   }
 
