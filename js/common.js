@@ -85,7 +85,7 @@
             <li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>
           </ul>
         </nav>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar">
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; padding: 8px; border-radius: 8px;">
           <span></span><span></span><span></span>
         </button>
       </div>`;

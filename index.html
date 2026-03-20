@@ -189,14 +189,21 @@ window.addEventListener('load',function(){
               <tbody id="metaBody"></tbody>
             </table>
           </details>
-          <div class="coord-form">
+         <div class="coord-form">
             <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-location"></use></svg> Set GPS Coordinates</h3>
-            <div class="field">
-              <label for="latInput">Latitude</label>
-              <input type="number" id="latInput" step="any" min="-90" max="90" placeholder="e.g. 48.8566">
-              <p class="hint">Range: -90 to 90 (negative = South)</p>
+            <div class="coord-grid">
+              <div class="field">
+                <label for="latInput">Latitude</label>
+                <input type="number" id="latInput" step="any" min="-90" max="90" placeholder="e.g. 48.8566">
+                <p class="hint">Range: -90 to 90 (negative = South)</p>
+              </div>
+              <div class="field">
+                <label for="lngInput">Longitude</label>
+                <input type="number" id="lngInput" step="any" min="-180" max="180" placeholder="e.g. 2.3522">
+                <p class="hint">Range: -180 to 180 (negative = West)</p>
               </div>
             </div>
+
             <h3 style="font-size:1rem;font-weight:600;margin:24px 0 8px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-map"></use></svg> Pick Location on Map</h3>
             <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:8px">Click anywhere on the map or drag the marker to set coordinates.</p>
             <div class="map-container" id="mapContainer"></div>
