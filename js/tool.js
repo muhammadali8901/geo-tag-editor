@@ -38,7 +38,11 @@
       'processedImagesContainer', 'uploadedImagesPreview', 'addMoreBtn'
     ].forEach(function (id) {
       els[id] = $(id);
-      console.log('Element cached:', id, els[id]); // Debug log
+      if (!els[id]) {
+        console.log('WARNING: Element not found:', id); // Debug log
+      } else {
+        console.log('Element cached:', id, els[id]); // Debug log
+      }
     });
   }
 
@@ -422,8 +426,20 @@
     console.log('Setting inputs:', hasGPS, lat, lng); // Debug log
     console.log('latInput element:', els.latInput); // Debug log
     console.log('lngInput element:', els.lngInput); // Debug log
-    console.log('latInput value after setting:', els.latInput ? els.latInput.value : 'undefined'); // Debug log
-    console.log('lngInput value after setting:', els.lngInput ? els.lngInput.value : 'undefined'); // Debug log
+    
+    if (els.latInput) {
+      els.latInput.value = hasGPS ? lat : '';
+      console.log('latInput value after setting:', els.latInput.value); // Debug log
+    } else {
+      console.log('ERROR: latInput element not found!'); // Debug log
+    }
+    
+    if (els.lngInput) {
+      els.lngInput.value = hasGPS ? lng : '';
+      console.log('lngInput value after setting:', els.lngInput.value); // Debug log
+    } else {
+      console.log('ERROR: lngInput element not found!'); // Debug log
+    }
 
     initMapAsync(lat, lng);
     validateCoords();
@@ -660,11 +676,13 @@
     els.removeGpsBtn.addEventListener('click', removeGPS);
 
     els.latInput.addEventListener('input', function () {
+      console.log('Latitude input changed:', this.value); // Debug log
       validateCoords();
       updateMapMarker();
     });
 
     els.lngInput.addEventListener('input', function () {
+      console.log('Longitude input changed:', this.value); // Debug log
       validateCoords();
       updateMapMarker();
     });
