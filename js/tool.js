@@ -38,6 +38,7 @@
       'processedImagesContainer', 'uploadedImagesPreview', 'addMoreBtn'
     ].forEach(function (id) {
       els[id] = $(id);
+      console.log('Element cached:', id, els[id]); // Debug log
     });
   }
 
@@ -419,7 +420,10 @@
     els.lngInput.value = hasGPS ? lng : '';
     
     console.log('Setting inputs:', hasGPS, lat, lng); // Debug log
-    console.log('latInput:', els.latInput, 'lngInput:', els.lngInput); // Debug log
+    console.log('latInput element:', els.latInput); // Debug log
+    console.log('lngInput element:', els.lngInput); // Debug log
+    console.log('latInput value after setting:', els.latInput ? els.latInput.value : 'undefined'); // Debug log
+    console.log('lngInput value after setting:', els.lngInput ? els.lngInput.value : 'undefined'); // Debug log
 
     initMapAsync(lat, lng);
     validateCoords();
@@ -430,6 +434,10 @@
     const lng = parseFloat(els.lngInput.value);
     const isValid = !isNaN(lat) && !isNaN(lng) && lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
     els.applyBtn.disabled = !isValid;
+    
+    console.log('Validating coords:', lat, lng, 'isValid:', isValid); // Debug log
+    console.log('latInput value:', els.latInput ? els.latInput.value : 'undefined'); // Debug log
+    console.log('lngInput value:', els.lngInput ? els.lngInput.value : 'undefined'); // Debug log
     return isValid;
   }
 
