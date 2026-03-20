@@ -344,10 +344,13 @@
   function updateImagesPreview() {
     if (uploadedImages.length === 0) return;
 
+    console.log('Updating image preview for', uploadedImages.length, 'images'); // Debug log
+
     els.imagesPreviewContainer.innerHTML = uploadedImages.map(function(img, idx) {
+      console.log('Processing image:', img.name, 'dataURL length:', img.dataURL ? img.dataURL.length : 'undefined'); // Debug log
       return '<div style="margin-bottom:20px">' +
         '<div class="preview-img-wrap">' +
-        '<img src="' + img.dataURL + '" alt="Image ' + (idx + 1) + ' preview" style="max-height:250px">' +
+        '<img src="' + img.dataURL + '" alt="Image ' + (idx + 1) + ' preview" style="max-height:250px" onerror="console.log(\'Image load error\'); this.style.display=\'none\'">' +
         '</div>' +
         '<div style="margin-top:8px">' +
         '<strong style="font-size:.9rem">' + img.name + '</strong>' +
@@ -360,6 +363,8 @@
   function readExifFromFirstImage() {
     if (uploadedImages.length === 0) return;
 
+    console.log('Reading EXIF from first image'); // Debug log
+
     let lat = 40.7128;
     let lng = -74.0060;
     let hasGPS = false;
@@ -370,6 +375,9 @@
       const zeroth = exif['0th'] || {};
       const exifData = exif.Exif || {};
       const gps = exif.GPS || {};
+
+      console.log('EXIF data loaded:', exif); // Debug log
+      console.log('GPS data:', gps); // Debug log
 
       if (zeroth[piexif.ImageIFD.Make]) rows.push(['Camera Make', zeroth[piexif.ImageIFD.Make]]);
       if (zeroth[piexif.ImageIFD.Model]) rows.push(['Camera Model', zeroth[piexif.ImageIFD.Model]]);
@@ -387,7 +395,10 @@
           hasGPS = true;
           rows.push(['GPS Latitude', lat]);
           rows.push(['GPS Longitude', lng]);
+          console.log('GPS found:', lat, lng); // Debug log
         }
+      } else {
+        console.log('No GPS data found in image'); // Debug log
       }
 
       if (gps[piexif.GPSIFD.GPSAltitude]) {
@@ -406,6 +417,9 @@
 
     els.latInput.value = hasGPS ? lat : '';
     els.lngInput.value = hasGPS ? lng : '';
+    
+    console.log('Setting inputs:', hasGPS, lat, lng); // Debug log
+    console.log('latInput:', els.latInput, 'lngInput:', els.lngInput); // Debug log
 
     initMapAsync(lat, lng);
     validateCoords();
