@@ -451,9 +451,17 @@
     const isValid = !isNaN(lat) && !isNaN(lng) && lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
     els.applyBtn.disabled = !isValid;
     
-    console.log('Validating coords:', lat, lng, 'isValid:', isValid); // Debug log
-    console.log('latInput value:', els.latInput ? els.latInput.value : 'undefined'); // Debug log
-    console.log('lngInput value:', els.lngInput ? els.lngInput.value : 'undefined'); // Debug log
+    console.log('=== VALIDATE COORDS DEBUG ===');
+    console.log('latInput exists:', !!els.latInput);
+    console.log('lngInput exists:', !!els.lngInput);
+    console.log('latInput current value:', els.latInput ? els.latInput.value : 'NOT_FOUND');
+    console.log('lngInput current value:', els.lngInput ? els.lngInput.value : 'NOT_FOUND');
+    console.log('Parsed lat:', lat, 'type:', typeof lat);
+    console.log('Parsed lng:', lng, 'type:', typeof lng);
+    console.log('isValid:', isValid);
+    console.log('applyBtn disabled:', els.applyBtn.disabled);
+    console.log('=== END VALIDATE COORDS DEBUG ===');
+    
     return isValid;
   }
 
