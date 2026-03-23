@@ -446,6 +446,11 @@ svg.icon{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;strok
 .use-case p{font-size:.82rem;color:var(--text-secondary);line-height:1.5}
 
 /* ── TOOL AREA ── */
+.tool-section{
+  padding:40px 0;
+  max-height:calc(100vh - 200px);
+  overflow-y: auto;
+}
 .tool-card{
   background:var(--card);border-radius:var(--radius-lg);
   box-shadow:0 15px 40px -10px rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.06);
@@ -453,7 +458,7 @@ svg.icon{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;strok
   contain:layout style paint;
 }
 .tool-steps{
-  display:flex;border-bottom:2px solid var(--border-light);overflow-x:auto;
+  display:flex;border-bottom:2px solid var(--border-light);
   background:var(--bg);
 }
 .tool-step-tab{
@@ -676,6 +681,10 @@ main{display:block;min-height:calc(100vh - var(--header-h))}
 /* ── GLOBAL RESPONSIVE REFINEMENTS ── */
 @media(max-width:768px){
   .section{padding:48px 0}
+  .tool-section{
+    padding:24px 0;
+    max-height:calc(100vh - 150px);
+  }
   .hero{padding:48px 0 40px}
   .page-hero{padding:36px 0 28px}
   .cta-banner{padding:40px 24px}
@@ -687,6 +696,10 @@ main{display:block;min-height:calc(100vh - var(--header-h))}
 }
 @media(max-width:480px){
   .section{padding:36px 0}
+  .tool-section{
+    padding:20px 0;
+    max-height:calc(100vh - 120px);
+  }
   .hero{padding:36px 0 28px}
   .hero::before{display:none}
   .hero::after{display:none}
