@@ -20,7 +20,32 @@
     year: new Date().getFullYear()
   };
 
-  const logoHTML = `<img src="/images/logo.png" alt="${SITE.name}" style="height:32px;width:auto">`;
+  const icon = {
+    home: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1v-10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    plus: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    minus: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    edit: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4 11.5-11.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
+    blog: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    about: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 16v-4M12 8h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    contact: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>',
+    shield: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>',
+    terms: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 3v5h4M10 13h6M10 17h6M10 9h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    map: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 4v14M15 6v14" fill="none" stroke="currentColor" stroke-width="2"/></svg>'
+  };
+  const primaryLinks = [
+    { label: 'Home', href: '/', icon: icon.home },
+    { label: 'Add GPS', href: '/add-gps-to-photo-online/', icon: icon.plus },
+    { label: 'Remove GPS', href: '/remove-geotag-from-photo-online/', icon: icon.minus },
+    { label: 'Geo Tag Editor', href: '/geo-tag-editor/', icon: icon.edit },
+    { label: 'Blog', href: '/blog/', icon: icon.blog }
+  ];
+  const utilityLinks = [
+    { label: 'About', href: '/about/', icon: icon.about },
+    { label: 'Contact', href: '/contact/', icon: icon.contact },
+    { label: 'Privacy Policy', href: '/privacy-policy/', icon: icon.shield },
+    { label: 'Terms & Conditions', href: '/terms/', icon: icon.terms },
+    { label: 'Sitemap', href: '/sitemap/', icon: icon.map }
+  ];
 
   function isActive(href) {
     var path = window.location.pathname.replace(/\\/g, '/').replace(/\/$/, '') || '/';
@@ -54,83 +79,66 @@
     header.parentNode.insertBefore(main, footer);
   }
 
-  function injectHeader() {
+  function loadPartial(targetId, partialPath) {
+    var target = document.getElementById(targetId);
+    if (!target) return Promise.resolve(false);
+    return fetch(partialPath, { credentials: 'same-origin' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Failed loading ' + partialPath);
+        return response.text();
+      })
+      .then(function (html) {
+        target.innerHTML = html;
+        return true;
+      })
+      .catch(function () {
+        return false;
+      });
+  }
+
+  function renderHeaderLinks() {
+    var desktop = document.getElementById('desktopNavLinks');
+    var mobilePrimary = document.getElementById('mobilePrimaryLinks');
+    var mobileUtility = document.getElementById('mobileUtilityLinks');
+    if (!desktop || !mobilePrimary || !mobileUtility) return;
+
+    desktop.innerHTML = primaryLinks.map(function (l) {
+      return '<li><a href="' + l.href + '" class="' + (isActive(l.href) ? 'active' : '') + '">' + l.label + '</a></li>';
+    }).join('') + '<li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>';
+
+    mobilePrimary.innerHTML = primaryLinks.map(function (l) {
+      return '<li><a href="' + l.href + '" class="' + (isActive(l.href) ? 'active' : '') + '">' + l.icon + '<span>' + l.label + '</span></a></li>';
+    }).join('');
+
+    mobileUtility.innerHTML = utilityLinks.map(function (l) {
+      return '<li><a href="' + l.href + '" class="' + (isActive(l.href) ? 'active' : '') + '">' + l.icon + '<span>' + l.label + '</span></a></li>';
+    }).join('');
+  }
+
+  function setupHeaderInteractions() {
     const header = document.getElementById('site-header');
     if (!header) return;
-
-    const links = [
-      { label: 'Home', href: '/' },
-      { label: 'Add GPS', href: '/add-gps-to-photo-online/' },
-      { label: 'Remove GPS', href: '/remove-geotag-from-photo-online/' },
-      { label: 'Geo Tag Editor', href: '/geo-tag-editor/' },
-      { label: 'Blog', href: '/blog/' },
-      { label: 'About', href: '/about/' },
-      { label: 'Contact', href: '/contact/' }
-    ];
-
-    const desktopNavItems = links.map(l =>
-      `<li><a href="${l.href}" class="${isActive(l.href) ? 'active' : ''}">${l.label}</a></li>`
-    ).join('');
-
-    const sidebarNavItems = links.map(l =>
-      `<li><a href="${l.href}" class="${isActive(l.href) ? 'active' : ''}">${l.label}</a></li>`
-    ).join('');
-
-    header.innerHTML = `
-      <div class="header-inner">
-        <a href="/" class="logo" aria-label="${SITE.name} Home">${logoHTML}<span>${SITE.name}</span></a>
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <ul class="nav-links" id="navLinks">
-            ${desktopNavItems}
-            <li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>
-          </ul>
-        </nav>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; padding: 8px; border-radius: 8px;">
-          <span></span><span></span><span></span>
-        </button>
-      </div>`;
-
-    // Inject sidebar + overlay into body
-    if (!document.getElementById('mobileSidebar')) {
-      const overlay = document.createElement('div');
-      overlay.className = 'sidebar-overlay';
-      overlay.id = 'sidebarOverlay';
-
-      const sidebar = document.createElement('aside');
-      sidebar.className = 'mobile-sidebar';
-      sidebar.id = 'mobileSidebar';
-      sidebar.setAttribute('aria-label', 'Mobile navigation');
-      sidebar.innerHTML = `
-        <div class="sidebar-header">
-          <a href="/" class="logo" aria-label="${SITE.name} Home">${logoHTML}<span>${SITE.name}</span></a>
-          <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          </button>
-        </div>
-        <nav aria-label="Mobile navigation">
-          <ul class="sidebar-nav">
-            ${sidebarNavItems}
-          </ul>
-        </nav>
-        <div class="sidebar-cta">
-          <a href="/geo-tag-editor/" class="btn btn-primary" style="width:100%;justify-content:center;">Try Free Tool</a>
-        </div>`;
-
-      document.body.appendChild(overlay);
-      document.body.appendChild(sidebar);
-    }
-
     const hamburger = document.getElementById('hamburger');
     const sidebar = document.getElementById('mobileSidebar');
     const overlay = document.getElementById('sidebarOverlay');
     const closeBtn = document.getElementById('sidebarClose');
+    if (!hamburger || !sidebar || !overlay || !closeBtn) return;
+    let lastActiveElement = null;
+
+    function getFocusable() {
+      return sidebar.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])');
+    }
 
     function openSidebar() {
+      lastActiveElement = document.activeElement;
       sidebar.classList.add('open');
       overlay.classList.add('open');
       hamburger.classList.add('open');
       hamburger.setAttribute('aria-expanded', 'true');
+      sidebar.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      const first = getFocusable()[0];
+      if (first) first.focus();
     }
 
     function closeSidebar() {
@@ -138,7 +146,11 @@
       overlay.classList.remove('open');
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
+      sidebar.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
+      if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+        lastActiveElement.focus();
+      }
     }
 
     hamburger.addEventListener('click', function () {
@@ -147,9 +159,25 @@
 
     closeBtn.addEventListener('click', closeSidebar);
     overlay.addEventListener('click', closeSidebar);
+    sidebar.addEventListener('click', function (e) {
+      if (e.target.closest('a')) closeSidebar();
+    });
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeSidebar();
+      if (e.key === 'Tab' && sidebar.classList.contains('open')) {
+        const focusable = getFocusable();
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     });
 
     window.addEventListener('scroll', function () {
@@ -157,52 +185,51 @@
     }, { passive: true });
   }
 
-  function injectFooter() {
-    const footer = document.getElementById('site-footer');
-    if (!footer) return;
+  function injectFallbackHeader() {
+    var header = document.getElementById('site-header');
+    if (!header) return;
+    header.innerHTML = '<div class="header-inner"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><nav class="desktop-nav"><ul class="nav-links" id="desktopNavLinks"></ul></nav><button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar"><span></span><span></span><span></span></button></div><div class="sidebar-overlay" id="sidebarOverlay"></div><aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true"><div class="sidebar-header"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><button class="sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><div class="mobile-sidebar-body"><p class="sidebar-section-title">Tools & Guides</p><nav><ul class="sidebar-nav" id="mobilePrimaryLinks"></ul></nav><p class="sidebar-section-title">Company & Legal</p><ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks"></ul></div><div class="sidebar-cta"><div class="sidebar-actions"><a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a><a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a></div></div></aside>';
+  }
 
-    footer.innerHTML = `
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">${logoHTML}<span>${SITE.name}</span></div>
-          <p>${SITE.name} is a free online tool that lets you add, edit, or remove GPS geotag metadata from your JPEG images. Fast, private, and entirely browser-based.</p>
-        </div>
-        <div class="footer-col">
-          <p class="footer-title">Quick Links</p>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/add-gps-to-photo-online/">Add GPS</a></li>
-            <li><a href="/remove-geotag-from-photo-online/">Remove GPS</a></li>
-            <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/about/">About Us</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <p class="footer-title">Articles & Guides</p>
-          <ul>
-            <li><a href="/blog/how-to-add-geotag-to-existing-photos/">Add Geotag to Existing Photos</a></li>
-            <li><a href="/blog/remove-geotag-from-photo/">Remove Geotag from Photo</a></li>
-            <li><a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging for Local SEO</a></li>
-            <li><a href="/blog/how-to-remove-metadata-from-images/">Remove Image Metadata</a></li>
-            <li><a href="/blog/how-to-remove-gps-location-data-from-photos/">Remove GPS Location Data From Photos</a></li>
-            <li><a href="/blog/how-to-add-gps-location-to-photos/">Add GPS to Photos</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <p class="footer-title">Legal</p>
-          <ul>
-            <li><a href="/privacy-policy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/disclaimer/">Disclaimer</a></li>
-            <li><a href="/sitemap/">Sitemap</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; ${SITE.year} ${SITE.name}. All rights reserved. Free online geo tag editor tool.
-      </div>`;
+  function injectFallbackFooter() {
+    var footer = document.getElementById('site-footer');
+    if (!footer) return;
+    footer.innerHTML = '<div class="footer-bottom">&copy; <span id="copyright-year"></span> ' + SITE.name + '. All rights reserved.</div>';
+  }
+
+  function updateFooterYear() {
+    var yearNode = document.getElementById('copyright-year');
+    if (yearNode) yearNode.textContent = String(SITE.year);
+  }
+
+  function addGlobalSeoSignals() {
+    if (!document.querySelector('meta[name="robots"]')) {
+      var robots = document.createElement('meta');
+      robots.name = 'robots';
+      robots.content = 'index,follow,max-image-preview:large';
+      document.head.appendChild(robots);
+    }
+
+    if (!document.querySelector('meta[name="referrer"]')) {
+      var referrer = document.createElement('meta');
+      referrer.name = 'referrer';
+      referrer.content = 'strict-origin-when-cross-origin';
+      document.head.appendChild(referrer);
+    }
+
+    if (!document.querySelector('link[rel="canonical"]')) {
+      var canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      canonical.href = SITE.domain + window.location.pathname;
+      document.head.appendChild(canonical);
+    }
+
+    if (!document.querySelector('meta[property="og:url"]')) {
+      var ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
+      ogUrl.content = SITE.domain + window.location.pathname;
+      document.head.appendChild(ogUrl);
+    }
   }
 
   function showToast(msg) {
@@ -218,11 +245,88 @@
     setTimeout(() => t.classList.remove('show'), 2800);
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
+  function injectRelatedPosts() {
+    var path = window.location.pathname.replace(/\\/g, '/');
+    if (!path.startsWith('/blog/') || path === '/blog/' || document.getElementById('related-posts')) return;
+    var article = document.querySelector('.article .container');
+    if (!article) return;
+
+    var posts = [
+      { href: '/blog/how-to-add-geotag-to-existing-photos/', title: 'How to Add Geotag to Existing Photos', desc: 'Step-by-step guide to add GPS coordinates to existing images.' },
+      { href: '/blog/remove-geotag-from-photo/', title: 'How to Remove Geotag from Photo', desc: 'Protect privacy by stripping location metadata before sharing.' },
+      { href: '/blog/how-to-remove-metadata-from-images/', title: 'How to Remove Metadata From Images', desc: 'Remove EXIF metadata for privacy and compliance use cases.' },
+      { href: '/blog/how-to-check-where-picture-was-taken/', title: 'How to Check Where a Picture Was Taken', desc: 'Learn how to read and verify image GPS data accurately.' },
+      { href: '/blog/why-geotagging-matters-for-local-seo/', title: 'Why Geotagging Matters for Local SEO', desc: 'Understand how image geotags can strengthen local rankings.' },
+      { href: '/blog/how-to-use-geotagging-to-rank-local-business-2026/', title: 'Use Geotagging to Rank Local Business', desc: 'Advanced strategy for better local visibility and click-through.' }
+    ].filter(function (item) { return item.href !== path; }).slice(0, 3);
+
+    var section = document.createElement('section');
+    section.className = 'section related-posts';
+    section.id = 'related-posts';
+    section.innerHTML = `
+      <div class="container">
+        <div class="section-header">
+          <h2>Related Articles</h2>
+          <p>Continue with practical guides to improve photo metadata quality and local SEO signals.</p>
+        </div>
+        <div class="grid-3">
+          ${posts.map(function (p) {
+            return `<a class="card-link" href="${p.href}"><div class="card"><h3>${p.title}</h3><p>${p.desc}</p></div></a>`;
+          }).join('')}
+        </div>
+      </div>`;
+    var footer = document.getElementById('site-footer');
+    if (footer && footer.parentNode) footer.parentNode.insertBefore(section, footer);
+  }
+
+  function injectQuickLinks() {
+    var path = window.location.pathname.replace(/\\/g, '/');
+    var toolPages = ['/add-gps-to-photo-online/', '/remove-geotag-from-photo-online/', '/geo-tag-editor/'];
+    if (toolPages.indexOf(path) === -1 || document.getElementById('quick-links-section')) return;
+    var main = document.getElementById('main-content');
+    if (!main) return;
+    var section = document.createElement('section');
+    section.className = 'section quick-links-section';
+    section.id = 'quick-links-section';
+    section.innerHTML = `
+      <div class="container">
+        <div class="card quick-links">
+          <h2>Explore More Resources</h2>
+          <p>Use these guides to improve photo privacy, geotag accuracy, and local search performance.</p>
+          <div class="quick-links-grid">
+            <a href="/blog/how-to-add-location-to-photos-android-iphone/">Add Location on Android & iPhone</a>
+            <a href="/blog/how-to-remove-gps-location-data-from-photos/">Remove GPS Location Data</a>
+            <a href="/blog/how-to-check-where-picture-was-taken/">Check Where a Picture Was Taken</a>
+            <a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging for Local SEO</a>
+          </div>
+        </div>
+      </div>`;
+    main.appendChild(section);
+  }
+
+  function optimizeImageLoading() {
+    document.querySelectorAll('img').forEach(function (img) {
+      if (img.closest('.site-header') || img.closest('.hero') || img.closest('.page-hero')) return;
+      if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+      if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+      if (!img.hasAttribute('fetchpriority')) img.setAttribute('fetchpriority', 'low');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', async function () {
     injectSkipLink();
-    injectHeader();
-    injectFooter();
+    var headerLoaded = await loadPartial('site-header', '/partials/header.html');
+    var footerLoaded = await loadPartial('site-footer', '/partials/footer.html');
+    if (!headerLoaded) injectFallbackHeader();
+    if (!footerLoaded) injectFallbackFooter();
+    renderHeaderLinks();
+    setupHeaderInteractions();
+    updateFooterYear();
     wrapMain();
+    addGlobalSeoSignals();
+    injectRelatedPosts();
+    injectQuickLinks();
+    optimizeImageLoading();
   });
 
   window.GTP = { showToast, SITE };
