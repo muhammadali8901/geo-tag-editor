@@ -89,6 +89,10 @@
       })
       .then(function (html) {
         target.innerHTML = html;
+        // If this is the header, immediately try to render links
+        if (targetId === 'site-header') {
+          setTimeout(renderHeaderLinks, 10);
+        }
         return true;
       })
       .catch(function () {
@@ -100,19 +104,78 @@
     var desktop = document.getElementById('desktopNavLinks');
     var mobilePrimary = document.getElementById('mobilePrimaryLinks');
     var mobileUtility = document.getElementById('mobileUtilityLinks');
-    if (!desktop || !mobilePrimary || !mobileUtility) return;
+    
+    console.log('Rendering header links:', { 
+      desktop: !!desktop, 
+      mobilePrimary: !!mobilePrimary, 
+      mobileUtility: !!mobileUtility,
+      primaryLinksCount: primaryLinks.length,
+      utilityLinksCount: utilityLinks.length
+    });
+    
+    if (!desktop || !mobilePrimary || !mobileUtility) {
+      console.log('Missing elements, retrying in 100ms...');
+      setTimeout(renderHeaderLinks, 100);
+      return;
+    }
 
-    desktop.innerHTML = primaryLinks.map(function (l) {
-      return '<li><a href="' + l.href + '" class="' + (isActive(l.href) ? 'active' : '') + '">' + l.label + '</a></li>';
-    }).join('') + '<li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>';
+    // Clear existing content first
+    desktop.innerHTML = '';
+    mobilePrimary.innerHTML = '';
+    mobileUtility.innerHTML = '';
 
-    mobilePrimary.innerHTML = primaryLinks.map(function (l) {
-      return '<li><a href="' + l.href + '" class="' + (isActive(l.href) ? 'active' : '') + '">' + l.icon + '<span>' + l.label + '</span></a></li>';
-    }).join('');
+    // Populate desktop links
+    primaryLinks.forEach(function (l) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = l.href;
+      a.className = isActive(l.href) ? 'active' : '';
+      a.textContent = l.label;
+      li.appendChild(a);
+      desktop.appendChild(li);
+    });
+    
+    // Add CTA button to desktop
+    var ctaLi = document.createElement('li');
+    var ctaA = document.createElement('a');
+    ctaA.href = '/geo-tag-editor/';
+    ctaA.className = 'nav-cta';
+    ctaA.textContent = 'Try Free Tool';
+    ctaLi.appendChild(ctaA);
+    desktop.appendChild(ctaLi);
 
-    mobileUtility.innerHTML = utilityLinks.map(function (l) {
-      return '<li><a href="' + l.href + '" class="' + (isActive(l.href) ? 'active' : '') + '">' + l.icon + '<span>' + l.label + '</span></a></li>';
-    }).join('');
+    // Populate mobile primary links
+    primaryLinks.forEach(function (l) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = l.href;
+      a.className = isActive(l.href) ? 'active' : '';
+      a.innerHTML = l.icon + '<span>' + l.label + '</span>';
+      li.appendChild(a);
+      mobilePrimary.appendChild(li);
+      console.log('Added mobile primary link:', l.label);
+    });
+
+    // Populate mobile utility links
+    utilityLinks.forEach(function (l) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = l.href;
+      a.className = isActive(l.href) ? 'active' : '';
+      a.innerHTML = l.icon + '<span>' + l.label + '</span>';
+      li.appendChild(a);
+      mobileUtility.appendChild(li);
+      console.log('Added mobile utility link:', l.label);
+    });
+    
+    console.log('Mobile sidebar content:', {
+      primaryHTML: mobilePrimary.innerHTML,
+      utilityHTML: mobileUtility.innerHTML,
+      primaryCount: mobilePrimary.children.length,
+      utilityCount: mobileUtility.children.length
+    });
+    
+    console.log('Header links rendered successfully');
   }
 
   function setupHeaderInteractions() {
@@ -130,24 +193,27 @@
     }
 
     function openSidebar() {
+      console.log('Opening sidebar...');
       lastActiveElement = document.activeElement;
       sidebar.classList.add('open');
       overlay.classList.add('open');
       hamburger.classList.add('open');
       hamburger.setAttribute('aria-expanded', 'true');
       sidebar.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('sidebar-open');
+      console.log('Sidebar classes:', sidebar.className);
       const first = getFocusable()[0];
       if (first) first.focus();
     }
 
     function closeSidebar() {
+      console.log('Closing sidebar...');
       sidebar.classList.remove('open');
       overlay.classList.remove('open');
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
       sidebar.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
+      document.body.classList.remove('sidebar-open');
       if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
         lastActiveElement.focus();
       }
@@ -188,7 +254,7 @@
   function injectFallbackHeader() {
     var header = document.getElementById('site-header');
     if (!header) return;
-    header.innerHTML = '<div class="header-inner"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><nav class="desktop-nav"><ul class="nav-links" id="desktopNavLinks"></ul></nav><button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar"><span></span><span></span><span></span></button></div><div class="sidebar-overlay" id="sidebarOverlay"></div><aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true"><div class="sidebar-header"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><button class="sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><div class="mobile-sidebar-body"><p class="sidebar-section-title">Tools & Guides</p><nav><ul class="sidebar-nav" id="mobilePrimaryLinks"></ul></nav><p class="sidebar-section-title">Company & Legal</p><ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks"></ul></div><div class="sidebar-cta"><div class="sidebar-actions"><a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a><a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a></div></div></aside>';
+    header.innerHTML = '<div class="header-inner"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><nav class="desktop-nav"><ul class="nav-links" id="desktopNavLinks"></ul></nav><button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar"><span></span><span></span><span></span></button></div><div class="sidebar-overlay" id="sidebarOverlay"></div><aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true"><div class="sidebar-header"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><button class="sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><div class="mobile-sidebar-body"><p class="sidebar-section-title">Tools & Guides</p><nav aria-label="Mobile navigation links"><ul class="sidebar-nav" id="mobilePrimaryLinks"></ul></nav><p class="sidebar-section-title">Company & Legal</p><ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks"></ul></div><div class="sidebar-cta"><div class="sidebar-actions"><a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a><a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a></div></div></aside>';
   }
 
   function injectFallbackFooter() {
@@ -319,7 +385,12 @@
     var footerLoaded = await loadPartial('site-footer', '/partials/footer.html');
     if (!headerLoaded) injectFallbackHeader();
     if (!footerLoaded) injectFallbackFooter();
-    renderHeaderLinks();
+    
+    // Wait a bit for the DOM to settle, then render links
+    setTimeout(function() {
+      renderHeaderLinks();
+    }, 50);
+    
     setupHeaderInteractions();
     updateFooterYear();
     wrapMain();
@@ -329,5 +400,9 @@
     optimizeImageLoading();
   });
 
-  window.GTP = { showToast, SITE };
+  window.GTP = { 
+    showToast, 
+    SITE,
+    renderHeaderLinks: renderHeaderLinks
+  };
 })();

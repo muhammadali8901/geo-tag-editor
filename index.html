@@ -961,6 +961,55 @@ window.addEventListener('load',function(){
 <script src="/js/site.js" async></script>
 <script src="/js/tool.js" async></script>
 <script>
+// SELECTIVE PROTECTION DISABLE
+(function() {
+  // Remove only protection-related event listeners and elements
+  function disableProtection() {
+    // Allow right-click
+    document.oncontextmenu = null;
+    
+    // Allow selection
+    document.onselectstart = null;
+    
+    // Allow copy/paste
+    document.oncopy = null;
+    document.oncut = null;
+    document.onpaste = null;
+    
+    // Allow drag
+    document.ondragstart = null;
+    document.ondrop = null;
+    
+    // Remove only specific protection elements
+    const protectionElements = document.querySelectorAll('.protection-overlay, .dev-tools-warning, .copy-protection-msg, .no-copy-paste');
+    protectionElements.forEach(el => el.remove());
+    
+    console.log('Protection disabled, content preserved');
+  }
+  
+  // Run immediately and on load
+  disableProtection();
+  window.addEventListener('load', disableProtection);
+})();
+
+// Console functionality
+window.console = {
+  log: console.log,
+  warn: console.warn, 
+  error: console.error,
+  info: console.info,
+  debug: console.debug,
+  clear: console.clear
+};
+
+// Manual trigger for debugging
+window.renderSidebar = function() {
+  if (window.GTP && window.GTP.renderHeaderLinks) {
+    window.GTP.renderHeaderLinks();
+  }
+};
+</script>
+<script>
 // Optimize font loading with font-display: swap
 if('fonts' in document){document.fonts.load("600 1em Outfit").then(function(){var l=document.createElement('link');l.href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap';l.rel='stylesheet';l.crossOrigin='anonymous';document.head.appendChild(l);});}
 
@@ -982,6 +1031,5 @@ window.addEventListener('load', function() {
   });
 });
 </script>
-<script src="/js/protection.js"></script>
 </body>
 </html>
