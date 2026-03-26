@@ -227,6 +227,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://geotagseditor.online/blog/photo-metadata-security-guide-2026/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
+      <image:title>Photo Metadata Security Guide 2026 - Privacy Protection</image:title>
+      <image:caption>Complete guide to photo metadata security and privacy protection. Learn how to remove EXIF data, GPS geotags, and protect your digital privacy in 2026.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://geotagseditor.online/sitemap/</loc>
     <lastmod>2025-03-25</lastmod>
     <changefreq>monthly</changefreq>
