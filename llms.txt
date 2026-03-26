@@ -1,0 +1,46 @@
+# Geo Tag Editor - LLMs Configuration File
+
+This file provides information about the Geo Tag Editor project for AI/LLM systems.
+
+## Project Overview
+Geo Tag Editor is a web-based application for adding, editing, and removing GPS location data from photos. The application provides online tools for geotagging photos and managing EXIF data.
+
+## Key Features
+- Add GPS coordinates to photos online
+- Remove geotags from photos
+- Edit EXIF data
+- Batch photo processing
+- Privacy-focused photo editing
+
+## Technology Stack
+- Frontend: HTML5, CSS3, JavaScript
+- Backend: Static hosting (Vercel/Netlify compatible)
+- No server-side processing required
+- Client-side photo processing
+
+## Repository Structure
+- `/` - Root directory with main pages
+- `/css/` - Stylesheets
+- `/js/` - JavaScript files
+- `/images/` - Static images and assets
+- `/blog/` - Blog posts and articles
+- `/partials/` - Reusable HTML components
+
+## Important Files
+- `index.html` - Main landing page
+- `geo-tag-editor.html` - Main tool page
+- `add-gps-to-photo-online.html` - GPS addition tool
+- `remove-geotag-from-photo-online.html` - GPS removal tool
+- `vercel.json` - Deployment configuration
+
+## Development Notes
+- This is a static website project
+- All photo processing happens client-side
+- No external APIs required for core functionality
+- SEO optimized with structured data
+- Mobile responsive design
+
+## Deployment
+- Optimized for Vercel deployment
+- Compatible with Netlify and other static hosts
+- Uses .htaccess for URL rewriting on Apache servers
