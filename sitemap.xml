@@ -243,4 +243,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
+  <url>
+    <loc>https://geotagseditor.online/blog/how-journalists-use-geotagging-in-photos/</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
+      <image:title>How Journalists Use Geotagging in Photos - Complete Guide</image:title>
+      <image:caption>Learn how journalists use geotagging in photos for verification, storytelling, and credibility. Master GPS metadata techniques for news photography.</image:caption>
+    </image:image>
+  </url>
 </urlset>
