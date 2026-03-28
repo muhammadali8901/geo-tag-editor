@@ -29,7 +29,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Geo Tag Editor Blog - GPS Photo Tips & Guides</image:title>
+      <image:title>Geo Tag Editor Blog - GPS Photo Tips &amp; Guides</image:title>
       <image:caption>Learn GPS photo editing tips, EXIF metadata guides, and photo privacy protection.</image:caption>
     </image:image>
   </url>
@@ -211,7 +211,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Website Optimization 2025 - Complete Guide to Speed & SEO</image:title>
+      <image:title>Website Optimization 2025 - Complete Guide to Speed &amp; SEO</image:title>
       <image:caption>Master website optimization in 2025. Learn proven strategies to boost site speed, improve SEO rankings, and enhance user experience.</image:caption>
     </image:image>
   </url>
