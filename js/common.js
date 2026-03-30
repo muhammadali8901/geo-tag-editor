@@ -104,27 +104,16 @@
     var desktop = document.getElementById('desktopNavLinks');
     var mobilePrimary = document.getElementById('mobilePrimaryLinks');
     var mobileUtility = document.getElementById('mobileUtilityLinks');
-    
-    console.log('Rendering header links:', { 
-      desktop: !!desktop, 
-      mobilePrimary: !!mobilePrimary, 
-      mobileUtility: !!mobileUtility,
-      primaryLinksCount: primaryLinks.length,
-      utilityLinksCount: utilityLinks.length
-    });
-    
+
     if (!desktop || !mobilePrimary || !mobileUtility) {
-      console.log('Missing elements, retrying in 100ms...');
       setTimeout(renderHeaderLinks, 100);
       return;
     }
 
-    // Clear existing content first
     desktop.innerHTML = '';
     mobilePrimary.innerHTML = '';
     mobileUtility.innerHTML = '';
 
-    // Populate desktop links
     primaryLinks.forEach(function (l) {
       var li = document.createElement('li');
       var a = document.createElement('a');
@@ -134,8 +123,7 @@
       li.appendChild(a);
       desktop.appendChild(li);
     });
-    
-    // Add CTA button to desktop
+
     var ctaLi = document.createElement('li');
     var ctaA = document.createElement('a');
     ctaA.href = '/geo-tag-editor/';
@@ -144,7 +132,6 @@
     ctaLi.appendChild(ctaA);
     desktop.appendChild(ctaLi);
 
-    // Populate mobile primary links
     primaryLinks.forEach(function (l) {
       var li = document.createElement('li');
       var a = document.createElement('a');
@@ -153,10 +140,8 @@
       a.innerHTML = l.icon + '<span>' + l.label + '</span>';
       li.appendChild(a);
       mobilePrimary.appendChild(li);
-      console.log('Added mobile primary link:', l.label);
     });
 
-    // Populate mobile utility links
     utilityLinks.forEach(function (l) {
       var li = document.createElement('li');
       var a = document.createElement('a');
@@ -165,39 +150,24 @@
       a.innerHTML = l.icon + '<span>' + l.label + '</span>';
       li.appendChild(a);
       mobileUtility.appendChild(li);
-      console.log('Added mobile utility link:', l.label);
     });
-    
-    console.log('Mobile sidebar content:', {
-      primaryHTML: mobilePrimary.innerHTML,
-      utilityHTML: mobileUtility.innerHTML,
-      primaryCount: mobilePrimary.children.length,
-      utilityCount: mobileUtility.children.length
-    });
-    
-    console.log('Header links rendered successfully');
   }
 
   function setupHeaderInteractions() {
-    const header = document.getElementById('site-header');
-    if (!header) return;
-    const hamburger = document.getElementById('hamburger');
-    const sidebar = document.getElementById('mobileSidebar');
-    const overlay = document.getElementById('sidebarOverlay');
-    const closeBtn = document.getElementById('sidebarClose');
-    const menuToggle = document.getElementById('menuToggleBtn');
-    const newSidebar = document.getElementById('sidebar');
-    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
-    
+    var hamburger = document.getElementById('hamburger');
+    var sidebar = document.getElementById('mobileSidebar');
+    var overlay = document.getElementById('sidebarOverlay');
+    var closeBtn = document.getElementById('sidebarClose');
+
     if (!hamburger || !sidebar || !overlay || !closeBtn) return;
-    let lastActiveElement = null;
+
+    var lastActiveElement = null;
 
     function getFocusable() {
       return sidebar.querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])');
     }
 
     function openSidebar() {
-      console.log('Opening sidebar...');
       lastActiveElement = document.activeElement;
       sidebar.classList.add('open');
       overlay.classList.add('open');
@@ -205,13 +175,11 @@
       hamburger.setAttribute('aria-expanded', 'true');
       sidebar.setAttribute('aria-hidden', 'false');
       document.body.classList.add('sidebar-open');
-      console.log('Sidebar classes:', sidebar.className);
-      const first = getFocusable()[0];
+      var first = getFocusable()[0];
       if (first) first.focus();
     }
 
     function closeSidebar() {
-      console.log('Closing sidebar...');
       sidebar.classList.remove('open');
       overlay.classList.remove('open');
       hamburger.classList.remove('open');
@@ -223,82 +191,36 @@
       }
     }
 
-    function openNewSidebar() {
-      if (newSidebar) {
-        newSidebar.classList.add('active');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeNewSidebar() {
-      if (newSidebar) {
-        newSidebar.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    }
-
     hamburger.addEventListener('click', function () {
       sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
     });
 
     closeBtn.addEventListener('click', closeSidebar);
-    overlay.addEventListener('click', function() {
-      closeSidebar();
-      closeNewSidebar(); // Also close new sidebar if open
-    });
+    overlay.addEventListener('click', closeSidebar);
     sidebar.addEventListener('click', function (e) {
       if (e.target.closest('a')) closeSidebar();
     });
 
-    if (menuToggle && newSidebar) {
-      menuToggle.addEventListener('click', openNewSidebar);
-    }
-    
-    if (closeSidebarBtn && newSidebar) {
-      closeSidebarBtn.addEventListener('click', closeNewSidebar);
-    }
-
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape' && sidebar.classList.contains('open')) {
         closeSidebar();
-        closeNewSidebar();
       }
       if (e.key === 'Tab' && sidebar.classList.contains('open')) {
-        const focusable = getFocusable();
+        var focusable = getFocusable();
         if (!focusable.length) return;
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
         if (e.shiftKey) {
-          if (document.activeElement === first) {
-            e.preventDefault();
-            last.focus();
-          }
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
         } else {
-          if (document.activeElement === last) {
-            e.preventDefault();
-            first.focus();
-          }
+          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
         }
       }
     });
 
-    const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
-    sidebarLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 820) {
-          closeNewSidebar();
-        }
-      });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768 && sidebar.classList.contains('open')) closeSidebar();
     });
-    
-    const sidebarCta = document.querySelector('.sidebar-cta');
-    if(sidebarCta) {
-      sidebarCta.addEventListener('click', () => {
-        if(window.innerWidth <= 820) closeNewSidebar();
-      });
-    }
   }
 
   function injectFallbackHeader() {

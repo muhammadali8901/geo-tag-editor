@@ -9,10 +9,6 @@
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar">
     <span></span><span></span><span></span>
   </button>
-  <!-- mobile toggle button from new.html -->
-  <button class="menu-toggle" id="menuToggleBtn" aria-label="Menu">
-    <i class="fas fa-bars"></i>
-  </button>
 </div>
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 <aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true">
@@ -29,11 +25,11 @@
     </button>
   </div>
   <div class="mobile-sidebar-body">
-    <p class="sidebar-section-title">Tools & Guides</p>
+    <p class="sidebar-section-title">Tools &amp; Guides</p>
     <nav aria-label="Mobile navigation links">
       <ul class="sidebar-nav" id="mobilePrimaryLinks"></ul>
     </nav>
-    <p class="sidebar-section-title">Company & Legal</p>
+    <p class="sidebar-section-title">Company &amp; Legal</p>
     <ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks"></ul>
   </div>
   <div class="sidebar-cta">
@@ -43,24 +39,3 @@
     </div>
   </div>
 </aside>
-
-<!-- NEW SIDEBAR FROM NEW.HTML -->
-<div class="sidebar" id="sidebar">
-  <div class="sidebar-header">
-    <div class="sidebar-brand">
-      <div class="brand-icon">📍</div>
-      <span style="font-weight: 700; font-size: 1.2rem;">Geo Tags</span>
-    </div>
-    <button class="close-sidebar" id="closeSidebarBtn" aria-label="Close menu">
-      <i class="fas fa-times"></i>
-    </button>
-  </div>
-  <div class="sidebar-nav">
-    <a href="/"><i class="fas fa-home"></i> Home</a>
-    <a href="/geo-tag-editor/"><i class="fas fa-map-marker-alt"></i> Add GPS</a>
-    <a href="/remove-geotag-from-photo-online/"><i class="fas fa-trash-alt"></i> Remove GPS</a>
-    <a href="/geo-tag-editor/"><i class="fas fa-edit"></i> Geo Tag Editor</a>
-    <a href="/blog/"><i class="fas fa-blog"></i> Blog</a>
-  </div>
-  <a href="/geo-tag-editor/" class="sidebar-cta"><i class="fas fa-star"></i> Try Free Tool</a>
-</div>
