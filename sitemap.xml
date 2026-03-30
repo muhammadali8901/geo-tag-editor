@@ -147,8 +147,8 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Add GPS to Photo - Online Photo Geotag Tool</image:title>
-      <image:caption>Add GPS location to photos with our online photo geotag tool. Instantly embed coordinates into EXIF data.</image:caption>
+      <image:title>Add GPS to Photo Online (2,400/month) - Best GPS Photo Editor</image:title>
+      <image:caption>Add GPS to photo online (2,400/month). Best GPS photo editor to add GPS location to photos, geotag images, and add coordinates to photos. How to add GPS location to photos for Android, iPhone, Windows.</image:caption>
     </image:image>
   </url>
   <url>
@@ -156,6 +156,39 @@
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://geotagseditor.online/blog/exif-data-ultimate-guide/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://geotagseditor.online/images/exif-data-guide.jpg</image:loc>
+      <image:title>EXIF Data Ultimate Guide (1,600/month) - Complete Photo Metadata Tutorial</image:title>
+      <image:caption>Complete EXIF data guide (1,600/month). Learn what is EXIF data, how to remove EXIF data, edit metadata, and protect photo privacy. Ultimate tutorial for photographers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://geotagseditor.online/blog/add-gps-to-photo-ultimate-guide/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://geotagseditor.online/images/add-gps-photo-guide.jpg</image:loc>
+      <image:title>Add GPS to Photo Ultimate Guide (2,400/month) - Complete Photo Geotagging Tutorial</image:title>
+      <image:caption>Add GPS to photo ultimate guide (2,400/month). Learn how to add GPS location to photos, geotag images, and enhance photo metadata. Ultimate tutorial for photographers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://geotagseditor.online/blog/add-location-photos-android-guide/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://geotagseditor.online/images/android-photo-location-guide.jpg</image:loc>
+      <image:title>Add Location to Photos Android Guide (580/month) - Complete Android Photo Geotagging Tutorial</image:title>
+      <image:caption>Add location to photos Android guide (580/month). Learn how to add GPS location to photos on Android, geotag images, and manage photo metadata. Step-by-step Android tutorial.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://geotagseditor.online/contact/</loc>
