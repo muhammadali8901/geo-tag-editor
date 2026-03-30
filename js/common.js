@@ -89,8 +89,13 @@
       })
       .then(function (html) {
         target.innerHTML = html;
-        // If this is the header, immediately try to render links
         if (targetId === 'site-header') {
+          // Move sidebar + overlay out of <header> to <body>.
+          // The header has contain:layout style paint which clips position:fixed children.
+          var overlay = target.querySelector('#sidebarOverlay');
+          var sidebar = target.querySelector('#mobileSidebar');
+          if (overlay) document.body.appendChild(overlay);
+          if (sidebar) document.body.appendChild(sidebar);
           setTimeout(renderHeaderLinks, 10);
         }
         return true;
@@ -226,7 +231,18 @@
   function injectFallbackHeader() {
     var header = document.getElementById('site-header');
     if (!header) return;
-    header.innerHTML = '<div class="header-inner"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><nav class="desktop-nav"><ul class="nav-links" id="desktopNavLinks"></ul></nav><button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar"><span></span><span></span><span></span></button></div><div class="sidebar-overlay" id="sidebarOverlay"></div><aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true"><div class="sidebar-header"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><button class="sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><div class="mobile-sidebar-body"><p class="sidebar-section-title">Tools & Guides</p><nav aria-label="Mobile navigation links"><ul class="sidebar-nav" id="mobilePrimaryLinks"></ul></nav><p class="sidebar-section-title">Company & Legal</p><ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks"></ul></div><div class="sidebar-cta"><div class="sidebar-actions"><a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a><a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a></div></div></aside>';
+    header.innerHTML = '<div class="header-inner"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><nav class="desktop-nav"><ul class="nav-links" id="desktopNavLinks"></ul></nav><button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar"><span></span><span></span><span></span></button></div>';
+    var overlayEl = document.createElement('div');
+    overlayEl.className = 'sidebar-overlay';
+    overlayEl.id = 'sidebarOverlay';
+    document.body.appendChild(overlayEl);
+    var sidebarEl = document.createElement('aside');
+    sidebarEl.className = 'mobile-sidebar';
+    sidebarEl.id = 'mobileSidebar';
+    sidebarEl.setAttribute('aria-label', 'Mobile navigation');
+    sidebarEl.setAttribute('aria-hidden', 'true');
+    sidebarEl.innerHTML = '<div class="sidebar-header"><a href="/" class="logo"><img src="/images/logo.png" alt="' + SITE.name + '" style="height:32px;width:auto"><span>' + SITE.name + '</span></a><button class="sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><div class="mobile-sidebar-body"><p class="sidebar-section-title">Tools &amp; Guides</p><nav aria-label="Mobile navigation links"><ul class="sidebar-nav" id="mobilePrimaryLinks"></ul></nav><p class="sidebar-section-title">Company &amp; Legal</p><ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks"></ul></div><div class="sidebar-cta"><div class="sidebar-actions"><a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a><a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a></div></div>';
+    document.body.appendChild(sidebarEl);
   }
 
   function injectFallbackFooter() {
