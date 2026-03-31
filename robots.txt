@@ -1,134 +1,17 @@
-# robots.txt for pakbizbranches.online
-# SEO-friendly configuration for directory website
+# robots.txt for geotagseditor.online
 
-# Allow all search engines to crawl
 User-agent: *
 Allow: /
 
-# Allow CSS and JavaScript files for proper rendering and indexing
+# Keep non-public or local-only paths out of crawl budget.
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /attached_assets/
+Disallow: /test-coordinate-input.html
+
+# Allow static assets required for rendering.
 Allow: /css/
 Allow: /js/
-Allow: /styles/
-Allow: /scripts/
-Allow: /assets/
-Allow: /static/
-Allow: /wp-content/
-Allow: /wp-includes/
-Allow: /wp-admin/admin-ajax.php
-
-# Allow directory categories and listings
-Allow: /categories/
-Allow: /listings/
-Allow: /branches/
-Allow: /banks/
-Allow: /cities/
-Allow: /areas/
-Allow: /businesses/
-Allow: /directory/
-Allow: /browse/
-Allow: /search-results/
-
-# Allow important assets
 Allow: /images/
-Allow: /img/
-Allow: /uploads/
-Allow: /favicon.ico
-Allow: /robots.txt
-Allow: /sitemap.xml
-Allow: /sitemap_index.xml
-Allow: /browserconfig.xml
-Allow: /site.webmanifest
-Allow: /manifest.json
 
-# Disallow sensitive areas and admin sections
-Disallow: /admin/
-Disallow: /administrator/
-Disallow: /wp-admin/
-Disallow: /bin/
-Disallow: /cgi-bin/
-Disallow: /private/
-Disallow: /config/
-Disallow: /logs/
-Disallow: /temp/
-Disallow: /tmp/
-Disallow: /.git/
-Disallow: /.svn/
-Disallow: /node_modules/
-Disallow: /vendor/
-Disallow: /backup/
-Disallow: /backups/
-Disallow: /cache/
-Disallow: /sessions/
-Disallow: /cookies/
-Disallow: /database/
-Disallow: /db/
-Disallow: /sql/
-Disallow: /scripts/
-Disallow: /shell/
-Disallow: /terminal/
-Disallow: /console/
-Disallow: /debug/
-Disallow: /testing/
-Disallow: /staging/
-Disallow: /dev/
-Disallow: /development/
-
-# Disallow private search result pages with parameters
-Disallow: /search?*
-Disallow: /search/*?*
-Disallow: /browse?*
-Disallow: /browse/*?*
-Disallow: /filter?*
-Disallow: /filter/*?*
-Disallow: /sort?*
-Disallow: /sort/*?*
-Disallow: /page/*?*
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
-Disallow: /*.log$
-Disallow: /*.sql$
-Disallow: /*.bak$
-Disallow: /*.backup$
-
-# Disallow affiliate and tracking links
-Disallow: /affiliate/
-Disallow: /referral/
-Disallow: /tracking/
-Disallow: /out/
-Disallow: /go/
-
-# Disallow user account sensitive areas
-Disallow: /account/
-Disallow: /profile/
-Disallow: /dashboard/
-Disallow: /settings/
-Disallow: /login/
-Disallow: /register/
-Disallow: /password/
-Disallow: /reset/
-Disallow: /forgot/
-
-# Specific rules for major search engines
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 1
-
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 1
-
-# Sitemap location
-Sitemap: https://www.pakbizbranches.online/sitemap.xml
-Sitemap: https://pakbizbranches.online/sitemap.xml
-
-# Crawl delay to prevent server overload
-Crawl-delay: 1
+Sitemap: https://geotagseditor.online/sitemap.xml
