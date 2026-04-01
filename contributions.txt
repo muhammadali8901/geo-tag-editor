@@ -2,3 +2,4 @@ Commit on 2026-04-01T17:56:36: fix: tooltip display glitch on mobile view
 Commit on 2026-04-01T18:58:54: docs: clarify privacy policy points
 Commit on 2026-04-01T11:19:58: perf: optimize web worker message passing
 Commit on 2026-04-01T10:10:50: style: update color variables for dark mode contrast
+Commit on 2026-04-01T16:05:15: fix: prevent duplicate form submission on rapid clicks
