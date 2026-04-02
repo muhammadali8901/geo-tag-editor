@@ -7,3 +7,4 @@ Commit on 2026-04-02T17:24:19: fix: handle missing geolocation permissions grace
 Commit on 2026-04-02T13:03:46: refactor: extract reusable modal components
 Commit on 2026-04-02T12:20:09: perf: memoize expensive image transform operations
 Commit on 2026-04-02T18:30:56: perf: reduce DOM manipulation overhead
+Commit on 2026-04-02T14:52:19: fix: prevent duplicate form submission on rapid clicks
