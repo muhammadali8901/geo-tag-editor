@@ -5,3 +5,4 @@ Commit on 2026-04-01T10:10:50: style: update color variables for dark mode contr
 Commit on 2026-04-01T16:05:15: fix: prevent duplicate form submission on rapid clicks
 Commit on 2026-04-02T17:24:19: fix: handle missing geolocation permissions gracefully
 Commit on 2026-04-02T13:03:46: refactor: extract reusable modal components
+Commit on 2026-04-02T12:20:09: perf: memoize expensive image transform operations
