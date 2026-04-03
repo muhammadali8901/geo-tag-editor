@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff"/>
+      <stop offset="100%" style="stop-color:#e0f2fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg3)" rx="8"/>
+  <rect x="20" y="20" width="600" height="320" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <!-- Browser chrome -->
+  <rect x="20" y="20" width="600" height="40" rx="8" fill="#f8fafc"/>
+  <rect x="20" y="48" width="600" height="12" fill="#f8fafc"/>
+  <circle cx="44" cy="40" r="6" fill="#ef4444" opacity="0.7"/>
+  <circle cx="62" cy="40" r="6" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="80" cy="40" r="6" fill="#10b981" opacity="0.7"/>
+  <!-- Map tiles grid -->
+  <rect x="40" y="70" width="560" height="250" rx="6" fill="#e8f4e8"/>
+  <!-- Grid lines for map look -->
+  <line x1="40" y1="120" x2="600" y2="120" stroke="#c8e6c8" stroke-width="1"/>
+  <line x1="40" y1="170" x2="600" y2="170" stroke="#c8e6c8" stroke-width="1"/>
+  <line x1="40" y1="220" x2="600" y2="220" stroke="#c8e6c8" stroke-width="1"/>
+  <line x1="40" y1="270" x2="600" y2="270" stroke="#c8e6c8" stroke-width="1"/>
+  <line x1="160" y1="70" x2="160" y2="320" stroke="#c8e6c8" stroke-width="1"/>
+  <line x1="280" y1="70" x2="280" y2="320" stroke="#c8e6c8" stroke-width="1"/>
+  <line x1="400" y1="70" x2="400" y2="320" stroke="#c8e6c8" stroke-width="1"/>
+  <line x1="520" y1="70" x2="520" y2="320" stroke="#c8e6c8" stroke-width="1"/>
+  <!-- Roads suggestion -->
+  <path d="M 40 195 Q 150 185 280 195 Q 400 205 600 195" stroke="#b0c4b0" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 280 70 Q 275 150 280 195 Q 285 240 280 320" stroke="#b0c4b0" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Map marker pin -->
+  <g transform="translate(310,165)">
+    <path d="M0,-28 C-14,-28 -24,-18 -24,-6 C-24,8 0,28 0,28 C0,28 24,8 24,-6 C24,-18 14,-28 0,-28 Z" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="0" cy="-8" r="8" fill="#ffffff"/>
+  </g>
+  <!-- Coordinate popup -->
+  <rect x="330" y="130" width="180" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.1))"/>
+  <text x="420" y="152" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#64748b">Selected Location</text>
+  <text x="420" y="170" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#0284c7" font-weight="600">48.8566, 2.3522</text>
+  <!-- Zoom controls -->
+  <rect x="555" y="90" width="30" height="30" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="570" y="109" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#475569" font-weight="600">+</text>
+  <rect x="555" y="122" width="30" height="30" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="570" y="141" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#475569" font-weight="600">−</text>
+</svg>

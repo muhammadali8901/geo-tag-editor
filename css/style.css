@@ -35,7 +35,7 @@ img, svg {
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap');
+/* Google Fonts loaded via <link> in HTML for non-blocking delivery */
 
 :root{
   --primary:#0284c7;

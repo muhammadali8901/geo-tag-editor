@@ -6,7 +6,7 @@ const PORT = 5000;
 const HOST = '0.0.0.0';
 
 const MIME_TYPES = {
-  '.html': 'text/html',
+  '.html': 'text/html; charset=utf-8',
   '.css': 'text/css',
   '.js': 'application/javascript',
   '.json': 'application/json',
@@ -26,6 +26,10 @@ const MIME_TYPES = {
   '.webmanifest': 'application/manifest+json',
   '.md': 'text/markdown',
 };
+
+// Assets that can be cached aggressively (1 year, immutable)
+const IMMUTABLE_EXTS = new Set(['.css', '.js', '.png', '.jpg', '.jpeg', '.gif',
+  '.svg', '.ico', '.webp', '.woff', '.woff', '.woff2', '.ttf', '.eot']);
 
 const REWRITES = {
   '/about': '/about/index.html',
@@ -55,9 +59,20 @@ const SECURITY_HEADERS = {
   'Referrer-Policy': 'strict-origin-when-cross-origin',
 };
 
+function getCacheHeader(ext) {
+  if (IMMUTABLE_EXTS.has(ext)) {
+    return 'public, max-age=31536000, immutable';
+  }
+  if (ext === '.html' || ext === '.webmanifest') {
+    return 'public, max-age=0, must-revalidate';
+  }
+  return 'public, max-age=3600';
+}
+
 function serveFile(filePath, res) {
   const ext = path.extname(filePath).toLowerCase();
   const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+  const cacheControl = getCacheHeader(ext);
 
   fs.readFile(filePath, (err, data) => {
     if (err) {
@@ -65,7 +80,12 @@ function serveFile(filePath, res) {
       res.end('<h1>404 Not Found</h1>');
       return;
     }
-    res.writeHead(200, { 'Content-Type': contentType, ...SECURITY_HEADERS });
+    res.writeHead(200, {
+      'Content-Type': contentType,
+      'Cache-Control': cacheControl,
+      'Vary': 'Accept-Encoding',
+      ...SECURITY_HEADERS,
+    });
     res.end(data);
   });
 }
