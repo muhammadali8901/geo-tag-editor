@@ -31,6 +31,13 @@ const MIME_TYPES = {
 const IMMUTABLE_EXTS = new Set(['.css', '.js', '.png', '.jpg', '.jpeg', '.gif',
   '.svg', '.ico', '.webp', '.woff', '.woff', '.woff2', '.ttf', '.eot']);
 
+const BLOCKED_PATHS = new Set([
+  '/adsense-placements.html',
+  '/test-coordinate-input.html',
+  '/protection-template.html',
+  '/social-preview-template.html',
+]);
+
 const REWRITES = {
   '/about': '/about/index.html',
   '/about/': '/about/index.html',
@@ -92,6 +99,12 @@ function serveFile(filePath, res) {
 
 const server = http.createServer((req, res) => {
   let urlPath = req.url.split('?')[0];
+
+  if (BLOCKED_PATHS.has(urlPath)) {
+    res.writeHead(404, { 'Content-Type': 'text/html', ...SECURITY_HEADERS });
+    res.end('<h1>404 Not Found</h1>');
+    return;
+  }
 
   const rewrittenPath = REWRITES[urlPath];
   if (rewrittenPath) {

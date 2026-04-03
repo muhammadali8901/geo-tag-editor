@@ -8,6 +8,9 @@ Disallow: /.git/
 Disallow: /node_modules/
 Disallow: /attached_assets/
 Disallow: /test-coordinate-input.html
+Disallow: /adsense-placements.html
+Disallow: /protection-template.html
+Disallow: /social-preview-template.html
 
 # Allow static assets required for rendering.
 Allow: /css/

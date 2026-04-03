@@ -367,6 +367,37 @@
     });
   }
 
+  function initCookieConsent() {
+    if (localStorage.getItem('gte_cookie_consent') === 'accepted') return;
+    var banner = document.createElement('div');
+    banner.id = 'gte-cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.style.cssText = [
+      'position:fixed', 'bottom:0', 'left:0', 'right:0', 'z-index:9999',
+      'background:#1e293b', 'color:#f1f5f9', 'padding:14px 20px',
+      'display:flex', 'align-items:center', 'justify-content:space-between',
+      'gap:16px', 'flex-wrap:wrap', 'font-size:.875rem', 'line-height:1.5',
+      'box-shadow:0 -2px 12px rgba(0,0,0,.25)'
+    ].join(';');
+    banner.innerHTML = [
+      '<span style="flex:1;min-width:200px">',
+        'This site uses cookies for analytics and to display ads. ',
+        'By continuing to use it, you accept our use of cookies. ',
+        '<a href="/privacy-policy/" style="color:#7dd3fc;text-decoration:underline">Privacy Policy</a>',
+      '</span>',
+      '<div style="display:flex;gap:10px;flex-shrink:0">',
+        '<a href="/privacy-policy/" style="padding:7px 14px;border:1px solid #7dd3fc;color:#7dd3fc;border-radius:6px;text-decoration:none;font-size:.8rem;white-space:nowrap">Learn More</a>',
+        '<button id="gte-cookie-accept" style="padding:7px 18px;background:#0ea5e9;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:600;white-space:nowrap">Accept</button>',
+      '</div>'
+    ].join('');
+    document.body.appendChild(banner);
+    document.getElementById('gte-cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('gte_cookie_consent', 'accepted');
+      banner.remove();
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', async function () {
     injectSkipLink();
     var headerLoaded = await loadPartial('site-header', '/partials/header.html');
@@ -374,7 +405,6 @@
     if (!headerLoaded) injectFallbackHeader();
     if (!footerLoaded) injectFallbackFooter();
     
-    // Wait a bit for the DOM to settle, then render links
     setTimeout(function() {
       renderHeaderLinks();
     }, 50);
@@ -386,6 +416,7 @@
     injectRelatedPosts();
     injectQuickLinks();
     optimizeImageLoading();
+    initCookieConsent();
   });
 
   window.GTP = { 
