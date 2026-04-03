@@ -292,4 +292,26 @@
       <image:caption>Learn how journalists use geotagging in photos for verification, storytelling, and credibility. Master GPS metadata techniques for news photography.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://geotagseditor.online/blog/exif-vs-metadata-whats-the-difference/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
+      <image:title>EXIF vs Metadata: What's the Difference? Complete Guide 2026</image:title>
+      <image:caption>Learn the real difference between EXIF data and metadata. Understand GPS coordinates in photos, privacy risks, and how EXIF differs from IPTC and XMP.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://geotagseditor.online/blog/top-7-photo-metadata-tools/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
+      <image:title>Top 7 Photo Metadata Tools - Best EXIF Editors 2026</image:title>
+      <image:caption>Discover the top 7 photo metadata tools for editing, viewing, and removing EXIF data. Compare free and paid GPS photo editors.</image:caption>
+    </image:image>
+  </url>
 </urlset>

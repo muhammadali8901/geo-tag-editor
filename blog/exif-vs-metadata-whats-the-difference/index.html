@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXIF vs Metadata: What's the Difference? | Complete Guide 2026</title>
+<meta name="description" content="EXIF vs metadata — what's the actual difference? Learn what EXIF data is, how it differs from general metadata, and why GPS coordinates in your photos matter for privacy and SEO.">
+<meta name="author" content="Geo Tags Editor">
+<link rel="alternate" hreflang="en" href="https://geotagseditor.online/blog/exif-vs-metadata-whats-the-difference/">
+<link rel="alternate" hreflang="x-default" href="https://geotagseditor.online/blog/exif-vs-metadata-whats-the-difference/">
+<link rel="canonical" href="https://geotagseditor.online/blog/exif-vs-metadata-whats-the-difference/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="publisher" content="GeoTagsEditor">
+<meta http-equiv="X-Robots-Tag" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Geo Tags Editor">
+<meta property="og:title" content="EXIF vs Metadata: What's the Difference?">
+<meta property="og:description" content="EXIF and metadata are not the same thing. Learn the real difference, what GPS EXIF data contains, and how to view or remove it from your photos.">
+<meta property="og:url" content="https://geotagseditor.online/blog/exif-vs-metadata-whats-the-difference/">
+<meta property="og:image" content="https://geotagseditor.online/images/og-default.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EXIF vs Metadata: What's the Difference?">
+<meta name="twitter:description" content="EXIF and metadata are not the same thing. Learn the real difference and why GPS data in your photos matters.">
+<meta name="twitter:image" content="https://geotagseditor.online/images/og-default.svg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0369a1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "EXIF vs Metadata: What's the Difference?",
+  "description": "EXIF and metadata are frequently confused, but they are not the same thing. This guide explains what each term means, how they differ, and why the distinction matters for photo privacy and local SEO.",
+  "image": "https://geotagseditor.online/images/logo.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Geo Tags Editor",
+    "url": "https://geotagseditor.online"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Geo Tags Editor",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://geotagseditor.online/images/logo.png",
+      "width": 512,
+      "height": 512
+    }
+  },
+  "datePublished": "2026-04-02",
+  "dateModified": "2026-04-03",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://geotagseditor.online/blog/exif-vs-metadata-whats-the-difference/"
+  },
+  "articleSection": "Photography",
+  "keywords": ["EXIF vs metadata", "what is EXIF data", "what is metadata", "EXIF data meaning", "photo metadata types", "IPTC XMP EXIF", "GPS EXIF data", "remove EXIF data", "photo privacy"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between EXIF and metadata?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Metadata is a broad term meaning 'data about data' — any information that describes a file. EXIF (Exchangeable Image File Format) is a specific, standardised type of metadata that cameras automatically embed into JPEG and TIFF photos. It includes camera settings, date/time, and GPS coordinates. So all EXIF data is metadata, but not all metadata is EXIF data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does EXIF data contain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EXIF data typically contains: camera make and model, shutter speed, aperture (f-stop), ISO sensitivity, focal length, date and time the photo was taken, GPS latitude and longitude (if location was enabled), altitude, flash status, white balance, and image dimensions. GPS coordinates are the most privacy-sensitive field in EXIF data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are IPTC and XMP, and how do they differ from EXIF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IPTC (International Press Telecommunications Council) metadata is a standard used mainly by journalists and stock photographers to store captions, keywords, copyright information, and credit lines. XMP (Extensible Metadata Platform) is Adobe's newer, more flexible XML-based format that can store EXIF, IPTC, and custom data. EXIF is set automatically by the camera; IPTC and XMP are usually added manually by the photographer or editor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can EXIF data reveal my home address?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you take a photo at home with location services enabled, the EXIF data will include the GPS coordinates of your home. Anyone who receives the photo file and checks its metadata can determine your exact address. This is why it is important to remove GPS EXIF data before sharing photos publicly online. Our free tool at geotagseditor.online lets you strip GPS coordinates in seconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I view or remove EXIF data from a photo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can view EXIF data by right-clicking a photo in Windows Explorer and selecting Properties > Details, or using our free online EXIF viewer at geotagseditor.online. To remove EXIF data — including GPS coordinates — upload your JPEG to our geo tag editor, click 'Remove Geotag', and download the cleaned file. No software installation needed, and your photos never leave your device."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="Breadcrumb" style="font-size:.85rem;color:var(--text-muted);margin-bottom:12px">
+      <a href="/" style="color:var(--text-muted);text-decoration:none">Home</a>
+      <span style="margin:0 6px">›</span>
+      <a href="/blog/" style="color:var(--text-muted);text-decoration:none">Blog</a>
+      <span style="margin:0 6px">›</span>
+      <span style="color:var(--text-secondary)">EXIF vs Metadata</span>
+    </nav>
+    <h1>EXIF vs Metadata: What's the Difference?</h1>
+    <p>The terms "EXIF data" and "metadata" get used interchangeably all the time — but they are not the same thing. Here's exactly what each one means, how they relate, and why it matters for your privacy and SEO.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:.85rem;color:var(--text-muted)">
+      <span>📅 Published: <time datetime="2026-04-02">April 2, 2026</time></span>
+      <span>⏱ 5 min read</span>
+      <span>✍️ By Geo Tags Editor</span>
+    </div>
+  </div>
+</section>
+
+<article class="article" itemscope itemtype="https://schema.org/Article">
+  <div class="container">
+    <div class="article-content">
+
+      <p>If you've ever uploaded a photo and worried someone might see where it was taken, or if you've tried to organise thousands of images by location, you've encountered two words repeatedly: <strong>metadata</strong> and <strong>EXIF data</strong>. They sound similar, and many guides use them as if they mean exactly the same thing. They don't — and the difference is more important than most people realise.</p>
+
+      <h2>What is Metadata?</h2>
+      <p>Metadata simply means <em>data about data</em>. For a digital photograph, metadata is any piece of information that describes the file itself rather than the visual content inside the image. Think of it as the label on a bottle rather than what's inside.</p>
+      <p>General metadata for an image file might include:</p>
+      <ul>
+        <li><strong>File name</strong> — the name you gave the file (IMG_4921.jpg)</li>
+        <li><strong>File size</strong> — how many bytes the image occupies on disk</li>
+        <li><strong>Date created / date modified</strong> — timestamps managed by your operating system</li>
+        <li><strong>File format</strong> — JPEG, PNG, TIFF, HEIC, and so on</li>
+        <li><strong>Color profile</strong> — sRGB, Adobe RGB, DCI-P3</li>
+        <li><strong>Copyright notice</strong> — a text field for ownership claims</li>
+        <li><strong>Keywords and captions</strong> — descriptive tags added by a human or software</li>
+      </ul>
+      <p>This kind of metadata lives in many forms and can be set by your camera, your operating system, your editing software, or you manually. There is no single universal standard for general metadata — different tools use different fields and formats.</p>
+
+      <h2>What is EXIF Data?</h2>
+      <p>EXIF stands for <strong>Exchangeable Image File Format</strong>. It is a specific, highly standardised type of metadata that was created in 1995 by the Japan Electronic Industries Development Association (JEIDA) and is now maintained under the JEITA standard. What makes EXIF unique is that it is written <em>automatically</em> by the camera or smartphone at the moment a photo is taken — you don't have to do anything.</p>
+      <p>A typical EXIF block includes:</p>
+      <ul>
+        <li><strong>Camera make and model</strong> — e.g. Apple iPhone 15 Pro, Canon EOS R5</li>
+        <li><strong>Shutter speed</strong> — e.g. 1/250 s</li>
+        <li><strong>Aperture (f-stop)</strong> — e.g. f/1.8</li>
+        <li><strong>ISO sensitivity</strong> — e.g. ISO 400</li>
+        <li><strong>Focal length</strong> — e.g. 24 mm</li>
+        <li><strong>Flash</strong> — whether the flash fired</li>
+        <li><strong>White balance</strong> — auto or custom</li>
+        <li><strong>Date and time</strong> — the exact moment the shutter was pressed</li>
+        <li><strong>Image dimensions</strong> — width and height in pixels</li>
+        <li><strong>GPS coordinates</strong> — latitude, longitude, and altitude (if location was enabled)</li>
+      </ul>
+      <p>EXIF data is stored in JPEG and TIFF files as a series of tagged fields. PNG files do not natively support EXIF, which is one reason JPEG remains the dominant format for camera photos.</p>
+
+      <h2>EXIF vs Metadata: The Core Difference</h2>
+      <p>The relationship is straightforward: <strong>EXIF data is a subset of metadata</strong>. Every EXIF field is metadata, but not all metadata is EXIF. The diagram below captures this:</p>
+
+      <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:24px 0;overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:.92rem">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border)">
+              <th style="text-align:left;padding:10px 12px;color:var(--text)">Feature</th>
+              <th style="text-align:left;padding:10px 12px;color:var(--primary)">EXIF Data</th>
+              <th style="text-align:left;padding:10px 12px;color:var(--text-secondary)">General Metadata</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 12px;font-weight:600">Scope</td>
+              <td style="padding:10px 12px">Specific standardised subset</td>
+              <td style="padding:10px 12px">Broad category covering many formats</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--bg)">
+              <td style="padding:10px 12px;font-weight:600">Who sets it</td>
+              <td style="padding:10px 12px">Camera/device, automatically</td>
+              <td style="padding:10px 12px">Camera, OS, software, or human</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 12px;font-weight:600">Standard</td>
+              <td style="padding:10px 12px">JEITA CP-3451 (EXIF spec)</td>
+              <td style="padding:10px 12px">No single standard; varies by format</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:var(--bg)">
+              <td style="padding:10px 12px;font-weight:600">Contains GPS</td>
+              <td style="padding:10px 12px">Yes (if location was enabled)</td>
+              <td style="padding:10px 12px">Sometimes, depending on format</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 12px;font-weight:600">Supported formats</td>
+              <td style="padding:10px 12px">JPEG, TIFF (not PNG)</td>
+              <td style="padding:10px 12px">All file types</td>
+            </tr>
+            <tr style="background:var(--bg)">
+              <td style="padding:10px 12px;font-weight:600">Privacy risk</td>
+              <td style="padding:10px 12px;color:var(--danger);font-weight:600">High (GPS field reveals location)</td>
+              <td style="padding:10px 12px">Varies</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Other Types of Photo Metadata: IPTC and XMP</h2>
+      <p>EXIF is just one of three major metadata standards used in photography. Understanding all three helps you choose the right tool for the right job.</p>
+
+      <h3>IPTC Metadata</h3>
+      <p>IPTC stands for <strong>International Press Telecommunications Council</strong>. Its metadata standard was originally developed for news agencies and wire services to attach captions, bylines, copyright notices, and subject keywords to photos as they moved between newsrooms. Today it is widely used in stock photography and commercial licensing. IPTC fields include: caption/description, credit line, creator/photographer name, copyright notice, keywords, and city/country (entered as plain text, not GPS coordinates).</p>
+
+      <h3>XMP Metadata</h3>
+      <p>XMP stands for <strong>Extensible Metadata Platform</strong>, developed by Adobe. It is based on XML and is far more flexible than EXIF or IPTC — it can store all of the above information plus custom fields defined by any application. Adobe Lightroom, Photoshop, and Bridge all read and write XMP data. Modern camera RAW files (CR3, ARW, NEF) typically store their metadata in a combination of EXIF and an embedded XMP block. Because XMP is XML, it can be edited with a text editor, but dedicated EXIF/metadata tools are far more practical.</p>
+
+      <h2>Why GPS Coordinates in EXIF Data Matter</h2>
+      <p>Of all the EXIF fields, GPS latitude and longitude are by far the most sensitive — and the most useful depending on context.</p>
+
+      <h3>Privacy: The Risk of Sharing Photos with GPS EXIF Intact</h3>
+      <p>When you photograph something at home and share the JPEG file directly (via email, WhatsApp, or an uncompressed platform), the recipient can open the file's EXIF data and see the exact coordinates — precise enough to identify your street address. This risk is real: photos taken at domestic violence shelters, witness protection addresses, and private residences have been used to locate people. Social media platforms like Facebook, Instagram, and Twitter automatically strip EXIF data when you upload, but messaging apps and email do not always do so. The safest practice is to <a href="/blog/remove-geotag-from-photo/">remove the geotag from your photo</a> before sending it anywhere publicly.</p>
+
+      <h3>SEO: The Benefit of GPS EXIF for Businesses</h3>
+      <p>On the other side of the coin, GPS coordinates embedded in images on your business website can help Google and other search engines understand the geographic relevance of your content. This is a known signal for local search rankings — photos geotagged to your business address reinforce your location to Google's crawlers and may appear in Google Maps image results. Real estate agents, restaurants, and local service businesses can <a href="/blog/why-geotagging-matters-for-local-seo/">benefit significantly from geotagged images</a>. If you have product or premises photos that were shot without GPS enabled, you can <a href="/add-gps-to-photo-online/">add GPS coordinates to the photo</a> after the fact using our free online tool.</p>
+
+      <h2>How to View and Edit EXIF Metadata</h2>
+      <p>You do not need specialist software to view or edit EXIF data. There are several straightforward options:</p>
+      <ul>
+        <li><strong>Windows:</strong> Right-click any JPEG → Properties → Details tab. You will see camera, date, and GPS fields if present.</li>
+        <li><strong>macOS:</strong> Open the photo in Preview → Tools → Show Inspector → the ⓘ icon → GPS tab.</li>
+        <li><strong>Online (any device):</strong> Upload your JPEG to our <a href="/geo-tag-editor/">free EXIF GPS editor</a>. It instantly displays all EXIF fields including GPS coordinates, and lets you add, edit, or completely remove the GPS data — all without uploading anything to a server. Your photo is processed entirely in your browser.</li>
+      </ul>
+      <p>If you need to <a href="/blog/how-to-remove-metadata-from-images/">remove metadata from images</a> in bulk, our batch processing feature handles up to three files at once. For privacy-critical use cases, always verify the output file's metadata before sharing.</p>
+
+      <h2>Quick Summary</h2>
+      <p>Here is the short version if you need to explain this to someone in one minute:</p>
+      <ul>
+        <li><strong>Metadata</strong> = any data that describes a file (name, size, date, copyright, keywords…)</li>
+        <li><strong>EXIF</strong> = a standardised block of metadata that cameras write automatically into JPEG files, covering camera settings, date/time, and GPS location</li>
+        <li><strong>IPTC</strong> = metadata for captions, credits, and keywords — set by photographers or agencies</li>
+        <li><strong>XMP</strong> = Adobe's flexible XML format that can contain all of the above</li>
+        <li>The <strong>GPS field in EXIF</strong> is the most sensitive: it can reveal exactly where you (or someone vulnerable) were when the photo was taken</li>
+      </ul>
+      <p>Understanding the distinction helps you make better decisions about when to keep location data (for local SEO) and when to remove it (for privacy). Our <a href="/">free geo tag editor</a> gives you full control over GPS coordinates in your photos, with no software to install and no files sent to any server.</p>
+
+      <hr style="border:none;border-top:1px solid var(--border);margin:40px 0">
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">What is the difference between EXIF and metadata?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">Metadata is a broad term meaning "data about data" — any information that describes a file. EXIF (Exchangeable Image File Format) is a specific, standardised type of metadata that cameras automatically embed into JPEG and TIFF photos. It includes camera settings, date/time, and GPS coordinates. So all EXIF data is metadata, but not all metadata is EXIF data.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What does EXIF data contain?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">EXIF data typically contains: camera make and model, shutter speed, aperture (f-stop), ISO sensitivity, focal length, date and time the photo was taken, GPS latitude and longitude (if location was enabled), altitude, flash status, white balance, and image dimensions. GPS coordinates are the most privacy-sensitive field in EXIF data.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What are IPTC and XMP, and how do they differ from EXIF?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">IPTC (International Press Telecommunications Council) metadata stores captions, keywords, copyright information, and credit lines — mainly used by journalists and stock photographers. XMP (Extensible Metadata Platform) is Adobe's newer, XML-based format that can store EXIF, IPTC, and custom data. EXIF is set automatically by the camera; IPTC and XMP are usually added manually by the photographer or editor.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can EXIF data reveal my home address?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. If you take a photo at home with location services enabled, the EXIF data will include the GPS coordinates of your home. Anyone who receives the original photo file can read those coordinates and determine your exact address. Always remove GPS EXIF data before sharing photos publicly. Our free tool at geotagseditor.online lets you strip GPS coordinates in seconds — no login required.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I view or remove EXIF data from a photo?</button>
+          <div class="faq-answer"><div class="faq-answer-inner">On Windows: right-click the photo → Properties → Details. On Mac: open in Preview → Tools → Show Inspector → GPS tab. Online: upload your JPEG to our free geo tag editor at geotagseditor.online. You can view all EXIF fields instantly and remove GPS coordinates with one click. All processing happens in your browser — nothing is uploaded to a server.</div></div>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;padding:24px;background:var(--gradient-soft);border-radius:var(--radius);text-align:center">
+        <h3 style="margin-bottom:8px">Ready to View or Edit Your Photo's EXIF Data?</h3>
+        <p style="color:var(--text-secondary);margin-bottom:20px">Upload a JPEG and instantly see all EXIF fields — then add, edit, or remove GPS coordinates for free. No account needed.</p>
+        <a href="/geo-tag-editor/" class="btn btn-primary">Open Free EXIF GPS Editor</a>
+      </div>
+
+    </div>
+  </div>
+</article>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="/js/common.js" defer></script>
+<script src="/js/site.js" defer></script>
+
+</body>
+</html>

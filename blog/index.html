@@ -42,9 +42,12 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0369a1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
 <link rel="preload" href="/css/style.css" as="style">
 <link rel="stylesheet" href="/css/style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -60,7 +63,7 @@
   "name": "GPS Photo Editor Free Blog",
   "description": "Expert guides on how to add GPS to photo, remove geotag from photo, EXIF metadata editing, and photo privacy protection.",
   "url": "https://geotagseditor.online/blog/",
-  "dateModified": "2025-03-14",
+  "dateModified": "2026-04-03",
   "author": {
     "@type": "Organization",
     "name": "Geo Tags Editor",
@@ -121,6 +124,11 @@
       "@type": "BlogPosting",
       "name": "Complete Guide to Photo Metadata Security: Protect Your Privacy in 2026",
       "url": "https://geotagseditor.online/blog/photo-metadata-security-guide-2026/"
+    },
+    {
+      "@type": "BlogPosting",
+      "name": "EXIF vs Metadata: What's the Difference?",
+      "url": "https://geotagseditor.online/blog/exif-vs-metadata-whats-the-difference/"
     }
   ]
 }
@@ -255,6 +263,16 @@
           <a href="/blog/geo-tagging-seo-complete-guide-2025/" class="read-more">Read Article &rarr;</a>
         </div>
       </article>
+
+      <article class="blog-card">
+        <div class="blog-card-thumb" aria-hidden="true"><svg class="icon"><use href="/images/icons.svg#icon-metadata"></use></svg></div>
+        <div class="blog-card-body">
+          <span class="tag">Education</span>
+          <h3><a href="/blog/exif-vs-metadata-whats-the-difference/">EXIF vs Metadata: What's the Difference?</a></h3>
+          <p>EXIF and metadata are not the same thing. Learn the real difference, what GPS EXIF data contains, how IPTC and XMP fit in, and why it matters for your privacy and SEO.</p>
+          <a href="/blog/exif-vs-metadata-whats-the-difference/" class="read-more">Read Article &rarr;</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -272,8 +290,5 @@
 
 <footer class="site-footer" id="site-footer"></footer>
 <script src="/js/common.js" defer></script>
-<script>
-if('fonts' in document){document.fonts.load("600 1em Outfit").then(function(){var l=document.createElement('link');l.href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap';l.rel='stylesheet';l.crossOrigin='anonymous';document.head.appendChild(l);});}
-</script>
 </body>
 </html>
