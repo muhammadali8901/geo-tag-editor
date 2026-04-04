@@ -18,3 +18,4 @@ Commit on 2026-04-03T15:19:23: style: update color variables for dark mode contr
 Commit on 2026-04-03T19:11:45: style: tweak typography hierarchy for blog headings
 Commit on 2026-04-04T17:57:27: fix: scroll restoration on back navigation
 Commit on 2026-04-04T20:14:00: style: adjust card padding for mobile screens
+Commit on 2026-04-04T16:34:02: chore: audit and remove unused asset references
