@@ -16,3 +16,4 @@ Commit on 2026-04-03T10:04:34: perf: memoize expensive image transform operation
 Commit on 2026-04-03T13:43:06: style: align footer navigation elements
 Commit on 2026-04-03T15:19:23: style: update color variables for dark mode contrast
 Commit on 2026-04-03T19:11:45: style: tweak typography hierarchy for blog headings
+Commit on 2026-04-04T17:57:27: fix: scroll restoration on back navigation
