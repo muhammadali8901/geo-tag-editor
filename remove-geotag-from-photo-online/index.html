@@ -325,6 +325,47 @@
 
     <footer class="site-footer" id="site-footer"></footer>
 
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does removing the GPS tag shrink my image size or drastically reduce visual quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, absolutely not. Utilizing our tool to remove location from image metadata entirely focuses on parsing and systematically deleting a few specific kilobytes of simple text characters stored securely within the file's header frame. The core visible matrix—including the visual resolution, pixel density, artifact compression, and the beautiful aesthetic coloring of the photo itself—is entirely untouched and remains 100% pristine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a highly skilled hacker or company reverse-engineer the deleted tag?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely not. Once you deliberately delete photo metadata and safely save the newly generated version to your local hard drive using our specialized utility, that specific EXIF geographical vector is fundamentally erased from existence. It cannot be recovered from the new exported file because the actual text strings simply do not exist within that generated binary code any longer. The data is gone forever."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it completely legal to delete a photo's metadata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, it is entirely legal in almost every jurisdiction. If you are the rightful owner, creator, and taker of a digital photograph, you inherently possess complete and total rights over its digital formatting and underlying file structure. Taking proactive steps to thoroughly remove geotag from image files is widely advocated and aggressively encouraged by premier cybersecurity professionals across the globe as a basic, foundational safety and privacy protocol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What exactly does the 'image gps editor' do under the hood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our image gps editor leverages modern browser APIs (using javascript) to intercept the JPEG binary. It rapidly scans the 0th IFD, Exif IFD, and GPS IFD sections of the file formatting structure. When you instruct it to clean the file, it specifically zeroes out the latitude and longitude array vectors while perfectly preserving the rest of the image dictionary, finally recombining it into a standard downloadable image blob."
+          }
+        }
+      ]
+    }
+    </script>
     <!-- Core Scripts -->
     <script src="/js/common.js"></script>
     <script src="/js/site.js"></script>

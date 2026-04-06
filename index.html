@@ -1109,6 +1109,54 @@ window.renderSidebar = function() {
     window.GTP.renderHeaderLinks();
   }
 };
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add GPS location to photos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upload your JPEG to our interface, pinpoint your desired location on the interactive map, and tap Apply Coordinates. The new GPS EXIF metadata will be embedded instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this photo geotag tool actually free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! Our tool is 100% free forever without requiring an account, subscription, or software installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I remove GPS from photos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upload your photo, view the existing GPS metadata, and click the 'Remove Geotag' button to delete all location data instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does editing GPS data affect image quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Editing EXIF metadata only changes the header information of the file. Your image pixels and visual quality remain completely unchanged."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data safe and private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All processing happens in your browser using JavaScript. Your photos never leave your device or get uploaded to any server."
+      }
+    }
+  ]
+}
 </script>
 <script>
 // Optimize font loading with font-display: swap
