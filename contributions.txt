@@ -39,3 +39,4 @@ Commit on 2026-04-07T19:05:03: refactor: extract reusable modal components
 Commit on 2026-04-07T11:54:44: style: update button hover effects
 Commit on 2026-04-07T12:13:55: docs: update EXIF metadata guide section
 Commit on 2026-04-07T13:20:07: refactor: extract reusable modal components
+Commit on 2026-04-07T12:45:05: docs: update README with recent feature notes
