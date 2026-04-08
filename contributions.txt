@@ -43,3 +43,4 @@ Commit on 2026-04-07T12:45:05: docs: update README with recent feature notes
 Commit on 2026-04-08T10:40:29: perf: memoize expensive image transform operations
 Commit on 2026-04-08T11:13:30: style: adjust card padding for mobile screens
 Commit on 2026-04-08T19:10:30: fix: scroll restoration on back navigation
+Commit on 2026-04-08T21:04:11: chore: update dependencies and internal scripts
