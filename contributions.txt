@@ -50,3 +50,4 @@ Commit on 2026-04-09T17:18:58: refactor: extract reusable modal components
 Commit on 2026-04-09T18:46:26: fix: scroll restoration on back navigation
 Commit on 2026-04-09T17:41:34: feat: add keyboard shortcut support for map zooming
 Commit on 2026-04-09T19:23:02: chore: clean up internal log statements
+Commit on 2026-04-09T10:18:46: fix: tooltip display glitch on mobile view
