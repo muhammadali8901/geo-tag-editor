@@ -48,3 +48,4 @@ Commit on 2026-04-08T18:53:40: refactor: extract reusable modal components
 Commit on 2026-04-08T19:35:32: style: tweak typography hierarchy for blog headings
 Commit on 2026-04-09T17:18:58: refactor: extract reusable modal components
 Commit on 2026-04-09T18:46:26: fix: scroll restoration on back navigation
+Commit on 2026-04-09T17:41:34: feat: add keyboard shortcut support for map zooming
