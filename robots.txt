@@ -11,10 +11,15 @@ Disallow: /test-coordinate-input.html
 Disallow: /adsense-placements.html
 Disallow: /protection-template.html
 Disallow: /social-preview-template.html
+Disallow: /partials/
 
 # Allow static assets required for rendering.
 Allow: /css/
 Allow: /js/
 Allow: /images/
 
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://geotagseditor.online/sitemap.xml
