@@ -52,3 +52,4 @@ Commit on 2026-04-09T17:41:34: feat: add keyboard shortcut support for map zoomi
 Commit on 2026-04-09T19:23:02: chore: clean up internal log statements
 Commit on 2026-04-09T10:18:46: fix: tooltip display glitch on mobile view
 Commit on 2026-04-09T16:29:45: docs: expand metadata dictionary table descriptions
+Commit on 2026-04-10T16:28:26: docs: clarify privacy policy points
