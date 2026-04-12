@@ -69,3 +69,4 @@ Commit on 2026-04-12T13:03:47: fix: tooltip display glitch on mobile view
 Commit on 2026-04-12T11:41:02: perf: reduce DOM manipulation overhead
 Commit on 2026-04-12T18:44:51: feat: refine error message clarity for invalid coordinates
 Commit on 2026-04-12T19:52:19: fix: handle missing geolocation permissions gracefully
+Commit on 2026-04-12T09:26:41: docs: expand metadata dictionary table descriptions
