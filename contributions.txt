@@ -65,3 +65,4 @@ Commit on 2026-04-11T17:26:13: style: update color variables for dark mode contr
 Commit on 2026-04-11T18:05:39: fix: tooltip display glitch on mobile view
 Commit on 2026-04-11T17:50:34: fix: scroll restoration on back navigation
 Commit on 2026-04-12T18:58:45: style: align footer navigation elements
+Commit on 2026-04-12T13:03:47: fix: tooltip display glitch on mobile view
