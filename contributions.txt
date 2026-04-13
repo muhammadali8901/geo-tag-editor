@@ -72,3 +72,4 @@ Commit on 2026-04-12T19:52:19: fix: handle missing geolocation permissions grace
 Commit on 2026-04-12T09:26:41: docs: expand metadata dictionary table descriptions
 Commit on 2026-04-12T15:49:25: docs: update README with recent feature notes
 Commit on 2026-04-12T13:41:23: style: minor spacing adjustment in navigation bar
+Commit on 2026-04-13T15:46:33: feat: improve metadata parsing efficiency
