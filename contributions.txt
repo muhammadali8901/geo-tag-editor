@@ -78,3 +78,4 @@ Commit on 2026-04-13T09:45:16: fix: scroll restoration on back navigation
 Commit on 2026-04-13T15:45:30: chore: update dependencies and internal scripts
 Commit on 2026-04-13T09:16:05: chore: update dependencies and internal scripts
 Commit on 2026-04-14T12:26:44: feat: improve metadata parsing efficiency
+Commit on 2026-04-14T18:58:46: style: update color variables for dark mode contrast
