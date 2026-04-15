@@ -8,7 +8,7 @@ RewriteBase /
 # Redirect index.html to /
 RewriteRule ^index\.html$ / [R=301,L]
 
-# Root-level .html to folder/
+# Root-level .html to folder/ (301 redirects)
 RewriteRule ^about\.html$ /about/ [R=301,L]
 RewriteRule ^contact\.html$ /contact/ [R=301,L]
 RewriteRule ^geo-tag-editor\.html$ /geo-tag-editor/ [R=301,L]
@@ -25,22 +25,64 @@ RewriteRule ^remove-geotag-from-photo-online\.html$ /remove-geotag-from-photo-on
 # Blog article .html to /blog/slug/
 RewriteRule ^blog/([a-z0-9-]+)\.html$ /blog/$1/ [R=301,L]
 
-# Internal rewrites - serve .html files for clean URLs
-RewriteRule ^about/$ about.html [L]
-RewriteRule ^contact/$ contact.html [L]
-RewriteRule ^geo-tag-editor/$ geo-tag-editor/index.html [L]
-RewriteRule ^blog/$ blog/index.html [L]
-RewriteRule ^privacy-policy/$ privacy-policy/index.html [L]
-RewriteRule ^terms/$ terms/index.html [L]
-RewriteRule ^disclaimer/$ disclaimer/index.html [L]
-RewriteRule ^sitemap/$ sitemap-page.html [L]
+# Internal rewrites - serve index.html files for clean URLs (no redirect, just internal)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^about/?$ /about/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^contact/?$ /contact/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^geo-tag-editor/?$ /geo-tag-editor/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/?$ /blog/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^privacy-policy/?$ /privacy-policy/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^terms/?$ /terms/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^disclaimer/?$ /disclaimer/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^sitemap/?$ /sitemap/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^features/?$ /features/index.html [L]
 
 # New GPS pages - internal rewrites
-RewriteRule ^add-gps-to-photo-online/$ add-gps-to-photo-online.html [L]
-RewriteRule ^remove-geotag-from-photo-online/$ remove-geotag-from-photo-online.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^add-gps-to-photo-online/?$ /add-gps-to-photo-online/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^remove-geotag-from-photo-online/?$ /remove-geotag-from-photo-online/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^geotag-photos-online/?$ /geotag-photos-online/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^how-to-remove-location-from-photos/?$ /how-to-remove-location-from-photos/index.html [L]
 
 # Blog articles - internal rewrites
-RewriteRule ^blog/([a-z0-9-]+)/$ blog/$1/index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([a-z0-9-]+)/?$ /blog/$1/index.html [L]
 </IfModule>
 
 # Enable GZIP Compression

@@ -1,4 +1,5 @@
 # robots.txt for geotagseditor.online
+# Updated: 2026-04-15
 
 User-agent: *
 Allow: /
@@ -12,6 +13,9 @@ Disallow: /adsense-placements.html
 Disallow: /protection-template.html
 Disallow: /social-preview-template.html
 Disallow: /partials/
+
+# Block old .html URLs (now redirect to clean URLs)
+Disallow: /*.html$
 
 # Allow static assets required for rendering.
 Allow: /css/
