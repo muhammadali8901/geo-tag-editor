@@ -1,6 +1,78 @@
 {
   "cleanUrls": false,
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-tag-editor.html",
+      "destination": "/geo-tag-editor/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms/",
+      "permanent": true
+    },
+    {
+      "source": "/disclaimer.html",
+      "destination": "/disclaimer/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-page.html",
+      "destination": "/sitemap/",
+      "permanent": true
+    },
+    {
+      "source": "/add-gps-to-photo-online.html",
+      "destination": "/add-gps-to-photo-online/",
+      "permanent": true
+    },
+    {
+      "source": "/remove-geotag-from-photo-online.html",
+      "destination": "/remove-geotag-from-photo-online/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-add-gps-location-to-photos.html",
+      "destination": "/blog/how-to-add-gps-location-to-photos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-remove-metadata-from-images.html",
+      "destination": "/blog/how-to-remove-metadata-from-images/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-geotagging-matters-for-local-seo.html",
+      "destination": "/blog/why-geotagging-matters-for-local-seo/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-practices-for-photo-geotagging-2026.html",
+      "destination": "/blog/best-practices-for-photo-geotagging-2026/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/about",
@@ -73,6 +145,38 @@
     {
       "source": "/geo-tag-editor/",
       "destination": "/geo-tag-editor/index.html"
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap/index.html"
+    },
+    {
+      "source": "/sitemap/",
+      "destination": "/sitemap/index.html"
+    },
+    {
+      "source": "/features",
+      "destination": "/features/index.html"
+    },
+    {
+      "source": "/features/",
+      "destination": "/features/index.html"
+    },
+    {
+      "source": "/geotag-photos-online",
+      "destination": "/geotag-photos-online/index.html"
+    },
+    {
+      "source": "/geotag-photos-online/",
+      "destination": "/geotag-photos-online/index.html"
+    },
+    {
+      "source": "/how-to-remove-location-from-photos",
+      "destination": "/how-to-remove-location-from-photos/index.html"
+    },
+    {
+      "source": "/how-to-remove-location-from-photos/",
+      "destination": "/how-to-remove-location-from-photos/index.html"
     }
   ]
 }
