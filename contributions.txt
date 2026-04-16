@@ -95,3 +95,4 @@ Commit on 2026-04-16T20:01:44: style: align footer navigation elements
 Commit on 2026-04-16T11:46:29: docs: update README with recent feature notes
 Commit on 2026-04-16T18:18:58: feat: refine error message clarity for invalid coordinates
 Commit on 2026-04-16T19:39:53: perf: reduce DOM manipulation overhead
+Commit on 2026-04-16T12:17:31: style: tweak typography hierarchy for blog headings
