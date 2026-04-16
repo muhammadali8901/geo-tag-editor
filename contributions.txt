@@ -92,3 +92,4 @@ Commit on 2026-04-15T19:10:29: refactor: optimize image loading routines
 Commit on 2026-04-15T14:32:13: style: update button hover effects
 Commit on 2026-04-15T21:02:27: perf: optimize web worker message passing
 Commit on 2026-04-16T20:01:44: style: align footer navigation elements
+Commit on 2026-04-16T11:46:29: docs: update README with recent feature notes
