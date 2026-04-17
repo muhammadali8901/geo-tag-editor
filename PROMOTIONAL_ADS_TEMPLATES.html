@@ -1,0 +1,578 @@
+<!-- 
+  ═══════════════════════════════════════════════════════════════════════════════
+  PROMOTIONAL ADS TEMPLATES - READY-TO-USE EXAMPLES
+  ═══════════════════════════════════════════════════════════════════════════════
+  
+  This file contains copy-paste ready HTML for:
+  1. Card Ad Component (single ad)
+  2. Sidebar Ad Component (sidebar)
+  3. Homepage integration
+  4. Tool page integration
+  
+  Replace YOUR_LISTING_WEBSITE_URL with your actual URL
+  ═══════════════════════════════════════════════════════════════════════════════
+-->
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- TEMPLATE 1: CARD AD - COMPLETE COMPONENT (COPY & PASTE) -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+
+<!-- 
+  HOW TO USE:
+  1. Copy the entire <div class="ad-card-container"> ... </div> block
+  2. Paste it in your homepage between sections (4-5 times recommended)
+  3. Wrap in: <div class="ad-section">PASTE HERE</div>
+  4. Replace YOUR_LISTING_WEBSITE_URL with your actual URL
+-->
+
+<!--
+CARD AD #1 - Basic Version
+-->
+<div class="ad-section">
+  <div class="ad-card-container">
+    <div class="ad-card-header">
+      <h3 class="ad-card-title">Free Business Listing</h3>
+      <p class="ad-card-subtitle">Get your business online in minutes</p>
+    </div>
+
+    <div class="ad-iframe-wrapper loading">
+      <iframe 
+        data-src="https://YOUR_LISTING_WEBSITE_URL"
+        loading="lazy"
+        sandbox="allow-same-origin allow-scripts allow-popups"
+        rel="noopener noreferrer"
+        title="Free Business Listing Preview">
+      </iframe>
+      <div class="ad-iframe-loader">
+        <div class="ad-loader-spinner"></div>
+      </div>
+    </div>
+
+    <ul class="ad-card-features">
+      <li class="ad-feature-item">
+        <span class="ad-feature-icon">✓</span>
+        <p class="ad-feature-text">Free business listing</p>
+      </li>
+      <li class="ad-feature-item">
+        <span class="ad-feature-icon">✓</span>
+        <p class="ad-feature-text">Increase online visibility</p>
+      </li>
+      <li class="ad-feature-item">
+        <span class="ad-feature-icon">✓</span>
+        <p class="ad-feature-text">SEO-friendly profiles</p>
+      </li>
+      <li class="ad-feature-item">
+        <span class="ad-feature-icon">✓</span>
+        <p class="ad-feature-text">Easy submission process</p>
+      </li>
+    </ul>
+
+    <div class="ad-card-footer">
+      <a href="https://YOUR_LISTING_WEBSITE_URL" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="ad-cta-button">
+        List Your Business
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- TEMPLATE 2: SIDEBAR AD - COMPLETE COMPONENT (COPY & PASTE) -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+
+<!-- 
+  HOW TO USE:
+  1. Copy the entire <aside class="ad-sidebar-container"> ... </aside> block
+  2. Paste it in your tool pages (Geo Tag Editor, etc.)
+  3. Place right after <body> opening tag OR at top of main content
+  4. Replace YOUR_LISTING_WEBSITE_URL with your actual URL
+  5. Optional: Add 'left' class to position on left side
+  6. Optional: Add 'sticky' class for sticky positioning (default is fixed)
+
+VARIANTS:
+- Default (right side, fixed): class="ad-sidebar-container"
+- Left side (fixed): class="ad-sidebar-container left"
+- Right side (sticky): class="ad-sidebar-container sticky"
+- Left side (sticky): class="ad-sidebar-container left sticky"
+-->
+
+<aside class="ad-sidebar-container sticky" role="complementary" aria-label="Promotional ads">
+  <button class="ad-sidebar-close" aria-label="Close sidebar">×</button>
+
+  <a href="https://YOUR_LISTING_WEBSITE_URL" 
+     class="ad-sidebar-item" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     title="List Your Business">
+    📌 List Business
+  </a>
+
+  <a href="https://YOUR_LISTING_WEBSITE_URL/features" 
+     class="ad-sidebar-item" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     title="See Features">
+    ⭐ Features
+  </a>
+
+  <a href="https://YOUR_LISTING_WEBSITE_URL/pricing" 
+     class="ad-sidebar-item" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     title="View Pricing">
+    💰 Pricing
+  </a>
+
+  <a href="https://YOUR_LISTING_WEBSITE_URL/contact" 
+     class="ad-sidebar-item" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     title="Contact Us">
+    💬 Support
+  </a>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- TEMPLATE 3: HOMEPAGE - COMPLETE EXAMPLE -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+
+<!-- 
+  Complete homepage example showing where to add ads
+  This is a reference - integrate ads into your existing homepage
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Geo Tag Editor - Professional geotagging for photos">
+  
+  <!-- Existing stylesheets -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <!-- ADD THIS: Promotional ads stylesheet -->
+  <link rel="stylesheet" href="/css/promotional-ads.css">
+</head>
+<body>
+  <!-- Header/Navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Your existing navigation -->
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
+      <h1>Geo Tag Editor</h1>
+      <p>Professional geotagging for your photos</p>
+      <!-- Hero content -->
+    </section>
+
+    <!-- ⭐ AD PLACEMENT #1: After Hero Section -->
+    <div class="ad-section">
+      <div class="ad-card-container">
+        <div class="ad-card-header">
+          <h3 class="ad-card-title">Free Business Listing</h3>
+          <p class="ad-card-subtitle">Get your business online in minutes</p>
+        </div>
+        <div class="ad-iframe-wrapper loading">
+          <iframe 
+            data-src="https://YOUR_LISTING_WEBSITE_URL"
+            loading="lazy"
+            sandbox="allow-same-origin allow-scripts allow-popups"
+            rel="noopener noreferrer"
+            title="Free Business Listing Preview">
+          </iframe>
+          <div class="ad-iframe-loader">
+            <div class="ad-loader-spinner"></div>
+          </div>
+        </div>
+        <ul class="ad-card-features">
+          <li class="ad-feature-item">
+            <span class="ad-feature-icon">✓</span>
+            <p class="ad-feature-text">Free business listing</p>
+          </li>
+          <li class="ad-feature-item">
+            <span class="ad-feature-icon">✓</span>
+            <p class="ad-feature-text">Increase online visibility</p>
+          </li>
+          <li class="ad-feature-item">
+            <span class="ad-feature-icon">✓</span>
+            <p class="ad-feature-text">SEO-friendly profiles</p>
+          </li>
+          <li class="ad-feature-item">
+            <span class="ad-feature-icon">✓</span>
+            <p class="ad-feature-text">Easy submission process</p>
+          </li>
+        </ul>
+        <div class="ad-card-footer">
+          <a href="https://YOUR_LISTING_WEBSITE_URL" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="ad-cta-button">
+            List Your Business
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. FEATURES SECTION -->
+    <section class="features">
+      <h2>Why Choose Geo Tag Editor?</h2>
+      <!-- Features content -->
+    </section>
+
+    <!-- ⭐ AD PLACEMENT #2: After Features -->
+    <div class="ad-section">
+      <div class="ad-card-container">
+        <!-- Same card ad HTML as above -->
+      </div>
+    </div>
+
+    <!-- 3. TOOLS SECTION -->
+    <section class="tools">
+      <h2>Our Tools</h2>
+      <!-- Tools grid/content -->
+    </section>
+
+    <!-- ⭐ AD PLACEMENT #3: After Tools -->
+    <div class="ad-section">
+      <div class="ad-card-container">
+        <!-- Same card ad HTML as above -->
+      </div>
+    </div>
+
+    <!-- 4. HOW IT WORKS SECTION -->
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <!-- How it works content -->
+    </section>
+
+    <!-- ⭐ AD PLACEMENT #4: After How It Works -->
+    <div class="ad-section">
+      <div class="ad-card-container">
+        <!-- Same card ad HTML as above -->
+      </div>
+    </div>
+
+    <!-- 5. TESTIMONIALS / SOCIAL PROOF -->
+    <section class="testimonials">
+      <h2>Trusted by Professionals</h2>
+      <!-- Testimonials -->
+    </section>
+
+    <!-- ⭐ AD PLACEMENT #5: Final CTA Ad (Most Important) -->
+    <div class="ad-section">
+      <div class="ad-card-container">
+        <div class="ad-card-header">
+          <h3 class="ad-card-title">🚀 Start Your Free Business Listing Today</h3>
+          <p class="ad-card-subtitle">No credit card required - takes 5 minutes</p>
+        </div>
+        <div class="ad-iframe-wrapper loading">
+          <iframe 
+            data-src="https://YOUR_LISTING_WEBSITE_URL"
+            loading="lazy"
+            sandbox="allow-same-origin allow-scripts allow-popups"
+            rel="noopener noreferrer"
+            title="Free Business Listing Preview">
+          </iframe>
+          <div class="ad-iframe-loader">
+            <div class="ad-loader-spinner"></div>
+          </div>
+        </div>
+        <ul class="ad-card-features">
+          <li class="ad-feature-item">
+            <span class="ad-feature-icon">✓</span>
+            <p class="ad-feature-text">No credit card required</p>
+          </li>
+          <li class="ad-feature-item">
+            <span class="ad-feature-icon">✓</span>
+            <p class="ad-feature-text">Takes only 5 minutes</p>
+          </li>
+          <li class="ad-feature-item">
+            <span class="ad-feature-icon">✓</span>
+            <p class="ad-feature-text">Instant online presence</p>
+          </li>
+          <li class="ad-feature-item">
+            <span class="ad-feature-icon">✓</span>
+            <p class="ad-feature-text">Premium support included</p>
+          </li>
+        </ul>
+        <div class="ad-card-footer">
+          <a href="https://YOUR_LISTING_WEBSITE_URL" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="ad-cta-button">
+            Create Free Listing Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- Your existing footer -->
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Existing scripts -->
+  
+  <!-- ADD THIS: Promotional ads script (must be after ads HTML) -->
+  <script src="/js/promotional-ads.js" defer></script>
+
+</body>
+</html>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- TEMPLATE 4: TOOL PAGE - COMPLETE EXAMPLE -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+
+<!-- 
+  Complete tool page example (e.g., Geo Tag Editor page)
+  Shows sidebar ad + optional card ad below tool
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Geo Tag Editor - Edit photo geotags online">
+  
+  <!-- Existing stylesheets -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <!-- ADD THIS: Promotional ads stylesheet -->
+  <link rel="stylesheet" href="/css/promotional-ads.css">
+  
+  <style>
+    /* Tool page layout styles */
+    .tool-wrapper {
+      position: relative;
+      display: flex;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .tool-main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .tool-interface {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      min-height: 500px;
+    }
+
+    @media (max-width: 1024px) {
+      .tool-wrapper {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ADD THIS: Sidebar Ad (right side, sticky) -->
+  <aside class="ad-sidebar-container sticky" role="complementary" aria-label="Promotional ads">
+    <button class="ad-sidebar-close" aria-label="Close sidebar">×</button>
+
+    <a href="https://YOUR_LISTING_WEBSITE_URL" 
+       class="ad-sidebar-item" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="List Your Business">
+      📌 List Business
+    </a>
+
+    <a href="https://YOUR_LISTING_WEBSITE_URL/features" 
+       class="ad-sidebar-item" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="See Features">
+      ⭐ Features
+    </a>
+
+    <a href="https://YOUR_LISTING_WEBSITE_URL/pricing" 
+       class="ad-sidebar-item" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="View Pricing">
+      💰 Pricing
+    </a>
+
+    <a href="https://YOUR_LISTING_WEBSITE_URL/contact" 
+       class="ad-sidebar-item" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="Contact Us">
+      💬 Support
+    </a>
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Your existing navigation -->
+    </nav>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="tool-wrapper">
+    <main class="tool-main">
+      <!-- Page Header -->
+      <header class="tool-header" style="margin-bottom: 24px;">
+        <h1>Geo Tag Editor</h1>
+        <p>Edit, manage, and organize your photo geotags with ease</p>
+      </header>
+
+      <!-- Tool Interface -->
+      <div class="tool-interface">
+        <!-- Your tool content here -->
+        <p style="color: #999; text-align: center; padding: 60px 20px;">
+          [Geo Tag Editor Tool Interface]
+        </p>
+      </div>
+
+      <!-- Optional: Ad Below Tool -->
+      <div class="ad-section" style="margin-top: 40px;">
+        <div class="ad-card-container">
+          <div class="ad-card-header">
+            <h3 class="ad-card-title">Grow Your Business Listing</h3>
+            <p class="ad-card-subtitle">Complement your photos with a professional business listing</p>
+          </div>
+          <div class="ad-iframe-wrapper loading">
+            <iframe 
+              data-src="https://YOUR_LISTING_WEBSITE_URL"
+              loading="lazy"
+              sandbox="allow-same-origin allow-scripts allow-popups"
+              rel="noopener noreferrer"
+              title="Free Business Listing Preview">
+            </iframe>
+            <div class="ad-iframe-loader">
+              <div class="ad-loader-spinner"></div>
+            </div>
+          </div>
+          <ul class="ad-card-features">
+            <li class="ad-feature-item">
+              <span class="ad-feature-icon">✓</span>
+              <p class="ad-feature-text">Free business listing</p>
+            </li>
+            <li class="ad-feature-item">
+              <span class="ad-feature-icon">✓</span>
+              <p class="ad-feature-text">Increase online visibility</p>
+            </li>
+            <li class="ad-feature-item">
+              <span class="ad-feature-icon">✓</span>
+              <p class="ad-feature-text">SEO-friendly profiles</p>
+            </li>
+            <li class="ad-feature-item">
+              <span class="ad-feature-icon">✓</span>
+              <p class="ad-feature-text">Easy submission process</p>
+            </li>
+          </ul>
+          <div class="ad-card-footer">
+            <a href="https://YOUR_LISTING_WEBSITE_URL" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="ad-cta-button">
+              List Your Business Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Content / FAQ -->
+      <section class="tool-faq" style="margin-top: 40px;">
+        <h2>Frequently Asked Questions</h2>
+        <!-- FAQ content -->
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- Your existing footer -->
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Existing scripts -->
+  
+  <!-- ADD THIS: Promotional ads script -->
+  <script src="/js/promotional-ads.js" defer></script>
+
+</body>
+</html>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- TEMPLATE 5: VARIANT CARD AD - DIFFERENT MESSAGING -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+
+<!-- 
+  Alternative card ad with different messaging
+  Use for variety or specific page context
+-->
+
+<div class="ad-section">
+  <div class="ad-card-container">
+    <div class="ad-card-header">
+      <h3 class="ad-card-title">📱 Get Listed Online</h3>
+      <p class="ad-card-subtitle">Perfect complement to photo geotagging</p>
+    </div>
+
+    <div class="ad-iframe-wrapper loading">
+      <iframe 
+        data-src="https://YOUR_LISTING_WEBSITE_URL"
+        loading="lazy"
+        sandbox="allow-same-origin allow-scripts allow-popups"
+        rel="noopener noreferrer"
+        title="Free Business Listing Preview">
+      </iframe>
+      <div class="ad-iframe-loader">
+        <div class="ad-loader-spinner"></div>
+      </div>
+    </div>
+
+    <ul class="ad-card-features">
+      <li class="ad-feature-item">
+        <span class="ad-feature-icon">⚡</span>
+        <p class="ad-feature-text">Lightning fast setup</p>
+      </li>
+      <li class="ad-feature-item">
+        <span class="ad-feature-icon">🎯</span>
+        <p class="ad-feature-text">Reach local customers</p>
+      </li>
+      <li class="ad-feature-item">
+        <span class="ad-feature-icon">📈</span>
+        <p class="ad-feature-text">Boost search rankings</p>
+      </li>
+      <li class="ad-feature-item">
+        <span class="ad-feature-icon">✨</span>
+        <p class="ad-feature-text">Professional profiles</p>
+      </li>
+    </ul>
+
+    <div class="ad-card-footer">
+      <a href="https://YOUR_LISTING_WEBSITE_URL" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="ad-cta-button">
+        Get Started Free
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- END OF TEMPLATES -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
