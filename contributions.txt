@@ -100,3 +100,4 @@ Commit on 2026-04-16T15:22:45: feat: add keyboard shortcut support for map zoomi
 Commit on 2026-04-16T16:39:28: docs: clarify privacy policy points
 Commit on 2026-04-16T21:37:17: refactor: clean up unused helper functions
 Commit on 2026-04-17T13:07:34: docs: update sitemap generator comments
+Commit on 2026-04-17T12:21:01: chore: update dependencies and internal scripts
