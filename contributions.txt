@@ -113,3 +113,4 @@ Commit on 2026-04-18T12:56:38: fix: handle missing geolocation permissions grace
 Commit on 2026-04-18T15:30:24: chore: audit and remove unused asset references
 Commit on 2026-04-18T17:03:21: style: minor spacing adjustment in navigation bar
 Commit on 2026-04-18T21:29:01: perf: memoize expensive image transform operations
+Commit on 2026-04-18T15:52:38: style: tweak typography hierarchy for blog headings
