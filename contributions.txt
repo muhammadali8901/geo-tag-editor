@@ -112,3 +112,4 @@ Commit on 2026-04-18T13:31:40: docs: update EXIF metadata guide section
 Commit on 2026-04-18T12:56:38: fix: handle missing geolocation permissions gracefully
 Commit on 2026-04-18T15:30:24: chore: audit and remove unused asset references
 Commit on 2026-04-18T17:03:21: style: minor spacing adjustment in navigation bar
+Commit on 2026-04-18T21:29:01: perf: memoize expensive image transform operations
