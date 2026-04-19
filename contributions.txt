@@ -116,3 +116,4 @@ Commit on 2026-04-18T21:29:01: perf: memoize expensive image transform operation
 Commit on 2026-04-18T15:52:38: style: tweak typography hierarchy for blog headings
 Commit on 2026-04-19T19:17:33: fix: tooltip display glitch on mobile view
 Commit on 2026-04-19T19:55:17: refactor: modularize coordinate conversion utility
+Commit on 2026-04-19T13:53:41: perf: optimize web worker message passing
