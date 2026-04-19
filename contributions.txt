@@ -118,3 +118,4 @@ Commit on 2026-04-19T19:17:33: fix: tooltip display glitch on mobile view
 Commit on 2026-04-19T19:55:17: refactor: modularize coordinate conversion utility
 Commit on 2026-04-19T13:53:41: perf: optimize web worker message passing
 Commit on 2026-04-19T13:19:32: style: update button hover effects
+Commit on 2026-04-19T11:43:29: docs: update README with recent feature notes
