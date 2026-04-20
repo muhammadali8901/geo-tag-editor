@@ -123,3 +123,4 @@ Commit on 2026-04-19T09:07:55: style: align footer navigation elements
 Commit on 2026-04-19T20:10:04: perf: memoize expensive image transform operations
 Commit on 2026-04-20T20:56:05: style: tweak typography hierarchy for blog headings
 Commit on 2026-04-20T19:55:08: fix: handle missing geolocation permissions gracefully
+Commit on 2026-04-20T11:47:39: docs: update sitemap generator comments
