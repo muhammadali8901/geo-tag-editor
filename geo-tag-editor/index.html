@@ -20,8 +20,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Geo Tag Editor: Edit GPS Photo Location Online Free Tool</title>
-<meta name="description" content="Edit GPS photo location with Geo Tag Editor to add, update, or remove EXIF metadata, then export images securely using private in-browser processing.">
+<title>Geo Tag Editor — Change or Fix GPS Coordinates in a Photo</title>
+<meta name="description" content="In-browser geo tag editor for fixing wrong or imprecise GPS coordinates in JPEG photos. Read the existing location, drag the marker to the correct point, and save the file with the corrected EXIF GPS values.">
 <link rel="alternate" hreflang="en" href="https://geotagseditor.online/geo-tag-editor/">
 <link rel="alternate" hreflang="x-default" href="https://geotagseditor.online/geo-tag-editor/">
 <link rel="canonical" href="https://geotagseditor.online/geo-tag-editor/">
@@ -100,10 +100,10 @@
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"How do I add GPS coordinates to a photo?","acceptedAnswer":{"@type":"Answer","text":"Upload your JPEG image to Geo Tags Editor, enter latitude and longitude values or pick a location on the map, click Apply Coordinates, then download your geotagged image."}},
-    {"@type":"Question","name":"Can I edit existing geotag data in a photo?","acceptedAnswer":{"@type":"Answer","text":"Yes. When you upload an image with existing GPS data, the tool automatically reads and displays the current coordinates. You can then modify them and save the updated image."}},
-    {"@type":"Question","name":"Is it safe to use this geo tag editor?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. All processing happens in your browser. No images are uploaded to any server. Your files remain on your device throughout the entire process."}},
-    {"@type":"Question","name":"What is EXIF GPS metadata?","acceptedAnswer":{"@type":"Answer","text":"EXIF GPS metadata is location information embedded within digital photo files. It includes latitude, longitude, and sometimes altitude data that records where a photo was taken."}}
+    {"@type":"Question","name":"How do I find the correct coordinates to enter?","acceptedAnswer":{"@type":"Answer","text":"Right-click the spot on Google Maps and copy the latitude/longitude from the context menu. Paste them into the coordinate fields and click Apply, or drag the marker on the editor's map to the right place — the values update automatically."}},
+    {"@type":"Question","name":"Will editing the GPS overwrite the original file on my computer?","acceptedAnswer":{"@type":"Answer","text":"No. The original file is never modified. The corrected version is offered as a new download — you choose where to save it."}},
+    {"@type":"Question","name":"Does changing the GPS affect the photo's timestamp or camera info?","acceptedAnswer":{"@type":"Answer","text":"No. Only the GPS sub-block of the EXIF is rewritten. Camera model, lens, exposure settings, capture date and time, and any other EXIF tags are preserved exactly as they were in the source file."}},
+    {"@type":"Question","name":"My photo's GPS is correct but the altitude is wrong — can I fix that?","acceptedAnswer":{"@type":"Answer","text":"This editor focuses on latitude and longitude. Altitude is recorded as a separate EXIF tag and isn't editable in the on-page form; for altitude-specific fixes a desktop tool like ExifTool gives you per-tag control."}}
   ]
 }
 </script>
@@ -122,8 +122,8 @@
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
-    <h1>Free <span class="gradient-text">GPS Photo Editor Online</span></h1>
-    <p>Add, edit, or remove geotags from your photos right in the browser. Our free online geo tag editor lets you embed precise GPS coordinates, fix incorrect locations, and strip metadata for privacy — with an interactive map picker, batch processing, and 100% client-side processing. No installs, no sign-up, no uploads.</p>
+    <h1>Geo Tag Editor — <span class="gradient-text">Fix or Change a Photo's GPS Coordinates</span></h1>
+    <p>This page is for photos that already have GPS data but the location is <em>wrong</em> — drifted, offset by a few hundred metres, taken indoors, or set by an app you no longer trust. Drop the JPEG in, see the existing coordinates, drag the marker to where the photo was actually taken, and save a corrected copy.</p>
   </div>
 </section>
 
@@ -213,75 +213,61 @@
   </div>
 </section>
 
-<!-- SEO CONTENT -->
+<!-- WHY EDIT EXISTING GPS -->
 <section class="section" style="background:var(--gradient-soft)">
-  <div class="container" style="max-width:800px">
-    <h2 style="font-size:1.6rem;font-weight:700;margin-bottom:16px">What Is a Geo Tag Editor?</h2>
-    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">A geo tag editor is a specialized tool designed to manage the GPS location metadata embedded within digital photographs. Every time you take a photo with a GPS-enabled camera or smartphone, the device can record the exact latitude and longitude coordinates where the image was captured. This information is stored within the image file as part of the EXIF (Exchangeable Image File Format) data.</p>
-    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">Our free online geo tag editor gives you complete control over this location data. Whether you need to add GPS coordinates to images that were taken without location services, correct inaccurate coordinates, or remove sensitive location information before sharing photos online, Geo Tags Editor handles it all without requiring any software installation.</p>
-
-    <h2 style="font-size:1.4rem;font-weight:700;margin:32px 0 16px">Why Edit GPS Metadata in Images?</h2>
-    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">There are several important reasons to edit the GPS geotag data in your photos:</p>
-    <ul style="color:var(--text-secondary);margin:0 0 16px 20px;line-height:1.8">
-      <li><strong style="color:var(--text)">Local SEO Optimization:</strong> Adding accurate GPS coordinates to images used on business websites helps search engines associate your content with a specific location, improving local search rankings.</li>
-      <li><strong style="color:var(--text)">Privacy Protection:</strong> Removing GPS data before sharing photos on social media or websites prevents others from determining where you live, work, or frequently visit.</li>
-      <li><strong style="color:var(--text)">Photo Organization:</strong> Adding location data to scanned photos, studio shots, or images taken with GPS-disabled devices helps you organize your photo library by location.</li>
-      <li><strong style="color:var(--text)">Real Estate Marketing:</strong> Property photos with embedded GPS data can appear in location-based image searches, driving more visibility to listings.</li>
-      <li><strong style="color:var(--text)">Correcting Errors:</strong> GPS sensors aren't always accurate. If your photo's location is wrong, you can correct it to reflect the actual shooting location.</li>
+  <div class="container" style="max-width:820px">
+    <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:16px">Why a Photo's GPS Is Often Wrong</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">A camera's GPS reading is a best guess, not a measurement. The accuracy depends on how good the satellite fix was at the moment the shutter fired, and that's affected by a long list of things you have no control over at the time. The most common reasons coordinates end up off:</p>
+    <ul style="color:var(--text-secondary);margin:0 0 24px 20px;line-height:1.8">
+      <li><strong>Indoor and urban canyon shots.</strong> Walls and tall buildings block satellite signals; the phone falls back to Wi-Fi or cell-tower triangulation, which can be off by 50–500 metres.</li>
+      <li><strong>Cold-start GPS.</strong> If the phone hasn't had a fix recently, the first photo of the session may use the last known location instead of the current one.</li>
+      <li><strong>Assisted GPS errors.</strong> Some phones write a coordinate before they've actually locked on, leaving early shots from a trip tagged at home or at the airport.</li>
+      <li><strong>Time-zone and clock drift.</strong> If the camera's clock is wrong, a tracker-based geotagging workflow (matching photos to a GPX log) snaps to the wrong point on the route.</li>
+      <li><strong>Imported tags from other software.</strong> Some apps round coordinates aggressively or apply them at the album level, leaving every photo at a single approximate point.</li>
     </ul>
 
-    <h2 style="font-size:1.4rem;font-weight:700;margin:32px 0 16px">How Does the Geo Tag Editor Work?</h2>
-    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">Geo Tags Editor works entirely within your web browser using JavaScript. When you upload a JPEG image, the tool reads the binary EXIF data structure within the file. It parses the GPS IFD (Image File Directory) to extract any existing latitude and longitude values stored as degrees, minutes, and seconds (DMS) format.</p>
-    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">When you enter new coordinates or pick a location on the map, the tool converts your decimal degree values into the DMS format required by the EXIF specification. It then writes these values back into the GPS IFD of the image binary, producing a new JPEG file with the updated metadata. The entire process happens locally — no data leaves your browser.</p>
+    <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:16px">How the Editor Handles Existing GPS</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">When you drop a JPEG into the tool, it reads the file's EXIF segment and looks for the GPS IFD. If coordinates are present, the latitude and longitude inputs are pre-filled with the existing values and the map marker is placed at that point. From there you have three options:</p>
+    <ul style="color:var(--text-secondary);margin:0 0 16px 20px;line-height:1.8">
+      <li><strong>Drag the marker</strong> to the correct location, then click Apply. The new coordinates overwrite the old GPS values; the rest of the EXIF (camera, lens, timestamp) is left intact.</li>
+      <li><strong>Type new latitude/longitude</strong> directly — useful if you have the precise coordinates from another source (a survey, a Google Maps pin, a GPX waypoint).</li>
+      <li><strong>Remove the GPS block entirely</strong> with the Remove Geotag button if the original is wrong but you don't have a correct value to replace it with.</li>
+    </ul>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">The image pixels are not touched. The output JPEG has the same resolution and visual quality as the input — only the GPS bytes in the metadata are rewritten.</p>
 
-    <h2 style="font-size:1.4rem;font-weight:700;margin:32px 0 16px">Geotagging for Local SEO: A Powerful Strategy</h2>
-    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">Search engines like Google can read EXIF metadata from images. When your website images contain GPS coordinates that match your business location, it sends a strong local relevance signal. This is why many SEO professionals use geo tag editors as part of their local SEO workflow.</p>
-    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">For maximum impact, geotag all images on your Google Business Profile, website, and social media accounts with your business's precise coordinates. Combined with other local SEO practices like consistent NAP (Name, Address, Phone) information, geotagged images can help your business rank higher in local search results and Google Maps.</p>
-
-    <h2 style="font-size:1.4rem;font-weight:700;margin:32px 0 16px">Features of Our Free Geo Tag Editor</h2>
-    <div class="grid-2" style="margin-top:20px">
-      <div class="card">
-        <h3 style="font-size:.95rem;margin-bottom:6px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-location"></use></svg> Add New GPS Data</h3>
-        <p style="font-size:.88rem;color:var(--text-secondary)">Add geotag to photos that don't have existing GPS metadata. Embed latitude and longitude coordinates.</p>
-      </div>
-      <div class="card">
-        <h3 style="font-size:.95rem;margin-bottom:6px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-edit"></use></svg> Edit Existing Coordinates</h3>
-        <p style="font-size:.88rem;color:var(--text-secondary)">Modify the GPS values in photos that already contain location EXIF data. A true geo tagging editor.</p>
-      </div>
-      <div class="card">
-        <h3 style="font-size:.95rem;margin-bottom:6px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-shield"></use></svg> Remove Geotag</h3>
-        <p style="font-size:.88rem;color:var(--text-secondary)">Strip all GPS data from images for privacy before sharing online.</p>
-      </div>
-      <div class="card">
-        <h3 style="font-size:.95rem;margin-bottom:6px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-map"></use></svg> Map Location Picker</h3>
-        <p style="font-size:.88rem;color:var(--text-secondary)">GPS map editor online — visually select locations on an interactive map with click or marker drag.</p>
-      </div>
-    </div>
+    <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:16px">Useful Companion Pages</h2>
+    <ul style="color:var(--text-secondary);margin:0 0 16px 20px;line-height:1.8">
+      <li><a href="/add-gps-to-photo-online/">Add GPS to a photo</a> — for JPEGs that have no GPS data at all.</li>
+      <li><a href="/geotag-photos-online/">Geotag photos online</a> — for tagging a batch of photos from the same location.</li>
+      <li><a href="/remove-geotag-from-photo-online/">Remove geotag from a photo</a> — for stripping GPS for privacy before sharing.</li>
+    </ul>
   </div>
 </section>
 
 <!-- TOOL PAGE FAQ -->
 <section class="section">
-  <div class="container" style="max-width:800px">
-    <div class="section-header">
-      <h2>Frequently Asked Questions</h2>
-    </div>
+  <div class="container" style="max-width:820px">
+    <h2 style="margin-bottom:16px">Frequently Asked Questions</h2>
     <div class="faq-list" id="faqList2">
       <div class="faq-item">
-        <button class="faq-question">How do I add GPS coordinates to a photo?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">Upload your JPEG image to Geo Tags Editor using drag-and-drop or the file browser. Enter the latitude and longitude values in the coordinate fields, or click on the interactive map to set your desired location. Click the "Apply Coordinates" button, and then download your image with the GPS data embedded in its EXIF metadata.</div></div>
+        <button class="faq-question">How do I find the correct coordinates to enter?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">The easiest way is to right-click the spot on Google Maps and copy the latitude/longitude that appears in the context menu. Paste those numbers into the coordinate fields and click Apply. Alternatively, drag the marker on this page's map to the right place — the values update automatically.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Can I edit existing geotag data in a photo?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes. When you upload an image that already contains GPS coordinates, Geo Tags Editor automatically detects and displays the existing latitude and longitude values. The coordinate fields are pre-filled with the current values, and the map marker is positioned at the existing location. You can then modify these values and save the updated image.</div></div>
+        <button class="faq-question">Will editing the GPS overwrite the original file on my computer?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">No. The original file is never modified. The corrected version is offered as a new download — you choose where to save it. If you want to keep both versions, just save the download to a different folder.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Is it safe to use this geo tag editor?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Geo Tags Editor processes all images entirely within your web browser using client-side JavaScript. No image data is ever transmitted to any server. Your files remain on your local device throughout the entire editing process. This approach ensures maximum privacy and security for your photos.</div></div>
+        <button class="faq-question">Does changing the GPS affect the photo's timestamp or camera info?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">No. Only the GPS sub-block of the EXIF is rewritten. Camera model, lens, exposure settings, capture date and time, and any other EXIF tags are preserved exactly as they were in the source file.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">What is EXIF GPS metadata?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">EXIF (Exchangeable Image File Format) GPS metadata is location information stored within digital photo files. It includes GPS latitude, longitude, altitude, and reference direction data that records where a photograph was taken. Most modern cameras and smartphones automatically embed this data when location services are enabled. EXIF metadata can be read by various software, image viewers, and even search engines.</div></div>
+        <button class="faq-question">My photo's GPS is correct but the altitude is wrong — can I fix that?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">This editor focuses on latitude and longitude. Altitude is recorded as a separate EXIF tag and isn't editable in the on-page form; for altitude-specific fixes a desktop tool like ExifTool gives you per-tag control.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What's the difference between this page and the other tools on the site?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">This page is the editing workflow — it assumes the photo already has GPS values that need correcting. If the photo has no GPS at all, the <a href="/add-gps-to-photo-online/">add GPS</a> page is simpler. For batches, see <a href="/geotag-photos-online/">geotag photos online</a>. To strip GPS for privacy, use <a href="/remove-geotag-from-photo-online/">remove geotag</a>.</div></div>
       </div>
     </div>
   </div>
@@ -291,9 +277,9 @@
 <section class="section" style="padding-top:0">
   <div class="container" style="max-width:800px">
     <div class="cta-banner">
-      <h2>Start Geotagging Your Images</h2>
-      <p>Upload a photo now and add precise GPS coordinates in seconds. No sign-up required.</p>
-      <a href="#tool-card" class="btn" data-scroll-target="#tool-card">Scroll to Tool</a>
+      <h2>Fix Your Photo's GPS</h2>
+      <p>Drop a JPEG in, drag the map marker to the correct spot, and download a corrected copy. No sign-up.</p>
+      <a href="#tool-card" class="btn" data-scroll-target="#tool-card">Open the Editor</a>
     </div>
   </div>
 </section>
