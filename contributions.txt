@@ -126,3 +126,4 @@ Commit on 2026-04-20T19:55:08: fix: handle missing geolocation permissions grace
 Commit on 2026-04-20T11:47:39: docs: update sitemap generator comments
 Commit on 2026-04-20T16:34:02: fix: prevent duplicate form submission on rapid clicks
 Commit on 2026-04-20T19:24:58: docs: improve inline code documentation
+Commit on 2026-04-20T18:52:08: fix: tooltip display glitch on mobile view
