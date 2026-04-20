@@ -122,3 +122,4 @@ Commit on 2026-04-19T11:43:29: docs: update README with recent feature notes
 Commit on 2026-04-19T09:07:55: style: align footer navigation elements
 Commit on 2026-04-19T20:10:04: perf: memoize expensive image transform operations
 Commit on 2026-04-20T20:56:05: style: tweak typography hierarchy for blog headings
+Commit on 2026-04-20T19:55:08: fix: handle missing geolocation permissions gracefully
