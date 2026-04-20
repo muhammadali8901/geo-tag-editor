@@ -124,3 +124,4 @@ Commit on 2026-04-19T20:10:04: perf: memoize expensive image transform operation
 Commit on 2026-04-20T20:56:05: style: tweak typography hierarchy for blog headings
 Commit on 2026-04-20T19:55:08: fix: handle missing geolocation permissions gracefully
 Commit on 2026-04-20T11:47:39: docs: update sitemap generator comments
+Commit on 2026-04-20T16:34:02: fix: prevent duplicate form submission on rapid clicks
