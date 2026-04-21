@@ -131,3 +131,4 @@ Commit on 2026-04-21T18:24:57: refactor: optimize image loading routines
 Commit on 2026-04-21T16:33:48: style: update color variables for dark mode contrast
 Commit on 2026-04-21T09:21:02: feat: improve metadata parsing efficiency
 Commit on 2026-04-21T11:14:56: fix: tooltip display glitch on mobile view
+Commit on 2026-04-21T18:25:04: refactor: clean up unused helper functions
