@@ -141,3 +141,4 @@ Commit on 2026-04-22T09:19:27: perf: optimize web worker message passing
 Commit on 2026-04-22T19:58:45: docs: update sitemap generator comments
 Commit on 2026-04-23T14:36:05: style: adjust card padding for mobile screens
 Commit on 2026-04-23T11:41:11: fix: tooltip display glitch on mobile view
+Commit on 2026-04-23T16:47:22: perf: memoize expensive image transform operations
