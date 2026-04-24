@@ -202,7 +202,7 @@
             <h3 style="margin-bottom:8px">Image Ready for Download</h3>
             <p style="color:var(--text-secondary);margin-bottom:20px;font-size:.95rem">Your image has been updated with the new GPS metadata. Preview it below and download when ready.</p>
             <div class="preview-img-wrap" style="margin-bottom:20px;max-height:300px">
-              <img id="dlPreviewImg" alt="Updated image preview" style="max-height:300px">
+              <img id="dlPreviewImg" alt="Updated image preview" loading="lazy" decoding="async" width="600" height="300" style="max-height:300px;width:auto;height:auto">
             </div>
             <button class="btn btn-success" id="downloadBtn" style="min-width:220px"><svg class="icon"><use href="/images/icons.svg#icon-download"></use></svg> Download Geotagged Image</button>
           </div>

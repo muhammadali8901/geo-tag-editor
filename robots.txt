@@ -28,11 +28,5 @@ Allow: *.png
 Allow: *.jpg
 Allow: *.webp
 
-# Crawl delay for polite crawling (1 second between requests)
-Crawl-delay: 1
-
-# Request timeout setting
-Request-timeout: 30
-
 # Sitemap location
 Sitemap: https://geotagseditor.online/sitemap.xml
