@@ -1,9 +1,16 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const indexnow = require('./lib/indexnow');
+const fileWatcher = require('./lib/file-watcher');
 
 const PORT = 5000;
 const HOST = '0.0.0.0';
+
+// Admin key for the manual IndexNow trigger endpoints.
+// Set INDEXNOW_ADMIN_KEY in your environment (cPanel: Setup Node.js App → Environment Variables)
+// to lock the endpoints. If unset, manual endpoints are disabled (returns 403).
+const INDEXNOW_ADMIN_KEY = process.env.INDEXNOW_ADMIN_KEY || '';
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -97,8 +104,78 @@ function serveFile(filePath, res) {
   });
 }
 
-const server = http.createServer((req, res) => {
-  let urlPath = req.url.split('?')[0];
+function jsonResponse(res, status, payload) {
+  const body = JSON.stringify(payload, null, 2);
+  res.writeHead(status, {
+    'Content-Type': 'application/json; charset=utf-8',
+    'Cache-Control': 'no-store',
+    ...SECURITY_HEADERS,
+  });
+  res.end(body);
+}
+
+async function handleIndexNow(req, res, urlPath, query) {
+  // Auth check
+  if (!INDEXNOW_ADMIN_KEY) {
+    return jsonResponse(res, 403, {
+      ok: false,
+      error: 'INDEXNOW_ADMIN_KEY env var is not set; manual endpoint disabled.',
+    });
+  }
+  const provided = query.get('key') || req.headers['x-admin-key'] || '';
+  if (provided !== INDEXNOW_ADMIN_KEY) {
+    return jsonResponse(res, 403, { ok: false, error: 'Invalid or missing admin key' });
+  }
+
+  // /submit-indexnow/sitemap → submit every URL in sitemap.xml
+  if (urlPath === '/submit-indexnow/sitemap') {
+    const results = await indexnow.submitFromSitemap();
+    return jsonResponse(res, 200, { ok: true, mode: 'sitemap', results });
+  }
+
+  // /submit-indexnow?url=https://...&url=https://... → submit one or more URLs
+  // Also accepts ?url=a,b,c (comma-separated) for convenience.
+  if (urlPath === '/submit-indexnow') {
+    const urls = [];
+    for (const v of query.getAll('url')) {
+      for (const part of v.split(',')) {
+        const trimmed = part.trim();
+        if (trimmed) urls.push(trimmed);
+      }
+    }
+    if (urls.length === 0) {
+      return jsonResponse(res, 400, {
+        ok: false,
+        error: 'Provide at least one ?url=... parameter',
+        usage: '/submit-indexnow?key=ADMIN_KEY&url=https://geotagseditor.online/page/',
+      });
+    }
+    // Force-submit the first URL (bypass dedup) so manual triggers always fire.
+    if (urls.length === 1) {
+      const result = await indexnow.forceSubmit(urls[0]);
+      return jsonResponse(res, 200, { ok: result.ok !== false, mode: 'single', url: urls[0], result });
+    }
+    const results = await indexnow.submitUrls(urls);
+    return jsonResponse(res, 200, { ok: true, mode: 'batch', count: urls.length, results });
+  }
+
+  return jsonResponse(res, 404, { ok: false, error: 'Unknown IndexNow endpoint' });
+}
+
+const server = http.createServer(async (req, res) => {
+  const fullUrl = new URL(req.url, `http://${req.headers.host || HOST}`);
+  let urlPath = fullUrl.pathname;
+  const query = fullUrl.searchParams;
+
+  // IndexNow management endpoints (auth-gated)
+  if (urlPath === '/submit-indexnow' || urlPath === '/submit-indexnow/sitemap') {
+    try {
+      await handleIndexNow(req, res, urlPath, query);
+    } catch (err) {
+      jsonResponse(res, 500, { ok: false, error: err.message });
+    }
+    return;
+  }
 
   if (BLOCKED_PATHS.has(urlPath)) {
     res.writeHead(404, { 'Content-Type': 'text/html', ...SECURITY_HEADERS });
@@ -143,4 +220,15 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, HOST, () => {
   console.log(`Server running at http://${HOST}:${PORT}`);
+  // Start IndexNow file watcher + daily sitemap submission
+  // (Disable in dev by setting INDEXNOW_DISABLE_WATCHER=1)
+  if (process.env.INDEXNOW_DISABLE_WATCHER !== '1') {
+    try {
+      fileWatcher.start();
+    } catch (err) {
+      console.warn('[indexnow-watcher] Failed to start:', err.message);
+    }
+  } else {
+    console.log('[indexnow-watcher] Disabled via INDEXNOW_DISABLE_WATCHER=1');
+  }
 });

@@ -57,3 +57,12 @@ The workflow "Start application" runs `node server.js`, which:
 
 ## Sidebar Architecture Note
 The mobile sidebar and overlay elements MUST live in `<body>`, not inside `<header>`. The `<header>` has `contain:layout style paint` in both the critical inline CSS and style.css — this clips any `position:fixed` children. `js/common.js` moves the sidebar and overlay to `document.body` after the partial header HTML is loaded via fetch.
+
+## IndexNow Integration (auto-submit URLs to Bing/Yandex/Seznam/Naver)
+- **Key**: `2f7faa808792498083543bb6cffb4123` — verification file at `/2f7faa808792498083543bb6cffb4123.txt` (root)
+- **Module**: `lib/indexnow.js` — submitUrls / submitFromSitemap / forceSubmit. Batches 100 URLs/request, dedups against 24h window in `.indexnow-submitted.json`, retries once on 5xx/429/network errors. Logs to `/tmp/indexnow.log`.
+- **Watcher**: `lib/file-watcher.js` — recursive `fs.watch` on every dir; on `.html` change, debounces 30s then submits the matching URL; on `sitemap.xml` change, debounces 30s then resubmits the whole sitemap; daily setInterval forces a full sitemap resubmit (force=true bypasses dedup). Uses two independent debounce timers so sitemap events cannot strand pending HTML URL flushes.
+- **Endpoints in server.js** (auth via `INDEXNOW_ADMIN_KEY` env var; 403 if unset or wrong):
+  - `GET /submit-indexnow?key=<KEY>&url=<URL>[&url=<URL>...]` — manual submit (single URL bypasses dedup)
+  - `GET /submit-indexnow/sitemap?key=<KEY>` — submit every URL in sitemap.xml
+- **Env vars**: `INDEXNOW_ADMIN_KEY` (required for manual endpoints), `INDEXNOW_DISABLE_WATCHER=1` (disables auto-submit, useful in dev)
