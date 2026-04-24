@@ -1,0 +1,132 @@
+You are a senior Technical SEO engineer and frontend developer.
+
+Audit and FIX this website completely for Google indexing issues:
+https://geotagseditor.online/
+
+GOAL:
+
+* Fix all indexing issues from Google Search Console
+* Ensure maximum pages get indexed as fast as possible (target: 24–72 hours)
+* Improve overall technical SEO score to near 100%
+
+CURRENT ISSUES FROM GOOGLE SEARCH CONSOLE:
+
+* Alternate page with proper canonical tag (2 pages)
+* Redirect errors (2 pages)
+* Excluded by ‘noindex’ tag (1 page)
+* Not found (404) (1 page)
+* Discovered – currently not indexed (23 pages)
+
+YOUR TASK IS NOT JUST TO AUDIT — YOU MUST FIX EVERYTHING.
+
+=====================================
+STEP 1: TECHNICAL SEO FIXES
+===========================
+
+* Remove ALL incorrect canonical tags
+* Ensure every indexable page has: <meta name="robots" content="index, follow">
+* Fix redirect chains and loops
+* Fix ALL 404 pages (either restore or 301 redirect)
+* Ensure correct status codes (200 for valid pages)
+* Create and optimize robots.txt:
+
+  * Allow all important pages
+  * Block only unnecessary paths
+
+=====================================
+STEP 2: SITEMAP OPTIMIZATION
+============================
+
+* Generate a clean XML sitemap
+* Include ONLY high-quality pages
+* Remove duplicate, thin, or useless URLs
+* Add lastmod tags correctly
+* Ensure sitemap is accessible at:
+  /sitemap.xml
+
+=====================================
+STEP 3: INTERNAL LINKING FIX
+============================
+
+* Ensure every page is linked within 3 clicks
+* Add links from:
+
+  * Homepage
+  * Footer
+  * Relevant pages
+* Fix orphan pages (VERY IMPORTANT)
+
+=====================================
+STEP 4: CONTENT QUALITY FIX (CRITICAL)
+======================================
+
+For each non-indexed page:
+
+* Add at least 300+ words unique content
+* Add:
+
+  * Proper H1, H2 structure
+  * Keywords naturally
+  * FAQ section
+* Avoid duplicate content across pages
+
+=====================================
+STEP 5: PAGE STRUCTURE (HTML FIX)
+=================================
+
+Ensure every page has:
+
+* Unique <title> (50–60 characters)
+* Unique meta description (140–160 chars)
+* Only ONE H1
+* Proper heading hierarchy
+* Image alt attributes
+
+=====================================
+STEP 6: PAGE SPEED & CORE WEB VITALS
+====================================
+
+* Minify CSS and HTML
+* Optimize images
+* Enable lazy loading
+* Improve LCP, CLS, INP
+
+=====================================
+STEP 7: INDEXING SIGNAL BOOST
+=============================
+
+* Add strong internal linking
+* Add breadcrumb schema
+* Add basic structured data (Organization / WebSite schema)
+* Ensure pages are NOT thin or duplicate
+
+=====================================
+STEP 8: FIX "DISCOVERED – NOT INDEXED"
+======================================
+
+* Identify why these 23 pages are ignored
+* Improve content quality
+* Increase internal links
+* Reduce low-value pages
+* Suggest which pages should be removed from sitemap
+
+=====================================
+STEP 9: FINAL OUTPUT REQUIRED
+=============================
+
+1. List of all issues found
+2. Exact fixes applied (code-level)
+3. Updated files (HTML, robots.txt, sitemap.xml)
+4. Before vs After comparison
+5. Final SEO score
+6. Step-by-step guide to request indexing in Google Search Console
+
+=====================================
+BONUS (IMPORTANT)
+=================
+
+* Suggest a 7-day plan to increase indexing speed
+* Suggest backlink strategy for faster crawling
+
+DO NOT GIVE GENERIC ANSWERS.
+APPLY REAL FIXES AND SHOW CODE.
