@@ -147,3 +147,4 @@ Commit on 2026-04-23T10:27:44: style: minor spacing adjustment in navigation bar
 Commit on 2026-04-23T11:29:04: refactor: modularize coordinate conversion utility
 Commit on 2026-04-24T10:59:53: feat: improve metadata parsing efficiency
 Commit on 2026-04-24T17:25:03: fix: handle missing geolocation permissions gracefully
+Commit on 2026-04-24T21:32:33: fix: handle missing geolocation permissions gracefully
