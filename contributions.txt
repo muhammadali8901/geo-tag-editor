@@ -145,3 +145,4 @@ Commit on 2026-04-23T16:47:22: perf: memoize expensive image transform operation
 Commit on 2026-04-23T19:15:37: docs: update README with recent feature notes
 Commit on 2026-04-23T10:27:44: style: minor spacing adjustment in navigation bar
 Commit on 2026-04-23T11:29:04: refactor: modularize coordinate conversion utility
+Commit on 2026-04-24T10:59:53: feat: improve metadata parsing efficiency
