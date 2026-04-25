@@ -82,6 +82,19 @@
   function loadPartial(targetId, partialPath) {
     var target = document.getElementById(targetId);
     if (!target) return Promise.resolve(false);
+    // If header/footer is already inlined into the HTML (preferred for SEO —
+    // means search engines and no-JS clients see the navigation immediately),
+    // skip the network fetch and just hydrate.
+    if (target.children.length > 0) {
+      if (targetId === 'site-header') {
+        var existingOverlay = target.querySelector('#sidebarOverlay');
+        var existingSidebar = target.querySelector('#mobileSidebar');
+        if (existingOverlay && existingOverlay.parentNode === target) document.body.appendChild(existingOverlay);
+        if (existingSidebar && existingSidebar.parentNode === target) document.body.appendChild(existingSidebar);
+        setTimeout(renderHeaderLinks, 10);
+      }
+      return Promise.resolve(true);
+    }
     return fetch(partialPath, { credentials: 'same-origin' })
       .then(function (response) {
         if (!response.ok) throw new Error('Failed loading ' + partialPath);
@@ -90,8 +103,6 @@
       .then(function (html) {
         target.innerHTML = html;
         if (targetId === 'site-header') {
-          // Move sidebar + overlay out of <header> to <body>.
-          // The header has contain:layout style paint which clips position:fixed children.
           var overlay = target.querySelector('#sidebarOverlay');
           var sidebar = target.querySelector('#mobileSidebar');
           if (overlay) document.body.appendChild(overlay);
@@ -112,6 +123,22 @@
 
     if (!desktop || !mobilePrimary || !mobileUtility) {
       setTimeout(renderHeaderLinks, 100);
+      return;
+    }
+
+    // If the lists are already statically rendered (preferred for SEO), just
+    // toggle the .active class on the matching link and stop. We never wipe
+    // SSR markup — only client-only renders may rebuild the lists.
+    if (desktop.children.length > 0) {
+      var allLinks = []
+        .concat(Array.prototype.slice.call(desktop.querySelectorAll('a')))
+        .concat(Array.prototype.slice.call(mobilePrimary.querySelectorAll('a')))
+        .concat(Array.prototype.slice.call(mobileUtility.querySelectorAll('a')));
+      allLinks.forEach(function (a) {
+        if (a.classList.contains('nav-cta')) return;
+        if (isActive(a.getAttribute('href'))) a.classList.add('active');
+        else a.classList.remove('active');
+      });
       return;
     }
 

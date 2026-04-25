@@ -19,9 +19,12 @@ The workflow "Start application" runs `node server.js`, which:
 ## Key Files
 - `server.js` — Static file server with rewrite rules, security headers, and caching
 - `index.html` — Main landing page (1140+ lines)
-- `partials/header.html` — Shared header loaded via fetch
-- `partials/footer.html` — Shared footer loaded via fetch
-- `js/common.js` — Header/footer loading, sidebar logic (sidebar/overlay moved to body, not header)
+- `partials/header.html` — Fallback header (kept as last-resort fallback only)
+- `partials/footer.html` — Fallback footer (kept as last-resort fallback only)
+- `js/common.js` — Header/footer hydration, sidebar logic (sidebar/overlay moved to body, not header)
+
+### Header & Footer Architecture (SEO-critical)
+The header and footer markup — including all desktop/mobile/footer navigation links — is **inlined statically** into every live HTML page. Search engines, no-JS clients, and audits see the complete navigation in the raw HTML response, with no JavaScript execution required. `js/common.js` hydrates the inlined markup: it detects pre-existing children in `#site-header` / `#site-footer` and skips the `fetch('/partials/...')` round-trip, then `renderHeaderLinks()` only toggles the `.active` class on the matching link instead of wiping and rebuilding the lists. The `partials/*.html` fallback path still works if a future page is added without inlining. To re-inline after editing the canonical header/footer markup, update the `HEADER_HTML` / `FOOTER_HTML` constants in `/tmp/inline-fix.js` (or a permanent build script) and re-run across all pages.
 - `js/site.js` — Site-wide interactions (FAQ, scroll, etc.)
 - `js/tool.js` — GPS EXIF editor tool logic
 - `css/style.css` — Main stylesheet (no @import — fonts loaded via HTML link tags)

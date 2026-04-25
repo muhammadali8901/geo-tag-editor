@@ -58,7 +58,68 @@
 
 <noscript><div class="noscript-banner">JavaScript is required for this website to function properly. Please enable JavaScript in your browser.</div></noscript>
 
-<header class="site-header" id="site-header"></header>
+<header class="site-header" id="site-header" role="banner">
+<div class="header-inner">
+  <a href="/" class="logo" aria-label="Geo Tags Editor Home">
+    <img src="/images/logo.png" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto">
+    <span>Geo Tags Editor</span>
+  </a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <ul class="nav-links" id="desktopNavLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/add-gps-to-photo-online/">Add GPS</a></li>
+      <li><a href="/remove-geotag-from-photo-online/">Remove GPS</a></li>
+      <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="sidebar-header">
+    <a href="/" class="logo" aria-label="Geo Tags Editor Home">
+      <img src="/images/logo.png" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto">
+      <span>Geo Tags Editor</span>
+    </a>
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-sidebar-body">
+    <p class="sidebar-section-title">Tools &amp; Guides</p>
+    <nav aria-label="Mobile navigation links">
+      <ul class="sidebar-nav" id="mobilePrimaryLinks">
+        <li><a href="/"><span>Home</span></a></li>
+        <li><a href="/add-gps-to-photo-online/"><span>Add GPS</span></a></li>
+        <li><a href="/remove-geotag-from-photo-online/"><span>Remove GPS</span></a></li>
+        <li><a href="/geo-tag-editor/"><span>Geo Tag Editor</span></a></li>
+        <li><a href="/blog/"><span>Blog</span></a></li>
+      </ul>
+    </nav>
+    <p class="sidebar-section-title">Company &amp; Legal</p>
+    <ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks">
+      <li><a href="/about/"><span>About</span></a></li>
+      <li><a href="/contact/"><span>Contact</span></a></li>
+      <li><a href="/privacy-policy/"><span>Privacy Policy</span></a></li>
+      <li><a href="/terms/"><span>Terms &amp; Conditions</span></a></li>
+      <li><a href="/sitemap/"><span>Sitemap</span></a></li>
+    </ul>
+  </div>
+  <div class="sidebar-cta">
+    <div class="sidebar-actions">
+      <a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a>
+      <a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a>
+    </div>
+  </div>
+</aside>
+</header>
 
 <nav class="container breadcrumb" aria-label="Breadcrumb">
   <a href="/">Home</a><span>/</span><strong>Contact Us</strong>
@@ -127,20 +188,14 @@
           </ul>
         </div>
         <!-- Google Maps embed - Gulghast Colony, Urdu Bazar, Multan -->
-        <div style="border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12005.76531049546!2d71.46549414541904!3d30.21566035761202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1773805087036!5m2!1sen!2s"
-            width="100%"
-            height="220"
-            style="border:0;display:block;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Gulghast Colony, Urdu Bazar, Multan">
-          </iframe>
-          <div style="padding:8px 12px;background:var(--bg);font-size:.78rem;color:var(--text-muted);">
-            <a href="https://www.google.com/maps?q=30.21566035761202,71.46549414541904" target="_blank" rel="noopener" style="color:var(--primary)">View larger map →</a>
-          </div>
+        <div class="card" style="padding:16px;border-radius:var(--radius)">
+          <p style="margin:0 0 8px;font-weight:600;font-size:.95rem">Office Location</p>
+          <p style="margin:0 0 12px;font-size:.9rem;color:var(--text-secondary);line-height:1.5">
+            Gulghast Colony, Urdu Bazar,<br>Multan, Pakistan
+          </p>
+          <a href="https://www.google.com/maps?q=30.21566035761202,71.46549414541904" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:.85rem;padding:8px 14px">
+            View on Google Maps →
+          </a>
         </div>
       </div>
 
@@ -184,7 +239,52 @@
   </ul>
 </aside>
 
-<footer class="site-footer" id="site-footer"></footer>
+<footer class="site-footer" id="site-footer" role="contentinfo">
+<div class="footer-grid">
+  <div class="footer-brand">
+    <div class="logo">
+      <img src="/images/logo.png" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto">
+      <span>Geo Tags Editor</span>
+    </div>
+    <p>Geo Tags Editor is a free online tool that lets you add, edit, or remove GPS geotag metadata from your JPEG images. Fast, private, and entirely browser-based.</p>
+  </div>
+  <div class="footer-col">
+    <p class="footer-title">Quick Links</p>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/add-gps-to-photo-online/">Add GPS</a></li>
+      <li><a href="/remove-geotag-from-photo-online/">Remove GPS</a></li>
+      <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about/">About Us</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-title">Articles &amp; Guides</p>
+    <ul>
+      <li><a href="/blog/how-to-add-geotag-to-existing-photos/">Add Geotag to Existing Photos</a></li>
+      <li><a href="/blog/remove-geotag-from-photo/">Remove Geotag from Photo</a></li>
+      <li><a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging for Local SEO</a></li>
+      <li><a href="/blog/how-to-remove-metadata-from-images/">Remove Image Metadata</a></li>
+      <li><a href="/blog/how-to-remove-gps-location-data-from-photos/">Remove GPS Location Data From Photos</a></li>
+      <li><a href="/blog/how-to-add-gps-location-to-photos/">Add GPS to Photos</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-title">Legal</p>
+    <ul>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms &amp; Conditions</a></li>
+      <li><a href="/disclaimer/">Disclaimer</a></li>
+      <li><a href="/sitemap/">Sitemap</a></li>
+    </ul>
+  </div>
+</div>
+<div class="footer-bottom">
+  &copy; <span id="copyright-year">2026</span> Geo Tags Editor. All rights reserved. Free online geo tag editor tool.
+</div>
+</footer>
 <script src="/js/common.js" defer></script>
 <script src="/js/site.js" defer></script>
 </body>

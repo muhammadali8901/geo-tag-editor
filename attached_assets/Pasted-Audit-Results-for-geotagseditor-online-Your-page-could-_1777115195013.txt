@@ -1,0 +1,381 @@
+Audit Results for geotagseditor.online
+Your page could be better
+
+
+On-Page SEO
+
+GEO
+
+Links
+
+Usability
+
+Performance
+
+Report Generated: 25 April 11:03AM UTC
+
+Improve Your Site With Our DIY SEO Tool
+Review unlimited pages. Crawl your whole site for problems and get clear, easy to follow recommendations with guides for your CMS. Monitor your keyword rankings and get regular updates on your site's performance.
+
+Helping Business Owners promote their websites the affordable way.
+
+
+Recommendations
+Execute a Link Building Strategy
+Links
+High Priority
+Use your main keywords across the important HTML Tags
+On-Page SEO
+Medium Priority
+Increase Page Text Content
+On-Page SEO
+Low Priority
+Make use of HTTP/2+ Protocol
+Performance
+Low Priority
+Add a DMARC Mail Record
+Technology
+Low Priority
+Add an SPF Mail Record
+Technology
+Low Priority
+Create and link your Facebook Page
+Social
+Low Priority
+Create and link your X Profile
+Social
+Low Priority
+Create and link an associated Instagram Profile
+Social
+Low Priority
+Create and link an associated YouTube Channel
+Social
+Low Priority
+Create and link an associated LinkedIn Profile
+Social
+Low Priority
+Add Business Address and Phone Number
+Local SEO
+Low Priority
+Add Local Business Schema
+Local SEO
+Low Priority
+Reduce Rendered Content
+GEO
+Low Priority
+Install a Facebook Pixel
+Social
+Low Priority
+Remove Inline Styles
+Performance
+Low Priority
+Resolve JavaScript errors
+Performance
+Low Priority
+Remove iFrames
+Usability
+Low Priority
+On-Page SEO Results
+Your On-Page SEO is very good!
+Congratulations, your On-Page SEO is well optimized. On-Page SEO is important to ensure Search Engines can understand your content appropriately and help it rank for relevant keywords. You can continue to build on your strong position through testing content improvements for gradual gains.
+Title Tag
+You have a Title Tag of optimal length (between 50 and 60 characters).
+Geo Tag Editor: Add or Remove GPS Data in Photos Online
+Length : 55
+Meta Description Tag
+Your page has a Meta Description of optimal length (between 120 and 160 characters).
+Add GPS location to photos or remove geotags instantly with our free online EXIF metadata editor. Private, browser-based, and mobile friendly.
+Length : 142
+SERP Snippet Preview
+This illustrates how your page may appear in Search Results. Note, this is intended as a guide and Search Engines are more frequently generating this content dynamically.
+
+Geo Tags Editor
+https://geotagseditor.online
+Geo Tag Editor: Add or Remove GPS Data in Photos Online
+Add GPS location to photos or remove geotags instantly with our free online EXIF metadata editor. Private, browser-based, and mobile friendly.
+Hreflang Usage
+Your page is making use of Hreflang attributes.
+Language
+Your page is using the Lang Attribute.
+Declared: English
+H1 Header Tag Usage
+Your page has a H1 Tag.
+H2-H6 Header Tag Usage
+Your page is making use multiple levels of Header Tags.
+Header Tag	Frequency	
+H2	9	
+H3	43	
+H4	9	
+H5	0	
+H6	0	
+Keyword Consistency
+Your page's main keywords are not distributed well across the important HTML Tags.
+Your page content should be focused around particular keywords you would like to rank for. Ideally these keywords should also be distributed across tags such as the title, meta and header tags.
+Amount of Content
+Your page has a low volume of text content which search engines can interpret as 'thin content'.
+Word Count: 1
+It has been well researched that higher text content volumes are related to better ranking ability in general.
+Image Alt Attributes
+You do not have any images missing Alt Attributes on your page.
+Canonical Tag
+Your page is using the Canonical Tag.
+https://geotagseditor.online/
+Noindex Tag Test
+Your page is not using the Noindex Tag which prevents indexing.
+Noindex Header Test
+Your page is not using the Noindex Header which prevents indexing.
+SSL Enabled
+Your website has SSL enabled.
+HTTPS Redirect
+Your page successfully redirects to a HTTPS (SSL secure) version.
+Robots.txt
+Your website appears to have a robots.txt file.
+http://geotagseditor.online/robots.txt
+Blocked by Robots.txt
+Your page does not appear to be blocked by robots.txt.
+XML Sitemaps
+Your website appears to have an XML Sitemap.
+https://geotagseditor.online/sitemap.xml
+Analytics
+Your page is using an analytics tool.
+  Google Analytics
+Schema.org Structured Data
+You are using JSON-LD, Microdata Schema on your page.
+Generative Engine Optimization (GEO)
+Your Generative Engine Optimization could be better
+Your page has some level positioning for Generative Engine Optimization (GEO). GEO is important to ensure LLMs and AI Search Engines can effectively crawl your content and understand the underlying entity structure. Consider additional enhancements to improve visibility in LLMs as this is becoming a rapidly growing traffic source.
+Identity SchemaNew
+Organization or Person Schema identified on the page.
+Organization
+Rendered Content (LLM Readability)New
+Your page has a high level of rendering (changes to the HTML).
+Rendering Percentage: 100%
+Dynamically rendering a lot of page content risks some important information being missed by LLMs that generally do not read this content.
+Llms.txtNew
+Your website appears to have a llms.txt file.
+Llms.txt is a proposed standard for websites to guide large language models (LLMs) to better understand your site's content.
+http://geotagseditor.online/llms.txt
+Rankings
+Top Organic Keyword Rankings
+You can see the live Keyword Rankings for your page within the report by signing up to one of our premium plans.
+Links
+Backlink Summary
+You have a reasonably weak level of backlink activity to this page.
+Search Engines use backlinks as a strong indicator of a page's authority, relevance and ranking potential. There are various strategies available to gain links to a page to improve this factor
+Domain
+Strength
+
+Page
+Strength
+
+0
+Total Backlinks
+0
+Referring Domains
+0
+Nofollow Backlinks
+0
+Dofollow Backlinks
+0
+Edu Backlinks
+0
+Gov Backlinks
+0
+IPs
+0
+Subnets
+Top Backlinks
+We haven't found any backlinks to report for this site.
+Top Pages by Backlinks
+We haven't found any Top Pages data for this site.
+Top Anchors by Backlinks
+We haven't found any Anchor Text data for this site.
+Top Referring Domain Geographies
+We haven't found any Geographic Data for this site.
+On-Page Link Structure
+We found 80 total links. 4% of your links are external links and are sending authority to other sites. 0% of your links are nofollow links, meaning authority is not being passed to those destination pages.
+On-Page Links
+80
+Total
+Internal Links
+77
+External Links: Follow
+3
+External Links: Nofollow
+0
+Friendly Links
+Your link URLs appear friendly (easily human or search engine readable).
+
+Create White Label PDFs
+Upload your own logo and company's contact details. Generate unlimited PDFs under our White Label plans. See an example PDF Report
+
+Embed the Audit Tool into your website. Get notified of leads straight from your website.
+
+
+Usability
+Your usability is good
+Your page is mostly usable across devices. Usability is important to maximize your available audience and minimize user bounce rates (which can indirectly affect your search engine rankings).
+Device Rendering
+This check visually demonstrates how your page renders on different devices. It is important that your page is optimized for mobile and tablet experiences as today the majority of web traffic comes from these sources.
+Use of Mobile Viewports
+Your page specifies a Viewport matching the device's size, allowing it to render appropriately across devices.
+Flash Used?
+No Flash content has been identified on your page.
+iFrames Used?
+Your page appears to be using iFrames.
+iFrames are discouraged as they can complicate navigation of content in mobile and have historically been harder to index for search engines.
+Favicon
+Your page has specified a Favicon.
+Email Privacy
+No email addresses have been found in plain text on your page.
+Performance Results
+Your performance could be better
+Your page's performance has some issues and room for improvement. Performance is important to ensure a good user experience, and reduced bounce rates (which can also indirectly affect your search engine rankings). We recommend addressing the highlighted factors below.
+Website Load Speed
+Your page loads in a reasonable amount of time.
+Server Response
+0.0s
+All Page Content Loaded
+7.3s
+All Page Scripts Complete
+3.2s
+Website Download Size
+Your page's file size is reasonably low which is good for Page Load Speed and user experience.
+Download Page Size
+0.70MB
+Download Page Size Breakdown
+0.7MB
+Total
+HTML
+0.07MB
+CSS
+0.04MB
+JS
+0.5MB
+Images
+0.01MB
+Other
+0.08MB
+Compression Usage (Gzip, Deflate, Brotli)
+Your website appears to be using a reasonable level of compression.
+Compression Rate
+69%
+Compression Rates
+HTML
+75% compressed of 0.27MB
+CSS
+83% compressed of 0.22MB
+JS
+68% compressed of 1.57MB
+Images
+63% compressed of 0.02MB
+Other
+58% compressed of 0.19MB
+Total
+69% compressed of 2.28MB
+Resources Breakdown
+This check displays the total number of files that need to be retrieved from web servers to load your page.
+78
+
+Total Objects
+
+9
+
+Number of HTML Pages
+
+24
+
+Number of JS Resources
+
+6
+
+Number of CSS Resources
+
+8
+
+Number of Images
+
+31
+
+Other Resources
+
+Google Accelerated Mobile Pages (AMP)
+This page does not appear to have AMP Enabled.
+JavaScript Errors
+Your page is reporting JavaScript errors during load.
+This could indicate that some required functionality on your page is failing or scripts may have coding problems.
+HTTP2 Usage
+Your website is using an outdated HTTP Protocol.
+We recommend enabling HTTP/2+ Protocol for your website as it can significantly improve page load speed for users.
+Deprecated HTML
+No deprecated HTML tags have been found within your page.
+Inline Styles
+Your page appears to be using Inline Styles.
+Inline Styles are an older coding practice and discouraged in favor of using CSS style sheets, due to their ability to degrade page load performance and unnecessarily complicate HTML Code.
+Social Results
+Facebook Page Linked
+No associated Facebook Page found as a link on your page.
+Facebook Open Graph Tags
+Your page is using Facebook Open Graph Tags.
+Facebook Pixel
+We have not detected a Facebook Pixel on your page.
+Facebook's Pixel is a useful piece of analytics code that allows you to retarget visitors if you decide to run Facebook Ads in future.
+X (formerly Twitter) Account Linked
+No associated X Profile found as a link on your page.
+X Cards
+Your page is using X Cards.
+Instagram Linked
+No associated Instagram Profile found linked on your page
+LinkedIn Page Linked
+No associated LinkedIn Profile found linked on your page.
+YouTube Channel Linked
+No associated YouTube Channel found linked on your page.
+YouTube Channel Activity
+No associated YouTube Channel found linked on your page.
+Want to grow your YouTube Channel? Try our  
+YouTube SEO Tool
+Local SEO
+Address & Phone Shown on Website
+We can't identify one or both of these components on the page. Missing: Phone, Address
+Local Business Schema
+No Local Business Schema identified on the page.
+Google Business Profile Identified
+You can see information about your page's Google Business Profile within this report by signing up to one of our premium plans.
+Want to improve your Local Search Presence? Try our  
+Local SEO Tool
+Technology Results
+Technology List
+These software or coding libraries have been identified on your page.
+Technology	Version
+	Google Analytics	
+	Vercel	
+Server IP Address
+216.198.79.1
+DNS Servers
+ns2.vercel-dns.com
+ns1.vercel-dns.com
+Web Server
+Vercel
+Charset
+text/html; charset=utf-8
+DMARC Record
+This site does not appear to have a DMARC record in place.
+DMARC records are important to improve email deliverability and combat spoofing.
+SPF Record
+This site does not appear to have an SPF record.
+SPF records are important to improve email deliverability and combat spoofing.
+Review Child Pages
+Page
+/about/
+/add-gps-to-photo-online/
+/blog/
+/blog/best-practices-for-photo-geotagging-2026/
+/blog/geo-tagging-seo-complete-guide-2025/
+/blog/how-journalists-use-geotagging-in-photos/
+/blog/how-to-add-geotag-to-existing-photos/
+/blog/how-to-add-gps-location-to-photos/
+/blog/how-to-add-location-to-photos-android-iphone/
+/blog/how-to-change-photo-location-gps-coordinates/
+/blog/how-to-remove-gps-location-data-from-photos/
+/blog/how-to-remove-metadata-from-images/
+Embed an Audit Tool into your Agency's S

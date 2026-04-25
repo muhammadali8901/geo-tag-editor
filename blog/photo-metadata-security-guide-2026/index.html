@@ -134,7 +134,68 @@ window.addEventListener('load',function(){
 
 <noscript><div class="noscript-banner">JavaScript is required for the best experience on our site. Please enable JavaScript in your browser.</div></noscript>
 
-<header class="site-header" id="site-header" role="banner"></header>
+<header class="site-header" id="site-header" role="banner">
+<div class="header-inner">
+  <a href="/" class="logo" aria-label="Geo Tags Editor Home">
+    <img src="/images/logo.png" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto">
+    <span>Geo Tags Editor</span>
+  </a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <ul class="nav-links" id="desktopNavLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/add-gps-to-photo-online/">Add GPS</a></li>
+      <li><a href="/remove-geotag-from-photo-online/">Remove GPS</a></li>
+      <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="sidebar-header">
+    <a href="/" class="logo" aria-label="Geo Tags Editor Home">
+      <img src="/images/logo.png" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto">
+      <span>Geo Tags Editor</span>
+    </a>
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-sidebar-body">
+    <p class="sidebar-section-title">Tools &amp; Guides</p>
+    <nav aria-label="Mobile navigation links">
+      <ul class="sidebar-nav" id="mobilePrimaryLinks">
+        <li><a href="/"><span>Home</span></a></li>
+        <li><a href="/add-gps-to-photo-online/"><span>Add GPS</span></a></li>
+        <li><a href="/remove-geotag-from-photo-online/"><span>Remove GPS</span></a></li>
+        <li><a href="/geo-tag-editor/"><span>Geo Tag Editor</span></a></li>
+        <li><a href="/blog/"><span>Blog</span></a></li>
+      </ul>
+    </nav>
+    <p class="sidebar-section-title">Company &amp; Legal</p>
+    <ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks">
+      <li><a href="/about/"><span>About</span></a></li>
+      <li><a href="/contact/"><span>Contact</span></a></li>
+      <li><a href="/privacy-policy/"><span>Privacy Policy</span></a></li>
+      <li><a href="/terms/"><span>Terms &amp; Conditions</span></a></li>
+      <li><a href="/sitemap/"><span>Sitemap</span></a></li>
+    </ul>
+  </div>
+  <div class="sidebar-cta">
+    <div class="sidebar-actions">
+      <a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a>
+      <a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a>
+    </div>
+  </div>
+</aside>
+</header>
 
 <!-- HERO SECTION -->
 <section class="hero" role="banner" aria-labelledby="hero-title">
