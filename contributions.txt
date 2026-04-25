@@ -152,3 +152,4 @@ Commit on 2026-04-24T10:15:15: style: update button hover effects
 Commit on 2026-04-24T13:37:23: refactor: optimize image loading routines
 Commit on 2026-04-25T10:49:49: fix: tooltip display glitch on mobile view
 Commit on 2026-04-25T13:06:25: refactor: modularize coordinate conversion utility
+Commit on 2026-04-25T12:29:07: perf: optimize web worker message passing
