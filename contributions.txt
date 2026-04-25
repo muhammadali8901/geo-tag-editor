@@ -154,3 +154,4 @@ Commit on 2026-04-25T10:49:49: fix: tooltip display glitch on mobile view
 Commit on 2026-04-25T13:06:25: refactor: modularize coordinate conversion utility
 Commit on 2026-04-25T12:29:07: perf: optimize web worker message passing
 Commit on 2026-04-25T17:30:18: style: tweak typography hierarchy for blog headings
+Commit on 2026-04-25T11:49:46: feat: improve metadata parsing efficiency
