@@ -155,3 +155,4 @@ Commit on 2026-04-25T13:06:25: refactor: modularize coordinate conversion utilit
 Commit on 2026-04-25T12:29:07: perf: optimize web worker message passing
 Commit on 2026-04-25T17:30:18: style: tweak typography hierarchy for blog headings
 Commit on 2026-04-25T11:49:46: feat: improve metadata parsing efficiency
+Commit on 2026-04-26T18:33:41: fix: handle missing geolocation permissions gracefully
