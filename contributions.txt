@@ -164,3 +164,4 @@ Commit on 2026-04-27T17:34:45: refactor: extract reusable modal components
 Commit on 2026-04-27T10:25:16: refactor: modularize coordinate conversion utility
 Commit on 2026-04-27T18:07:20: docs: expand metadata dictionary table descriptions
 Commit on 2026-04-27T16:55:13: fix: scroll restoration on back navigation
+Commit on 2026-04-27T16:01:39: style: update button hover effects
