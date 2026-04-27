@@ -160,3 +160,4 @@ Commit on 2026-04-26T15:35:03: chore: audit and remove unused asset references
 Commit on 2026-04-26T13:36:17: perf: optimize web worker message passing
 Commit on 2026-04-26T20:02:10: docs: expand metadata dictionary table descriptions
 Commit on 2026-04-26T19:22:38: docs: expand metadata dictionary table descriptions
+Commit on 2026-04-27T17:34:45: refactor: extract reusable modal components
