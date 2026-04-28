@@ -168,3 +168,4 @@ Commit on 2026-04-27T16:01:39: style: update button hover effects
 Commit on 2026-04-28T13:14:18: docs: improve inline code documentation
 Commit on 2026-04-28T13:38:45: perf: memoize expensive image transform operations
 Commit on 2026-04-28T18:42:21: docs: update EXIF metadata guide section
+Commit on 2026-04-28T11:40:06: refactor: clean up unused helper functions
