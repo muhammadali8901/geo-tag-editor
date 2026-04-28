@@ -170,3 +170,4 @@ Commit on 2026-04-28T13:38:45: perf: memoize expensive image transform operation
 Commit on 2026-04-28T18:42:21: docs: update EXIF metadata guide section
 Commit on 2026-04-28T11:40:06: refactor: clean up unused helper functions
 Commit on 2026-04-28T15:10:32: feat: improve metadata parsing efficiency
+Commit on 2026-04-28T12:26:20: chore: audit and remove unused asset references
