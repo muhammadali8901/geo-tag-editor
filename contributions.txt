@@ -165,3 +165,4 @@ Commit on 2026-04-27T10:25:16: refactor: modularize coordinate conversion utilit
 Commit on 2026-04-27T18:07:20: docs: expand metadata dictionary table descriptions
 Commit on 2026-04-27T16:55:13: fix: scroll restoration on back navigation
 Commit on 2026-04-27T16:01:39: style: update button hover effects
+Commit on 2026-04-28T13:14:18: docs: improve inline code documentation
