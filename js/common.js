@@ -2,14 +2,6 @@
    Geo Tags Editor — Shared Components & Utilities
    ============================================ */
 
-// Load protection script first
-(function() {
-    var protectionScript = document.createElement('script');
-    protectionScript.src = '/js/protection.js';
-    protectionScript.async = true;
-    document.head.appendChild(protectionScript);
-})();
-
 (function () {
   'use strict';
 
@@ -440,10 +432,13 @@
     updateFooterYear();
     wrapMain();
     addGlobalSeoSignals();
-    injectRelatedPosts();
-    injectQuickLinks();
     optimizeImageLoading();
-    initCookieConsent();
+    // Defer non-critical tasks to after paint
+    requestIdleCallback(function() {
+      injectRelatedPosts();
+      injectQuickLinks();
+      initCookieConsent();
+    }, { timeout: 3000 });
   });
 
   window.GTP = { 

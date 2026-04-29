@@ -1,11 +1,3 @@
-// Load universal protection first
-(function() {
-    var script = document.createElement('script');
-    script.src = '/js/universal-protection.js';
-    script.async = true;
-    document.head.appendChild(script);
-})();
-
 (function () {
   'use strict';
 
