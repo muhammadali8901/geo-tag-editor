@@ -176,3 +176,4 @@ Commit on 2026-04-29T14:45:05: style: tweak typography hierarchy for blog headin
 Commit on 2026-04-29T20:50:21: style: update color variables for dark mode contrast
 Commit on 2026-04-29T10:20:17: style: adjust card padding for mobile screens
 Commit on 2026-04-29T19:42:41: docs: update EXIF metadata guide section
+Commit on 2026-04-29T16:16:22: style: minor spacing adjustment in navigation bar
