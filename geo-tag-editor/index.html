@@ -20,8 +20,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Geo Tag Editor — Change or Fix GPS Coordinates in a Photo</title>
-<meta name="description" content="Browser-based geo tag editor for JPEG photos. Read existing GPS, drag the marker to the right point, save corrected EXIF coordinates.">
+<title>Free Geo Tag Editor — Online Geo Tagging Editor for Photo GPS</title>
+<meta name="description" content="Free online geo tag editor — add, change, or remove GPS coordinates in JPEG photos right in your browser. No upload, no signup. Works on desktop and mobile.">
 <link rel="alternate" hreflang="en" href="https://geotagseditor.online/geo-tag-editor/">
 <link rel="alternate" hreflang="x-default" href="https://geotagseditor.online/geo-tag-editor/">
 <link rel="canonical" href="https://geotagseditor.online/geo-tag-editor/">
@@ -40,11 +40,11 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Geo Tags Editor">
-<meta property="og:title" content="Geo Tag Editor - Edit GPS Photo Location">
+<meta property="og:title" content="Free Geo Tag Editor — Online Geo Tagging Editor for Photo GPS">
 <meta property="og:description" content="Edit GPS photo location with our Geo Tag Editor. Add, edit or remove EXIF metadata from photos. Try our free online tool now.">
 <meta property="og:url" content="https://geotagseditor.online/geo-tag-editor/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Geo Tag Editor - Edit GPS Photo Location">
+<meta name="twitter:title" content="Free Geo Tag Editor — Online Geo Tagging Editor for Photo GPS">
 <meta name="twitter:description" content="Edit GPS photo location with our Geo Tag Editor. Add, edit or remove EXIF metadata from photos. Try our free online tool now.">
 <meta property="og:image" content="https://geotagseditor.online/images/logo.png">
 <meta property="og:image:width" content="1200">
@@ -82,7 +82,7 @@
   "operatingSystem": "All",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "description": "Free online geo tag editor to add, edit, or remove GPS coordinates from JPEG images directly in the browser.",
-  "dateModified": "2026-04-24"
+  "dateModified": "2026-04-29"
 }
 </script>
 <script type="application/ld+json">
@@ -100,6 +100,10 @@
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
+    {"@type":"Question","name":"Is the Geo Tag Editor really free?","acceptedAnswer":{"@type":"Answer","text":"Yes — the Geo Tag Editor is 100% free to use, with no signup, no account, and no hidden limits. You can edit as many photos as you want. The tool runs entirely in your browser using JavaScript, so we don't pay for server processing and don't need to charge you for it."}},
+    {"@type":"Question","name":"Are my photos uploaded or stored on your servers?","acceptedAnswer":{"@type":"Answer","text":"No. Your photos never leave your browser. All EXIF reading, GPS editing, and re-saving happens locally on your device — nothing is uploaded, nothing is logged, and nothing is stored on our servers. You can verify this by opening your browser's Network tab while you use the tool: there are no image uploads."}},
+    {"@type":"Question","name":"Does the geo tag editor work on mobile (Android and iPhone)?","acceptedAnswer":{"@type":"Answer","text":"Yes. The geo tagging editor works in any modern mobile browser — Chrome, Safari, Firefox, Edge, Samsung Internet — on both Android and iPhone. Tap to select a JPEG from your camera roll, drag the marker on the map, and download the updated photo to your device."}},
+    {"@type":"Question","name":"What photo formats are supported?","acceptedAnswer":{"@type":"Answer","text":"The geo editor supports JPEG / JPG photos (the format most phone cameras and DSLRs use by default). HEIC, PNG, RAW, and WebP files are not supported because the EXIF GPS standard is built around JPEG. If your photo is HEIC or PNG, convert it to JPEG first using a free online converter, then come back here to add or edit the GPS coordinates."}},
     {"@type":"Question","name":"How do I find the correct coordinates to enter?","acceptedAnswer":{"@type":"Answer","text":"Right-click the spot on Google Maps and copy the latitude/longitude from the context menu. Paste them into the coordinate fields and click Apply, or drag the marker on the editor's map to the right place — the values update automatically."}},
     {"@type":"Question","name":"Will editing the GPS overwrite the original file on my computer?","acceptedAnswer":{"@type":"Answer","text":"No. The original file is never modified. The corrected version is offered as a new download — you choose where to save it."}},
     {"@type":"Question","name":"Does changing the GPS affect the photo's timestamp or camera info?","acceptedAnswer":{"@type":"Answer","text":"No. Only the GPS sub-block of the EXIF is rewritten. Camera model, lens, exposure settings, capture date and time, and any other EXIF tags are preserved exactly as they were in the source file."}},
@@ -183,8 +187,34 @@
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
-    <h1>Geo Tag Editor — <span class="gradient-text">Fix or Change a Photo's GPS Coordinates</span></h1>
-    <p>This page is for photos that already have GPS data but the location is <em>wrong</em> — drifted, offset by a few hundred metres, taken indoors, or set by an app you no longer trust. Drop the JPEG in, see the existing coordinates, drag the marker to where the photo was actually taken, and save a corrected copy.</p>
+    <h1>Free Geo Tag Editor — <span class="gradient-text">Online Geo Tagging Editor for Photo GPS</span></h1>
+    <p>The Geo Tags Editor is a <strong>free online geo editor</strong> that lets you read, change, fix, or remove the GPS coordinates inside any JPEG photo. Upload a picture, pin the right spot on the map, and download the updated file — your photos never leave your browser. Works on desktop and mobile.</p>
+    <p>Use this <strong>geo tagging editor</strong> when a photo's location is wrong (drifted, offset, taken indoors, or set by an app you no longer trust), or when you need to add or strip GPS data for privacy or local SEO. Supported format: JPEG / JPG.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" style="padding-top:24px;padding-bottom:0">
+  <div class="container" style="max-width:800px">
+    <h2 style="text-align:center;margin-bottom:8px;font-size:1.5rem">How the Geo Tag Editor Works in 3 Steps</h2>
+    <p style="text-align:center;color:var(--text-secondary);margin-bottom:24px;font-size:.95rem">No signup. No upload. Works straight in your browser on phone or desktop.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+      <div style="padding:20px;background:var(--bg-alt);border-radius:var(--radius);border:1px solid var(--border)">
+        <div style="font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:8px">1</div>
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:6px">Upload your JPEG</h3>
+        <p style="font-size:.9rem;color:var(--text-secondary);margin:0;line-height:1.5">Drag and drop, or tap to select a JPEG photo from your phone or computer.</p>
+      </div>
+      <div style="padding:20px;background:var(--bg-alt);border-radius:var(--radius);border:1px solid var(--border)">
+        <div style="font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:8px">2</div>
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:6px">Pin the location on the map</h3>
+        <p style="font-size:.9rem;color:var(--text-secondary);margin:0;line-height:1.5">Drag the marker on the interactive map, or paste exact latitude and longitude values.</p>
+      </div>
+      <div style="padding:20px;background:var(--bg-alt);border-radius:var(--radius);border:1px solid var(--border)">
+        <div style="font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:8px">3</div>
+        <h3 style="font-size:1rem;font-weight:600;margin-bottom:6px">Download the updated photo</h3>
+        <p style="font-size:.9rem;color:var(--text-secondary);margin:0;line-height:1.5">Save the corrected JPEG to your device. The original file stays untouched.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -201,6 +231,10 @@
 
         <!-- UPLOAD SECTION -->
         <div id="uploadSection" role="tabpanel" aria-labelledby="tabUpload">
+          <p style="display:flex;align-items:center;gap:8px;padding:10px 14px;margin:0 0 14px;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:var(--radius);font-size:.85rem;color:#065f46;font-weight:500">
+            <svg class="icon" style="width:1em;height:1em;flex-shrink:0" aria-hidden="true"><use href="/images/icons.svg#icon-shield"></use></svg>
+            <span>100% private — your photos never leave your browser. No upload, no server, no tracking.</span>
+          </p>
           <div class="drop-zone" id="dropZone">
             <input type="file" id="fileInput" accept=".jpg,.jpeg,image/jpeg">
             <span class="dz-icon" aria-hidden="true"><svg class="icon"><use href="/images/icons.svg#icon-image"></use></svg></span>
@@ -310,6 +344,22 @@
   <div class="container" style="max-width:820px">
     <h2 style="margin-bottom:16px">Frequently Asked Questions</h2>
     <div class="faq-list" id="faqList2">
+      <div class="faq-item">
+        <button class="faq-question">Is the Geo Tag Editor really free?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes — the Geo Tag Editor is 100% free to use, with no signup, no account, and no hidden limits. You can edit as many photos as you want. The tool runs entirely in your browser using JavaScript, so we don't pay for server processing and don't need to charge you for it.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Are my photos uploaded or stored on your servers?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">No. Your photos never leave your browser. All EXIF reading, GPS editing, and re-saving happens locally on your device — nothing is uploaded, nothing is logged, and nothing is stored on our servers. You can verify this by opening your browser's Network tab while you use the tool: there are no image uploads.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Does the geo tag editor work on mobile (Android &amp; iPhone)?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes. The geo tagging editor works in any modern mobile browser — Chrome, Safari, Firefox, Edge, Samsung Internet — on both Android and iPhone. Tap to select a JPEG from your camera roll, drag the marker on the map, and download the updated photo to your device.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What photo formats are supported?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">The geo editor supports JPEG / JPG photos (the format most phone cameras and DSLRs use by default). HEIC, PNG, RAW, and WebP files are not supported because the EXIF GPS standard is built around JPEG. If your photo is HEIC or PNG, convert it to JPEG first using a free online converter, then come back here to add or edit the GPS coordinates.</div></div>
+      </div>
       <div class="faq-item">
         <button class="faq-question">How do I find the correct coordinates to enter?</button>
         <div class="faq-answer"><div class="faq-answer-inner">The easiest way is to right-click the spot on Google Maps and copy the latitude/longitude that appears in the context menu. Paste those numbers into the coordinate fields and click Apply. Alternatively, drag the marker on this page's map to the right place — the values update automatically.</div></div>
