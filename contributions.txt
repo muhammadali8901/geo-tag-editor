@@ -172,3 +172,4 @@ Commit on 2026-04-28T11:40:06: refactor: clean up unused helper functions
 Commit on 2026-04-28T15:10:32: feat: improve metadata parsing efficiency
 Commit on 2026-04-28T12:26:20: chore: audit and remove unused asset references
 Commit on 2026-04-28T17:40:33: chore: update dependencies and internal scripts
+Commit on 2026-04-29T14:45:05: style: tweak typography hierarchy for blog headings
