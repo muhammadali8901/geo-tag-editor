@@ -174,3 +174,4 @@ Commit on 2026-04-28T12:26:20: chore: audit and remove unused asset references
 Commit on 2026-04-28T17:40:33: chore: update dependencies and internal scripts
 Commit on 2026-04-29T14:45:05: style: tweak typography hierarchy for blog headings
 Commit on 2026-04-29T20:50:21: style: update color variables for dark mode contrast
+Commit on 2026-04-29T10:20:17: style: adjust card padding for mobile screens
