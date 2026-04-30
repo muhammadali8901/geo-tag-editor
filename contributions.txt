@@ -178,3 +178,4 @@ Commit on 2026-04-29T10:20:17: style: adjust card padding for mobile screens
 Commit on 2026-04-29T19:42:41: docs: update EXIF metadata guide section
 Commit on 2026-04-29T16:16:22: style: minor spacing adjustment in navigation bar
 Commit on 2026-04-29T10:37:38: perf: reduce DOM manipulation overhead
+Commit on 2026-04-30T19:59:29: fix: scroll restoration on back navigation
