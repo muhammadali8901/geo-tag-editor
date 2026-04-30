@@ -2,14 +2,6 @@
    Geo Tags Editor — Geo Tag Editor Tool Logic
    ============================================ */
 
-// Load universal protection first
-(function() {
-    var script = document.createElement('script');
-    script.src = '/js/universal-protection.js';
-    script.async = true;
-    document.head.appendChild(script);
-})();
-
 (function () {
   'use strict';
 
@@ -31,19 +23,12 @@
 
   function cacheEls() {
     [
-      'dropZone', 'fileInput', 'previewArea', 'removeBtn', 'metaBody', 'latInput', 
-      'lngInput', 'applyBtn', 'removeGpsBtn', 'downloadBtn', 'resultBanner', 
-      'resultText', 'mapContainer', 'tabUpload', 'tabEdit', 'tabDownload', 
+      'dropZone', 'fileInput', 'previewArea', 'removeBtn', 'metaBody', 'latInput',
+      'lngInput', 'applyBtn', 'removeGpsBtn', 'downloadBtn', 'resultBanner',
+      'resultText', 'mapContainer', 'tabUpload', 'tabEdit', 'tabDownload',
       'editSection', 'downloadSection', 'uploadSection', 'imagesPreviewContainer',
       'processedImagesContainer', 'uploadedImagesPreview', 'addMoreBtn'
-    ].forEach(function (id) {
-      els[id] = $(id);
-      if (!els[id]) {
-        console.log('WARNING: Element not found:', id); // Debug log
-      } else {
-        console.log('Element cached:', id, els[id]); // Debug log
-      }
-    });
+    ].forEach(function (id) { els[id] = $(id); });
   }
 
   function formatBytes(bytes) {
@@ -349,10 +334,7 @@
   function updateImagesPreview() {
     if (uploadedImages.length === 0) return;
 
-    console.log('Updating image preview for', uploadedImages.length, 'images'); // Debug log
-
     els.imagesPreviewContainer.innerHTML = uploadedImages.map(function(img, idx) {
-      console.log('Processing image:', img.name, 'dataURL length:', img.dataURL ? img.dataURL.length : 'undefined'); // Debug log
       return '<div style="margin-bottom:20px">' +
         '<div class="preview-img-wrap">' +
         '<img src="' + img.dataURL + '" alt="Image ' + (idx + 1) + ' preview" style="max-height:250px" onerror="console.log(\'Image load error\'); this.style.display=\'none\'">' +
@@ -368,8 +350,6 @@
   function readExifFromFirstImage() {
     if (uploadedImages.length === 0) return;
 
-    console.log('Reading EXIF from first image'); // Debug log
-
     let lat = 40.7128;
     let lng = -74.0060;
     let hasGPS = false;
@@ -380,9 +360,6 @@
       const zeroth = exif['0th'] || {};
       const exifData = exif.Exif || {};
       const gps = exif.GPS || {};
-
-      console.log('EXIF data loaded:', exif); // Debug log
-      console.log('GPS data:', gps); // Debug log
 
       if (zeroth[piexif.ImageIFD.Make]) rows.push(['Camera Make', zeroth[piexif.ImageIFD.Make]]);
       if (zeroth[piexif.ImageIFD.Model]) rows.push(['Camera Model', zeroth[piexif.ImageIFD.Model]]);
@@ -400,10 +377,7 @@
           hasGPS = true;
           rows.push(['GPS Latitude', lat]);
           rows.push(['GPS Longitude', lng]);
-          console.log('GPS found:', lat, lng); // Debug log
         }
-      } else {
-        console.log('No GPS data found in image'); // Debug log
       }
 
       if (gps[piexif.GPSIFD.GPSAltitude]) {
@@ -420,26 +394,8 @@
       return '<tr><th scope="row">' + row[0] + '</th><td>' + row[1] + '</td></tr>';
     }).join('');
 
-    els.latInput.value = hasGPS ? lat : '';
-    els.lngInput.value = hasGPS ? lng : '';
-    
-    console.log('Setting inputs:', hasGPS, lat, lng); // Debug log
-    console.log('latInput element:', els.latInput); // Debug log
-    console.log('lngInput element:', els.lngInput); // Debug log
-    
-    if (els.latInput) {
-      els.latInput.value = hasGPS ? lat : '';
-      console.log('latInput value after setting:', els.latInput.value); // Debug log
-    } else {
-      console.log('ERROR: latInput element not found!'); // Debug log
-    }
-    
-    if (els.lngInput) {
-      els.lngInput.value = hasGPS ? lng : '';
-      console.log('lngInput value after setting:', els.lngInput.value); // Debug log
-    } else {
-      console.log('ERROR: lngInput element not found!'); // Debug log
-    }
+    if (els.latInput) els.latInput.value = hasGPS ? lat : '';
+    if (els.lngInput) els.lngInput.value = hasGPS ? lng : '';
 
     initMapAsync(lat, lng);
     validateCoords();
@@ -450,18 +406,6 @@
     const lng = parseFloat(els.lngInput.value);
     const isValid = !isNaN(lat) && !isNaN(lng) && lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
     els.applyBtn.disabled = !isValid;
-    
-    console.log('=== VALIDATE COORDS DEBUG ===');
-    console.log('latInput exists:', !!els.latInput);
-    console.log('lngInput exists:', !!els.lngInput);
-    console.log('latInput current value:', els.latInput ? els.latInput.value : 'NOT_FOUND');
-    console.log('lngInput current value:', els.lngInput ? els.lngInput.value : 'NOT_FOUND');
-    console.log('Parsed lat:', lat, 'type:', typeof lat);
-    console.log('Parsed lng:', lng, 'type:', typeof lng);
-    console.log('isValid:', isValid);
-    console.log('applyBtn disabled:', els.applyBtn.disabled);
-    console.log('=== END VALIDATE COORDS DEBUG ===');
-    
     return isValid;
   }
 
@@ -479,8 +423,7 @@
     const lat = parseFloat(els.latInput.value);
     const lng = parseFloat(els.lngInput.value);
 
-    console.log('Applying GPS coordinates:', lat, lng); // Debug log
-    showResult('Processing images... Applying coordinates...', 'success');
+    showResult('Processing images...', 'success');
 
     setTimeout(function() {
       try {
@@ -500,17 +443,12 @@
 
           img.modifiedDataURL = piexif.insert(piexif.dump(exif), img.dataURL);
           img.action = 'geotagged';
-          
-          console.log('GPS applied to image:', img.name); // Debug log
         });
 
         showResult('GPS coordinates applied successfully. Latitude: ' + lat + ', Longitude: ' + lng + '.', 'success');
         displayProcessedImages();
-        GTP.showToast('GPS metadata saved successfully. Redirecting to download...');
-        
-        // Auto-switch to download tab after processing
+        GTP.showToast('GPS metadata saved. Redirecting to download...');
         setTimeout(function() {
-          console.log('Switching to download tab'); // Debug log
           setTab('download');
           updateDownloadPreview();
           GTP.showToast('Ready to download! Your images now have GPS coordinates.');
@@ -525,21 +463,10 @@
   function updateDownloadPreview() {
     if (uploadedImages.length === 0) return;
     
-    console.log('Updating download preview for', uploadedImages.length, 'images'); // Debug log
-    
     const img = uploadedImages[0];
     const dataURL = img.modifiedDataURL || img.dataURL;
     const previewImg = $('dlPreviewImg');
-    
-    console.log('Preview image element:', previewImg); // Debug log
-    console.log('DataURL available:', !!dataURL); // Debug log
-    
-    if (previewImg && dataURL) {
-      previewImg.src = dataURL;
-      console.log('Download preview updated'); // Debug log
-    } else {
-      console.log('Failed to update download preview'); // Debug log
-    }
+    if (previewImg && dataURL) previewImg.src = dataURL;
   }
 
   function displayProcessedImages() {
@@ -683,17 +610,8 @@
     els.applyBtn.addEventListener('click', applyGPS);
     els.removeGpsBtn.addEventListener('click', removeGPS);
 
-    els.latInput.addEventListener('input', function () {
-      console.log('Latitude input changed:', this.value); // Debug log
-      validateCoords();
-      updateMapMarker();
-    });
-
-    els.lngInput.addEventListener('input', function () {
-      console.log('Longitude input changed:', this.value); // Debug log
-      validateCoords();
-      updateMapMarker();
-    });
+    els.latInput.addEventListener('input', function () { validateCoords(); updateMapMarker(); });
+    els.lngInput.addEventListener('input', function () { validateCoords(); updateMapMarker(); });
 
     els.tabUpload.addEventListener('click', function () {
       setTab('upload');
