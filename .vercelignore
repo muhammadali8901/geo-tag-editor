@@ -3,3 +3,11 @@ lib/
 add_toc.js
 enhance_seo.js
 download_images.mjs
+seo-qa.js
+attached_assets/
+.replit
+.indexnow-submitted.json
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

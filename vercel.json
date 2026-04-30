@@ -2,7 +2,7 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "installCommand": null,
-  "framework": null,
+  "framework": "static",
   "cleanUrls": false,
   "trailingSlash": true,
   "headers": [
