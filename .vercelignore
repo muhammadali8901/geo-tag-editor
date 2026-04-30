@@ -1,13 +1,20 @@
+# Node.js and build files
 server.js
 lib/
 add_toc.js
 enhance_seo.js
 download_images.mjs
 seo-qa.js
-attached_assets/
-.replit
-.indexnow-submitted.json
 node_modules/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# Development and temporary files
+attached_assets/
+.indexnow-submitted.json
+.replit
+.git/
+.gitignore
+.htaccess
+_headers
