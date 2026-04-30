@@ -1,23 +1,24 @@
 # robots.txt for geotagseditor.online
-# Updated: 2026-04-17
+# Updated: 2026-04-30
 
 User-agent: *
 Allow: /
 
-# Keep non-public or local-only paths out of crawl budget.
+# Block non-public paths
 Disallow: /.git/
 Disallow: /node_modules/
 Disallow: /attached_assets/
+Disallow: /lib/
 Disallow: /test-coordinate-input.html
 Disallow: /adsense-placements.html
 Disallow: /protection-template.html
 Disallow: /social-preview-template.html
+Disallow: /BLOG_POST_TEMPLATE.html
 Disallow: /partials/
-Disallow: /.htaccess
-Disallow: /admin/
-Disallow: /private/
+Disallow: /seo-qa.js
+Disallow: /server.js
 
-# Allow essential static assets required for rendering.
+# Allow all static assets
 Allow: /css/
 Allow: /js/
 Allow: /images/
@@ -27,6 +28,7 @@ Allow: *.svg
 Allow: *.png
 Allow: *.jpg
 Allow: *.webp
+Allow: *.ico
 
-# Sitemap location
+# Sitemap
 Sitemap: https://geotagseditor.online/sitemap.xml

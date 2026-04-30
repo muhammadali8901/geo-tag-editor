@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"><meta name="google-site-verification" content="GX7E3WwTMpMblI_s7KutApuKm_lCuKQzkQHUs0xGRx8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,10 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#0284c7">
 <meta name="author" content="Geo Tags Editor">
+<meta name="geo.region" content="US">
+<meta name="geo.country" content="US">
+<meta name="language" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Remove GPS from Photo Online - Best Tool to Remove Geotag & Add GPS Location">
 <meta property="og:description" content="Remove GPS from photo or add GPS location to photos instantly. The best tool to remove geotag from photo, remove GPS metadata, and add coordinates to photos.">
@@ -23,6 +27,8 @@
 <meta name="twitter:title" content="Remove GPS from Photo - Best Tool to Remove Geotag">
 <meta name="twitter:description" content="Remove GPS from photo or add GPS location to photos instantly. Free tool to remove geotag from photo and remove GPS metadata.">
 <meta name="twitter:image" content="https://geotagseditor.online/images/og-default.svg">
+<meta name="twitter:site" content="@geotagseditor">
+<meta name="twitter:creator" content="@geotagseditor">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -34,6 +40,7 @@
 <link rel="preload" href="/images/icons.svg" as="image" type="image/svg+xml">
 <link rel="preload" href="/css/style.css" as="style">
 <link rel="stylesheet" href="/css/style.css">
+<meta name="format-detection" content="telephone=no">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap"></noscript>
 <link rel="preload" href="/css/promotional-ads.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -286,17 +293,17 @@
       <h3 style="margin-bottom:24px;color:var(--text)">See Our Geo Tag Editor in Action</h3>
       <div class="grid-3" style="gap:20px">
         <div style="background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)">
-          <img src="/images/tool-screenshot-1.svg" alt="Upload photos interface — drag and drop JPEG files" loading="lazy" decoding="async" width="640" height="360" style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:12px;background:var(--gradient-soft)">
+          <img src="/images/tool-screenshot-1.svg" alt="Upload photos interface — drag and drop JPEG files" loading="lazy" decoding="async" width="640" height="360" style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:12px;background:var(--gradient-soft)" fetchpriority="low">
           <h4 style="font-size:1rem;font-weight:600;margin-bottom:8px">Easy Upload Interface</h4>
           <p style="font-size:.85rem;color:var(--text-secondary)">Drag & drop multiple photos for batch processing</p>
         </div>
         <div style="background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)">
-          <img src="/images/tool-screenshot-2.svg" alt="GPS coordinate editing interface with latitude and longitude fields" loading="lazy" decoding="async" width="640" height="360" style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:12px;background:var(--gradient-soft)">
+          <img src="/images/tool-screenshot-2.svg" alt="GPS coordinate editing interface with latitude and longitude fields" loading="lazy" decoding="async" width="640" height="360" style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:12px;background:var(--gradient-soft)" fetchpriority="low">
           <h4 style="font-size:1rem;font-weight:600;margin-bottom:8px">Precise GPS Editing</h4>
           <p style="font-size:.85rem;color:var(--text-secondary)">Edit coordinates with decimal precision</p>
         </div>
         <div style="background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)">
-          <img src="/images/tool-screenshot-3.svg" alt="Interactive OpenStreetMap interface for picking GPS location" loading="lazy" decoding="async" width="640" height="360" style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:12px;background:var(--gradient-soft)">
+          <img src="/images/tool-screenshot-3.svg" alt="Interactive OpenStreetMap interface for picking GPS location" loading="lazy" decoding="async" width="640" height="360" style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:12px;background:var(--gradient-soft)" fetchpriority="low">
           <h4 style="font-size:1rem;font-weight:600;margin-bottom:8px">Interactive Map Selection</h4>
           <p style="font-size:.85rem;color:var(--text-secondary)">Click anywhere on the map to set location</p>
         </div>
@@ -722,7 +729,7 @@
   </div>
 </section>
 
-<footer class="site-footer" id="site-footer" role="contentinfo">
+<footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site footer">
 <div class="footer-grid">
   <div class="footer-brand">
     <div class="logo">
@@ -732,6 +739,7 @@
     <p>Geo Tags Editor is a free online tool that lets you add, edit, or remove GPS geotag metadata from your JPEG images. Fast, private, and entirely browser-based.</p>
   </div>
   <div class="footer-col">
+    <nav aria-label="Quick links">
     <p class="footer-title">Quick Links</p>
     <ul>
       <li><a href="/">Home</a></li>
@@ -742,8 +750,10 @@
       <li><a href="/about/">About Us</a></li>
       <li><a href="/contact/">Contact</a></li>
     </ul>
+    </nav>
   </div>
   <div class="footer-col">
+    <nav aria-label="Articles and guides">
     <p class="footer-title">Articles &amp; Guides</p>
     <ul>
       <li><a href="/blog/how-to-add-geotag-to-existing-photos/">Add Geotag to Existing Photos</a></li>
@@ -753,8 +763,10 @@
       <li><a href="/blog/how-to-remove-gps-location-data-from-photos/">Remove GPS Location Data From Photos</a></li>
       <li><a href="/blog/how-to-add-gps-location-to-photos/">Add GPS to Photos</a></li>
     </ul>
+    </nav>
   </div>
   <div class="footer-col">
+    <nav aria-label="Legal links">
     <p class="footer-title">Legal</p>
     <ul>
       <li><a href="/privacy-policy/">Privacy Policy</a></li>
@@ -762,6 +774,7 @@
       <li><a href="/disclaimer/">Disclaimer</a></li>
       <li><a href="/sitemap/">Sitemap</a></li>
     </ul>
+    </nav>
   </div>
 </div>
 <div class="footer-bottom">
