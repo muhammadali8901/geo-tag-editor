@@ -219,10 +219,35 @@
 <article class="article" itemscope itemtype="https://schema.org/Article">
   <div class="container">
     <div class="article-content">
-
       <p>If you've ever uploaded a photo and worried someone might see where it was taken, or if you've tried to organise thousands of images by location, you've encountered two words repeatedly: <strong>metadata</strong> and <strong>EXIF data</strong>. They sound similar, and many guides use them as if they mean exactly the same thing. They don't — and the difference is more important than most people realise.</p>
+      
+      <div style="background:var(--bg-alt); padding: 24px; border-radius: var(--radius-sm); margin: 32px 0; border: 1px solid var(--border);">
+        <h3 style="margin-top:0; font-size: 1.25rem;">Table of Contents</h3>
+        <ul style="margin-bottom:0; list-style: none; padding-left: 0;">
+        <li style="margin-bottom: 8px;"><a href="#what-is-metadata" style="color: var(--primary); text-decoration: none;">What is Metadata?</a></li>
+<li style="margin-bottom: 8px;"><a href="#what-is-exif-data" style="color: var(--primary); text-decoration: none;">What is EXIF Data?</a></li>
+<li style="margin-bottom: 8px;"><a href="#exif-vs-metadata-the-core-difference" style="color: var(--primary); text-decoration: none;">EXIF vs Metadata: The Core Difference</a></li>
+<li style="margin-bottom: 8px;"><a href="#other-types-of-photo-metadata-iptc-and-xmp" style="color: var(--primary); text-decoration: none;">Other Types of Photo Metadata: IPTC and XMP</a></li>
+<li style="margin-bottom: 8px;"><a href="#why-gps-coordinates-in-exif-data-matter" style="color: var(--primary); text-decoration: none;">Why GPS Coordinates in EXIF Data Matter</a></li>
+<li style="margin-bottom: 8px;"><a href="#how-to-view-and-edit-exif-metadata" style="color: var(--primary); text-decoration: none;">How to View and Edit EXIF Metadata</a></li>
+<li style="margin-bottom: 8px;"><a href="#quick-summary" style="color: var(--primary); text-decoration: none;">Quick Summary</a></li>
+<li style="margin-bottom: 8px;"><a href="#frequently-asked-questions" style="color: var(--primary); text-decoration: none;">Frequently Asked Questions</a></li>
+<li style="margin-bottom: 8px;"><a href="#related-guides" style="color: var(--primary); text-decoration: none;">Related guides</a></li>
+</ul></div>
 
-      <h2>What is Metadata?</h2>
+
+      
+      <div style="background:var(--info-bg); border-left: 4px solid var(--primary); padding: 24px; border-radius: var(--radius-sm); margin: 32px 0;">
+        <h3 style="margin-top:0; font-size: 1.25rem; color: var(--primary);">Key Takeaways</h3>
+        <ul style="margin-bottom:0; color: var(--text-secondary);">
+          <li>Geotagging adds GPS coordinates to your photo's EXIF metadata.</li>
+          <li>Properly geotagged images can improve local SEO and organization.</li>
+          <li>You can add, edit, or remove GPS data safely using our free online tool.</li>
+          <li>Always consider privacy before sharing location-tagged photos publicly.</li>
+        </ul>
+      </div>
+        
+<h2 id="what-is-metadata">What is Metadata?</h2>
       <p>Metadata simply means <em>data about data</em>. For a digital photograph, metadata is any piece of information that describes the file itself rather than the visual content inside the image. Think of it as the label on a bottle rather than what's inside.</p>
       <p>General metadata for an image file might include:</p>
       <ul>
@@ -236,7 +261,7 @@
       </ul>
       <p>This kind of metadata lives in many forms and can be set by your camera, your operating system, your editing software, or you manually. There is no single universal standard for general metadata — different tools use different fields and formats.</p>
 
-      <h2>What is EXIF Data?</h2>
+      <h2 id="what-is-exif-data">What is EXIF Data?</h2>
       <p>EXIF stands for <strong>Exchangeable Image File Format</strong>. It is a specific, highly standardised type of metadata that was created in 1995 by the Japan Electronic Industries Development Association (JEIDA) and is now maintained under the JEITA standard. What makes EXIF unique is that it is written <em>automatically</em> by the camera or smartphone at the moment a photo is taken — you don't have to do anything.</p>
       <p>A typical EXIF block includes:</p>
       <ul>
@@ -253,7 +278,7 @@
       </ul>
       <p>EXIF data is stored in JPEG and TIFF files as a series of tagged fields. PNG files do not natively support EXIF, which is one reason JPEG remains the dominant format for camera photos.</p>
 
-      <h2>EXIF vs Metadata: The Core Difference</h2>
+      <h2 id="exif-vs-metadata-the-core-difference">EXIF vs Metadata: The Core Difference</h2>
       <p>The relationship is straightforward: <strong>EXIF data is a subset of metadata</strong>. Every EXIF field is metadata, but not all metadata is EXIF. The diagram below captures this:</p>
 
       <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:24px 0;overflow-x:auto">
@@ -300,7 +325,7 @@
         </table>
       </div>
 
-      <h2>Other Types of Photo Metadata: IPTC and XMP</h2>
+      <h2 id="other-types-of-photo-metadata-iptc-and-xmp">Other Types of Photo Metadata: IPTC and XMP</h2>
       <p>EXIF is just one of three major metadata standards used in photography. Understanding all three helps you choose the right tool for the right job.</p>
 
       <h3>IPTC Metadata</h3>
@@ -309,7 +334,7 @@
       <h3>XMP Metadata</h3>
       <p>XMP stands for <strong>Extensible Metadata Platform</strong>, developed by Adobe. It is based on XML and is far more flexible than EXIF or IPTC — it can store all of the above information plus custom fields defined by any application. Adobe Lightroom, Photoshop, and Bridge all read and write XMP data. Modern camera RAW files (CR3, ARW, NEF) typically store their metadata in a combination of EXIF and an embedded XMP block. Because XMP is XML, it can be edited with a text editor, but dedicated EXIF/metadata tools are far more practical.</p>
 
-      <h2>Why GPS Coordinates in EXIF Data Matter</h2>
+      <h2 id="why-gps-coordinates-in-exif-data-matter">Why GPS Coordinates in EXIF Data Matter</h2>
       <p>Of all the EXIF fields, GPS latitude and longitude are by far the most sensitive — and the most useful depending on context.</p>
 
       <h3>Privacy: The Risk of Sharing Photos with GPS EXIF Intact</h3>
@@ -318,7 +343,7 @@
       <h3>SEO: The Benefit of GPS EXIF for Businesses</h3>
       <p>On the other side of the coin, GPS coordinates embedded in images on your business website can help Google and other search engines understand the geographic relevance of your content. This is a known signal for local search rankings — photos geotagged to your business address reinforce your location to Google's crawlers and may appear in Google Maps image results. Real estate agents, restaurants, and local service businesses can <a href="/blog/why-geotagging-matters-for-local-seo/">benefit significantly from geotagged images</a>. If you have product or premises photos that were shot without GPS enabled, you can <a href="/add-gps-to-photo-online/">add GPS coordinates to the photo</a> after the fact using our free online tool.</p>
 
-      <h2>How to View and Edit EXIF Metadata</h2>
+      <h2 id="how-to-view-and-edit-exif-metadata">How to View and Edit EXIF Metadata</h2>
       <p>You do not need specialist software to view or edit EXIF data. There are several straightforward options:</p>
       <ul>
         <li><strong>Windows:</strong> Right-click any JPEG → Properties → Details tab. You will see camera, date, and GPS fields if present.</li>
@@ -327,7 +352,7 @@
       </ul>
       <p>If you need to <a href="/blog/how-to-remove-metadata-from-images/">remove metadata from images</a> in bulk, our batch processing feature handles up to three files at once. For privacy-critical use cases, always verify the output file's metadata before sharing.</p>
 
-      <h2>Quick Summary</h2>
+      <h2 id="quick-summary">Quick Summary</h2>
       <p>Here is the short version if you need to explain this to someone in one minute:</p>
       <ul>
         <li><strong>Metadata</strong> = any data that describes a file (name, size, date, copyright, keywords…)</li>
@@ -340,7 +365,7 @@
 
       <hr style="border:none;border-top:1px solid var(--border);margin:40px 0">
 
-      <h2>Frequently Asked Questions</h2>
+      <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
       <div class="faq-list">
         <div class="faq-item">
@@ -373,13 +398,22 @@
 
     </div>
   </div>
+
+      <div class="author-bio" style="display:flex; align-items:center; gap: 20px; background: var(--bg-alt); padding: 24px; border-radius: var(--radius); margin-top: 48px;">
+        <div style="width:80px; height:80px; border-radius:50%; background:var(--primary); display:flex; align-items:center; justify-content:center; color:#fff; font-size:2rem; font-weight:bold;">GT</div>
+        <div>
+          <h4 style="margin:0 0 8px; font-size: 1.2rem;">Geo Tags Editor Team</h4>
+          <p style="margin:0; color: var(--text-secondary); font-size: 0.95rem;">Experts in digital photography metadata, EXIF data manipulation, and online privacy. We build fast, secure tools for photographers and developers.</p>
+        </div>
+      </div>
+      
 </article>
 </main>
 
 <!-- updated-2026-04-19 -->
 <aside class="container" style="max-width:900px;margin:48px auto 24px;padding:24px;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb">
   <p style="margin:0 0 6px;font-size:.85rem;color:#6b7280"><strong>Last reviewed:</strong> April 19, 2026 — checked for accuracy and updated for current iOS, Android, Windows and macOS behaviour.</p>
-  <h2 style="font-size:1.15rem;margin:14px 0 10px">Related guides</h2>
+  <h2 id="related-guides">Related guides</h2>
   <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
     <li><a href="/add-gps-to-photo-online/">Add geotag to a photo (free online editor)</a></li>
     <li><a href="/geotag-photos-online/">Geotag photos online</a></li>

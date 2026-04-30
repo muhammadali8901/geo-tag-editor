@@ -237,17 +237,46 @@
 <article class="article" itemscope itemtype="https://schema.org/Article">
   <div class="container">
     <div class="article-content">
-
       <p>Every photo you take with a modern smartphone is more than just an image. Hidden inside the file is a layer of invisible information — including the exact GPS coordinates of where and when the photo was taken. This hidden location data is called a <strong>geotag</strong>, and the process of adding it is called <strong>geotagging</strong>.</p>
+      
+      <div style="background:var(--bg-alt); padding: 24px; border-radius: var(--radius-sm); margin: 32px 0; border: 1px solid var(--border);">
+        <h3 style="margin-top:0; font-size: 1.25rem;">Table of Contents</h3>
+        <ul style="margin-bottom:0; list-style: none; padding-left: 0;">
+        <li style="margin-bottom: 8px;"><a href="#what-is-geotagging-the-simple-definition" style="color: var(--primary); text-decoration: none;">What is Geotagging? The Simple Definition</a></li>
+<li style="margin-bottom: 8px;"><a href="#how-does-geotagging-work" style="color: var(--primary); text-decoration: none;">How Does Geotagging Work?</a></li>
+<li style="margin-bottom: 8px;"><a href="#what-data-does-a-geotag-contain" style="color: var(--primary); text-decoration: none;">What Data Does a Geotag Contain?</a></li>
+<li style="margin-bottom: 8px;"><a href="#the-privacy-risks-of-geotagged-photos" style="color: var(--primary); text-decoration: none;">The Privacy Risks of Geotagged Photos</a></li>
+<li style="margin-bottom: 8px;"><a href="#the-benefits-of-geotagging-photos" style="color: var(--primary); text-decoration: none;">The Benefits of Geotagging Photos</a></li>
+<li style="margin-bottom: 8px;"><a href="#how-to-view-gps-data-in-a-photo" style="color: var(--primary); text-decoration: none;">How to View GPS Data in a Photo</a></li>
+<li style="margin-bottom: 8px;"><a href="#how-to-add-a-geotag-to-a-photo" style="color: var(--primary); text-decoration: none;">How to Add a Geotag to a Photo</a></li>
+<li style="margin-bottom: 8px;"><a href="#how-to-remove-a-geotag-from-a-photo" style="color: var(--primary); text-decoration: none;">How to Remove a Geotag from a Photo</a></li>
+<li style="margin-bottom: 8px;"><a href="#geotagging-vs-geofencing-what-s-the-difference" style="color: var(--primary); text-decoration: none;">Geotagging vs Geofencing — What's the Difference?</a></li>
+<li style="margin-bottom: 8px;"><a href="#does-geotagging-work-on-all-file-types" style="color: var(--primary); text-decoration: none;">Does Geotagging Work on All File Types?</a></li>
+<li style="margin-bottom: 8px;"><a href="#quick-summary-key-geotagging-facts" style="color: var(--primary); text-decoration: none;">Quick Summary: Key Geotagging Facts</a></li>
+<li style="margin-bottom: 8px;"><a href="#frequently-asked-questions-about-geotagging" style="color: var(--primary); text-decoration: none;">Frequently Asked Questions About Geotagging</a></li>
+<li style="margin-bottom: 8px;"><a href="#related-guides" style="color: var(--primary); text-decoration: none;">Related guides</a></li>
+</ul></div>
+
 
       <p>Most people have no idea their photos carry this data. Others know it exists but don't know how to view it, edit it, or remove it. This guide explains everything from scratch — what geotagging actually is, how it works technically, who it benefits, and exactly when it becomes a privacy risk you need to address.</p>
 
-      <h2>What is Geotagging? The Simple Definition</h2>
+      
+      <div style="background:var(--info-bg); border-left: 4px solid var(--primary); padding: 24px; border-radius: var(--radius-sm); margin: 32px 0;">
+        <h3 style="margin-top:0; font-size: 1.25rem; color: var(--primary);">Key Takeaways</h3>
+        <ul style="margin-bottom:0; color: var(--text-secondary);">
+          <li>Geotagging adds GPS coordinates to your photo's EXIF metadata.</li>
+          <li>Properly geotagged images can improve local SEO and organization.</li>
+          <li>You can add, edit, or remove GPS data safely using our free online tool.</li>
+          <li>Always consider privacy before sharing location-tagged photos publicly.</li>
+        </ul>
+      </div>
+        
+<h2 id="what-is-geotagging-the-simple-definition">What is Geotagging? The Simple Definition</h2>
       <p>Geotagging is the process of embedding geographical location data — most commonly GPS latitude and longitude — into a digital file. In the context of photography, it means your camera or smartphone records where a photo was taken and stores those coordinates invisibly inside the image file itself.</p>
       <p>The word is a combination of <em>geo</em> (earth/geography) and <em>tag</em> (a label of information attached to something). A geotag is simply a location label attached to a photo.</p>
       <p>Geotagging applies to more than just photos. Videos, social media posts, tweets, check-ins, blog posts, and even news articles can be geotagged. But for photographers, content creators, businesses, and privacy-conscious individuals, <strong>photo geotagging</strong> is the most practically important type to understand.</p>
 
-      <h2>How Does Geotagging Work?</h2>
+      <h2 id="how-does-geotagging-work">How Does Geotagging Work?</h2>
       <p>Here is the technical process, explained simply:</p>
       <ol>
         <li><strong>Your device records your location.</strong> The GPS chip in your smartphone or camera connects to satellites and calculates your latitude, longitude, and altitude with high precision — often within a few metres.</li>
@@ -256,7 +285,7 @@
       </ol>
       <p>The key point: geotagging happens automatically and silently, unless you explicitly disable it. Most people never realise their photos are broadcasting their location every time they share an image.</p>
 
-      <h2>What Data Does a Geotag Contain?</h2>
+      <h2 id="what-data-does-a-geotag-contain">What Data Does a Geotag Contain?</h2>
       <p>A geotag embedded inside a JPEG photo typically stores these values inside the EXIF GPS block:</p>
       <table style="width:100%;border-collapse:collapse;font-size:.9rem;margin:20px 0">
         <thead>
@@ -301,7 +330,7 @@
       </table>
       <p>Of all these fields, <strong>GPSLatitude and GPSLongitude</strong> are by far the most important. A pair of decimal coordinates (e.g. 48.8584, 2.2945) can be pasted directly into Google Maps to identify a precise location — often accurate enough to pinpoint a specific room in a building.</p>
 
-      <h2>The Privacy Risks of Geotagged Photos</h2>
+      <h2 id="the-privacy-risks-of-geotagged-photos">The Privacy Risks of Geotagged Photos</h2>
       <p>Geotagging is one of the most underestimated privacy risks in everyday digital life. Here is exactly why it matters:</p>
 
       <h3>Sharing Photos Can Reveal Your Home Address</h3>
@@ -318,7 +347,7 @@
 
       <p>For a deeper understanding of protecting yourself, read our full guide on <a href="/blog/gps-photo-privacy-protection-guide/">GPS photo privacy protection</a>.</p>
 
-      <h2>The Benefits of Geotagging Photos</h2>
+      <h2 id="the-benefits-of-geotagging-photos">The Benefits of Geotagging Photos</h2>
       <p>Geotagging is not purely a risk — in the right context, it is a tool. Here are the main reasons to intentionally geotag your photos:</p>
 
       <h3>1. Organise and Search Your Photo Library by Location</h3>
@@ -334,7 +363,7 @@
       <h3>4. Journalism and Verification</h3>
       <p>Journalists and fact-checkers use geotagging to verify that photos were taken where claimed. Embedded GPS coordinates can confirm the location of a news event, validate citizen journalism, or detect images that have been misrepresented. Learn how <a href="/blog/how-journalists-use-geotagging-in-photos/">journalists use geotagging in photos</a> for verification and storytelling.</p>
 
-      <h2>How to View GPS Data in a Photo</h2>
+      <h2 id="how-to-view-gps-data-in-a-photo">How to View GPS Data in a Photo</h2>
       <p>You can check whether a photo contains GPS data in several ways:</p>
       <ul>
         <li><strong>Windows:</strong> Right-click the photo → Properties → Details tab. Scroll down to the GPS section. If there are latitude and longitude values, the photo is geotagged.</li>
@@ -344,7 +373,7 @@
         <li><strong>Online (any device):</strong> Upload your JPEG to our <a href="/geo-tag-editor/">free geo tag editor</a> and all EXIF GPS fields will be displayed — no software needed.</li>
       </ul>
 
-      <h2>How to Add a Geotag to a Photo</h2>
+      <h2 id="how-to-add-a-geotag-to-a-photo">How to Add a Geotag to a Photo</h2>
       <p>Your camera or phone did not record GPS, or you want to correct an incorrect location? You can <a href="/add-gps-to-photo-online/">add GPS data to a photo</a> without any specialist software using our free online tool:</p>
       <ol>
         <li>Go to <a href="/">geotagseditor.online</a> and open the <a href="/geo-tag-editor/">Geo Tag Editor</a>.</li>
@@ -355,7 +384,7 @@
       </ol>
       <p>For a full step-by-step walkthrough, see our guide on <a href="/blog/how-to-add-geotag-to-existing-photos/">how to add a geotag to existing photos</a>.</p>
 
-      <h2>How to Remove a Geotag from a Photo</h2>
+      <h2 id="how-to-remove-a-geotag-from-a-photo">How to Remove a Geotag from a Photo</h2>
       <p>If privacy is your concern, removing GPS data before sharing photos is the most reliable approach. Platforms cannot always be trusted to strip metadata for you — and once a file with GPS data is shared, you cannot take it back.</p>
       <p>To <a href="/remove-geotag-from-photo-online/">remove a geotag from a photo</a> using our free tool:</p>
       <ol>
@@ -366,13 +395,13 @@
       </ol>
       <p>Your photos never leave your device. All processing runs locally in your browser — nothing is uploaded to any server. For a comprehensive privacy guide, read <a href="/blog/how-to-remove-gps-location-data-from-photos/">how to remove GPS location data from photos</a>.</p>
 
-      <h2>Geotagging vs Geofencing — What's the Difference?</h2>
+      <h2 id="geotagging-vs-geofencing-what-s-the-difference">Geotagging vs Geofencing — What's the Difference?</h2>
       <p>These two terms are often confused. <strong>Geotagging</strong> is about attaching a location to existing content — a photo, a post, a data record. <strong>Geofencing</strong> is about defining a virtual boundary around a geographic area and triggering automatic actions (notifications, ads, alerts) when a device enters or leaves that boundary. Geotagging is passive; geofencing is active. They are related concepts but serve very different purposes.</p>
 
-      <h2>Does Geotagging Work on All File Types?</h2>
+      <h2 id="does-geotagging-work-on-all-file-types">Does Geotagging Work on All File Types?</h2>
       <p>GPS data via EXIF is natively supported in <strong>JPEG</strong> and <strong>TIFF</strong> files — the two formats cameras most commonly produce. <strong>PNG</strong> files do not use the EXIF standard and therefore do not carry GPS data in the same way. RAW files (CR2, NEF, ARW, etc.) do support GPS via their own manufacturer-specific metadata structures. Our free tool works with JPEG files, which account for the vast majority of photos shared online.</p>
 
-      <h2>Quick Summary: Key Geotagging Facts</h2>
+      <h2 id="quick-summary-key-geotagging-facts">Quick Summary: Key Geotagging Facts</h2>
       <ul>
         <li><strong>Geotagging</strong> = embedding GPS coordinates (latitude, longitude) into a digital file</li>
         <li>In photos, geotags are stored inside the <strong>EXIF metadata</strong> section of the file</li>
@@ -385,7 +414,7 @@
 
       <hr style="border:none;border-top:1px solid var(--border);margin:40px 0">
 
-      <h2>Frequently Asked Questions About Geotagging</h2>
+      <h2 id="frequently-asked-questions-about-geotagging">Frequently Asked Questions About Geotagging</h2>
 
       <div class="faq-list">
         <div class="faq-item">
@@ -439,13 +468,22 @@
 
     </div>
   </div>
+
+      <div class="author-bio" style="display:flex; align-items:center; gap: 20px; background: var(--bg-alt); padding: 24px; border-radius: var(--radius); margin-top: 48px;">
+        <div style="width:80px; height:80px; border-radius:50%; background:var(--primary); display:flex; align-items:center; justify-content:center; color:#fff; font-size:2rem; font-weight:bold;">GT</div>
+        <div>
+          <h4 style="margin:0 0 8px; font-size: 1.2rem;">Geo Tags Editor Team</h4>
+          <p style="margin:0; color: var(--text-secondary); font-size: 0.95rem;">Experts in digital photography metadata, EXIF data manipulation, and online privacy. We build fast, secure tools for photographers and developers.</p>
+        </div>
+      </div>
+      
 </article>
 </main>
 
 <!-- updated-2026-04-19 -->
 <aside class="container" style="max-width:900px;margin:48px auto 24px;padding:24px;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb">
   <p style="margin:0 0 6px;font-size:.85rem;color:#6b7280"><strong>Last reviewed:</strong> April 19, 2026 — checked for accuracy and updated for current iOS, Android, Windows and macOS behaviour.</p>
-  <h2 style="font-size:1.15rem;margin:14px 0 10px">Related guides</h2>
+  <h2 id="related-guides">Related guides</h2>
   <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
     <li><a href="/add-gps-to-photo-online/">Add geotag to a photo (free online editor)</a></li>
     <li><a href="/geotag-photos-online/">Geotag photos online</a></li>

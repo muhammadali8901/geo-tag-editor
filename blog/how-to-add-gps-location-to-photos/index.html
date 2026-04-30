@@ -175,9 +175,35 @@
       </header>
 
       <div class="article-content">
-        <p>There isn't one right way to add GPS coordinates to a photo. There's a fast way, a free way, a precise way, a batch way, and a private way — and which one you should pick depends on what the photo is, how many you have, and what you're going to do with the result. This guide walks through each method honestly, so you can stop guessing.</p>
+      <p>There isn't one right way to add GPS coordinates to a photo. There's a fast way, a free way, a precise way, a batch way, and a private way — and which one you should pick depends on what the photo is, how many you have, and what you're going to do with the result. This guide walks through each method honestly, so you can stop guessing.</p>
+      
+      <div style="background:var(--bg-alt); padding: 24px; border-radius: var(--radius-sm); margin: 32px 0; border: 1px solid var(--border);">
+        <h3 style="margin-top:0; font-size: 1.25rem;">Table of Contents</h3>
+        <ul style="margin-bottom:0; list-style: none; padding-left: 0;">
+        <li style="margin-bottom: 8px;"><a href="#the-quick-decision-tree" style="color: var(--primary); text-decoration: none;">The Quick Decision Tree</a></li>
+<li style="margin-bottom: 8px;"><a href="#what-actually-happens-when-you-add-gps-to-a-photo" style="color: var(--primary); text-decoration: none;">What Actually Happens When You "Add GPS" to a Photo</a></li>
+<li style="margin-bottom: 8px;"><a href="#method-by-method-when-each-one-earns-its-place" style="color: var(--primary); text-decoration: none;">Method by Method: When Each One Earns Its Place</a></li>
+<li style="margin-bottom: 8px;"><a href="#picking-the-right-coordinate-precision" style="color: var(--primary); text-decoration: none;">Picking the Right Coordinate Precision</a></li>
+<li style="margin-bottom: 8px;"><a href="#things-that-will-surprise-you" style="color: var(--primary); text-decoration: none;">Things That Will Surprise You</a></li>
+<li style="margin-bottom: 8px;"><a href="#companion-reading-on-this-site" style="color: var(--primary); text-decoration: none;">Companion Reading on This Site</a></li>
+<li style="margin-bottom: 8px;"><a href="#frequently-asked-questions" style="color: var(--primary); text-decoration: none;">Frequently Asked Questions</a></li>
+<li style="margin-bottom: 8px;"><a href="#try-the-in-browser-tool" style="color: var(--primary); text-decoration: none;">Try the In-Browser Tool</a></li>
+<li style="margin-bottom: 8px;"><a href="#related-guides" style="color: var(--primary); text-decoration: none;">Related guides</a></li>
+</ul></div>
 
-        <h2>The Quick Decision Tree</h2>
+
+        
+      <div style="background:var(--info-bg); border-left: 4px solid var(--primary); padding: 24px; border-radius: var(--radius-sm); margin: 32px 0;">
+        <h3 style="margin-top:0; font-size: 1.25rem; color: var(--primary);">Key Takeaways</h3>
+        <ul style="margin-bottom:0; color: var(--text-secondary);">
+          <li>Geotagging adds GPS coordinates to your photo's EXIF metadata.</li>
+          <li>Properly geotagged images can improve local SEO and organization.</li>
+          <li>You can add, edit, or remove GPS data safely using our free online tool.</li>
+          <li>Always consider privacy before sharing location-tagged photos publicly.</li>
+        </ul>
+      </div>
+        
+<h2 id="the-quick-decision-tree">The Quick Decision Tree</h2>
         <p>If you only read one section, read this one.</p>
         <ul>
           <li><strong>One JPEG, you don't already have software installed:</strong> use the in-browser <a href="/add-gps-to-photo-online/">Add GPS to a photo</a> tool. Drop in, pick the spot, download. ~30 seconds.</li>
@@ -188,7 +214,7 @@
           <li><strong>The photo's GPS is already wrong (not missing):</strong> use the <a href="/geo-tag-editor/">geo tag editor</a> page — it's set up to read existing GPS and let you correct it.</li>
         </ul>
 
-        <h2>What Actually Happens When You "Add GPS" to a Photo</h2>
+        <h2 id="what-actually-happens-when-you-add-gps-to-a-photo">What Actually Happens When You "Add GPS" to a Photo</h2>
         <p>Behind the scenes, every method does the same handful of things to the file. Knowing what those are helps you understand why some methods work and some don't.</p>
         <p>A JPEG is a container. The image pixels live in one section; metadata lives in a small EXIF segment near the start of the file. Adding GPS means writing six values into that segment:</p>
         <ul>
@@ -203,7 +229,7 @@
           <li>The format is JPEG-specific. PNG can carry textual metadata but doesn't have a standard GPS tag; HEIC (the iPhone format) does, but most browser tools haven't caught up. RAW formats use sidecar files (.XMP) or vendor-specific containers.</li>
         </ol>
 
-        <h2>Method by Method: When Each One Earns Its Place</h2>
+        <h2 id="method-by-method-when-each-one-earns-its-place">Method by Method: When Each One Earns Its Place</h2>
 
         <h3>In-browser tools (this site, and a couple of competitors)</h3>
         <p>Best for one-off edits and small batches. The file is read, GPS bytes are rewritten, and a new copy is offered as a download — all inside the browser tab, with no server upload. Nothing to install, works on any device with a modern browser, and the original on your disk is never modified.</p>
@@ -233,7 +259,7 @@
         <p>Best when you're stuck on mobile and don't want to use Safari/Chrome to reach a web tool. Most of these apps are basically a phone-shaped wrapper around the same EXIF rewriting that a browser tool does.</p>
         <p>Tradeoffs: many free versions are ad-supported. Privacy varies — some apps upload photos for processing instead of doing it locally. Read the app's permissions before installing.</p>
 
-        <h2>Picking the Right Coordinate Precision</h2>
+        <h2 id="picking-the-right-coordinate-precision">Picking the Right Coordinate Precision</h2>
         <p>Not all GPS coordinates need to be exact to seven decimal places. A quick guide:</p>
         <ul>
           <li><strong>2 decimals (~1 km):</strong> good enough for "this photo was taken in Brooklyn".</li>
@@ -243,7 +269,7 @@
         </ul>
         <p>If you're copying coordinates from Google Maps' right-click menu, you're already getting 7 decimals. Just paste them in; don't agonise over rounding.</p>
 
-        <h2>Things That Will Surprise You</h2>
+        <h2 id="things-that-will-surprise-you">Things That Will Surprise You</h2>
         <ul>
           <li><strong>Instagram and Facebook strip your GPS on upload.</strong> If your goal is "make this photo show up in location-based searches on Instagram", adding GPS to the file won't do anything — the platforms re-encode and discard EXIF. Use the platform's own location-tagging UI instead.</li>
           <li><strong>Google Photos respects EXIF GPS, but it also has its own internal location field.</strong> If your photo had no GPS when you uploaded it but you typed a location into Google Photos, that location lives in Google's database, not in the file. Download the file and the GPS is still empty. To make it permanent, edit the file before uploading.</li>
@@ -251,7 +277,7 @@
           <li><strong>iCloud's "Share Original" toggle controls whether GPS travels with the photo.</strong> If recipients aren't seeing the location you set, check the share-sheet options.</li>
         </ul>
 
-        <h2>Companion Reading on This Site</h2>
+        <h2 id="companion-reading-on-this-site">Companion Reading on This Site</h2>
         <ul>
           <li><a href="/add-gps-to-photo-online/">The single-photo browser tool.</a> The fastest way to do this if you don't want to read any further.</li>
           <li><a href="/geotag-photos-online/">Batch geotagging.</a> If you have a set from one location.</li>
@@ -261,7 +287,7 @@
         </ul>
       </div>
 
-      <h2>Frequently Asked Questions</h2>
+      <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
       <h3>What's the fastest method to add GPS to a single photo?</h3>
       <p>An in-browser tool. Drop the JPEG in, pick the location on a map, download — about 30 seconds, no install, no upload. Phone built-in editors are similar speed if the photo is already on the phone.</p>
@@ -279,18 +305,27 @@
       <p>Yes, but not with most browser-based tools. Use Lightroom, Capture One, digiKam, or ExifTool — they understand vendor RAW containers and the XMP sidecar files RAW workflows usually rely on.</p>
 
       <div class="cta-banner">
-        <h2>Try the In-Browser Tool</h2>
+        <h2 id="try-the-in-browser-tool">Try the In-Browser Tool</h2>
         <p>If the decision tree at the top of this page pointed you at the browser-based option, the single-photo editor is one click away.</p>
         <a href="/add-gps-to-photo-online/" class="btn btn-primary">Open the Editor</a>
       </div>
-    </article>
+    
+      <div class="author-bio" style="display:flex; align-items:center; gap: 20px; background: var(--bg-alt); padding: 24px; border-radius: var(--radius); margin-top: 48px;">
+        <div style="width:80px; height:80px; border-radius:50%; background:var(--primary); display:flex; align-items:center; justify-content:center; color:#fff; font-size:2rem; font-weight:bold;">GT</div>
+        <div>
+          <h4 style="margin:0 0 8px; font-size: 1.2rem;">Geo Tags Editor Team</h4>
+          <p style="margin:0; color: var(--text-secondary); font-size: 0.95rem;">Experts in digital photography metadata, EXIF data manipulation, and online privacy. We build fast, secure tools for photographers and developers.</p>
+        </div>
+      </div>
+      
+</article>
   </div>
 </section>
 
 <!-- updated-2026-04-19 -->
 <aside class="container" style="max-width:900px;margin:48px auto 24px;padding:24px;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb">
   <p style="margin:0 0 6px;font-size:.85rem;color:#6b7280"><strong>Last reviewed:</strong> April 19, 2026 — checked for accuracy and updated for current iOS, Android, Windows and macOS behaviour.</p>
-  <h2 style="font-size:1.15rem;margin:14px 0 10px">Related guides</h2>
+  <h2 id="related-guides">Related guides</h2>
   <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
     <li><a href="/add-gps-to-photo-online/">Add geotag to a photo (free online editor)</a></li>
     <li><a href="/geotag-photos-online/">Geotag photos online</a></li>
