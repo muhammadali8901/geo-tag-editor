@@ -179,3 +179,4 @@ Commit on 2026-04-29T19:42:41: docs: update EXIF metadata guide section
 Commit on 2026-04-29T16:16:22: style: minor spacing adjustment in navigation bar
 Commit on 2026-04-29T10:37:38: perf: reduce DOM manipulation overhead
 Commit on 2026-04-30T19:59:29: fix: scroll restoration on back navigation
+Commit on 2026-04-30T15:37:25: perf: optimize web worker message passing
