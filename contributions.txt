@@ -184,3 +184,4 @@ Commit on 2026-04-30T19:30:17: docs: update README with recent feature notes
 Commit on 2026-04-30T12:20:29: style: tweak typography hierarchy for blog headings
 Commit on 2026-04-30T20:12:20: feat: refine error message clarity for invalid coordinates
 Commit on 2026-04-30T19:24:36: feat: add keyboard shortcut support for map zooming
+Commit on 2026-05-01T16:38:41: docs: update EXIF metadata guide section
