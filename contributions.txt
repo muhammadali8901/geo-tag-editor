@@ -186,3 +186,4 @@ Commit on 2026-04-30T20:12:20: feat: refine error message clarity for invalid co
 Commit on 2026-04-30T19:24:36: feat: add keyboard shortcut support for map zooming
 Commit on 2026-05-01T16:38:41: docs: update EXIF metadata guide section
 Commit on 2026-05-01T17:15:47: fix: prevent duplicate form submission on rapid clicks
+Commit on 2026-05-01T19:17:57: docs: update EXIF metadata guide section
