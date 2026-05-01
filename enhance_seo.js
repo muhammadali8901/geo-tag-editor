@@ -4,7 +4,7 @@ const path = require('path');
 const baseDir = 'c:/Users/Laptop Seller/Desktop/geo or genay do/geo-tag-editor';
 
 // 1. Noindex utility pages
-const dirs = ['disclaimer', 'features', 'privacy-policy', 'terms', 'sitemap'];
+const dirs = ['disclaimer', 'privacy-policy', 'terms', 'sitemap'];
 for (const dir of dirs) {
   const file = path.join(baseDir, dir, 'index.html');
   if (fs.existsSync(file)) {

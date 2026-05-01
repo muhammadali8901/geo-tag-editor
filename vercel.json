@@ -3,7 +3,7 @@
   "outputDirectory": ".",
   "installCommand": null,
   "framework": null,
-  "cleanUrls": false,
+  "cleanUrls": true,
   "trailingSlash": true,
   "headers": [
     {
@@ -108,112 +108,6 @@
       "source": "/blog/best-practices-for-photo-geotagging-2026.html",
       "destination": "/blog/best-practices-for-photo-geotagging-2026/",
       "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/about",
-      "destination": "/about/index.html"
-    },
-    {
-      "source": "/about/",
-      "destination": "/about/index.html"
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact/index.html"
-    },
-    {
-      "source": "/contact/",
-      "destination": "/contact/index.html"
-    },
-    {
-      "source": "/disclaimer",
-      "destination": "/disclaimer/index.html"
-    },
-    {
-      "source": "/disclaimer/",
-      "destination": "/disclaimer/index.html"
-    },
-    {
-      "source": "/privacy-policy",
-      "destination": "/privacy-policy/index.html"
-    },
-    {
-      "source": "/privacy-policy/",
-      "destination": "/privacy-policy/index.html"
-    },
-    {
-      "source": "/terms",
-      "destination": "/terms/index.html"
-    },
-    {
-      "source": "/terms/",
-      "destination": "/terms/index.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog/index.html"
-    },
-    {
-      "source": "/blog/",
-      "destination": "/blog/index.html"
-    },
-    {
-      "source": "/add-gps-to-photo-online",
-      "destination": "/add-gps-to-photo-online/index.html"
-    },
-    {
-      "source": "/add-gps-to-photo-online/",
-      "destination": "/add-gps-to-photo-online/index.html"
-    },
-    {
-      "source": "/remove-geotag-from-photo-online",
-      "destination": "/remove-geotag-from-photo-online/index.html"
-    },
-    {
-      "source": "/remove-geotag-from-photo-online/",
-      "destination": "/remove-geotag-from-photo-online/index.html"
-    },
-    {
-      "source": "/geo-tag-editor",
-      "destination": "/geo-tag-editor/index.html"
-    },
-    {
-      "source": "/geo-tag-editor/",
-      "destination": "/geo-tag-editor/index.html"
-    },
-    {
-      "source": "/sitemap",
-      "destination": "/sitemap/index.html"
-    },
-    {
-      "source": "/sitemap/",
-      "destination": "/sitemap/index.html"
-    },
-    {
-      "source": "/features",
-      "destination": "/features/index.html"
-    },
-    {
-      "source": "/features/",
-      "destination": "/features/index.html"
-    },
-    {
-      "source": "/geotag-photos-online",
-      "destination": "/geotag-photos-online/index.html"
-    },
-    {
-      "source": "/geotag-photos-online/",
-      "destination": "/geotag-photos-online/index.html"
-    },
-    {
-      "source": "/how-to-remove-location-from-photos",
-      "destination": "/how-to-remove-location-from-photos/index.html"
-    },
-    {
-      "source": "/how-to-remove-location-from-photos/",
-      "destination": "/how-to-remove-location-from-photos/index.html"
     }
   ]
 }
