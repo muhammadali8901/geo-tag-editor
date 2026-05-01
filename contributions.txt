@@ -189,3 +189,4 @@ Commit on 2026-05-01T17:15:47: fix: prevent duplicate form submission on rapid c
 Commit on 2026-05-01T19:17:57: docs: update EXIF metadata guide section
 Commit on 2026-05-01T16:36:10: chore: audit and remove unused asset references
 Commit on 2026-05-01T09:46:46: docs: update README with recent feature notes
+Commit on 2026-05-01T18:39:13: docs: update EXIF metadata guide section
