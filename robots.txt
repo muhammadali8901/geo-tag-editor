@@ -30,5 +30,15 @@ Allow: *.jpg
 Allow: *.webp
 Allow: *.ico
 
+# Explicitly allow Google AdSense + ad crawlers
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
 # Sitemap
 Sitemap: https://geotagseditor.online/sitemap.xml

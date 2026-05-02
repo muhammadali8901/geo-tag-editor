@@ -1,3 +1,4 @@
 # ads.txt for geotagseditor.online
-# Replace the line below with your actual Google AdSense publisher ID once approved.
-# Format: google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# Replace the placeholder line below with your actual Google AdSense publisher ID once approved.
+# Format example:
+# google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
