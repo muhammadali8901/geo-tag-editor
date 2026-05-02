@@ -198,3 +198,4 @@ Commit on 2026-05-02T21:24:43: feat: refine error message clarity for invalid co
 Commit on 2026-05-02T11:49:24: chore: audit and remove unused asset references
 Commit on 2026-05-02T16:48:05: refactor: optimize image loading routines
 Commit on 2026-05-02T11:43:03: style: adjust card padding for mobile screens
+Commit on 2026-05-02T11:42:31: feat: refine error message clarity for invalid coordinates
