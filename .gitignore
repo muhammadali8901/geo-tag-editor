@@ -16,3 +16,7 @@ npm-debug.log*
 # Temporary files
 *.tmp
 *~
+server.js
+.replit
+lib/
+attached_assets/

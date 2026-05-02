@@ -26,12 +26,10 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" href="/css/style.css" as="style" importance="high">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="preload" href="/images/icons.svg" as="image" type="image/svg+xml" importance="high">
-    <link rel="preload" href="/images/logo.png" as="image" importance="high">
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript></noscript>
+    <link rel="preload" href="/images/logo.png" as="image" fetchpriority="high">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap"></noscript>
     
     <style>
       .hero { padding: 80px 0 40px; text-align: center; }
@@ -431,9 +429,9 @@
 </footer>
 
     <!-- Core Scripts -->
-    <script src="/js/common.js"></script>
-    <script src="/js/site.js"></script>
-    <script src="/js/tool.js"></script>
+    <script src="/js/common.js" defer></script>
+    <script src="/js/site.js" defer></script>
+    <script src="/js/tool.js" defer></script>
     <script>
     if('fonts' in document){document.fonts.load("600 1em Outfit").then(function(){var l=document.createElement('link');l.href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap';l.rel='stylesheet';l.crossOrigin='anonymous';document.head.appendChild(l);});}
     </script>
