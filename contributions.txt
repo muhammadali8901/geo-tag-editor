@@ -195,3 +195,4 @@ Commit on 2026-05-01T21:20:18: style: update button hover effects
 Commit on 2026-05-02T20:41:59: docs: improve inline code documentation
 Commit on 2026-05-02T18:43:25: feat: refine error message clarity for invalid coordinates
 Commit on 2026-05-02T21:24:43: feat: refine error message clarity for invalid coordinates
+Commit on 2026-05-02T11:49:24: chore: audit and remove unused asset references
