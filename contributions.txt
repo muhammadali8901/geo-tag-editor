@@ -193,3 +193,4 @@ Commit on 2026-05-01T18:39:13: docs: update EXIF metadata guide section
 Commit on 2026-05-01T10:31:02: refactor: modularize coordinate conversion utility
 Commit on 2026-05-01T21:20:18: style: update button hover effects
 Commit on 2026-05-02T20:41:59: docs: improve inline code documentation
+Commit on 2026-05-02T18:43:25: feat: refine error message clarity for invalid coordinates
