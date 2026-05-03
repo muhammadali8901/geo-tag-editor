@@ -201,3 +201,4 @@ Commit on 2026-05-02T11:43:03: style: adjust card padding for mobile screens
 Commit on 2026-05-02T11:42:31: feat: refine error message clarity for invalid coordinates
 Commit on 2026-05-02T19:02:14: feat: add keyboard shortcut support for map zooming
 Commit on 2026-05-03T15:59:10: style: minor spacing adjustment in navigation bar
+Commit on 2026-05-03T13:33:47: docs: update EXIF metadata guide section
