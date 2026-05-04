@@ -206,3 +206,4 @@ Commit on 2026-05-03T19:04:59: docs: expand metadata dictionary table descriptio
 Commit on 2026-05-03T20:36:41: style: tweak typography hierarchy for blog headings
 Commit on 2026-05-03T18:48:10: style: update color variables for dark mode contrast
 Commit on 2026-05-04T10:40:42: style: update color variables for dark mode contrast
+Commit on 2026-05-04T13:43:19: style: adjust card padding for mobile screens
