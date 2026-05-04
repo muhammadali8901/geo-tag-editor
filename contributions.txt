@@ -208,3 +208,4 @@ Commit on 2026-05-03T18:48:10: style: update color variables for dark mode contr
 Commit on 2026-05-04T10:40:42: style: update color variables for dark mode contrast
 Commit on 2026-05-04T13:43:19: style: adjust card padding for mobile screens
 Commit on 2026-05-04T21:12:47: style: tweak typography hierarchy for blog headings
+Commit on 2026-05-04T18:00:18: perf: reduce DOM manipulation overhead
