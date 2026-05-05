@@ -216,3 +216,4 @@ Commit on 2026-05-05T11:00:46: feat: refine error message clarity for invalid co
 Commit on 2026-05-05T19:19:47: docs: improve inline code documentation
 Commit on 2026-05-05T19:32:48: style: minor spacing adjustment in navigation bar
 Commit on 2026-05-05T15:52:52: style: update color variables for dark mode contrast
+Commit on 2026-05-05T21:25:01: perf: optimize web worker message passing
