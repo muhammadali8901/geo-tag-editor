@@ -215,3 +215,4 @@ Commit on 2026-05-05T14:28:32: perf: reduce DOM manipulation overhead
 Commit on 2026-05-05T11:00:46: feat: refine error message clarity for invalid coordinates
 Commit on 2026-05-05T19:19:47: docs: improve inline code documentation
 Commit on 2026-05-05T19:32:48: style: minor spacing adjustment in navigation bar
+Commit on 2026-05-05T15:52:52: style: update color variables for dark mode contrast
