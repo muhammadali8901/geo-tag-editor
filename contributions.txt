@@ -211,3 +211,4 @@ Commit on 2026-05-04T21:12:47: style: tweak typography hierarchy for blog headin
 Commit on 2026-05-04T18:00:18: perf: reduce DOM manipulation overhead
 Commit on 2026-05-04T17:10:38: chore: audit and remove unused asset references
 Commit on 2026-05-05T12:22:27: refactor: clean up unused helper functions
+Commit on 2026-05-05T14:28:32: perf: reduce DOM manipulation overhead
