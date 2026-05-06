@@ -222,3 +222,4 @@ Commit on 2026-05-06T15:25:44: perf: memoize expensive image transform operation
 Commit on 2026-05-06T10:28:03: feat: refine error message clarity for invalid coordinates
 Commit on 2026-05-06T13:02:24: fix: resolve edge case handling in location lookup
 Commit on 2026-05-06T19:46:39: fix: scroll restoration on back navigation
+Commit on 2026-05-06T11:37:17: refactor: extract reusable modal components
