@@ -218,3 +218,4 @@ Commit on 2026-05-05T19:32:48: style: minor spacing adjustment in navigation bar
 Commit on 2026-05-05T15:52:52: style: update color variables for dark mode contrast
 Commit on 2026-05-05T21:25:01: perf: optimize web worker message passing
 Commit on 2026-05-05T14:17:38: docs: update README with recent feature notes
+Commit on 2026-05-06T15:25:44: perf: memoize expensive image transform operations
