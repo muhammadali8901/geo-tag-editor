@@ -108,6 +108,11 @@
       "source": "/blog/best-practices-for-photo-geotagging-2026.html",
       "destination": "/blog/best-practices-for-photo-geotagging-2026/",
       "permanent": true
+    },
+    {
+      "source": "/blog/website-optimization-complete-guide-2025/",
+      "destination": "/blog/",
+      "permanent": true
     }
   ]
 }

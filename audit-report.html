@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Report | Geotags Editor</title>
+    <style>
+        :root {
+            --bg-dark: #0a0c10;
+            --card-bg: #161b22;
+            --accent-red: #ff4d4d;
+            --accent-green: #00e676;
+            --accent-blue: #2979ff;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --border: #30363d;
+            --gradient-danger: linear-gradient(135deg, #ff4d4d 0%, #b71c1c 100%);
+            --gradient-success: linear-gradient(135deg, #00e676 0%, #1b5e20 100%);
+            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .report-container {
+            max-width: 900px;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            padding: 60px 40px;
+            background: radial-gradient(circle at top right, rgba(41, 121, 255, 0.1), transparent);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(255, 77, 77, 0.1);
+            color: var(--accent-red);
+            border: 1px solid var(--accent-red);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(to bottom, #fff, #8b949e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            padding: 40px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-value {
+            font-size: 48px;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .score-red { color: var(--accent-red); }
+        .score-green { color: var(--accent-green); }
+
+        .section-title {
+            padding: 0 40px;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--accent-red);
+            border-radius: 2px;
+        }
+
+        .issue-list {
+            padding: 0 40px 40px;
+        }
+
+        .issue-card {
+            background: rgba(255, 77, 77, 0.03);
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .issue-card:hover {
+            border-color: var(--accent-red);
+            background: rgba(255, 77, 77, 0.05);
+        }
+
+        .issue-icon {
+            font-size: 32px;
+            background: var(--gradient-danger);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .issue-content h3 {
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .issue-content p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .trust-signals {
+            background: rgba(0, 230, 118, 0.02);
+            padding: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent-green);
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px;
+            background: rgba(0, 230, 118, 0.05);
+            border-radius: 8px;
+        }
+
+        .roadmap {
+            padding: 40px;
+            background: rgba(41, 121, 255, 0.02);
+            border-top: 1px solid var(--border);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        .timeline-item h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            background: rgba(0,0,0,0.2);
+        }
+
+        .btn-action {
+            display: inline-block;
+            padding: 16px 32px;
+            background: var(--accent-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(41, 121, 255, 0.3);
+        }
+
+        .btn-action:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(41, 121, 255, 0.5);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 32px; }
+            .stats-grid { padding: 20px; }
+            .issue-card { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <header>
+            <span class="badge">Brutally Honest Diagnostic</span>
+            <h1>SEO PERFORMANCE AUDIT</h1>
+            <p class="subtitle">A clinical breakdown of geotagseditor.online's authority, spam signals, and growth potential.</p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-value score-red">9%</span>
+                <span class="stat-label">Current Spam Score</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value score-green">&lt; 3%</span>
+                <span class="stat-label">Safety Threshold</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" style="color: var(--accent-blue);">4-8wk</span>
+                <span class="stat-label">Recovery Window</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">Critical Ranking Blockers</h2>
+        <div class="issue-list">
+            <div class="issue-card">
+                <div class="issue-icon">🚩</div>
+                <div class="issue-content">
+                    <h3>PakBiz Link Farm Signal</h3>
+                    <p>The embedded "Grow Your Business" banner is cross-promoting unrelated domains. To Google, this looks like a link-swap scheme, poisoning your domain's integrity.</p>
+                </div>
+            </div>
+            <div class="issue-card">
+                <div class="issue-icon">🗑️</div>
+                <div class="issue-content">
+                    <h3>SEO Filler Content</h3>
+                    <p>The "Website Optimization" article is off-topic. A niche GPS tool hosting generic SEO advice signals a "thin content" site designed for ads, not users.</p>
+                </div>
+            </div>
+            <div class="issue-card">
+                <div class="issue-icon">🤥</div>
+                <div class="issue-content">
+                    <h3>Unverified Trust Signals</h3>
+                    <p>Fake 5-star reviews with no third-party verification are active triggers for Google's E-E-A-T quality reviewers. They destroy trust faster than they build it.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="trust-signals">
+            <h2 class="section-title" style="margin-bottom: 24px; padding: 0;">Foundational Strengths</h2>
+            <div class="trust-grid">
+                <div class="trust-item">✅ Working Web Tool</div>
+                <div class="trust-item">✅ Physical NAP Data</div>
+                <div class="trust-item">✅ Clean Sitemap</div>
+                <div class="trust-item">✅ Legal Transparency</div>
+                <div class="trust-item">✅ Privacy Compliant</div>
+                <div class="trust-item">✅ High Performance</div>
+            </div>
+        </div>
+
+        <div class="roadmap">
+            <h2 class="section-title" style="margin-bottom: 32px; padding: 0;">Recovery Roadmap</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Phase 1: Immediate Sanitization</h4>
+                    <p>Remove cross-promotions, delete off-topic blog posts, and purge unverified reviews.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Phase 2: Recrawl & Re-indexing</h4>
+                    <p>Submit updated sitemap to Search Console. Wait for Google to purge spam signals (2-4 weeks).</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Phase 3: Authority Growth</h4>
+                    <p>Ranking improvements materialize as Google re-evaluates the tool as a high-quality utility (4-8 weeks).</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p style="margin-bottom: 24px; color: var(--text-secondary);">This audit is a diagnostic tool. Implementation of recommendations is the path to #1 rankings.</p>
+            <a href="#" class="btn-action">Begin Remediation</a>
+        </footer>
+    </div>
+</body>
+</html>
