@@ -225,3 +225,4 @@ Commit on 2026-05-06T19:46:39: fix: scroll restoration on back navigation
 Commit on 2026-05-06T11:37:17: refactor: extract reusable modal components
 Commit on 2026-05-07T09:20:04: style: tweak typography hierarchy for blog headings
 Commit on 2026-05-07T20:12:59: style: update button hover effects
+Commit on 2026-05-07T21:42:09: fix: tooltip display glitch on mobile view
