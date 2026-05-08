@@ -236,3 +236,4 @@ Commit on 2026-05-08T19:27:55: docs: clarify privacy policy points
 Commit on 2026-05-08T19:12:33: perf: optimize web worker message passing
 Commit on 2026-05-08T16:32:11: docs: clarify privacy policy points
 Commit on 2026-05-08T09:37:28: style: align footer navigation elements
+Commit on 2026-05-08T10:41:31: fix: handle missing geolocation permissions gracefully
