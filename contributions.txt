@@ -232,3 +232,4 @@ Commit on 2026-05-07T21:36:08: refactor: optimize image loading routines
 Commit on 2026-05-08T10:03:52: docs: expand metadata dictionary table descriptions
 Commit on 2026-05-08T17:29:31: perf: optimize web worker message passing
 Commit on 2026-05-08T18:38:36: docs: improve inline code documentation
+Commit on 2026-05-08T19:27:55: docs: clarify privacy policy points
