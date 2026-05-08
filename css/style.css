@@ -82,7 +82,7 @@ img, svg {
 }
 
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--bg);font-display:swap}
-body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;contain:layout style;padding-top:var(--header-h)}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;padding-top:var(--header-h)}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--primary);text-decoration:none;transition:color .2s}
 a:hover{color:var(--primary-dark)}
@@ -102,7 +102,6 @@ h1,h2,h3,h4,h5,h6{line-height:1.3;color:var(--text)}
   height:var(--header-h);
   width:100%;
   transition:all .3s cubic-bezier(.4,0,.2,1);
-  contain:layout style paint;
 }
 .site-header.scrolled{
   box-shadow:var(--shadow-lg);
