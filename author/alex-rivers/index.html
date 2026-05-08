@@ -14,7 +14,7 @@
 <meta property="og:title" content="Alex Rivers — Photography & EXIF Metadata Expert">
 <meta property="og:description" content="Professional photographer and metadata specialist at Geo Tags Editor. Expert in GPS photo editing and EXIF data.">
 <meta property="og:url" content="https://geotagseditor.online/author/alex-rivers/">
-<meta property="og:image" content="https://geotagseditor.online/android-chrome-512x512.png">
+<meta property="og:image" content="https://geotagseditor.online/images/alex-rivers.png">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -26,12 +26,27 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/css/style.css">
 
+<style>
+  .author-hero { padding: 80px 0 60px; background: var(--bg-alt); border-bottom: 1px solid var(--border); }
+  .author-profile { display: flex; align-items: center; gap: 48px; max-width: 900px; margin: 0 auto; }
+  .author-img-wrap { flex-shrink: 0; width: 180px; height: 180px; border-radius: 50%; overflow: hidden; box-shadow: var(--shadow-lg); border: 4px solid #fff; }
+  .author-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .author-info h1 { font-size: 2.5rem; margin-bottom: 8px; }
+  .author-title { font-size: 1.1rem; color: var(--primary); font-weight: 600; margin-bottom: 16px; }
+  .author-bio { font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary); }
+  
+  @media (max-width: 768px) {
+    .author-profile { flex-direction: column; text-align: center; gap: 24px; }
+  }
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Alex Rivers",
   "url": "https://geotagseditor.online/author/alex-rivers/",
+  "image": "https://geotagseditor.online/images/alex-rivers.png",
   "jobTitle": "Lead Metadata Specialist & Photographer",
   "worksFor": {
     "@type": "Organization",
@@ -68,50 +83,101 @@
   <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><strong>Alex Rivers</strong>
 </nav>
 
-<section class="section">
-  <div class="container" style="max-width:800px">
-    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:var(--spacing-2xl)">
-      <div style="width:120px;height:120px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:var(--spacing-md)">
-        <span style="font-size:3rem;font-weight:700;color:var(--primary)">AR</span>
+<section class="author-hero">
+  <div class="container">
+    <div class="author-profile">
+      <div class="author-img-wrap">
+        <img src="/images/alex-rivers.png" alt="Alex Rivers" width="180" height="180">
       </div>
-      <h1 style="margin-bottom:var(--spacing-xs)">Alex Rivers</h1>
-      <p style="font-weight:600;color:var(--primary);margin-bottom:var(--spacing-md)">Lead Metadata Specialist & Photographer</p>
-      <div style="max-width:600px;line-height:1.8;color:var(--text-secondary)">
-        <p>Alex is a professional photographer and digital archivist with over 12 years of experience managing complex media libraries. His technical focus is on image metadata architecture, specifically the practical application of EXIF, IPTC, and GPS data for search visibility and privacy protection.</p>
+      <div class="author-info">
+        <h1>Alex Rivers</h1>
+        <p class="author-title">Lead Metadata Specialist & Photographer</p>
+        <div class="author-bio">
+          <p>Alex is a professional photographer and digital archivist with over 12 years of experience managing complex media libraries. His technical focus is on image metadata architecture, specifically the practical application of EXIF, IPTC, and GPS data for search visibility and privacy protection.</p>
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="content-page">
+<section class="section">
+  <div class="container" style="max-width:900px">
+    <div class="content-page" style="padding-top:0">
       <h2>Expertise & Background</h2>
       <p>Alex's journey into the world of metadata began in commercial studio photography, where the need for precise asset organization led him to master command-line tools like ExifTool and professional management software. He soon realized that the most powerful tools were often the most difficult for the average user to access, leading to the creation of the browser-based Geo Tags Editor.</p>
       
       <p>As the Lead Metadata Specialist at Geo Tags Editor, Alex reviews every guide and tutorial published on the site to ensure technical accuracy and practical relevance. He is a strong advocate for "Privacy by Architecture," pushing for client-side processing to keep sensitive location data in the hands of the users.</p>
 
-      <h2>Featured Guides by Alex</h2>
-      <div class="grid-1" style="gap:var(--spacing-md);margin-top:var(--spacing-lg)">
+      <h2 style="margin-top:48px">Featured Guides by Alex</h2>
+      <div class="grid-1" style="gap:24px;margin-top:24px">
         <article class="card">
-          <h3 style="font-size:1.1rem;margin-bottom:8px"><a href="/blog/best-practices-for-photo-geotagging-2026/" style="color:var(--text);text-decoration:none">Best Practices for Photo Geotagging in 2026</a></h3>
-          <p style="font-size:.9rem;color:var(--text-secondary)">The definitive guide to balancing SEO benefits with personal privacy when managing photo location data.</p>
+          <h3 style="font-size:1.25rem;margin-bottom:8px"><a href="/blog/best-practices-for-photo-geotagging-2026/" style="color:var(--text);text-decoration:none">Best Practices for Photo Geotagging in 2026</a></h3>
+          <p style="color:var(--text-secondary)">The definitive guide to balancing SEO benefits with personal privacy when managing photo location data.</p>
+          <a href="/blog/best-practices-for-photo-geotagging-2026/" class="read-more" style="margin-top:12px;display:inline-block">Read Full Guide →</a>
         </article>
         <article class="card">
-          <h3 style="font-size:1.1rem;margin-bottom:8px"><a href="/blog/exif-data-ultimate-guide/" style="color:var(--text);text-decoration:none">EXIF Data Explained: Complete Photo Metadata Guide</a></h3>
-          <p style="font-size:.9rem;color:var(--text-secondary)">A deep dive into what is actually stored inside your JPEG files and how to manage it safely.</p>
+          <h3 style="font-size:1.25rem;margin-bottom:8px"><a href="/blog/exif-data-ultimate-guide/" style="color:var(--text);text-decoration:none">EXIF Data Explained: Complete Photo Metadata Guide</a></h3>
+          <p style="color:var(--text-secondary)">A deep dive into what is actually stored inside your JPEG files and how to manage it safely.</p>
+          <a href="/blog/exif-data-ultimate-guide/" class="read-more" style="margin-top:12px;display:inline-block">Read Full Guide →</a>
         </article>
         <article class="card">
-          <h3 style="font-size:1.1rem;margin-bottom:8px"><a href="/blog/why-geotagging-matters-for-local-seo/" style="color:var(--text);text-decoration:none">Why Geotagging Matters for Local SEO</a></h3>
-          <p style="font-size:.9rem;color:var(--text-secondary)">Alex explains how geographic signals in images help search engines connect businesses with local customers.</p>
+          <h3 style="font-size:1.25rem;margin-bottom:8px"><a href="/blog/why-geotagging-matters-for-local-seo/" style="color:var(--text);text-decoration:none">Why Geotagging Matters for Local SEO</a></h3>
+          <p style="color:var(--text-secondary)">Alex explains how geographic signals in images help search engines connect businesses with local customers.</p>
+          <a href="/blog/why-geotagging-matters-for-local-seo/" class="read-more" style="margin-top:12px;display:inline-block">Read Full Guide →</a>
         </article>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>&copy; 2026 Geo Tags Editor. Built for privacy and speed.</p>
+<footer class="site-footer" id="site-footer" role="contentinfo">
+<div class="footer-grid">
+  <div class="footer-brand">
+    <div class="logo">
+      <img src="/images/logo.png" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto">
+      <span>Geo Tags Editor</span>
+    </div>
+    <p>Geo Tags Editor is a free online tool that lets you add, edit, or remove GPS geotag metadata from your JPEG images. Fast, private, and entirely browser-based.</p>
   </div>
+  <div class="footer-col">
+    <p class="footer-title">Quick Links</p>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/add-gps-to-photo-online/">Add GPS</a></li>
+      <li><a href="/remove-geotag-from-photo-online/">Remove GPS</a></li>
+      <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about/">About Us</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-title">Articles &amp; Guides</p>
+    <ul>
+      <li><a href="/blog/how-to-add-geotag-to-existing-photos/">Add Geotag to Existing Photos</a></li>
+      <li><a href="/blog/remove-geotag-from-photo/">Remove Geotag from Photo</a></li>
+      <li><a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging for Local SEO</a></li>
+      <li><a href="/blog/how-to-remove-metadata-from-images/">Remove Image Metadata</a></li>
+      <li><a href="/blog/how-to-remove-gps-location-data-from-photos/">Remove GPS Location Data From Photos</a></li>
+      <li><a href="/blog/how-to-add-gps-location-to-photos/">Add GPS to Photos</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-title">Legal</p>
+    <ul>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms/">Terms &amp; Conditions</a></li>
+      <li><a href="/disclaimer/">Disclaimer</a></li>
+      <li><a href="/sitemap/">Sitemap</a></li>
+    </ul>
+  </div>
+</div>
+<div class="footer-bottom">
+  &copy; <span id="copyright-year">2026</span> Geo Tags Editor. All rights reserved. Free online geo tag editor tool.
+</div>
 </footer>
 
 <script src="/js/common.js" defer></script>
 </body>
 </html>
+

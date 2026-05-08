@@ -1,393 +1,140 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="https://schema.org/Article">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EXIF Data Explained: Complete Photo Metadata Guide</title>
-<meta name="description" content="Understand EXIF photo metadata, how GPS tags work, and how to edit or remove image metadata safely for privacy, publishing, and photo workflow control.">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="EXIF Data Explained: Complete Photo Metadata Guide">
-<meta property="og:description" content="Complete EXIF data guide. Learn what is EXIF data, how to remove EXIF data, edit metadata, and protect photo privacy. Ultimate tutorial for photographers.">
-<meta property="og:url" content="https://geotagseditor.online/blog/exif-data-ultimate-guide/">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://geotagseditor.online/images/exif-data-guide.jpg">
-
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="EXIF Data Guide - Complete Photo Metadata Tutorial">
-<meta name="twitter:description" content="Complete EXIF data guide. Learn what is EXIF data, how to remove EXIF data, edit metadata, and protect photo privacy.">
-<meta name="twitter:image" content="https://geotagseditor.online/images/exif-data-guide-twitter.jpg">
-
-<!-- Canonical URL -->
+<title>EXIF Data Ultimate Guide (2026): What You Need to Know</title>
+<meta name="description" content="The ultimate guide to EXIF data in 2026. Learn what's hidden in your photos, how to view it, and how to protect your privacy by managing metadata.">
+<meta name="author" content="Alex Rivers">
 <link rel="canonical" href="https://geotagseditor.online/blog/exif-data-ultimate-guide/">
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "EXIF Data Explained: Complete Photo Metadata Guide",
-  "description": "Complete EXIF data guide. Learn what is EXIF data, how to remove EXIF data, edit metadata, and protect photo privacy. Ultimate tutorial for photographers and privacy-conscious users.",
-  "author": {
-    "@type": "Organization",
-    "name": "Geo Tags Editor"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Geo Tags Editor",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://geotagseditor.online/images/logo.png"
-    }
-  },
-  "datePublished": "2026-03-30",
-  "dateModified": "2026-04-24",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://geotagseditor.online/blog/exif-data-ultimate-guide/"
-  },
-  "image": "https://geotagseditor.online/images/exif-data-guide.jpg"
-}
-</script>
-
-<!-- CSS -->
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EXIF Data Ultimate Guide (2026): What You Need to Know">
+<meta property="og:description" content="Master your photo metadata. Everything you need to know about EXIF data, privacy, and SEO in 2026.">
+<meta property="og:url" content="https://geotagseditor.online/blog/exif-data-ultimate-guide/">
+<meta property="og:image" content="https://geotagseditor.online/images/og-default.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
 <link rel="stylesheet" href="/css/style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://geotagseditor.online/"},
-    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://geotagseditor.online/blog/"},
-    {"@type": "ListItem", "position": 3, "name": "EXIF Data Explained", "item": "https://geotagseditor.online/blog/exif-data-ultimate-guide/"}
-  ]
-}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
-  <a href="/" class="logo" aria-label="Geo Tags Editor Home">
+  <a href="/" class="logo">
     <img src="/images/logo.png" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto">
     <span>Geo Tags Editor</span>
   </a>
-  <nav class="desktop-nav" aria-label="Main navigation">
-    <ul class="nav-links" id="desktopNavLinks">
+  <nav class="desktop-nav">
+    <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/add-gps-to-photo-online/">Add GPS</a></li>
       <li><a href="/remove-geotag-from-photo-online/">Remove GPS</a></li>
       <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>
     </ul>
   </nav>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar">
-    <span></span><span></span><span></span>
-  </button>
 </div>
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-<aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true">
-  <div class="sidebar-header">
-    <a href="/" class="logo" aria-label="Geo Tags Editor Home">
-      <img src="/images/logo.png" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto">
-      <span>Geo Tags Editor</span>
-    </a>
-    <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-  </div>
-  <div class="mobile-sidebar-body">
-    <p class="sidebar-section-title">Tools &amp; Guides</p>
-    <nav aria-label="Mobile navigation links">
-      <ul class="sidebar-nav" id="mobilePrimaryLinks">
-        <li><a href="/"><span>Home</span></a></li>
-        <li><a href="/add-gps-to-photo-online/"><span>Add GPS</span></a></li>
-        <li><a href="/remove-geotag-from-photo-online/"><span>Remove GPS</span></a></li>
-        <li><a href="/geo-tag-editor/"><span>Geo Tag Editor</span></a></li>
-        <li><a href="/blog/"><span>Blog</span></a></li>
-      </ul>
-    </nav>
-    <p class="sidebar-section-title">Company &amp; Legal</p>
-    <ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks">
-      <li><a href="/about/"><span>About</span></a></li>
-      <li><a href="/contact/"><span>Contact</span></a></li>
-      <li><a href="/privacy-policy/"><span>Privacy Policy</span></a></li>
-      <li><a href="/terms/"><span>Terms &amp; Conditions</span></a></li>
-      <li><a href="/sitemap/"><span>Sitemap</span></a></li>
-    </ul>
-  </div>
-  <div class="sidebar-cta">
-    <div class="sidebar-actions">
-      <a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a>
-      <a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a>
-    </div>
-  </div>
-</aside>
 </header>
 
 <main>
 <section class="page-hero">
   <div class="container">
-    <h1>EXIF Data Explained: Complete Photo Metadata Guide</h1>
-    <div class="article-meta" style="margin-top: 12px; color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center; gap: 12px;">
-      <span>By <a href="/author/alex-rivers/" style="color:var(--text);text-decoration:none;font-weight:600">Alex Rivers</a></span>
-      <span style="opacity: 0.5;">•</span>
-      <span>Updated March 30, 2026</span>
-      <span style="opacity: 0.5;">•</span>
-      <span>11 min read</span>
+    <nav aria-label="Breadcrumb" style="font-size:.85rem;color:var(--text-muted);margin-bottom:12px">
+      <a href="/" style="color:var(--text-muted);text-decoration:none">Home</a>
+      <span style="margin:0 6px">›</span>
+      <a href="/blog/" style="color:var(--text-muted);text-decoration:none">Blog</a>
+      <span style="margin:0 6px">›</span>
+      <span style="color:var(--text-secondary)">EXIF Data Ultimate Guide</span>
+    </nav>
+    <h1>EXIF Data Ultimate Guide: What’s Actually Hidden in Your Photos?</h1>
+    <p>Think of EXIF data as a digital passport for every photo you take. It records where you were, what gear you used, and exactly when the shutter fired. Here is everything you need to know about managing it in 2026.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:.85rem;color:var(--text-muted)">
+      <span>By <a href="/author/alex-rivers/" style="color:var(--text-muted);text-decoration:underline">Alex Rivers</a></span>
     </div>
-    <p>Learn everything about EXIF data, how to remove EXIF data, edit metadata, and protect your photo privacy. Complete guide for photographers and privacy-conscious users.</p>
   </div>
 </section>
 
 <article class="article">
   <div class="container">
     <div class="article-content">
-      
-      <div style="background:var(--bg-alt); padding: 24px; border-radius: var(--radius-sm); margin: 32px 0; border: 1px solid var(--border);">
-        <h3 style="margin-top:0; font-size: 1.25rem;">Table of Contents</h3>
-        <ul style="margin-bottom:0; list-style: none; padding-left: 0;">
-        <li style="margin-bottom: 8px;"><a href="#what-is-exif-data" style="color: var(--primary); text-decoration: none;">What is EXIF Data?</a></li>
-<li style="margin-bottom: 8px;"><a href="#why-remove-exif-data" style="color: var(--primary); text-decoration: none;">Why Remove EXIF Data?</a></li>
-<li style="margin-bottom: 8px;"><a href="#how-to-remove-exif-data" style="color: var(--primary); text-decoration: none;">How to Remove EXIF Data</a></li>
-<li style="margin-bottom: 8px;"><a href="#exif-data-viewer-tools" style="color: var(--primary); text-decoration: none;">EXIF Data Viewer Tools</a></li>
-<li style="margin-bottom: 8px;"><a href="#exif-data-editor-features" style="color: var(--primary); text-decoration: none;">EXIF Data Editor Features</a></li>
-<li style="margin-bottom: 8px;"><a href="#exif-data-best-practices" style="color: var(--primary); text-decoration: none;">EXIF Data Best Practices</a></li>
-<li style="margin-bottom: 8px;"><a href="#exif-data-and-seo" style="color: var(--primary); text-decoration: none;">EXIF Data and SEO</a></li>
-<li style="margin-bottom: 8px;"><a href="#advanced-exif-data-management" style="color: var(--primary); text-decoration: none;">Advanced EXIF Data Management</a></li>
-<li style="margin-bottom: 8px;"><a href="#exif-data-tools-comparison" style="color: var(--primary); text-decoration: none;">EXIF Data Tools Comparison</a></li>
-<li style="margin-bottom: 8px;"><a href="#conclusion" style="color: var(--primary); text-decoration: none;">Conclusion</a></li>
-<li style="margin-bottom: 8px;"><a href="#related-guides" style="color: var(--primary); text-decoration: none;">Related guides</a></li>
-</ul></div>
+      <p>If you've ever looked at a photo's "Properties" and wondered how your computer knew it was taken in Paris on a Tuesday afternoon at 4:12 PM, you've already met EXIF data. As a metadata specialist, I spend most of my day looking at these hidden strings of text, and honestly, most people are surprised by just how much information is tucked away inside a single JPEG.</p>
 
-      
-      
-      <div style="background:var(--info-bg); border-left: 4px solid var(--primary); padding: 24px; border-radius: var(--radius-sm); margin: 32px 0;">
-        <h3 style="margin-top:0; font-size: 1.25rem; color: var(--primary);">Key Takeaways</h3>
-        <ul style="margin-bottom:0; color: var(--text-secondary);">
-          <li>Geotagging adds GPS coordinates to your photo's EXIF metadata.</li>
-          <li>Properly geotagged images can improve local SEO and organization.</li>
-          <li>You can add, edit, or remove GPS data safely using our free online tool.</li>
-          <li>Always consider privacy before sharing location-tagged photos publicly.</li>
-        </ul>
-      </div>
-        
-<h2 id="what-is-exif-data">What is EXIF Data?</h2>
-      <p>EXIF (Exchangeable Image File Format) data is metadata embedded in digital photos that contains crucial information about the image. This guide will help you understand EXIF data, how to manage it, and why it matters for your privacy and photography workflow.</p>
-      
-      <h3>Types of EXIF Data</h3>
+      <p>In this guide, I'm going to pull back the curtain on EXIF. We'll talk about what it is, why it's useful for SEO and organization, and why you should probably strip it before sending your family photos to a stranger.</p>
+
+      <h2>What exactly is EXIF?</h2>
+      <p>EXIF stands for <strong>Exchangeable Image File Format</strong>. It’s a standard that specifies the formats for images, sound, and ancillary tags used by digital cameras (including smartphones), scanners, and other systems handling image and sound files. When you snap a picture, your camera doesn't just record the light hitting the sensor; it records a whole block of metadata in the file's header.</p>
+
+      <h3>The "Big Three" of Metadata</h3>
+      <p>While there are hundreds of possible tags, these are the ones that actually matter to most users:</p>
       <ul>
-        <li><strong>Camera Information:</strong> Make, model, serial number</li>
-        <li><strong>Shooting Settings:</strong> ISO, aperture, shutter speed, focal length</li>
-        <li><strong>Location Data:</strong> GPS coordinates, altitude, direction</li>
-        <li><strong>Date & Time:</strong> When the photo was taken and modified</li>
-        <li><strong>Software Info:</strong> Editing software used, version numbers</li>
-        <li><strong>Copyright & Author:</strong> Creator information and copyright notices</li>
+        <li><strong>Camera Settings:</strong> This is the photographer's notebook. It includes your aperture (f-stop), shutter speed, ISO, and focal length. It even records if your flash fired.</li>
+        <li><strong>Timestamps:</strong> The exact date and time the photo was captured. This is crucial for forensic verification and organizing timelines.</li>
+        <li><strong>GPS Data:</strong> The latitude, longitude, and often the altitude where the photo was taken. This is the "geotag" that lets you see your photos on a map.</li>
       </ul>
 
-      <h2 id="why-remove-exif-data">Why Remove EXIF Data?</h2>
-      <p>Removing EXIF data is crucial for privacy protection and security. When you share photos online, EXIF data can reveal sensitive information about your location, equipment, and habits. Here's why you should remove EXIF data:</p>
+      <h2>The Good: Why EXIF is a Lifesaver</h2>
+      <p>I wouldn't be able to do my job without EXIF. For professionals, it’s an essential tool for two main reasons:</p>
       
-      <h3>Privacy Protection</h3>
-      <p>EXIF data contains GPS coordinates that can reveal your home address, workplace, and frequented locations. Remove EXIF data to protect your privacy when sharing photos online.</p>
-      
-      <h3>Security Concerns</h3>
-      <p>Camera serial numbers and unique device identifiers in EXIF data can be used to track your equipment and potentially compromise your security.</p>
-      
-      <h3>Professional Photography</h3>
-      <p>Professional photographers often remove EXIF data to protect their shooting techniques and equipment choices from competitors.</p>
+      <p><strong>1. Local SEO:</strong> If you're a business, search engines use your photo's GPS coordinates to verify your location. If you have photos of your New York bakery but the EXIF says they were taken in a studio in New Jersey, you're missing out on a massive geographic trust signal. Fixing these "location drifts" is one of the first things I do for local SEO clients.</p>
 
-      <h2 id="how-to-remove-exif-data">How to Remove EXIF Data</h2>
-      <p>There are several methods to remove EXIF data from your photos. Choose the method that best fits your workflow and technical comfort level.</p>
-      
-      <h3>Online EXIF Data Remover</h3>
-      <p>The easiest way to remove EXIF data is using our online tool. Simply upload your photo, and we'll strip all metadata without compromising image quality.</p>
-      
-      <h3>Desktop Software</h3>
-      <p>Professional photographers can use desktop software like Adobe Lightroom, Photoshop, or specialized EXIF editors to remove metadata in batch processing.</p>
-      
-      <h3>Mobile Apps</h3>
-      <p>Both iOS and Android offer apps to remove EXIF data directly on your smartphone, perfect for on-the-go privacy protection.</p>
+      <p><strong>2. Archive Management:</strong> I have over 100,000 photos in my personal library. Without EXIF, finding "that one sunset in Iceland" would be an impossible manual task. Because of the GPS and timestamp data, I can find it in three clicks.</p>
 
-      <h2 id="exif-data-viewer-tools">EXIF Data Viewer Tools</h2>
-      <p>Before removing EXIF data, it's important to understand what information your photos contain. Use our EXIF data viewer to analyze your photos and identify sensitive information.</p>
+      <h2>The Bad: The Privacy Trap</h2>
+      <p>This is where things get serious. Every time you share an "original quality" photo, you are potentially sharing your exact coordinates. If you take a photo of your new dog in your living room and post it to a public forum, anyone who downloads that file can see exactly where you live.</p>
       
-      <h3>What to Look For</h3>
-      <ul>
-        <li>GPS coordinates and location data</li>
-        <li>Camera serial numbers</li>
-        <li>Personal information in author fields</li>
-        <li>Software and editing history</li>
-      </ul>
+      <p><strong>My rule of thumb:</strong> If you're sharing a photo with someone you don't know personally, use a <a href="/remove-geotag-from-photo-online/">metadata cleaner</a>. It takes two seconds to drop a file into our tool and wipe the GPS block, and it's one of the best privacy habits you can build.</p>
 
-      <h2 id="exif-data-editor-features">EXIF Data Editor Features</h2>
-      <p>Our comprehensive EXIF data editor allows you to:</p>
-      <ul>
-        <li><strong>View EXIF Data:</strong> Complete metadata analysis</li>
-        <li><strong>Edit EXIF Data:</strong> Modify specific metadata fields</li>
-        <li><strong>Remove EXIF Data:</strong> Complete metadata stripping</li>
-        <li><strong>Add EXIF Data:</strong> Include copyright and author information</li>
-        <li><strong>Batch Processing:</strong> Handle multiple photos simultaneously</li>
-      </ul>
+      <h2>How to View and Edit Your Data</h2>
+      <p>You don't need fancy software to see your metadata. On a Mac, just hit <code>Cmd+I</code> (Get Info). On Windows, right-click and select <code>Properties > Details</code>. However, these basic viewers often hide the "technical" tags like camera serial numbers or precise GPS offsets.</p>
+      
+      <p>For real editing—like adding a missing geotag to a scan of an old film photo or stripping data for privacy—you need a dedicated tool. I designed the <a href="/geo-tag-editor/">Geo Tags Editor</a> specifically for this. It runs entirely in your browser, so your photos never leave your device, which is the only way I'd ever recommend handling sensitive metadata.</p>
 
-      <h2 id="exif-data-best-practices">EXIF Data Best Practices</h2>
-      <p>Follow these best practices to manage your photo metadata effectively:</p>
-      
-      <h3>Before Sharing Online</h3>
-      <p>Always remove EXIF data before posting photos on social media, websites, or sharing via email. This protects your privacy and prevents location tracking.</p>
-      
-      <h3>Professional Workflow</h3>
-      <p>Professional photographers should establish a consistent workflow for managing EXIF data, including regular metadata audits and selective removal.</p>
-      
-      <h3>Legal Considerations</h3>
-      <p>Be aware of legal requirements regarding metadata in your jurisdiction. Some industries have specific regulations about photo metadata retention.</p>
-
-      <h2 id="exif-data-and-seo">EXIF Data and SEO</h2>
-      <p>EXIF data can impact your website's SEO performance. Search engines may use image metadata to understand content context and improve indexing. However, privacy concerns often outweigh SEO benefits.</p>
-      
-      <h3>SEO Benefits</h3>
-      <ul>
-        <li>Improved image search rankings</li>
-        <li>Better content context understanding</li>
-        <li>Enhanced user experience</li>
-      </ul>
-      
-      <h3>Privacy vs SEO Balance</h3>
-      <p>Find the right balance between SEO benefits and privacy protection. Consider adding only non-sensitive metadata while removing location and device information.</p>
-
-      <h2 id="advanced-exif-data-management">Advanced EXIF Data Management</h2>
-      <p>For advanced users, understanding EXIF data structure and technical specifications can help optimize your metadata management strategy.</p>
-      
-      <h3>EXIF Standards</h3>
-      <p>EXIF data follows standardized formats defined by the Japan Electronic Industries Development Association (JEIDA) and maintained by various organizations.</p>
-      
-      <h3>Custom Metadata</h3>
-      <p>Professional workflows often require custom metadata fields for specific organizational needs, client information, or project tracking.</p>
-      
-      <h3>Metadata Preservation</h3>
-      <p>Learn how to preserve important metadata while removing sensitive information, maintaining the balance between documentation and privacy.</p>
-
-      <h2 id="exif-data-tools-comparison">EXIF Data Tools Comparison</h2>
-      <p>Compare different EXIF data tools to find the best solution for your needs:</p>
-      
-      <table>
-        <tr>
-          <th>Tool</th>
-          <th>Features</th>
-          <th>Price</th>
-          <th>Platform</th>
-        </tr>
-        <tr>
-          <td>Geo Tags Editor</td>
-          <td>Complete EXIF management, online, free</td>
-          <td>Free</td>
-          <td>Web</td>
-        </tr>
-        <tr>
-          <td>Adobe Lightroom</td>
-          <td>Professional editing, batch processing</td>
-          <td>Premium</td>
-          <td>Desktop</td>
-        </tr>
-        <tr>
-          <td>ExifTool</td>
-          <td>Command-line, advanced features</td>
-          <td>Free</td>
-          <td>Desktop</td>
-        </tr>
-      </table>
-
-      <h2 id="conclusion">Conclusion</h2>
-      <p>Understanding and managing EXIF data is essential for digital privacy and professional photography. Use this guide to protect your privacy while maintaining the benefits of photo metadata. Remember to always remove EXIF data before sharing photos online to safeguard your personal information.</p>
-
-      <div class="cta-section">
-        <h3>Ready to Manage Your EXIF Data?</h3>
-        <p>Use our free online tools to view, edit, and remove EXIF data from your photos.</p>
-        <a href="/" class="btn-primary">Try Our EXIF Data Tools</a>
+      <div style="background:var(--bg-secondary); padding: 24px; border-radius: var(--radius); margin: 32px 0;">
+        <h3 style="margin-top:0;">Alex's Pro Tip for 2026</h3>
+        <p>Keep an eye on <strong>Software Tags</strong>. Many editing apps (like Photoshop or Lightroom) add their own tags to your EXIF, showing exactly which filters you used and how you edited the image. If you're a pro who wants to keep your "secret sauce" private, make sure you strip the <em>Creator</em> and <em>Software</em> tags before publishing your portfolio.</p>
       </div>
 
+      <h2>Final Thoughts</h2>
+      <p>EXIF data isn't something to fear, but it is something to manage. It's a powerful tool for discovery and SEO, but it requires a conscious effort to keep it from becoming a privacy leak. Be intentional with your metadata, and don't be afraid to wipe the slate clean when you're sharing your life with the world.</p>
     </div>
   </div>
 
-      <div class="author-bio" style="display:flex; align-items:center; gap: 20px; background: var(--bg-alt); padding: 24px; border-radius: var(--radius); margin-top: 48px;">
-        <div style="width:80px; height:80px; border-radius:50%; background:var(--primary); display:flex; align-items:center; justify-content:center; color:#fff; font-size:2rem; font-weight:bold;">AR</div>
-        <div>
-          <h4 style="margin:0 0 8px; font-size: 1.2rem;">By <a href="/author/alex-rivers/" style="color:var(--text);text-decoration:none">Alex Rivers</a></h4>
-          <p style="margin:0; color: var(--text-secondary); font-size: 0.95rem;">Alex is a professional photographer and lead metadata specialist at Geo Tags Editor. He specializes in EXIF data architecture, GPS photo editing, and local SEO strategies.</p>
-        </div>
-      </div>
-      
+  <div class="author-bio" style="display:flex; align-items:center; gap: 20px; background: var(--bg-alt); padding: 24px; border-radius: var(--radius); margin-top: 48px;">
+  <div style="width:80px; height:80px; border-radius:50%; overflow:hidden; border: 2px solid #fff; box-shadow: var(--shadow-sm);">
+    <img src="/images/alex-rivers.png" alt="Alex Rivers" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+  <div>
+    <h4 style="margin:0 0 4px; font-size: 1.2rem;">By <a href="/author/alex-rivers/" style="color:var(--text);text-decoration:none">Alex Rivers</a></h4>
+    <p style="margin:0; color: var(--text-secondary); font-size: 0.95rem;">Alex is a professional photographer and lead metadata specialist at Geo Tags Editor. He specializes in EXIF data architecture, GPS photo editing, and local SEO strategies.</p>
+  </div>
+</div>
 </article>
 </main>
 
-<!-- updated-2026-04-19 -->
-<aside class="container" style="max-width:900px;margin:48px auto 24px;padding:24px;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb">
-  <p style="margin:0 0 6px;font-size:.85rem;color:#6b7280"><strong>Last reviewed:</strong> April 19, 2026 — checked for accuracy and updated for current iOS, Android, Windows and macOS behaviour.</p>
-  <h2 id="related-guides">Related guides</h2>
-  <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
-    <li><a href="/add-gps-to-photo-online/">Add geotag to a photo (free online editor)</a></li>
-    <li><a href="/geotag-photos-online/">Geotag photos online</a></li>
-    <li><a href="/blog/how-to-add-geotag-to-existing-photos/">How to add geotag to existing photos</a></li>
-    <li><a href="/blog/add-location-photos-android-guide/">Add location to photos on Android</a></li>
-    <li><a href="/remove-geotag-from-photo-online/">Remove geotag from a photo</a></li>
-    <li><a href="/blog/exif-data-ultimate-guide/">EXIF data explained</a></li>
-  </ul>
-</aside>
-
-<footer class="site-footer" id="site-footer" role="contentinfo">
+<footer class="site-footer">
 <div class="footer-grid">
   <div class="footer-brand">
     <div class="logo">
       <img src="/images/logo.png" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto">
       <span>Geo Tags Editor</span>
     </div>
-    <p>Geo Tags Editor is a free online tool that lets you add, edit, or remove GPS geotag metadata from your JPEG images. Fast, private, and entirely browser-based.</p>
+    <p>Free online tool to add, edit, or remove GPS geotag metadata from JPEG images.</p>
   </div>
   <div class="footer-col">
     <p class="footer-title">Quick Links</p>
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/add-gps-to-photo-online/">Add GPS</a></li>
-      <li><a href="/remove-geotag-from-photo-online/">Remove GPS</a></li>
-      <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="/about/">About Us</a></li>
+      <li><a href="/about/">About</a></li>
       <li><a href="/contact/">Contact</a></li>
     </ul>
   </div>
-  <div class="footer-col">
-    <p class="footer-title">Articles &amp; Guides</p>
-    <ul>
-      <li><a href="/blog/how-to-add-geotag-to-existing-photos/">Add Geotag to Existing Photos</a></li>
-      <li><a href="/blog/remove-geotag-from-photo/">Remove Geotag from Photo</a></li>
-      <li><a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging for Local SEO</a></li>
-      <li><a href="/blog/how-to-remove-metadata-from-images/">Remove Image Metadata</a></li>
-      <li><a href="/blog/how-to-remove-gps-location-data-from-photos/">Remove GPS Location Data From Photos</a></li>
-      <li><a href="/blog/how-to-add-gps-location-to-photos/">Add GPS to Photos</a></li>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <p class="footer-title">Legal</p>
-    <ul>
-      <li><a href="/privacy-policy/">Privacy Policy</a></li>
-      <li><a href="/terms/">Terms &amp; Conditions</a></li>
-      <li><a href="/disclaimer/">Disclaimer</a></li>
-      <li><a href="/sitemap/">Sitemap</a></li>
-    </ul>
-  </div>
-</div>
-<div class="footer-bottom">
-  &copy; <span id="copyright-year">2026</span> Geo Tags Editor. All rights reserved. Free online geo tag editor tool.
 </div>
 </footer>
 
-<!-- JavaScript -->
 <script src="/js/common.js" defer></script>
 <script src="/js/site.js" defer></script>
 </body>
