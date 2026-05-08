@@ -284,14 +284,23 @@
                   </details>
                   <div class="coord-form">
                     <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-location"></use></svg> Set GPS Coordinates</h3>
-                    <div class="field">
-                      <label for="latInput">Latitude</label>
-                      <input type="number" id="latInput" step="any" min="-90" max="90" placeholder="e.g. 48.8566">
+                    <div class="coord-grid">
+                      <div class="field">
+                        <label for="latInput">Latitude</label>
+                        <input type="number" id="latInput" step="any" min="-90" max="90" placeholder="e.g. 48.8566">
+                        <p class="hint">Range: -90 to 90</p>
+                      </div>
+                      <div class="field">
+                        <label for="lngInput">Longitude</label>
+                        <input type="number" id="lngInput" step="any" min="-180" max="180" placeholder="e.g. 2.3522">
+                        <p class="hint">Range: -180 to 180</p>
+                      </div>
                     </div>
-                    <div class="field">
-                      <label for="lngInput">Longitude</label>
-                      <input type="number" id="lngInput" step="any" min="-180" max="180" placeholder="e.g. 2.3522">
-                    </div>
+                    <button type="button" class="btn-location" id="getCurrentLocBtn">
+                      <span class="spinner"></span>
+                      <span class="icon-loc">📍</span>
+                      <span id="locBtnText">Use Current Location</span>
+                    </button>
                   </div>
                   <h3 style="font-size:1rem;font-weight:600;margin:24px 0 8px;display:flex;align-items:center;gap:8px"><svg class="icon" style="width:1.1em;height:1.1em"><use href="/images/icons.svg#icon-map"></use></svg> Pick Location on Map</h3>
                   <div class="map-container" id="mapContainer"></div>

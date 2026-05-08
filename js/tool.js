@@ -27,7 +27,8 @@
       'lngInput', 'applyBtn', 'removeGpsBtn', 'downloadBtn', 'resultBanner',
       'resultText', 'mapContainer', 'tabUpload', 'tabEdit', 'tabDownload',
       'editSection', 'downloadSection', 'uploadSection', 'imagesPreviewContainer',
-      'processedImagesContainer', 'uploadedImagesPreview', 'addMoreBtn'
+      'processedImagesContainer', 'uploadedImagesPreview', 'addMoreBtn',
+      'getCurrentLocBtn', 'locBtnText'
     ].forEach(function (id) { els[id] = $(id); });
   }
 
@@ -609,6 +610,58 @@
     els.removeBtn.addEventListener('click', resetTool);
     els.applyBtn.addEventListener('click', applyGPS);
     els.removeGpsBtn.addEventListener('click', removeGPS);
+
+    if (els.getCurrentLocBtn) {
+      els.getCurrentLocBtn.addEventListener('click', function() {
+        if (!navigator.geolocation) {
+          GTP.showToast('Geolocation is not supported by your browser.', 'error');
+          return;
+        }
+
+        els.getCurrentLocBtn.classList.add('loading');
+        els.locBtnText.textContent = 'Getting current location...';
+        els.getCurrentLocBtn.disabled = true;
+
+        navigator.geolocation.getCurrentPosition(
+          function(position) {
+            const lat = position.coords.latitude.toFixed(7);
+            const lng = position.coords.longitude.toFixed(7);
+            
+            els.latInput.value = lat;
+            els.lngInput.value = lng;
+            
+            els.getCurrentLocBtn.classList.remove('loading');
+            els.locBtnText.textContent = 'Current location applied successfully.';
+            els.getCurrentLocBtn.disabled = false;
+            
+            GTP.showToast('Current location applied successfully.', 'success');
+            
+            validateCoords();
+            updateMapMarker();
+            
+            // Reset text after 3 seconds
+            setTimeout(function() {
+              if (els.locBtnText.textContent === 'Current location applied successfully.') {
+                els.locBtnText.textContent = 'Use Current Location';
+              }
+            }, 3000);
+          },
+          function(error) {
+            els.getCurrentLocBtn.classList.remove('loading');
+            els.locBtnText.textContent = 'Use Current Location';
+            els.getCurrentLocBtn.disabled = false;
+            
+            let msg = 'Unable to access current location. Please allow location permission.';
+            if (error.code === error.TIMEOUT) msg = 'Location request timed out.';
+            else if (error.code === error.POSITION_UNAVAILABLE) msg = 'Location information is unavailable.';
+            
+            GTP.showToast(msg, 'error');
+            console.error('Geolocation error:', error);
+          },
+          { enableHighAccuracy: true, timeout: 8000, maximumAge: 0 }
+        );
+      });
+    }
 
     els.latInput.addEventListener('input', function () { validateCoords(); updateMapMarker(); });
     els.lngInput.addEventListener('input', function () { validateCoords(); updateMapMarker(); });
