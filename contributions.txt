@@ -234,3 +234,4 @@ Commit on 2026-05-08T17:29:31: perf: optimize web worker message passing
 Commit on 2026-05-08T18:38:36: docs: improve inline code documentation
 Commit on 2026-05-08T19:27:55: docs: clarify privacy policy points
 Commit on 2026-05-08T19:12:33: perf: optimize web worker message passing
+Commit on 2026-05-08T16:32:11: docs: clarify privacy policy points
