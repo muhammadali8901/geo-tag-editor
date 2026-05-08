@@ -631,20 +631,20 @@
             els.lngInput.value = lng;
             
             els.getCurrentLocBtn.classList.remove('loading');
-            els.locBtnText.textContent = 'Current location applied successfully.';
+            els.locBtnText.textContent = 'Location Fetched Successfully!';
             els.getCurrentLocBtn.disabled = false;
             
-            GTP.showToast('Current location applied successfully.', 'success');
+            GTP.showToast('Location fetched! Click "Apply" below to save to photo.', 'success');
             
             validateCoords();
             updateMapMarker();
             
-            // Reset text after 3 seconds
+            // Reset text after 5 seconds
             setTimeout(function() {
-              if (els.locBtnText.textContent === 'Current location applied successfully.') {
-                els.locBtnText.textContent = 'Use Current Location';
+              if (els.locBtnText.textContent === 'Location Fetched Successfully!') {
+                els.locBtnText.textContent = '📍 Get My Current Location';
               }
-            }, 3000);
+            }, 5000);
           },
           function(error) {
             els.getCurrentLocBtn.classList.remove('loading');
