@@ -239,3 +239,4 @@ Commit on 2026-05-08T09:37:28: style: align footer navigation elements
 Commit on 2026-05-08T10:41:31: fix: handle missing geolocation permissions gracefully
 Commit on 2026-05-09T15:28:10: refactor: optimize image loading routines
 Commit on 2026-05-09T20:31:23: docs: update README with recent feature notes
+Commit on 2026-05-09T18:38:47: feat: improve metadata parsing efficiency
