@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Geo Tags Editor Sitemap - Updated: 2026-04-30 -->
+<!-- Geo Tags Editor Sitemap - Updated: 2026-05-09 -->
 <!-- This sitemap includes all indexable pages with proper priority and change frequency -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://geotagseditor.online/</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -242,17 +242,6 @@
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
       <image:title>How to Remove Location from Photos - Free GPS Data Remover</image:title>
       <image:caption>Learn how to remove location from photos instantly with our free GPS data remover tool. Strip geotag metadata and protect privacy.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://geotagseditor.online/blog/website-optimization-complete-guide-2025/</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Website Optimization 2025 - Complete Guide to Speed &amp; SEO</image:title>
-      <image:caption>Master website optimization in 2025. Learn proven strategies to boost site speed, improve SEO rankings, and enhance user experience.</image:caption>
     </image:image>
   </url>
   <url>

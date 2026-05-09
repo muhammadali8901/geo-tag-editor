@@ -4,7 +4,7 @@
 <meta charset="UTF-8"><meta name="google-site-verification" content="GX7E3WwTMpMblI_s7KutApuKm_lCuKQzkQHUs0xGRx8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Geo Tags Editor — Add or Remove GPS from Photos Free</title>
-<meta name="description" content="Add GPS coordinates to photos or remove location metadata instantly. A private, browser-based EXIF editor for JPEG images.">
+<meta name="description" content="Add or remove GPS coordinates from JPEG photos — directly in your browser. No upload, no account, no software. Free EXIF editor for privacy-conscious photographers.">
 <link rel="canonical" href="https://geotagseditor.online/">
 <link rel="alternate" hreflang="en" href="https://geotagseditor.online/">
 <link rel="alternate" hreflang="x-default" href="https://geotagseditor.online/">
@@ -49,15 +49,18 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Geo Tags Editor",
-  "operatingSystem": "All (Web-based)",
-  "applicationCategory": "MultimediaApplication",
+  "applicationCategory": "PhotographyApplication",
+  "operatingSystem": "Any (Browser-based)",
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "featureList": "Add GPS to photos, Remove GPS from photos, Edit EXIF metadata, Interactive map picker, Batch processing",
-  "screenshot": "https://geotagseditor.online/images/og-default.jpg"
+  "description": "Browser-based EXIF GPS editor for JPEG photos. Add, edit, or remove GPS coordinates without uploading images to any server.",
+  "url": "https://geotagseditor.online/",
+  "featureList": ["Add GPS coordinates", "Remove geotag", "Interactive map picker", "Batch processing", "No server upload"],
+  "image": "https://geotagseditor.online/images/og-default.jpg",
+  "screenshot": "https://geotagseditor.online/images/tool-screenshot-1.svg"
 }
 </script>
 
@@ -65,28 +68,40 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Is Geo Tags Editor free to use?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes, Geo Tags Editor is 100% free to use. There are no subscriptions, no accounts required, and no watermarks on your edited photos."
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to add GPS to photo online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upload your JPEG image, enter latitude and longitude or pick a location on the map, click Apply Coordinates, then download the updated file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Geo Tags Editor free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Geo Tags Editor is 100% free to use. There are no subscriptions, no accounts required, and no watermarks on your edited photos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my photos uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Geo Tags Editor is a privacy-first tool. All photo processing happens directly in your browser. Your images never leave your device and are never uploaded to any server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What image formats are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Currently, we support JPEG and JPG formats, which are the most common formats for photos with EXIF metadata."
+      }
     }
-  }, {
-    "@type": "Question",
-    "name": "Are my photos uploaded to a server?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "No. Geo Tags Editor is a privacy-first tool. All photo processing happens directly in your browser. Your images never leave your device and are never uploaded to any server."
-    }
-  }, {
-    "@type": "Question",
-    "name": "What image formats are supported?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Currently, we support JPEG and JPG formats, which are the most common formats for photos with EXIF metadata."
-    }
-  }]
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -106,6 +121,47 @@
   "sameAs": [
     "https://twitter.com/geotagseditor"
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Add GPS to Photo Online",
+  "description": "Learn how to add geotag to existing photos in four simple steps.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Upload Your Image",
+      "text": "Drag and drop your JPEG image or browse to select a file from your device."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "View EXIF Metadata",
+      "text": "The EXIF GPS editor automatically detects and displays all existing EXIF metadata."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Edit GPS Coordinates",
+      "text": "Enter new latitude and longitude values manually or pick a location on the interactive map."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download Geotagged Image",
+      "text": "Save the updated image with new GPS metadata embedded directly into the file."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Geo Tags Editor",
+  "url": "https://geotagseditor.online/",
+  "logo": "https://geotagseditor.online/images/logo.png",
+  "description": "Free, privacy-first online GPS metadata tool to add or remove geotags from photos directly in the browser.",
+  "sameAs": ["https://twitter.com/geotagseditor"]
 }
 </script>
 </head>
@@ -704,11 +760,6 @@
 <script src="/js/common.js" defer></script>
 <script src="/js/site.js" defer></script>
 <script src="/js/tool.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Geo Tags Editor","alternateName":"Geotagging Editor","url":"https://geotagseditor.online/","logo":"https://geotagseditor.online/images/logo.png","description":"Free, privacy-first online GPS metadata tool to add or remove geotags from photos directly in the browser.","sameAs":["https://twitter.com/geotagseditor"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Geo Tags Editor","alternateName":"Geotagging Editor","url":"https://geotagseditor.online/","inLanguage":"en","publisher":{"@type":"Organization","name":"Geo Tags Editor","url":"https://geotagseditor.online/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Geo Tag Editor","url":"https://geotagseditor.online","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free online GPS photo editor. Add GPS to photo, remove geotag, edit EXIF metadata. 100% browser-based, no uploads."}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to add GPS to photo online?","acceptedAnswer":{"@type":"Answer","text":"Upload your JPEG, enter latitude and longitude or pick on the map, click Apply Coordinates, then download."}},{"@type":"Question","name":"How to remove geotag from photo?","acceptedAnswer":{"@type":"Answer","text":"Upload your image, click Remove Geotag to strip all GPS metadata, then download the cleaned image."}},{"@type":"Question","name":"Are my images uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. All processing happens in your browser. Your photos never leave your device."}},{"@type":"Question","name":"Is this tool free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no sign-up, no limits, and no hidden fees."}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Add GPS to Photo Online","description":"Learn how to add geotag to existing photos in four simple steps.","step":[{"@type":"HowToStep","name":"Upload Your Image","text":"Drag and drop your JPEG image or browse to select a file from your device."},{"@type":"HowToStep","name":"View EXIF Metadata","text":"The EXIF GPS editor automatically detects and displays all existing EXIF metadata."},{"@type":"HowToStep","name":"Edit GPS Coordinates","text":"Enter new latitude and longitude values manually or pick a location on the interactive map."},{"@type":"HowToStep","name":"Download Geotagged Image","text":"Save the updated image with new GPS metadata embedded directly into the file."}]}</script>
 <script>
 window.addEventListener('load',function(){
   var s=document.createElement('script');s.async=true;
