@@ -244,3 +244,4 @@ Commit on 2026-05-09T18:04:23: chore: audit and remove unused asset references
 Commit on 2026-05-09T19:38:40: docs: update README with recent feature notes
 Commit on 2026-05-09T20:34:34: chore: update dependencies and internal scripts
 Commit on 2026-05-10T09:32:52: style: minor spacing adjustment in navigation bar
+Commit on 2026-05-10T15:47:50: docs: update README with recent feature notes
