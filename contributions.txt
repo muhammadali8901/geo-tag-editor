@@ -252,3 +252,4 @@ Commit on 2026-05-10T13:38:21: feat: refine error message clarity for invalid co
 Commit on 2026-05-11T20:42:47: docs: update sitemap generator comments
 Commit on 2026-05-11T20:55:18: style: update color variables for dark mode contrast
 Commit on 2026-05-11T19:52:50: refactor: optimize image loading routines
+Commit on 2026-05-11T18:17:33: feat: improve metadata parsing efficiency
