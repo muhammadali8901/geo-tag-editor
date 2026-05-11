@@ -249,3 +249,4 @@ Commit on 2026-05-10T17:38:27: refactor: clean up unused helper functions
 Commit on 2026-05-10T15:26:23: chore: update dependencies and internal scripts
 Commit on 2026-05-10T14:13:37: feat: refine error message clarity for invalid coordinates
 Commit on 2026-05-10T13:38:21: feat: refine error message clarity for invalid coordinates
+Commit on 2026-05-11T20:42:47: docs: update sitemap generator comments
