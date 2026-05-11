@@ -254,3 +254,4 @@ Commit on 2026-05-11T20:55:18: style: update color variables for dark mode contr
 Commit on 2026-05-11T19:52:50: refactor: optimize image loading routines
 Commit on 2026-05-11T18:17:33: feat: improve metadata parsing efficiency
 Commit on 2026-05-11T13:21:00: docs: clarify privacy policy points
+Commit on 2026-05-11T14:37:12: style: tweak typography hierarchy for blog headings
