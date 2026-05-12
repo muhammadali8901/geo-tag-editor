@@ -258,3 +258,4 @@ Commit on 2026-05-11T14:37:12: style: tweak typography hierarchy for blog headin
 Commit on 2026-05-12T19:36:00: chore: clean up internal log statements
 Commit on 2026-05-12T14:12:09: refactor: modularize coordinate conversion utility
 Commit on 2026-05-12T14:15:02: chore: clean up internal log statements
+Commit on 2026-05-12T11:34:48: perf: optimize web worker message passing
