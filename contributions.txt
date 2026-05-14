@@ -268,3 +268,4 @@ Commit on 2026-05-13T09:15:55: refactor: modularize coordinate conversion utilit
 Commit on 2026-05-13T19:58:52: docs: update sitemap generator comments
 Commit on 2026-05-13T21:55:57: chore: audit and remove unused asset references
 Commit on 2026-05-14T12:49:37: fix: tooltip display glitch on mobile view
+Commit on 2026-05-14T19:55:36: feat: add keyboard shortcut support for map zooming
