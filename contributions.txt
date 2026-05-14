@@ -271,3 +271,4 @@ Commit on 2026-05-14T12:49:37: fix: tooltip display glitch on mobile view
 Commit on 2026-05-14T19:55:36: feat: add keyboard shortcut support for map zooming
 Commit on 2026-05-14T11:20:34: style: update button hover effects
 Commit on 2026-05-14T15:34:55: style: adjust card padding for mobile screens
+Commit on 2026-05-14T11:50:11: refactor: optimize image loading routines
