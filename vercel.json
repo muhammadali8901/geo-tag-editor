@@ -19,12 +19,24 @@
       "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]
     },
     {
-      "source": "/(.*).(png|jpg|jpeg|svg|ico|webp)",
+      "source": "/(.*).(png|jpg|jpeg|svg|ico|webp|avif)",
       "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]
     },
     {
       "source": "/sitemap.xml",
       "headers": [{"key": "Cache-Control", "value": "public, max-age=86400"}]
+    },
+    {
+      "source": "/site.webmanifest",
+      "headers": [{"key": "Cache-Control", "value": "public, max-age=86400"}]
+    },
+    {
+      "source": "/(.*).html",
+      "headers": [{"key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400"}]
+    },
+    {
+      "source": "/(.*)/",
+      "headers": [{"key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400"}]
     },
     {
       "source": "/(.*)",
@@ -33,8 +45,9 @@
         {"key": "X-Frame-Options", "value": "DENY"},
         {"key": "X-XSS-Protection", "value": "1; mode=block"},
         {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"},
-        {"key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()"},
-        {"key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload"}
+        {"key": "Permissions-Policy", "value": "geolocation=(self), microphone=(), camera=()"},
+        {"key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload"},
+        {"key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://analytics.ahrefs.com https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.clarity.ms https://analytics.ahrefs.com https://nominatim.openstreetmap.org https://*.tile.openstreetmap.org; frame-src https://www.google.com https://googleads.g.doubleclick.net; worker-src blob:; object-src 'none'; base-uri 'self'; form-action 'self'"}
       ]
     }
   ],

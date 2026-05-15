@@ -1,22 +1,43 @@
 {
   "name": "Geo Tags Editor",
-  "short_name": "Geo Tags Editor",
-  "description": "Fast, private geo tag editor for JPEG EXIF GPS metadata.",
+  "short_name": "GeoTagsEditor",
+  "description": "Free online GPS photo editor — add, edit, or remove geotag metadata from JPEG images directly in your browser. No upload, no signup.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#f8fafc",
-  "theme_color": "#0369a1",
+  "theme_color": "#0284c7",
+  "lang": "en",
+  "categories": ["photo", "utilities", "productivity"],
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Add GPS to Photo",
+      "short_name": "Add GPS",
+      "description": "Add GPS coordinates to a JPEG photo",
+      "url": "/add-gps-to-photo-online/",
+      "icons": [{"src": "/android-chrome-192x192.png", "sizes": "192x192"}]
+    },
+    {
+      "name": "Remove Geotag",
+      "short_name": "Remove GPS",
+      "description": "Remove GPS location data from a photo",
+      "url": "/remove-geotag-from-photo-online/",
+      "icons": [{"src": "/android-chrome-192x192.png", "sizes": "192x192"}]
     }
   ]
 }
