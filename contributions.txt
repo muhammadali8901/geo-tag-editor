@@ -274,3 +274,4 @@ Commit on 2026-05-14T15:34:55: style: adjust card padding for mobile screens
 Commit on 2026-05-14T11:50:11: refactor: optimize image loading routines
 Commit on 2026-05-15T17:40:05: docs: improve inline code documentation
 Commit on 2026-05-15T16:13:54: feat: improve metadata parsing efficiency
+Commit on 2026-05-15T12:55:47: fix: scroll restoration on back navigation
