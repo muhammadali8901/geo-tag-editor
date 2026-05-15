@@ -279,3 +279,4 @@ Commit on 2026-05-15T16:44:21: style: update button hover effects
 Commit on 2026-05-15T10:55:53: docs: improve inline code documentation
 Commit on 2026-05-15T16:44:31: style: align footer navigation elements
 Commit on 2026-05-15T16:49:39: feat: improve metadata parsing efficiency
+Commit on 2026-05-15T15:33:12: fix: tooltip display glitch on mobile view
