@@ -1,5 +1,5 @@
 # robots.txt for geotagseditor.online
-# Updated: 2026-05-13
+# Updated: 2026-05-16
 
 User-agent: *
 Allow: /
