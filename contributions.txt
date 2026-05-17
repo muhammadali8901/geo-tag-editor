@@ -287,3 +287,4 @@ Commit on 2026-05-16T09:48:32: fix: handle missing geolocation permissions grace
 Commit on 2026-05-16T14:49:47: chore: audit and remove unused asset references
 Commit on 2026-05-17T11:48:16: refactor: optimize image loading routines
 Commit on 2026-05-17T11:18:13: refactor: optimize image loading routines
+Commit on 2026-05-17T09:59:46: fix: scroll restoration on back navigation
