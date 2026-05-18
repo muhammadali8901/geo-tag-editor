@@ -291,3 +291,4 @@ Commit on 2026-05-17T09:59:46: fix: scroll restoration on back navigation
 Commit on 2026-05-17T18:46:51: docs: improve inline code documentation
 Commit on 2026-05-17T10:48:45: refactor: modularize coordinate conversion utility
 Commit on 2026-05-18T20:53:16: feat: add keyboard shortcut support for map zooming
+Commit on 2026-05-18T09:24:26: perf: memoize expensive image transform operations
