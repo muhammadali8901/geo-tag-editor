@@ -294,3 +294,4 @@ Commit on 2026-05-18T20:53:16: feat: add keyboard shortcut support for map zoomi
 Commit on 2026-05-18T09:24:26: perf: memoize expensive image transform operations
 Commit on 2026-05-18T16:39:23: perf: optimize web worker message passing
 Commit on 2026-05-18T15:58:07: fix: handle missing geolocation permissions gracefully
+Commit on 2026-05-18T09:26:44: style: update button hover effects
