@@ -9,7 +9,7 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Geo Tag Editor - Edit Photo Location Online</image:title>
+      <image:title>Geo Tag Editor Edit Photo Location Online</image:title>
       <image:caption>Edit photo location data with our Geo Tag Editor. Add GPS coordinates or remove geotag from photos instantly.</image:caption>
     </image:image>
   </url>
@@ -20,7 +20,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Geo Tag Editor - Edit GPS Photo Location</image:title>
+      <image:title>Geo Tag Editor Edit GPS Photo Location</image:title>
       <image:caption>Edit GPS photo location with our Geo Tag Editor. Add, edit or remove EXIF metadata from photos.</image:caption>
     </image:image>
   </url>
@@ -31,7 +31,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Geo Tag Editor Blog - GPS Photo Tips &amp; Guides</image:title>
+      <image:title>Geo Tag Editor Blog GPS Photo Tips &amp; Guides</image:title>
       <image:caption>Learn GPS photo editing tips, EXIF metadata guides, and photo privacy protection.</image:caption>
     </image:image>
   </url>
@@ -42,7 +42,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Geo Tag Editor - Check Photo Location Instantly</image:title>
+      <image:title>Geo Tag Editor Check Photo Location Instantly</image:title>
       <image:caption>Check where photos were taken with our Geo Tag Editor. Instantly view GPS coordinates and edit photo location data.</image:caption>
     </image:image>
   </url>
@@ -53,8 +53,8 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Add GPS Location to Photos - Complete Guide</image:title>
-      <image:caption>Learn how to add GPS location to photos with our step-by-step guide. Free online GPS photo editor tool.</image:caption>
+      <image:title>Add GPS Location to Photos Complete Guide</image:title>
+      <image:caption>Learn how to add GPS location to photos with our step by step guide. Free online GPS photo editor tool.</image:caption>
     </image:image>
   </url>
   <url>
@@ -75,7 +75,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Remove Metadata From Images - Privacy Guide</image:title>
+      <image:title>Remove Metadata From Images Privacy Guide</image:title>
       <image:caption>Learn how to remove metadata from images to protect privacy. Strip EXIF data securely with our guide.</image:caption>
     </image:image>
   </url>
@@ -86,7 +86,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Add Geotag to Existing Photos - Step Guide</image:title>
+      <image:title>Add Geotag to Existing Photos Step Guide</image:title>
       <image:caption>Learn how to add geotag to existing photos with our complete guide. Fix missing GPS data easily.</image:caption>
     </image:image>
   </url>
@@ -97,7 +97,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Remove Geotag from Photo - How to Remove GPS from Photo</image:title>
+      <image:title>Remove Geotag from Photo How to Remove GPS from Photo</image:title>
       <image:caption>Remove geotag from photo instantly. Learn how to remove GPS from photo, remove location data from photos, and remove EXIF data. Best tool for Android, iPhone, Windows.</image:caption>
     </image:image>
   </url>
@@ -138,7 +138,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Remove GPS from Photo - Best Tool to Remove Geotag</image:title>
+      <image:title>Remove GPS from Photo Best Tool to Remove Geotag</image:title>
       <image:caption>Remove GPS from photo instantly. Best tool to remove geotag from photo, remove location data from photos, and remove EXIF data. How to remove GPS from photo on Android, iPhone, Windows.</image:caption>
     </image:image>
   </url>
@@ -149,7 +149,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Add GPS to Photo Online - Best GPS Photo Editor</image:title>
+      <image:title>Add GPS to Photo Online Best GPS Photo Editor</image:title>
       <image:caption>Add GPS to photo online. Best GPS photo editor to add GPS location to photos, geotag images, and add coordinates to photos. How to add GPS location to photos for Android, iPhone, Windows.</image:caption>
     </image:image>
   </url>
@@ -166,7 +166,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/exif-data-guide.jpg</image:loc>
-      <image:title>EXIF Data Ultimate Guide - Complete Photo Metadata Tutorial</image:title>
+      <image:title>EXIF Data Ultimate Guide Complete Photo Metadata Tutorial</image:title>
       <image:caption>Complete EXIF data guide. Learn what is EXIF data, how to remove EXIF data, edit metadata, and protect photo privacy. Ultimate tutorial for photographers.</image:caption>
     </image:image>
   </url>
@@ -177,7 +177,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/add-gps-photo-guide.jpg</image:loc>
-      <image:title>Add GPS to Photo Ultimate Guide - Complete Photo Geotagging Tutorial</image:title>
+      <image:title>Add GPS to Photo Ultimate Guide Complete Photo Geotagging Tutorial</image:title>
       <image:caption>Add GPS to photo ultimate guide. Learn how to add GPS location to photos, geotag images, and enhance photo metadata. Ultimate tutorial for photographers.</image:caption>
     </image:image>
   </url>
@@ -188,8 +188,8 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/android-photo-location-guide.jpg</image:loc>
-      <image:title>Add Location to Photos Android Guide - Complete Android Photo Geotagging Tutorial</image:title>
-      <image:caption>Add location to photos Android guide. Learn how to add GPS location to photos on Android, geotag images, and manage photo metadata. Step-by-step Android tutorial.</image:caption>
+      <image:title>Add Location to Photos Android Guide Complete Android Photo Geotagging Tutorial</image:title>
+      <image:caption>Add location to photos Android guide. Learn how to add GPS location to photos on Android, geotag images, and manage photo metadata. Step by step Android tutorial.</image:caption>
     </image:image>
   </url>
   <url>
@@ -229,7 +229,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Geotag Photos Online Free - Add GPS Location to Images</image:title>
+      <image:title>Geotag Photos Online Free Add GPS Location to Images</image:title>
       <image:caption>Geotag photos online free with our instant GPS photo editor. Add location data to images, edit GPS coordinates, and manage photo metadata.</image:caption>
     </image:image>
   </url>
@@ -240,7 +240,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>How to Remove Location from Photos - Free GPS Data Remover</image:title>
+      <image:title>How to Remove Location from Photos Free GPS Data Remover</image:title>
       <image:caption>Learn how to remove location from photos instantly with our free GPS data remover tool. Strip geotag metadata and protect privacy.</image:caption>
     </image:image>
   </url>
@@ -251,7 +251,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Geo Tagging SEO - Complete Guide to Boost Local Rankings</image:title>
+      <image:title>Geo Tagging SEO Complete Guide to Boost Local Rankings</image:title>
       <image:caption>Master geo tagging SEO to boost local search rankings. Learn how GPS metadata in images improves local SEO and increases visibility.</image:caption>
     </image:image>
   </url>
@@ -262,7 +262,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Photo Metadata Security Guide 2026 - Privacy Protection</image:title>
+      <image:title>Photo Metadata Security Guide 2026 Privacy Protection</image:title>
       <image:caption>Complete guide to photo metadata security and privacy protection. Learn how to remove EXIF data, GPS geotags, and protect your digital privacy in 2026.</image:caption>
     </image:image>
   </url>
@@ -279,7 +279,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>How Journalists Use Geotagging in Photos - Complete Guide</image:title>
+      <image:title>How Journalists Use Geotagging in Photos Complete Guide</image:title>
       <image:caption>Learn how journalists use geotagging in photos for verification, storytelling, and credibility. Master GPS metadata techniques for news photography.</image:caption>
     </image:image>
   </url>
@@ -290,7 +290,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>EXIF vs Metadata: What's the Difference? Complete Guide 2026</image:title>
+      <image:title>EXIF vs Metadata What's the Difference? Complete Guide 2026</image:title>
       <image:caption>Learn the real difference between EXIF data and metadata. Understand GPS coordinates in photos, privacy risks, and how EXIF differs from IPTC and XMP.</image:caption>
     </image:image>
   </url>
@@ -313,7 +313,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>How to Protect Your Privacy in Photos - Complete Guide 2026</image:title>
+      <image:title>How to Protect Your Privacy in Photos Complete Guide 2026</image:title>
       <image:caption>Learn essential techniques to protect your privacy in photos. Remove location data, manage EXIF metadata, and secure your digital images.</image:caption>
     </image:image>
   </url>
@@ -324,7 +324,7 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/logo.png</image:loc>
-      <image:title>Best Practices for Photo Geotagging in 2026: Complete Guide for SEO, Privacy &amp; Organization</image:title>
+      <image:title>Best Practices for Photo Geotagging in 2026 Complete Guide for SEO, Privacy &amp; Organization</image:title>
       <image:caption>Master photo geotagging with expert best practices for SEO optimization, privacy protection, and smart photo organization strategies.</image:caption>
     </image:image>
   </url>
@@ -352,8 +352,8 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://geotagseditor.online/images/android-photo-location-guide.jpg</image:loc>
-      <image:title>Add Location to Photos Android Guide - Complete Android Photo Geotagging Tutorial</image:title>
-      <image:caption>Add location to photos Android guide. Learn how to add GPS location to photos on Android, geotag images, and manage photo metadata. Step-by-step Android tutorial.</image:caption>
+      <image:title>Add Location to Photos Android Guide Complete Android Photo Geotagging Tutorial</image:title>
+      <image:caption>Add location to photos Android guide. Learn how to add GPS location to photos on Android, geotag images, and manage photo metadata. Step by step Android tutorial.</image:caption>
     </image:image>
   </url>
 </urlset>
