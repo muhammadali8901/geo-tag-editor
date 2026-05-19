@@ -300,3 +300,4 @@ Commit on 2026-05-19T17:47:20: style: minor spacing adjustment in navigation bar
 Commit on 2026-05-19T19:18:46: docs: expand metadata dictionary table descriptions
 Commit on 2026-05-19T18:12:59: docs: expand metadata dictionary table descriptions
 Commit on 2026-05-19T11:37:42: feat: improve metadata parsing efficiency
+Commit on 2026-05-19T09:01:02: style: adjust card padding for mobile screens
