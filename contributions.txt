@@ -306,3 +306,4 @@ Commit on 2026-05-20T17:23:24: feat: refine error message clarity for invalid co
 Commit on 2026-05-20T21:34:21: style: adjust card padding for mobile screens
 Commit on 2026-05-20T19:15:40: fix: tooltip display glitch on mobile view
 Commit on 2026-05-20T18:55:50: style: update button hover effects
+Commit on 2026-05-20T18:14:57: refactor: clean up unused helper functions
