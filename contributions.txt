@@ -309,3 +309,4 @@ Commit on 2026-05-20T18:55:50: style: update button hover effects
 Commit on 2026-05-20T18:14:57: refactor: clean up unused helper functions
 Commit on 2026-05-20T15:41:26: docs: update EXIF metadata guide section
 Commit on 2026-05-21T10:48:15: refactor: extract reusable modal components
+Commit on 2026-05-21T17:54:49: perf: reduce DOM manipulation overhead
