@@ -317,3 +317,4 @@ Commit on 2026-05-22T13:41:48: fix: tooltip display glitch on mobile view
 Commit on 2026-05-22T11:04:42: refactor: optimize image loading routines
 Commit on 2026-05-22T19:38:21: fix: resolve edge case handling in location lookup
 Commit on 2026-05-22T13:58:04: refactor: extract reusable modal components
+Commit on 2026-05-22T10:11:37: refactor: optimize image loading routines
