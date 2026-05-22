@@ -319,3 +319,4 @@ Commit on 2026-05-22T19:38:21: fix: resolve edge case handling in location looku
 Commit on 2026-05-22T13:58:04: refactor: extract reusable modal components
 Commit on 2026-05-22T10:11:37: refactor: optimize image loading routines
 Commit on 2026-05-22T09:30:05: perf: optimize web worker message passing
+Commit on 2026-05-22T18:54:11: fix: prevent duplicate form submission on rapid clicks
