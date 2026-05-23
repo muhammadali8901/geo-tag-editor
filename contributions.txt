@@ -323,3 +323,4 @@ Commit on 2026-05-22T18:54:11: fix: prevent duplicate form submission on rapid c
 Commit on 2026-05-23T09:35:51: style: adjust card padding for mobile screens
 Commit on 2026-05-23T11:58:59: style: align footer navigation elements
 Commit on 2026-05-23T11:37:26: feat: improve metadata parsing efficiency
+Commit on 2026-05-23T09:02:54: perf: optimize web worker message passing
