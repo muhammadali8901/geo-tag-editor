@@ -325,3 +325,4 @@ Commit on 2026-05-23T11:58:59: style: align footer navigation elements
 Commit on 2026-05-23T11:37:26: feat: improve metadata parsing efficiency
 Commit on 2026-05-23T09:02:54: perf: optimize web worker message passing
 Commit on 2026-05-23T14:07:35: perf: memoize expensive image transform operations
+Commit on 2026-05-24T12:08:57: refactor: modularize coordinate conversion utility
