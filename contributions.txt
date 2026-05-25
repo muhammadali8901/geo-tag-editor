@@ -336,3 +336,4 @@ Commit on 2026-05-25T12:15:03: chore: audit and remove unused asset references
 Commit on 2026-05-25T10:16:58: fix: handle missing geolocation permissions gracefully
 Commit on 2026-05-25T10:33:14: refactor: clean up unused helper functions
 Commit on 2026-05-25T19:49:18: refactor: clean up unused helper functions
+Commit on 2026-05-25T09:59:36: fix: prevent duplicate form submission on rapid clicks
