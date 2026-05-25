@@ -330,3 +330,4 @@ Commit on 2026-05-24T09:50:35: perf: memoize expensive image transform operation
 Commit on 2026-05-24T11:43:39: style: update color variables for dark mode contrast
 Commit on 2026-05-24T18:40:32: perf: optimize web worker message passing
 Commit on 2026-05-24T15:30:24: refactor: modularize coordinate conversion utility
+Commit on 2026-05-25T17:12:11: fix: resolve edge case handling in location lookup
