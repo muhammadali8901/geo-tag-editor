@@ -7,10 +7,48 @@ template_file = os.path.join(root_dir, "add-gps-to-photo-online", "index.html")
 with open(template_file, "r", encoding="utf-8") as f:
     template = f.read()
 
-# Extract header, footer, and other parts to use as a wrapper
-# We will replace <title>, <meta name="description">, canonical, og, twitter, JSON-LD, and <main> content.
-def create_page(rel_path, title, desc, canonical, main_content):
+# Visual EEAT and internal linking constants
+ALEX_RIVERS_BIO = """
+<div class="author-bio" style="display:flex;align-items:center;gap:20px;background:var(--bg-alt,#f1f5f9);padding:24px;border-radius:var(--radius,10px);margin-top:48px;border:1px solid var(--border,#e2e8f0)">
+  <div style="width:80px;height:80px;border-radius:50%;overflow:hidden;border:2px solid #fff;box-shadow:var(--shadow-sm,0 1px 2px rgba(0,0,0,.05));flex-shrink:0;">
+    <picture>
+      <source srcset="/images/alex-rivers.avif" type="image/avif">
+      <source srcset="/images/alex-rivers.webp" type="image/webp">
+      <img src="/images/alex-rivers.webp" alt="Alex Rivers" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+    </picture>
+  </div>
+  <div>
+    <h4 style="margin:0 0 4px;font-size:1.2rem">By <a href="/author/alex-rivers/" style="color:var(--text,#0f172a);font-weight:700;text-decoration:none">Alex Rivers</a></h4>
+    <p style="margin:0;color:var(--text-secondary,#475569);font-size:.95rem">Alex is a professional photographer and lead metadata specialist at Geo Tags Editor. He specializes in EXIF data architecture, GPS photo editing, and local SEO strategies with over 12 years of hands-on experience.</p>
+  </div>
+</div>
+"""
+
+MIDDLE_CTA_BLOCK = """
+<div class="article-middle-cta" style="background: linear-gradient(135deg, #0b2545 0%, #134074 100%); color: #fff; padding: 28px; border-radius: var(--radius, 10px); margin: 36px 0; text-align: center; box-shadow: 0 4px 20px rgba(11,37,69,0.15);">
+  <h4 style="margin:0 0 8px; font-size:1.25rem; font-weight:700; color:#fff; font-family:var(--font,'Outfit',sans-serif);">Need to edit your photo locations instantly?</h4>
+  <p style="margin:0 0 20px; color:rgba(255,255,255,0.9); font-size:0.95rem; line-height:1.6;">Try our free browser-based GPS Photo Editor. Add coordinates, pick a spot on the map, or strip metadata right in your browser without uploading anything.</p>
+  <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a href="/add-gps-to-photo-online/" class="btn btn-primary" style="background:#0ab8a0; color:#fff; padding:10px 20px; border-radius:6px; font-weight:600; font-size:0.9rem; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; min-height:40px; border:none; transition:background .2s;">Add GPS to Photo</a>
+    <a href="/remove-geotag-from-photo-online/" class="btn btn-outline" style="background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.7); padding:10px 20px; border-radius:6px; font-weight:600; font-size:0.9rem; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; min-height:40px; transition:border-color .2s;">Remove GPS Data</a>
+  </div>
+</div>
+"""
+
+RELATED_RESOURCES_BLOCK = """
+<div class="related-resources" style="border-top:1px solid var(--border,#e2e8f0); padding-top:24px; margin-top:36px; margin-bottom:24px;">
+  <h3 style="font-size:1.3rem; margin-bottom:16px; color:var(--text,#0f172a); font-weight:700; font-family:var(--font,'Outfit',sans-serif);">Try Our Free Location Tools</h3>
+  <ul style="list-style:none; padding-left:0; display:flex; flex-direction:column; gap:12px;">
+    <li style="display:flex; align-items:baseline; gap:8px;">🗺️ <div><a href="/add-gps-to-photo-online/" style="color:var(--primary,#0284c7); font-weight:600; text-decoration:none; border-bottom:1px dashed var(--primary,#0284c7);">Add GPS to Photo Online</a> - Pick a location on the interactive map and write coordinates directly into your JPEG EXIF data.</div></li>
+    <li style="display:flex; align-items:baseline; gap:8px;">🛡️ <div><a href="/remove-geotag-from-photo-online/" style="color:var(--primary,#0284c7); font-weight:600; text-decoration:none; border-bottom:1px dashed var(--primary,#0284c7);">Remove GPS Geotags from Photo</a> - Strip sensitive location metadata from your photos before sharing them online for privacy protection.</div></li>
+    <li style="display:flex; align-items:baseline; gap:8px;">⚙️ <div><a href="/geo-tag-editor/" style="color:var(--primary,#0284c7); font-weight:600; text-decoration:none; border-bottom:1px dashed var(--primary,#0284c7);">Free EXIF GPS Editor</a> - Complete web-based EXIF utility to view, edit, or clear advanced photo metadata in seconds.</div></li>
+  </ul>
+</div>
+"""
+
+def create_page(rel_path, title, desc, canonical, main_content, pub_date=None, mod_date=None):
     page = template
+    
     # Replace Title
     page = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", page)
     # Replace Meta Description
@@ -24,15 +62,7 @@ def create_page(rel_path, title, desc, canonical, main_content):
     page = re.sub(r'<meta name="twitter:title" content="[^"]*">', f'<meta name="twitter:title" content="{title}">', page)
     page = re.sub(r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{desc}">', page)
     
-    # Replace MAIN content
-    page = re.sub(r'<main id="main-content">.*?</main>', f'<main id="main-content">{main_content}</main>', page, flags=re.DOTALL)
-    
-    # Remove existing JSON-LD (we'll just let the new main content have it if needed, or inject a basic one)
-    # Actually, let's just strip the specific HowTo and FAQ from the template and replace with generic WebPage schema
-    page = re.sub(r'<script type="application/ld\+json">\{[^}]*"@type": "HowTo".*?\}</script>', '', page, flags=re.DOTALL)
-    page = re.sub(r'<script type="application/ld\+json">\{[^}]*"@type": "FAQPage".*?\}</script>', '', page, flags=re.DOTALL)
-    
-    # Breadcrumb schema replace
+    # Adjust Breadcrumb List Schema dynamically
     breadcrumb_schema = f'''<script type="application/ld+json">{{
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -41,17 +71,121 @@ def create_page(rel_path, title, desc, canonical, main_content):
         "position": 1,
         "name": "Home",
         "item": "https://geotagseditor.online/"
-      }},{{
+      }},'''
+      
+    if "blog/" in rel_path:
+        breadcrumb_schema += '''{
         "@type": "ListItem",
         "position": 2,
-        "name": "{title.split(' - ')[0]}",
-        "item": "{canonical}"
-      }}]
-    }}</script>'''
+        "name": "Blog",
+        "item": "https://geotagseditor.online/blog/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "''' + title.split(' - ')[0] + '''",
+        "item": "''' + canonical + '''"
+      }]
+    } </script>'''
+    else:
+        breadcrumb_schema += '''{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "''' + title.split(' - ')[0] + '''",
+        "item": "''' + canonical + '''"
+      }]
+    } </script>'''
+    
+    # Strip template HowTo, FAQ, and BreadcrumbList schemas
+    page = re.sub(r'<script type="application/ld\+json">\{[^}]*"@type": "HowTo".*?\}</script>', '', page, flags=re.DOTALL)
+    page = re.sub(r'<script type="application/ld\+json">\{[^}]*"@type": "FAQPage".*?\}</script>', '', page, flags=re.DOTALL)
     page = re.sub(r'<script type="application/ld\+json">\{[^}]*"@type": "BreadcrumbList".*?\}</script>', breadcrumb_schema, page, flags=re.DOTALL)
     
-    # Make sure we don't have em-dash or pipe
-    page = page.replace('\u2014', '-').replace('|', '-')
+    # Clean template index WebSite and SoftwareApplication schemas if they are present and it's a blog page
+    if "blog/" in rel_path:
+        page = re.sub(r'<script type="application/ld\+json">\{[^}]*"@type": "WebSite".*?\}</script>', '', page, flags=re.DOTALL)
+        page = re.sub(r'<script type="application/ld\+json">\{[^}]*"@type": "SoftwareApplication".*?\}</script>', '', page, flags=re.DOTALL)
+        
+        # Inject standard Article schema for Google
+        article_schema = f'''<script type="application/ld+json">{{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "{title}",
+          "description": "{desc}",
+          "author": {{
+            "@type": "Person",
+            "name": "Alex Rivers",
+            "url": "https://geotagseditor.online/author/alex-rivers/"
+          }},
+          "publisher": {{
+            "@type": "Organization",
+            "name": "Geo Tags Editor",
+            "logo": {{
+              "@type": "ImageObject",
+              "url": "https://geotagseditor.online/images/logo.webp"
+            }}
+          }},
+          "datePublished": "{pub_date if pub_date else '2026-04-10'}",
+          "dateModified": "{mod_date if mod_date else '2026-05-16'}",
+          "mainEntityOfPage": {{
+            "@type": "WebPage",
+            "@id": "{canonical}"
+          }},
+          "image": "https://geotagseditor.online/images/og-default.jpg"
+        }}</script>'''
+        page = page.replace('</head>', f'{article_schema}\n</head>')
+        
+        # Format the visual dates in main content
+        def format_date(d_str):
+            parts = d_str.split('-')
+            months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            return f"{months[int(parts[1])-1]} {int(parts[2])}, {parts[0]}"
+        
+        disp_pub = format_date(pub_date if pub_date else '2026-04-10')
+        disp_mod = format_date(mod_date if mod_date else '2026-05-16')
+        
+        # Inject the visual EEAT metadata bar
+        visual_meta_bar = f"""
+        <div class="article-meta-bar" style="display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:16px; font-size:.875rem; color:var(--text-secondary,#475569); margin-bottom: 12px;">
+          <span>By <a href="/author/alex-rivers/" style="color:var(--primary,#0284c7); font-weight:600; text-decoration:none;">Alex Rivers</a></span>
+          <span style="opacity:0.4;">•</span>
+          <span>Published: <strong>{disp_pub}</strong></span>
+          <span style="opacity:0.4;">•</span>
+          <span>Last Updated: <strong>{disp_mod}</strong></span>
+        </div>
+        <div class="expertise-badge" style="max-width: 680px; margin: 12px auto 0; font-size: 0.82rem; color: #0a5f52; background: #e6faf7; border: 1px solid #c3f5ee; padding: 6px 14px; border-radius: 20px; display: inline-flex; align-items: center; gap: 8px; justify-content: center; font-weight: 500; line-height: 1.4;">
+          <span style="display:inline-flex; align-items:center; justify-content:center; background:#0ab8a0; color:#fff; width:16px; height:16px; border-radius:50%; font-size:0.65rem; font-weight:bold;">✓</span>
+          <span><strong>Fact-Checked &amp; Verified:</strong> Written by a GPS metadata and local SEO tool developer with hands-on experience editing EXIF and geotag data for photographers and businesses.</span>
+        </div>
+        """
+        
+        # Re-compile main_content to have CTAs, related tools, and author bio
+        # Split paragraph midpoint for Middle CTA
+        p_split = main_content.split('</p>')
+        if len(p_split) >= 2:
+            mid = len(p_split) // 2
+            p_split[mid] = p_split[mid] + '\n' + MIDDLE_CTA_BLOCK
+            main_content = '</p>'.join(p_split)
+            
+        display_title = title.split(' - ')[0]
+        # Prepend the section class page-hero containing the H1 title and visual meta-bar!
+        hero_section = f"""<section class="page-hero">
+          <div class="container">
+            <nav aria-label="Breadcrumb" style="font-size:.85rem;color:var(--text-muted);margin-bottom:12px"><a href="/" style="color:var(--text-muted);text-decoration:none">Home</a> <span style="margin:0 6px">›</span> <a href="/blog/" style="color:var(--text-muted);text-decoration:none">Blog</a> <span style="margin:0 6px">›</span> <span style="color:var(--text-secondary)">{display_title}</span></nav>
+            <h1>{display_title}</h1>
+            {visual_meta_bar}
+          </div>
+        </section>"""
+        
+        main_content = f"{hero_section}\n<article class=\"article\"><div class=\"container\"><div class=\"article-content\">{main_content}</div>{RELATED_RESOURCES_BLOCK}{ALEX_RIVERS_BIO}</div></article>"
+        
+        # In blog layout, the template wrapper might have other content. Replace the inner hero title logic.
+        page = re.sub(r'<main id="main-content">.*?</main>', f'<main id="main-content">{main_content}</main>', page, flags=re.DOTALL)
+    else:
+        # For non-blog tool comparison pages
+        page = re.sub(r'<main id="main-content">.*?</main>', f'<main id="main-content">{main_content}</main>', page, flags=re.DOTALL)
+    
+    # Ensure there are no em-dashes or pipe delimiters in titles, description meta, and visible text
+    page = page.replace('\u2014', '-').replace('&mdash;', '-').replace('|', '-')
     
     out_path = os.path.join(root_dir, rel_path)
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
@@ -62,8 +196,8 @@ def create_page(rel_path, title, desc, canonical, main_content):
 pages = [
     {
         "path": "geoimgr-alternative/index.html",
-        "title": "GeoImgr Alternative Free - No Upload GPS Photo Editor",
-        "desc": "Looking for a free GeoImgr alternative? Geo Tags Editor adds or removes GPS from photos 100% in your browser. No upload, no account, no file size limit.",
+        "title": "Free GeoImgr Alternative to Edit Photo GPS Coordinates",
+        "desc": "Looking for a free GeoImgr alternative? Geo Tags Editor adds or removes GPS coordinates from JPEG photos 100% in your browser without server uploads.",
         "canonical": "https://geotagseditor.online/geoimgr-alternative/",
         "content": '''
         <section class="hero"><div class="container"><span class="section-label">No Upload Required</span><h1>The Best Free GeoImgr Alternative</h1><p>Geotag photos without uploading them to a server. 100% free, no account required, and no file size limits.</p><div class="trust-signals"><div class="trust-signal"><svg class="icon"><use href="/images/icons.svg#icon-shield"></use></svg> <span>100% Private</span></div><div class="trust-signal"><svg class="icon"><use href="/images/icons.svg#icon-check"></use></svg> <span>No 5MB Limit</span></div></div><a href="/add-gps-to-photo-online/" class="btn btn-primary">Try Free Alternative Now</a></div></section>
@@ -76,8 +210,8 @@ pages = [
     },
     {
         "path": "geotag-world-alternative/index.html",
-        "title": "Geotag.world Alternative - Free Private GPS Photo Editor",
-        "desc": "Need a Geotag.world alternative? Geo Tags Editor is 100% free, works without uploading photos, and has no account requirement. Try it now.",
+        "title": "Free Geotag.world Alternative for Private GPS Photo Editing",
+        "desc": "Need a Geotag.world alternative? Geo Tags Editor is 100% free, works without uploading photos, and has no account requirements. Try it now.",
         "canonical": "https://geotagseditor.online/geotag-world-alternative/",
         "content": '''
         <section class="hero"><div class="container"><span class="section-label">100% Free Tool</span><h1>Free Geotag.world Alternative With No Upload Required</h1><p>A faster, private alternative to Geotag.world. Edit EXIF GPS data securely in your browser.</p><a href="/add-gps-to-photo-online/" class="btn btn-primary">Open Editor</a></div></section>
@@ -86,8 +220,8 @@ pages = [
     },
     {
         "path": "geotag-photos-without-uploading/index.html",
-        "title": "Geotag Photos Without Uploading - 100% Local Browser Tool",
-        "desc": "Geotag photos without uploading to any server. Our browser-based GPS editor processes everything locally. No cloud, no account, no privacy risk.",
+        "title": "Geotag Photos Without Uploading Using a Local Browser Tool",
+        "desc": "Geotag photos without uploading to any server. Our browser-based GPS editor processes everything locally. No cloud, no account, no privacy risks.",
         "canonical": "https://geotagseditor.online/geotag-photos-without-uploading/",
         "content": '''
         <section class="hero"><div class="container"><span class="section-label">Privacy First</span><h1>Geotag Photos Without Uploading Anything</h1><p>Edit your EXIF GPS data securely. Our tool runs locally in your browser using the HTML5 FileReader API.</p><a href="/add-gps-to-photo-online/" class="btn btn-primary">Start Geotagging Securely</a></div></section>
@@ -96,7 +230,7 @@ pages = [
     },
     {
         "path": "geotag-photos-for-real-estate/index.html",
-        "title": "Geotag Photos for Real Estate Listings - Free GPS Editor",
+        "title": "Geotag Photos for Real Estate Listings with a Free GPS Editor",
         "desc": "Add GPS coordinates to real estate photos before uploading to MLS, Zillow, or Realtor.com. Free browser tool - no account, no upload.",
         "canonical": "https://geotagseditor.online/geotag-photos-for-real-estate/",
         "content": '''
@@ -106,7 +240,7 @@ pages = [
     },
     {
         "path": "geotag-photos-for-restaurants/index.html",
-        "title": "Geotag Restaurant Photos for Google Business Profile - Free",
+        "title": "Geotag Restaurant Photos for Better Google Business Profile SEO",
         "desc": "Geotag your restaurant photos before uploading to Google Business Profile, Yelp, or TripAdvisor. Free GPS editor - no upload needed.",
         "canonical": "https://geotagseditor.online/geotag-photos-for-restaurants/",
         "content": '''
@@ -116,7 +250,7 @@ pages = [
     },
     {
         "path": "geotag-photos-for-hvac/index.html",
-        "title": "Geotag HVAC Job Photos for Local Search Rankings - Free",
+        "title": "Geotag HVAC Job Photos to Improve Local Search Rankings",
         "desc": "HVAC technicians - geotag your job site photos before uploading to Google Business Profile. Free GPS editor works in browser.",
         "canonical": "https://geotagseditor.online/geotag-photos-for-hvac/",
         "content": '''
@@ -126,7 +260,7 @@ pages = [
     },
     {
         "path": "geotag-photos-for-plumbers/index.html",
-        "title": "Geotag Plumber Job Photos for Local Search - Free GPS Tool",
+        "title": "Geotag Plumbing Job Photos for Local Search Relevance",
         "desc": "Plumbers - add GPS to your job site photos before uploading to Google Business Profile. Free browser GPS editor. No upload, no account.",
         "canonical": "https://geotagseditor.online/geotag-photos-for-plumbers/",
         "content": '''
@@ -136,22 +270,24 @@ pages = [
     },
     {
         "path": "blog/free-geoimgr-alternative/index.html",
-        "title": "Free GeoImgr Alternative That Works Without Uploading",
+        "title": "Free GeoImgr Alternative That Works Without Server Uploads",
         "desc": "GeoImgr requires uploading photos to their servers. This free alternative does all GPS editing in your browser. No upload, no account, unlimited file size.",
         "canonical": "https://geotagseditor.online/blog/free-geoimgr-alternative/",
+        "pub_date": "2026-04-15",
+        "mod_date": "2026-05-16",
         "content": '''
-        <section class="page-hero"><div class="container"><h1>Free GeoImgr Alternative That Works Without Uploading</h1></div></section>
-        <section class="section"><div class="container content-block"><h2>What is GeoImgr?</h2><p>GeoImgr is a popular tool for adding GPS to photos, but it requires uploading your files to a server and limits free users to 5MB.</p><h2>The Best Free Alternative</h2><p>Geo Tags Editor provides the exact same functionality completely free, with no file size limits, because it processes everything securely in your browser.</p></div></section>
+        <h2>What is GeoImgr?</h2><p>GeoImgr is a popular tool for adding GPS to photos, but it requires uploading your files to a server and limits free users to 5MB.</p><h2>The Best Free Alternative</h2><p>Geo Tags Editor provides the exact same functionality completely free, with no file size limits, because it processes everything securely in your browser.</p>
         '''
     },
     {
         "path": "blog/exif-gps-editor-online-free/index.html",
-        "title": "Best Free EXIF GPS Editor Online in 2026 - No Download Required",
+        "title": "Best Free EXIF GPS Editor Online in 2026 with No Downloads",
         "desc": "Compare the best free EXIF GPS editors available online in 2026. Find the fastest, most private option that works without installing software.",
         "canonical": "https://geotagseditor.online/blog/exif-gps-editor-online-free/",
+        "pub_date": "2026-04-12",
+        "mod_date": "2026-05-16",
         "content": '''
-        <section class="page-hero"><div class="container"><h1>Best Free EXIF GPS Editor Online in 2026</h1></div></section>
-        <section class="section"><div class="container content-block"><h2>Why You Need an EXIF GPS Editor</h2><p>Metadata provides crucial context to your photos. We compare the top 5 tools available in 2026 to help you choose the best web-based solution.</p></div></section>
+        <h2>Why You Need an EXIF GPS Editor</h2><p>Metadata provides crucial context to your photos. We compare the top 5 tools available in 2026 to help you choose the best web-based solution.</p>
         '''
     },
     {
@@ -159,24 +295,34 @@ pages = [
         "title": "How to Geotag Photos for Google Business Profile in 2026",
         "desc": "Step-by-step guide to geotagging photos before uploading them to Google Business Profile. Improve your local map pack rankings with properly geotagged photos.",
         "canonical": "https://geotagseditor.online/blog/how-to-geotag-photos-for-google-business-profile/",
+        "pub_date": "2026-04-25",
+        "mod_date": "2026-05-16",
         "content": '''
-        <section class="page-hero"><div class="container"><h1>How to Geotag Photos for Google Business Profile in 2026</h1></div></section>
-        <section class="section"><div class="container content-block"><h2>Does Google Business Profile use EXIF GPS data?</h2><p>Yes. Providing exact location coordinates in your photo metadata helps Google understand your service relevance to specific neighborhoods.</p></div></section>
+        <h2>Does Google Business Profile use EXIF GPS data?</h2><p>Yes. Providing exact location coordinates in your photo metadata helps Google understand your service relevance to specific neighborhoods.</p>
         '''
     },
     {
         "path": "blog/how-to-add-geotag-to-photo-on-iphone/index.html",
-        "title": "How to Add Geotag to a Photo on iPhone - Fix Missing GPS Data",
+        "title": "How to Add a Geotag to an iPhone Photo and Fix Missing GPS Data",
         "desc": "Fix missing GPS location on iPhone photos. Use this free browser tool to add accurate GPS coordinates to any JPEG photo - no app download needed.",
         "canonical": "https://geotagseditor.online/blog/how-to-add-geotag-to-photo-on-iphone/",
+        "pub_date": "2026-04-20",
+        "mod_date": "2026-05-16",
         "content": '''
-        <section class="page-hero"><div class="container"><h1>How to Add Geotag to a Photo on iPhone</h1></div></section>
-        <section class="section"><div class="container content-block"><h2>Fixing Missing GPS on iOS</h2><p>Sometimes iPhone location services fail. You can easily fix missing location data using our browser tool directly in Safari.</p></div></section>
+        <h2>Fixing Missing GPS on iOS</h2><p>Sometimes iPhone location services fail. You can easily fix missing location data using our browser tool directly in Safari.</p>
         '''
     }
 ]
 
 for p in pages:
-    create_page(p["path"], p["title"], p["desc"], p["canonical"], p["content"])
+    create_page(
+        p["path"], 
+        p["title"], 
+        p["desc"], 
+        p["canonical"], 
+        p["content"],
+        p.get("pub_date"),
+        p.get("mod_date")
+    )
 
-print("All 11 pages generated successfully.")
+print("All 11 pages generated successfully with high-EEAT schemas, conversational titles, and conversion CTAs.")

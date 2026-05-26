@@ -109,7 +109,42 @@
     },
     {
       "source": "/blog/how-to-remove-metadata-from-images.html",
-      "destination": "/blog/how-to-remove-metadata-from-images/",
+      "destination": "/blog/how-to-remove-gps-exif-data-from-photos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-remove-metadata-from-images/",
+      "destination": "/blog/how-to-remove-gps-exif-data-from-photos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/remove-geotag-from-photo.html",
+      "destination": "/blog/how-to-remove-gps-exif-data-from-photos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/remove-geotag-from-photo/",
+      "destination": "/blog/how-to-remove-gps-exif-data-from-photos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-remove-gps-location-data-from-photos.html",
+      "destination": "/blog/how-to-remove-gps-exif-data-from-photos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-remove-gps-location-data-from-photos/",
+      "destination": "/blog/how-to-remove-gps-exif-data-from-photos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-protect-your-privacy-in-photos.html",
+      "destination": "/blog/how-to-remove-gps-exif-data-from-photos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-protect-your-privacy-in-photos/",
+      "destination": "/blog/how-to-remove-gps-exif-data-from-photos/",
       "permanent": true
     },
     {
@@ -120,6 +155,11 @@
     {
       "source": "/blog/best-practices-for-photo-geotagging-2026.html",
       "destination": "/blog/best-practices-for-photo-geotagging-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/website-optimization-complete-guide-2025.html",
+      "destination": "/blog/",
       "permanent": true
     },
     {
