@@ -126,7 +126,7 @@ def create_page(rel_path, title, desc, canonical, main_content, pub_date=None, m
             "@type": "WebPage",
             "@id": "{canonical}"
           }},
-          "image": "https://geotagseditor.online/images/og-default.jpg"
+          "image": "https://geotagseditor.online/images/og-blog.png"
         }}</script>'''
         page = page.replace('</head>', f'{article_schema}\n</head>')
         
@@ -166,7 +166,15 @@ def create_page(rel_path, title, desc, canonical, main_content, pub_date=None, m
         # Prepend the section class page-hero containing the H1 title and visual meta-bar!
         hero_section = f"""<section class="page-hero">
           <div class="container">
-            <nav aria-label="Breadcrumb" style="font-size:.85rem;color:var(--text-muted);margin-bottom:12px"><a href="/" style="color:var(--text-muted);text-decoration:none">Home</a> <span style="margin:0 6px">›</span> <a href="/blog/" style="color:var(--text-muted);text-decoration:none">Blog</a> <span style="margin:0 6px">›</span> <span style="color:var(--text-secondary)">{display_title}</span></nav>
+            <nav aria-label="Breadcrumb" class="breadcrumb" style="font-size: 0.85rem; color: var(--text-muted, #64748b); margin-bottom: 12px;">
+              <a href="/" style="color: var(--text-muted, #64748b); text-decoration: none;">Home</a>
+              <span style="margin: 0 6px; opacity: 0.5;">›</span>
+              <a href="/blog/" style="color: var(--text-muted, #64748b); text-decoration: none;">Blog</a>
+              <span style="margin: 0 6px; opacity: 0.5;">›</span>
+              <a href="/blog/" style="color: var(--text-muted, #64748b); text-decoration: none;">EXIF Guides</a>
+              <span style="margin: 0 6px; opacity: 0.5;">›</span>
+              <span style="color: var(--text-secondary, #475569);">{display_title}</span>
+            </nav>
             <h1>{display_title}</h1>
             {visual_meta_bar}
           </div>
