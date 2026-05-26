@@ -2333,8 +2333,9 @@
 
                 // Auto pre-fill metadata from active profile on ingest
                 let activeProfile = SuiteApp.profiles.find(p => p.id === SuiteApp.activeProfileId) || SuiteApp.profiles[0];
+                let imgId = "img_" + Date.now() + "_" + Math.floor(Math.random() * 1000000);
                 let newImg = {
-                    id: id,
+                    id: imgId,
                     file: activeFile,
                     name: activeFile.name,
                     size: activeFile.size,
