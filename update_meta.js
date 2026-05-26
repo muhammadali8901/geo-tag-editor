@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 const newMeta = {
@@ -9,10 +9,6 @@ const newMeta = {
   "add-gps-to-photo-online\\index.html": {
     "title": "Add GPS Coordinates to Any Photo with Browser Editor",
     "description": "Write GPS coordinates into any JPEG photo. Pick a location on the map, click apply and download. Nothing leaves your device with our free tool."
-  },
-  "author\\alex-rivers\\index.html": {
-    "title": "Alex Rivers Photography and EXIF Metadata Specialist",
-    "description": "Meet Alex Rivers who is a professional photographer and metadata specialist. Learn about Alex and his expertise in digital privacy and EXIF data."
   },
   "blog\\add-gps-to-photo-ultimate-guide\\index.html": {
     "title": "Complete Geotagging Guide to Add GPS to Photos Online",

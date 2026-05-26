@@ -11,7 +11,6 @@ root = r'c:\Users\DELL\Desktop\geo or genay do\geo-tag-editor'
 target_files_em = [
     'about\\index.html',
     'add-gps-to-photo-online\\index.html',
-    'author\\alex-rivers\\index.html',
     'blog\\add-location-photos-android-guide\\index.html',
     'blog\\exif-vs-metadata-whats-the-difference\\index.html',
     'blog\\how-to-add-geotag-to-existing-photos\\index.html',

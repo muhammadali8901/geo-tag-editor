@@ -8,18 +8,14 @@ with open(template_file, "r", encoding="utf-8") as f:
     template = f.read()
 
 # Visual EEAT and internal linking constants
-ALEX_RIVERS_BIO = """
+BRAND_BIO = """
 <div class="author-bio" style="display:flex;align-items:center;gap:20px;background:var(--bg-alt,#f1f5f9);padding:24px;border-radius:var(--radius,10px);margin-top:48px;border:1px solid var(--border,#e2e8f0)">
-  <div style="width:80px;height:80px;border-radius:50%;overflow:hidden;border:2px solid #fff;box-shadow:var(--shadow-sm,0 1px 2px rgba(0,0,0,.05));flex-shrink:0;">
-    <picture>
-      <source srcset="/images/alex-rivers.avif" type="image/avif">
-      <source srcset="/images/alex-rivers.webp" type="image/webp">
-      <img src="/images/alex-rivers.webp" alt="Alex Rivers" style="width:100%;height:100%;object-fit:cover" loading="lazy">
-    </picture>
+  <div style="width:60px;height:60px;border-radius:50%;background:var(--primary-light,#e0f2fe);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:var(--shadow-sm,0 1px 2px rgba(0,0,0,.05))">
+    <span style="font-size:1.8rem;">✍️</span>
   </div>
   <div>
-    <h4 style="margin:0 0 4px;font-size:1.2rem">By <a href="/author/alex-rivers/" style="color:var(--text,#0f172a);font-weight:700;text-decoration:none">Alex Rivers</a></h4>
-    <p style="margin:0;color:var(--text-secondary,#475569);font-size:.95rem">Alex is a professional photographer and lead metadata specialist at Geo Tags Editor. He specializes in EXIF data architecture, GPS photo editing, and local SEO strategies with over 12 years of hands-on experience.</p>
+    <h4 style="margin:0 0 4px;font-size:1.15rem;font-weight:700;color:var(--text,#0f172a);">Written by the <a href="/about/" style="color:var(--primary,#0284c7);text-decoration:none">GeoTagsEditor Editorial Team</a></h4>
+    <p style="margin:0;color:var(--text-secondary,#475569);font-size:.9rem;line-height:1.5;">Our development and editorial team specializes in image metadata architecture, EXIF GPS standards, and digital privacy. Every tool and guide we publish is verified for technical accuracy and operates entirely client-side for absolute privacy.</p>
   </div>
 </div>
 """
@@ -112,9 +108,9 @@ def create_page(rel_path, title, desc, canonical, main_content, pub_date=None, m
           "headline": "{title}",
           "description": "{desc}",
           "author": {{
-            "@type": "Person",
-            "name": "Alex Rivers",
-            "url": "https://geotagseditor.online/author/alex-rivers/"
+            "@type": "Organization",
+            "name": "GeoTagsEditor Editorial Team",
+            "url": "https://geotagseditor.online/about/"
           }},
           "publisher": {{
             "@type": "Organization",
@@ -146,7 +142,7 @@ def create_page(rel_path, title, desc, canonical, main_content, pub_date=None, m
         # Inject the visual EEAT metadata bar
         visual_meta_bar = f"""
         <div class="article-meta-bar" style="display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:16px; font-size:.875rem; color:var(--text-secondary,#475569); margin-bottom: 12px;">
-          <span>By <a href="/author/alex-rivers/" style="color:var(--primary,#0284c7); font-weight:600; text-decoration:none;">Alex Rivers</a></span>
+          <span>By the <a href="/about/" style="color:var(--primary,#0284c7); font-weight:600; text-decoration:none;">GeoTagsEditor Team</a></span>
           <span style="opacity:0.4;">•</span>
           <span>Published: <strong>{disp_pub}</strong></span>
           <span style="opacity:0.4;">•</span>
@@ -154,7 +150,7 @@ def create_page(rel_path, title, desc, canonical, main_content, pub_date=None, m
         </div>
         <div class="expertise-badge" style="max-width: 680px; margin: 12px auto 0; font-size: 0.82rem; color: #0a5f52; background: #e6faf7; border: 1px solid #c3f5ee; padding: 6px 14px; border-radius: 20px; display: inline-flex; align-items: center; gap: 8px; justify-content: center; font-weight: 500; line-height: 1.4;">
           <span style="display:inline-flex; align-items:center; justify-content:center; background:#0ab8a0; color:#fff; width:16px; height:16px; border-radius:50%; font-size:0.65rem; font-weight:bold;">✓</span>
-          <span><strong>Fact-Checked &amp; Verified:</strong> Written by a GPS metadata and local SEO tool developer with hands-on experience editing EXIF and geotag data for photographers and businesses.</span>
+          <span><strong>Verified Privacy &amp; Technical Accuracy:</strong> Developed and verified by metadata software engineers. All operations run locally inside your browser with 0% server uploads.</span>
         </div>
         """
         
@@ -176,7 +172,7 @@ def create_page(rel_path, title, desc, canonical, main_content, pub_date=None, m
           </div>
         </section>"""
         
-        main_content = f"{hero_section}\n<article class=\"article\"><div class=\"container\"><div class=\"article-content\">{main_content}</div>{RELATED_RESOURCES_BLOCK}{ALEX_RIVERS_BIO}</div></article>"
+        main_content = f"{hero_section}\n<article class=\"article\"><div class=\"container\"><div class=\"article-content\">{main_content}</div>{RELATED_RESOURCES_BLOCK}{BRAND_BIO}</div></article>"
         
         # In blog layout, the template wrapper might have other content. Replace the inner hero title logic.
         page = re.sub(r'<main id="main-content">.*?</main>', f'<main id="main-content">{main_content}</main>', page, flags=re.DOTALL)

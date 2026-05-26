@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Geo Tags Editor Sitemap - Updated: 2026-05-18 -->
 <!-- This sitemap includes all indexable pages with proper priority and change frequency -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -309,12 +309,6 @@
       <image:title>How to Change Photo Location &amp; GPS Coordinates (2026 Guide)</image:title>
       <image:caption>Complete guide to changing photo location and editing GPS coordinates. Works on iPhone, Android, Windows, and Mac devices.</image:caption>
     </image:image>
-  </url>
-<url>
-    <loc>https://geotagseditor.online/author/alex-rivers/</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 <url>
     <loc>https://geotagseditor.online/blog/add-location-photos-android-guide/</loc>
