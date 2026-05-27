@@ -1,6 +1,6 @@
 # Node.js and build files
 server.js
-lib/
+/lib/
 add_toc.js
 enhance_seo.js
 download_images.mjs
