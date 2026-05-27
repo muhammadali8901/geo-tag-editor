@@ -346,3 +346,4 @@ Commit on 2026-05-26T21:44:35: fix: scroll restoration on back navigation
 Commit on 2026-05-27T19:29:11: docs: update EXIF metadata guide section
 Commit on 2026-05-27T17:32:55: refactor: optimize image loading routines
 Commit on 2026-05-27T15:56:30: style: update button hover effects
+Commit on 2026-05-27T18:09:08: docs: update sitemap generator comments
