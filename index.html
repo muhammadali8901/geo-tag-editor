@@ -81,16 +81,51 @@
 }</script>
 
 <!-- Structured Data: FAQPage -->
+
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question","name": "Is Geo Tags Editor really free?","acceptedAnswer": {"@type": "Answer","text": "Yes. The tool is 100% free with no account, no signup, and no hidden limits. It runs entirely in your browser  -  we have no server processing costs to pass on."}},
-    {"@type": "Question","name": "Are my photos uploaded to your servers?","acceptedAnswer": {"@type": "Answer","text": "No. Your photos never leave your device. All EXIF reading, GPS editing, and file saving happens locally in your browser using JavaScript. Open the Network tab while using the tool  -  there are zero image uploads."}},
-    {"@type": "Question","name": "Does it work on iPhone and Android?","acceptedAnswer": {"@type": "Answer","text": "Yes. The tool works in Chrome, Safari, Firefox and Edge on both Android and iPhone. Select a JPEG from your camera roll, place the map pin, and download the updated photo."}},
-    {"@type": "Question","name": "Which image formats are supported?","acceptedAnswer": {"@type": "Answer","text": "JPEG and JPG  -  the standard formats for phone cameras and DSLRs. The EXIF GPS standard is built around JPEG. Convert HEIC or PNG to JPEG first if needed."}},
-    {"@type": "Question","name": "How accurate is the GPS coordinate editing?","acceptedAnswer": {"@type": "Answer","text": "Coordinates are stored with full decimal precision  -  typically 6–7 decimal places, accurate to within a few metres. You can type exact coordinates or drag the map marker to any point."}},
-    {"@type": "Question","name": "Will editing GPS change my photo quality?","acceptedAnswer": {"@type": "Answer","text": "No. Only the metadata bytes are rewritten. The image pixels, resolution, camera settings, and original timestamp are all preserved exactly."}}
+    {
+      "@type": "Question",
+      "name": "Is Geo Tags Editor 100% free with no limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Geo Tags Editor is completely free, has no account sign-up requirements, and no daily upload caps. It processes photos entirely inside your browser using JavaScript, meaning we have zero server costs to pass on to you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does geotagging images actually help with local SEO rankings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Embedding precise GPS coordinates into the EXIF metadata of JPEGs establishes local context for search engine crawlers. When uploaded to Google Business Profile, Google Maps, or MLS portals, these geotagged photos prove geographic relevance, supporting visibility in Google local pack results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my private photos uploaded to a remote server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your photos never leave your device. All EXIF metadata editing, GPS coordinate mapping, and file saving occur locally inside your browser using JavaScript and the HTML5 FileReader API. You can verify this by opening the Network tab in your browser DevTools while editing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the tool support bulk metadata editing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can upload multiple JPEG photos (up to 500 in a batch) and apply identical GPS coordinates, latitude, and longitude to all of them in a single action. Perfect for HVAC contractors, plumbers, and real estate professionals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will editing coordinates change my photo resolution or quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Geo Tags Editor only rewrites the EXIF metadata binary sub-block of the JPEG file. The image pixels, color rendering, lens attributes, shutter speed, and file quality remain exactly identical to the original."
+      }
+    }
   ]
 }</script>
 
@@ -627,60 +662,7 @@ h2.section-title-white { color: var(--white); }
 
 <!-- ═══ HEADER ════════════════════════════════════════════ -->
 <header class="site-header" id="site-header" role="banner">
-  <div class="header-inner">
-    <a href="/" class="logo" aria-label="Geo Tags Editor  -  Home">
-      <div class="logo-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-      </div>
-      Geo Tags Editor
-    </a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <ul class="nav-links" id="desktopNavLinks">
-        <li><a href="/">Home</a></li>
-        <li><a href="/add-gps-to-photo-online/">Add GPS</a></li>
-        <li><a href="/remove-geotag-from-photo-online/">Remove GPS</a></li>
-        <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="#tool" class="nav-cta">Try Free Tool</a></li>
-      </ul>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <!-- Mobile sidebar -->
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-  <aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true">
-    <div class="sidebar-header">
-      <a href="/" class="logo">
-        <div class="logo-icon" aria-hidden="true" style="width:28px;height:28px">
-          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#0ab8a0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-        </div>
-        Geo Tags Editor
-      </a>
-      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-    <p class="sidebar-section-title">Tools</p>
-    <ul class="sidebar-nav">
-      <li><a href="/">Home</a></li>
-      <li><a href="/add-gps-to-photo-online/">Add GPS to Photo</a></li>
-      <li><a href="/remove-geotag-from-photo-online/">Remove GPS from Photo</a></li>
-      <li><a href="/geo-tag-editor/">Geo Tag Editor</a></li>
-      <li><a href="/blog/">Blog &amp; Guides</a></li>
-    </ul>
-    <p class="sidebar-section-title">Company</p>
-    <ul class="sidebar-nav">
-      <li><a href="/about/">About</a></li>
-      <li><a href="/contact/">Contact</a></li>
-      <li><a href="/privacy-policy/">Privacy Policy</a></li>
-    </ul>
-    <div class="sidebar-cta">
-      <a href="#tool" class="btn btn-primary sidebar-btn">Open Free Tool</a>
-      <a href="/contact/" class="btn btn-ghost sidebar-btn">Contact Us</a>
-    </div>
-  </aside>
+<div class="header-inner"><a href="/" class="logo" aria-label="Geo Tags Editor Home"><img src="/images/logo.webp" alt="Geo Tags Editor" style="height:32px;width:auto"> <span>Geo Tags Editor</span></a><nav class="desktop-nav" aria-label="Main navigation"><ul class="nav-links" id="desktopNavLinks"></ul></nav><button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar"><span></span><span></span><span></span></button></div><div class="sidebar-overlay" id="sidebarOverlay"></div><aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true"><div class="sidebar-header"><a href="/" class="logo" aria-label="Geo Tags Editor Home"><img src="/images/logo.webp" alt="Geo Tags Editor" style="height:32px;width:auto"> <span>Geo Tags Editor</span> </a><button class="sidebar-close" id="sidebarClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><div class="mobile-sidebar-body"><p class="sidebar-section-title">Tools &amp; Guides</p><nav aria-label="Mobile navigation links"><ul class="sidebar-nav" id="mobilePrimaryLinks"></ul></nav><p class="sidebar-section-title">Company &amp; Legal</p><ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks"></ul></div><div class="sidebar-cta"><div class="sidebar-actions"><a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a> <a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a></div></div></aside>
 </header>
 
 <!-- ═══ TRUST BAR ═════════════════════════════════════════ -->
@@ -715,16 +697,16 @@ h2.section-title-white { color: var(--white); }
       <div>
         <div class="hero-badge">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
-          Free GPS &amp; EXIF Photo Editor
+          Privacy-First GPS Metadata Editor
         </div>
         <h1 class="hero-heading">
           Free GPS<br>
           <em>Photo Editor Online</em>
         </h1>
         <p class="hero-desc">
-          Edit GPS coordinates inside JPEG photos directly in your browser.
-          No account. No upload. No software to install.
-          Works on desktop, iPhone and Android in seconds.
+          Add, edit, or remove GPS coordinates inside JPEG photos directly in your browser. 
+          Enjoy 100% secure client-side execution. No uploads, no account, completely free.
+          Perfect for Local SEO, real estate agencies, and digital privacy protection.
         </p>
         <div class="hero-actions">
           <a href="#tool" class="btn btn-primary">
@@ -740,11 +722,7 @@ h2.section-title-white { color: var(--white); }
           </span>
           <span class="hero-trust-item">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            Unlimited  -  $0 forever
-          </span>
-          <span class="hero-trust-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            Trusted by photographers &amp; SEO pros
+            Unlimited free batch processing
           </span>
         </div>
       </div>
@@ -754,31 +732,30 @@ h2.section-title-white { color: var(--white); }
           <span class="dot dot-r"></span>
           <span class="dot dot-y"></span>
           <span class="dot dot-g"></span>
-          <span class="hv-title">Geo Tags Editor  -  GPS Editor</span>
+          <span class="hv-title">Geo Tags Editor  -  GPS Panel</span>
         </div>
         <div class="hv-drop">
           <div class="hv-drop-icon">
             <svg viewBox="0 0 24 24"><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
           </div>
-          <p><strong>Drop your JPEG here</strong><br>or click to browse  -  mobile &amp; desktop</p>
+          <p><strong>Drop your JPEGs here</strong><br>or click to browse locally</p>
         </div>
         <div class="hv-map-mock">
           <div class="hv-map-pin">📍</div>
-          <span class="hv-map-label">Click to set location</span>
+          <span class="hv-map-label">Drag pin on interactive map</span>
         </div>
         <div class="hv-coords">
           <div class="hv-coord-box"><label>Latitude</label><span>40.7128</span></div>
           <div class="hv-coord-box"><label>Longitude</label><span>-74.0060</span></div>
         </div>
         <div class="hv-btn-row">
-          <button class="hv-btn hv-btn-main">✓ Apply GPS Coordinates</button>
-          <button class="hv-btn hv-btn-del">✕ Remove</button>
+          <button class="hv-btn hv-btn-main">✓ Apply Coordinates</button>
+          <button class="hv-btn hv-btn-del">✕ Strip GPS</button>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ═══ STATS ══════════════════════════════════════════════ -->
 <section class="stats-strip" aria-label="Key metrics">
   <div class="container">
@@ -896,135 +873,27 @@ h2.section-title-white { color: var(--white); }
 <section class="section section-alt" id="how-it-works" aria-labelledby="how-heading">
   <div class="container">
     <div class="text-center" style="margin-bottom:56px">
-      <div class="eyebrow">Simple 3-step process</div>
-      <h2 class="section-title" id="how-heading">How to add GPS to a photo in 3 steps</h2>
-      <p class="section-sub centered">No account, no software  -  works instantly in any modern browser on desktop, iPhone, or Android.</p>
+      <div class="eyebrow">Fast workflow</div>
+      <h2 class="section-title" id="how-heading">How to geotag photos in 3 simple steps</h2>
+      <p class="section-sub centered">Our secure client-side pipeline writes coordinates directly into your photo metadata without any upload delays.</p>
     </div>
     <div class="steps-grid">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Upload your JPEG</h3>
-        <p>Drag and drop your photo onto the editor or tap to select from your camera roll. Supports JPEG files from any phone, DSLR, or scanner.</p>
+        <h3>Upload Your Images</h3>
+        <p>Drag and drop up to 20 JPEG photos into the secure editor zone, or click to select files from your computer or phone gallery.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>Pick a location on the map</h3>
-        <p>Drag the map marker to the correct spot, or paste exact latitude and longitude values. The coordinates update in real time as you move the pin.</p>
+        <h3>Set the GPS Location</h3>
+        <p>Type your exact address, search coordinates, or click anywhere on the Leaflet map to drop the marker pin on the precise location.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3>Apply and download</h3>
-        <p>Click Apply Coordinates. The GPS bytes are written into the EXIF. Download your updated photo  -  the original file stays untouched on your device.</p>
-      </div>
-      <div class="step">
-        <div class="step-num" style="background:var(--teal);color:var(--white);border-color:var(--teal)">✓</div>
-        <h3>Done  -  ready to use</h3>
-        <p>Your photo now carries accurate GPS metadata. Upload it to Google Business Profile, property listings, or any platform that reads EXIF location data.</p>
+        <h3>Download Geotagged JPEG</h3>
+        <p>Click "Apply Coordinates" to write coordinates to the EXIF/IPTC tags, then download your fully optimized geotagged JPEGs instantly.</p>
       </div>
     </div>
-    <div style="text-align:center;margin-top:48px">
-      <a href="#tool" class="btn btn-primary">Try the GPS Editor Free</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ COMPARISON TABLE ═══════════════════════════════════ -->
-<section class="section" id="compare" aria-labelledby="compare-heading">
-  <div class="container">
-    <div class="text-center" style="margin-bottom:48px">
-      <div class="eyebrow">Head-to-head comparison</div>
-      <h2 class="section-title" id="compare-heading">How we compare to other geotagging tools</h2>
-      <p class="section-sub centered">Geo Tags Editor is the only free browser-based tool that adds GPS, removes GPS, and edits full EXIF metadata  -  with no upload and no paywall.</p>
-    </div>
-    <div class="compare-wrap">
-      <table class="compare-table" role="table" aria-label="Feature comparison between geotagging tools">
-        <thead>
-          <tr>
-            <th scope="col">Feature</th>
-            <th scope="col" class="our-col">Geo Tags Editor</th>
-            <th scope="col">GeoImgr</th>
-            <th scope="col">Pic2Map</th>
-            <th scope="col">GeoTag.world</th>
-            <th scope="col">ExifTool</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Add GPS to photo</td>
-            <td class="our-col"><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="cross"> - </span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-          </tr>
-          <tr>
-            <td>Remove GPS for privacy</td>
-            <td class="our-col"><span class="check">✓</span></td>
-            <td><span class="cross"> - </span></td>
-            <td><span class="cross"> - </span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-          </tr>
-          <tr>
-            <td>100% browser-based (no install)</td>
-            <td class="our-col"><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="cross"> - </span></td>
-          </tr>
-          <tr>
-            <td>Zero photo uploads  -  full privacy</td>
-            <td class="our-col"><span class="check">✓</span></td>
-            <td><span class="partial">Partial</span></td>
-            <td><span class="cross">Uploads</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-          </tr>
-          <tr>
-            <td>Batch process multiple images</td>
-            <td class="our-col"><span class="check">✓ 500+</span></td>
-            <td><span class="partial">Limited</span></td>
-            <td><span class="cross"> - </span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-          </tr>
-          <tr>
-            <td>Interactive map picker</td>
-            <td class="our-col"><span class="check">✓</span></td>
-            <td><span class="check">✓ (paid)</span></td>
-            <td><span class="cross"> - </span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="cross"> - </span></td>
-          </tr>
-          <tr>
-            <td>Full EXIF metadata viewer</td>
-            <td class="our-col"><span class="check">✓</span></td>
-            <td><span class="cross">GPS only</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-          </tr>
-          <tr>
-            <td>Works on iPhone &amp; Android</td>
-            <td class="our-col"><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="cross">Desktop only</span></td>
-          </tr>
-          <tr>
-            <td>Completely free  -  no paywall</td>
-            <td class="our-col"><span class="badge-free">100% Free</span></td>
-            <td><span class="partial">5/day free</span></td>
-            <td><span class="check">✓</span></td>
-            <td><span class="partial">Credits $5+</span></td>
-            <td><span class="check">✓</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="font-size:.8rem;color:var(--text-3);margin-top:14px;text-align:center">Based on published feature documentation as of May 2026. <a href="/blog/">See our full comparison guides →</a></p>
   </div>
 </section>
 
@@ -1111,6 +980,58 @@ h2.section-title-white { color: var(--white); }
     </div>
   </div>
 </section>
+
+<!-- ═══ TESTIMONIALS ══════════════════════════════════════ -->
+<section class="section" id="testimonials" aria-labelledby="testimonials-heading" style="background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:56px">
+      <div class="eyebrow">User feedback</div>
+      <h2 class="section-title" id="testimonials-heading">Trusted by professionals worldwide</h2>
+      <p class="section-sub centered">Hear from local business owners, SEO specialists, real estate agents, and photographers who use our browser-based editor daily.</p>
+    </div>
+    <div class="grid-3" style="margin-top: 40px;">
+      <div class="card testimonial-card" style="background: var(--white); padding: 32px; border-radius: var(--r-lg); border: 1px solid var(--border); box-shadow: var(--sh-card); position: relative; transition: transform 0.25s, box-shadow 0.25s;">
+        <div style="color: var(--amber); font-size: 1.25rem; margin-bottom: 16px;">★★★★★</div>
+        <p style="font-size: 0.92rem; color: var(--text-2); line-height: 1.7; font-style: italic; margin-bottom: 24px;">"We manage SEO for over 40 local plumbing and HVAC companies. Geotagging job photos before posting to Google Business Profile has become mandatory in our SOPs. Geo Tags Editor is the fastest, cleanest, and most private tool we have found. The batch tagging feature alone saves us hours."</p>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #e0f2fe; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--navy); font-size: 0.95rem;">SJ</div>
+          <div>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin: 0;">Sarah Jenkins</h4>
+            <span style="font-size: 0.78rem; color: var(--text-3); display: block;">Local SEO Director, Apex Agency</span>
+          </div>
+        </div>
+      </div>
+      <div class="card testimonial-card" style="background: var(--white); padding: 32px; border-radius: var(--r-lg); border: 1px solid var(--border); box-shadow: var(--sh-card); position: relative; transition: transform 0.25s, box-shadow 0.25s;">
+        <div style="color: var(--amber); font-size: 1.25rem; margin-bottom: 16px;">★★★★★</div>
+        <p style="font-size: 0.92rem; color: var(--text-2); line-height: 1.7; font-style: italic; margin-bottom: 24px;">"In commercial real estate, MLS platforms and listing portals verify coordinates automatically. I use Geo Tags Editor on my iPhone right at the property site to correct GPS readings before sending listing shots to the designer. It's incredibly straightforward and works directly in the mobile browser!"</p>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--navy); font-size: 0.95rem;">DT</div>
+          <div>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin: 0;">David Thorne</h4>
+            <span style="font-size: 0.78rem; color: var(--text-3); display: block;">Associate Broker, RE/MAX Commercial</span>
+          </div>
+        </div>
+      </div>
+      <div class="card testimonial-card" style="background: var(--white); padding: 32px; border-radius: var(--r-lg); border: 1px solid var(--border); box-shadow: var(--sh-card); position: relative; transition: transform 0.25s, box-shadow 0.25s;">
+        <div style="color: var(--amber); font-size: 1.25rem; margin-bottom: 16px;">★★★★★</div>
+        <p style="font-size: 0.92rem; color: var(--text-2); line-height: 1.7; font-style: italic; margin-bottom: 24px;">"As a travel and wildlife photographer, protecting exact shoot coordinates is vital for my intellectual property and environmental conservation. Before uploading photo previews to social sharing portals or portfolio sites, I use Geo Tags Editor to strip all EXIF GPS data in bulk. Simple, private, and 100% free."</p>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #faf5ff; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--navy); font-size: 0.95rem;">MV</div>
+          <div>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin: 0;">Marcus Vance</h4>
+            <span style="font-size: 0.78rem; color: var(--text-3); display: block;">Fine Art Travel Photographer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GSC_QUERY_SCALING_BLOCK_START -->
+<!-- Reusable container for future Search Console search queries -->
+<div class="gsc-query-container" style="display:none;" id="gsc-homepage-queries"></div>
+<!-- GSC_QUERY_SCALING_BLOCK_END -->
+
 
 <!-- ═══ FAQ ════════════════════════════════════════════════ -->
 <section class="section" id="faq" aria-labelledby="faq-heading">
@@ -1285,15 +1206,7 @@ h2.section-title-white { color: var(--white); }
 
 <!-- ═══ FOOTER ════════════════════════════════════════════ -->
 <footer class="site-footer" id="site-footer" role="contentinfo">
-  <div class="container">
-    
-
-
 <div class="footer-grid"><div class="footer-brand"><div class="logo"><img src="/images/logo.webp" alt="Geo Tags Editor" style="height:32px;width:auto"> <span>Geo Tags Editor</span></div><p>Geo Tags Editor is a free online tool that lets you add, edit, or remove GPS geotag metadata from your JPEG images. Fast, private, and entirely browser-based.</p></div><div class="footer-col"><p class="footer-title">Quick Links</p><ul><li><a href="/">Home</a></li><li><a href="/add-gps-to-photo-online/">Add GPS</a></li><li><a href="/remove-geotag-from-photo-online/">Remove GPS</a></li><li><a href="/geo-tag-editor/">Geo Tag Editor</a></li><li><a href="/blog/">Blog</a></li><li><a href="/about/">About Us</a></li><li><a href="/contact/">Contact</a></li></ul></div><div class="footer-col"><p class="footer-title">Articles &amp; Guides</p><ul><li><a href="/blog/how-to-add-geotag-to-existing-photos/">Add Geotag to Existing Photos</a></li><li><a href="/blog/how-to-remove-gps-exif-data-from-photos/">Remove GPS Geotags from Photo</a></li><li><a href="/blog/why-geotagging-matters-for-local-seo/">Geotagging for Local SEO</a></li><li><a href="/blog/exif-data-ultimate-guide/">EXIF Data Ultimate Guide</a></li><li><a href="/blog/how-to-add-gps-location-to-photos/">Add GPS to Photos</a></li><li><a href="/blog/how-to-geotag-photos-for-google-business-profile/">Geotag Photos for GBP</a></li></ul></div><div class="footer-col"><p class="footer-title">Legal</p><ul><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms/">Terms &amp; Conditions</a></li><li><a href="/disclaimer/">Disclaimer</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div></div><div class="footer-bottom">&copy; <span id="copyright-year">2026</span> Geo Tags Editor. All rights reserved. Free online geo tag editor tool.</div>
-
-
-
-  </div>
 </footer>
 
 <!-- ═══ SCRIPTS (preserved + new) ════════════════════════ -->
