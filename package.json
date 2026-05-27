@@ -1,0 +1,36 @@
+{
+  "name": "geo-tag-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "add_toc.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammadali8901/geo-tag-editor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/muhammadali8901/geo-tag-editor/issues"
+  },
+  "homepage": "https://github.com/muhammadali8901/geo-tag-editor#readme",
+  "dependencies": {
+    "@astrojs/mdx": "^5.0.6",
+    "astro": "^6.3.8",
+    "common-ancestor-path": "^2.0.0",
+    "leaflet": "^1.9.4",
+    "piexifjs": "^1.0.6"
+  },
+  "devDependencies": {
+    "vite": "^6.4.2"
+  }
+}

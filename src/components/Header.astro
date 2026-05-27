@@ -1,0 +1,81 @@
+---
+const primaryLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/add-gps-to-photo-online/', label: 'Add GPS' },
+  { href: '/remove-geotag-from-photo-online/', label: 'Remove GPS' },
+  { href: '/geo-tag-editor/', label: 'Geo Tag Editor' },
+  { href: '/blog/', label: 'Blog' },
+];
+
+const utilityLinks = [
+  { href: '/about/', label: 'About' },
+  { href: '/contact/', label: 'Contact' },
+  { href: '/privacy-policy/', label: 'Privacy Policy' },
+  { href: '/terms/', label: 'Terms & Conditions' },
+  { href: '/sitemap/', label: 'Sitemap' },
+];
+---
+
+<header class="site-header" id="site-header" role="banner">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label="Geo Tags Editor Home">
+      <img src="/images/logo.webp" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto" fetchpriority="high" />
+      <span>Geo Tags Editor</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <ul class="nav-links" id="desktopNavLinks">
+        {primaryLinks.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+        <li><a href="/geo-tag-editor/" class="nav-cta">Try Free Tool</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="mobile-sidebar" id="mobileSidebar" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="sidebar-header">
+      <a href="/" class="logo" aria-label="Geo Tags Editor Home">
+        <img src="/images/logo.webp" alt="Geo Tags Editor" width="32" height="32" style="height:32px;width:auto" fetchpriority="high" />
+        <span>Geo Tags Editor</span>
+      </a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-sidebar-body">
+      <p class="sidebar-section-title">Tools &amp; Guides</p>
+      <nav aria-label="Mobile navigation links">
+        <ul class="sidebar-nav" id="mobilePrimaryLinks">
+          {primaryLinks.map((l) => (
+            <li><a href={l.href}><span>{l.label}</span></a></li>
+          ))}
+        </ul>
+      </nav>
+
+      <p class="sidebar-section-title">Company &amp; Legal</p>
+      <ul class="sidebar-nav sidebar-nav-secondary" id="mobileUtilityLinks">
+        {utilityLinks.map((l) => (
+          <li><a href={l.href}><span>{l.label}</span></a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-actions">
+        <a href="/geo-tag-editor/" class="btn btn-primary sidebar-btn">Open Geo Tag Tool</a>
+        <a href="/contact/" class="btn btn-outline sidebar-btn">Contact Us</a>
+      </div>
+    </div>
+  </aside>
+</header>
+

@@ -4,9 +4,11 @@
     // -------------------------------------------------------------
     // CDN DEPENDENCIES & LIBRARIES
     // -------------------------------------------------------------
-    const PIEXIF_URL = "https://cdn.jsdelivr.net/npm/piexifjs@1.0.6/piexif.min.js";
-    const LEAFLET_JS_URL = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-    const LEAFLET_CSS_URL = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+    // Prefer self-hosted vendor assets to reduce third-party dependency variance.
+    // Fallbacks remain in place for resilience if local assets are missing.
+    const PIEXIF_URL = "/vendor/piexifjs-1.0.6.js";
+    const LEAFLET_JS_URL = "/vendor/leaflet-1.9.4.js";
+    const LEAFLET_CSS_URL = "/vendor/leaflet-1.9.4.css";
     const JSZIP_URL = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js";
     const PAPAPARSE_URL = "https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js";
     const HEIC2ANY_URL = "https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js";

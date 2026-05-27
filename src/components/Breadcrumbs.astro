@@ -1,0 +1,14 @@
+---
+type Crumb = { href: string; label: string };
+const { items } = Astro.props as { items: Crumb[] };
+---
+
+<nav class="container breadcrumb" aria-label="Breadcrumb">
+  {items.map((c, idx) => (
+    <>
+      {idx > 0 ? <span>/</span> : null}
+      {idx === items.length - 1 ? <strong>{c.label}</strong> : <a href={c.href}>{c.label}</a>}
+    </>
+  ))}
+</nav>
+

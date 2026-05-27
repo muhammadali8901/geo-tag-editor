@@ -13,6 +13,11 @@ desktop.ini
 *.log
 npm-debug.log*
 
+# Dependencies / build output
+node_modules/
+dist/
+.astro/
+
 # Temporary files
 *.tmp
 *~
