@@ -343,3 +343,4 @@ Commit on 2026-05-26T20:53:11: style: update color variables for dark mode contr
 Commit on 2026-05-26T20:00:59: perf: reduce DOM manipulation overhead
 Commit on 2026-05-26T20:16:12: refactor: extract reusable modal components
 Commit on 2026-05-26T21:44:35: fix: scroll restoration on back navigation
+Commit on 2026-05-27T19:29:11: docs: update EXIF metadata guide section
