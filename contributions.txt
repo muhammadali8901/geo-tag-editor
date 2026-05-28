@@ -354,3 +354,4 @@ Commit on 2026-05-28T12:29:59: refactor: extract reusable modal components
 Commit on 2026-05-28T19:28:09: perf: optimize web worker message passing
 Commit on 2026-05-28T15:48:55: style: align footer navigation elements
 Commit on 2026-05-28T21:41:29: docs: update README with recent feature notes
+Commit on 2026-05-28T18:35:59: docs: improve inline code documentation
