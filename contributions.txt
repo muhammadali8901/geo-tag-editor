@@ -365,3 +365,4 @@ Commit on 2026-05-29T18:28:55: refactor: clean up unused helper functions
 Commit on 2026-05-29T10:03:35: style: adjust card padding for mobile screens
 Commit on 2026-05-29T13:51:41: perf: optimize web worker message passing
 Commit on 2026-05-29T19:28:50: docs: improve inline code documentation
+Commit on 2026-05-29T10:34:03: docs: update EXIF metadata guide section
