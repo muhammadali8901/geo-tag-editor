@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseDir = 'c:/Users/Laptop Seller/Desktop/geo or genay do/geo-tag-editor';
+const baseDir = __dirname;
 const blogDir = path.join(baseDir, 'blog');
 
 let blogPages = [];
