@@ -368,3 +368,4 @@ Commit on 2026-05-29T19:28:50: docs: improve inline code documentation
 Commit on 2026-05-29T10:34:03: docs: update EXIF metadata guide section
 Commit on 2026-05-30T16:31:39: perf: memoize expensive image transform operations
 Commit on 2026-05-30T09:01:13: docs: expand metadata dictionary table descriptions
+Commit on 2026-05-30T12:39:10: style: minor spacing adjustment in navigation bar
