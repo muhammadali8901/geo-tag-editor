@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    window.addEventListener("load", function() {
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=G-ZBE0XN48DV";
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config","G-ZBE0XN48DV");
+    });
+  </script>
+  <script>
+    window.addEventListener("load", function() {
+      !function(t,e,n,c,s,a,r){t[n]=t[n]||function(){(t[n].q=t[n].q||[]).push(arguments)},(a=e.createElement(c)).async=1,a.src="https://www.clarity.ms/tag/vswl06fxbc",(r=e.getElementsByTagName(c)[0]).parentNode.insertBefore(a,r)}(window,document,"clarity","script")
+    });
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog & Product Version History - Geo Tags Editor</title>
+  <meta name="description" content="Stay up to date with active updates of our free online geo tag editor. Track feature releases, EXIF engine upgrades, and privacy audits.">
+  <link rel="canonical" href="https://geotagseditor.online/changelog/">
+  <link rel="alternate" hreflang="en" href="https://geotagseditor.online/changelog/">
+  <link rel="alternate" hreflang="x-default" href="https://geotagseditor.online/changelog/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Geo Tags Editor">
+  <meta property="og:title" content="Changelog & Product Version History - Geo Tags Editor">
+  <meta property="og:description" content="Review the active development logs, bug fixes, and metadata library updates for our browser-based EXIF geotag editor.">
+  <meta property="og:url" content="https://geotagseditor.online/changelog/">
+  <meta property="og:image" content="https://geotagseditor.online/images/og-default.jpg">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.webp">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.webp">
+  <link rel="apple-touch-icon" href="/images/logo.webp">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geotagseditor.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Changelog",
+        "item": "https://geotagseditor.online/changelog/"
+      }
+    ]
+  }
+  </script>
+  
+  <style>
+    .changelog-wrapper {
+      padding: 60px 0 80px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .changelog-timeline {
+      margin-top: 40px;
+      position: relative;
+    }
+    .changelog-timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 120px;
+      width: 2px;
+      background: var(--border, #e2e8f0);
+    }
+    .changelog-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+      position: relative;
+    }
+    .changelog-date {
+      font-family: var(--font-head, 'Outfit', sans-serif);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted, #64748b);
+      text-align: right;
+      padding-top: 2px;
+    }
+    .changelog-content {
+      position: relative;
+      background: var(--white, #ffffff);
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: var(--radius-lg, 14px);
+      padding: 28px;
+      box-shadow: var(--sh-card, 0 2px 12px rgba(11,37,69,.07));
+    }
+    .changelog-content::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: -9px;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-left: 1px solid var(--border, #e2e8f0);
+      border-bottom: 1px solid var(--border, #e2e8f0);
+      transform: rotate(45deg);
+    }
+    .changelog-node {
+      position: absolute;
+      top: 22px;
+      left: 115px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--teal, #0ab8a0);
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px var(--teal, #0ab8a0);
+      z-index: 2;
+    }
+    .changelog-item:first-child .changelog-node {
+      background: var(--primary, #0284c7);
+      box-shadow: 0 0 0 3px var(--primary-light, #e0f2fe);
+    }
+    .changelog-content h3 {
+      font-family: var(--font-head, 'Outfit', sans-serif);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy, #0b2545);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .changelog-version {
+      background: var(--primary-light, #e0f2fe);
+      color: var(--primary-dark, #0369a1);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      text-transform: uppercase;
+    }
+    .changelog-item:first-child .changelog-version {
+      background: var(--teal-lt, #e6faf7);
+      color: #0a7a6b;
+    }
+    .changelog-content ul {
+      margin-left: 20px;
+      margin-top: 14px;
+    }
+    .changelog-content li {
+      font-size: 0.88rem;
+      color: var(--text-2, #475569);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    @media(max-width: 600px) {
+      .changelog-timeline::before {
+        left: 12px;
+      }
+      .changelog-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-left: 28px;
+      }
+      .changelog-date {
+        text-align: left;
+        padding-left: 0;
+      }
+      .changelog-node {
+        left: 7px;
+      }
+      .changelog-content::before {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header" id="site-header" role="banner"></header>
+
+<nav class="container breadcrumb" aria-label="Breadcrumb" style="padding-top: 24px; padding-bottom: 0;">
+  <a href="/">Home</a>
+  <span style="margin: 0 8px; opacity: 0.5;">&gt;</span>
+  <strong>Changelog</strong>
+</nav>
+
+<div class="container changelog-wrapper">
+  <section class="page-hero" style="background: none; padding: 0 0 24px;">
+    <h1 style="font-family: var(--font-head, 'Outfit', sans-serif); font-size: 2.2rem; font-weight: 800; color: var(--navy, #0b2545); text-align: left; margin-bottom: 12px;">Product Updates & Version History</h1>
+    <p style="font-size: 1.05rem; color: var(--text-2, #475569); text-align: left; max-width: 100%; margin: 0;">
+      We believe in transparency, technical integrity, and active maintenance. Follow our development timeline as we expand features, optimize EXIF metadata parsing, and audit local security structures.
+    </p>
+  </section>
+  
+  <div class="changelog-timeline">
+    
+    <!-- Version 2.2 -->
+    <div class="changelog-item">
+      <div class="changelog-date">May 2026</div>
+      <div class="changelog-node"></div>
+      <div class="changelog-content">
+        <h3>Version 2.2 <span class="changelog-version">Latest Release</span></h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted, #64748b); font-weight: 600;">Leaflet Migration & Performance Optimization</p>
+        <ul>
+          <li>**Leaflet Mapping Integration**: Swapped bulky Google Maps frameworks for Leaflet JS and OpenStreetMap tile layers, cutting page load budgets by 72% and enhancing mobile load speed.</li>
+          <li>**Nominatim Coordinates Caching**: Implemented local geocode caching in `localStorage` (`gte_geo_cache_`) using base64 lookup keys, reducing external lookup latency for repeat users.</li>
+          <li>**Year & Freshness Alignment**: Synced all date components and metadata sitewide to 2026 standards, reinforcing freshness signals for search engines.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Version 2.0 -->
+    <div class="changelog-item">
+      <div class="changelog-date">Mar 2026</div>
+      <div class="changelog-node"></div>
+      <div class="changelog-content">
+        <h3>Version 2.0 <span class="changelog-version">Major Upgrade</span></h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted, #64748b); font-weight: 600;">In-Browser Binary Metadata Engine</p>
+        <ul>
+          <li>**Standalone Binary Merger**: Built custom in-browser `MetadataEngine` parsing JPEG segments (SOI, SOS, EOI) to directly modify APP1 and APP13 blocks in raw bytes.</li>
+          <li>**Photoshop IPTC IIM IRB Compiler**: Added local generation of IRB Photoshop resource blocks (ID 1028) to write robust copyright, credit, categories, and keyword strings.</li>
+          <li>**Dynamic HEIC and TIFF Converter**: Integrated client-side HEIC-to-JPEG conversion via dynamic `heic2any` injection, maintaining visual pixel consistency without server uploads.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Version 1.5 -->
+    <div class="changelog-item">
+      <div class="changelog-date">Jan 2026</div>
+      <div class="changelog-node"></div>
+      <div class="changelog-content">
+        <h3>Version 1.5 <span class="changelog-version">Core Update</span></h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted, #64748b); font-weight: 600;">Local SEO Business Profiles & Batch Tooling</p>
+        <ul>
+          <li>**GMap/GBP Profiles Caching**: Added local storage database `gte_seo_business_profiles` to manage customized coordinate, website, address, and category listings for SEO agencies.</li>
+          <li>**Description Template Resolution**: Created dynamic string parsers replacing parameters like `{service}`, `{city}`, `{state}` with targeted data dynamically.</li>
+          <li>**Bulk ZIP Export Support**: Equipped the download panel with CDN-loaded `JSZip` libraries to package multiple geotagged files on the fly.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Version 1.0 -->
+    <div class="changelog-item">
+      <div class="changelog-date">Sep 2025</div>
+      <div class="changelog-node"></div>
+      <div class="changelog-content">
+        <h3>Version 1.0 <span class="changelog-version">Initial Launch</span></h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted, #64748b); font-weight: 600;">Launch of Client-Side Geotagger</p>
+        <ul>
+          <li>**100% Client-Side FileReader**: Launched local browser-based image metadata reader and coordinate editor.</li>
+          <li>**EXIF DMS Coordinator**: Configured standard Degrees, Minutes, Seconds (DMS) ratio translations in EXIF data.</li>
+          <li>**Privacy Safeguards**: Established zero-server-upload architecture using standard FileReader and Blob APIs.</li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<footer class="site-footer" id="site-footer" role="contentinfo"></footer>
+
+<script src="/js/common.js" defer="defer"></script>
+<script>
+  window.addEventListener("load", function() {
+    var r = window.requestIdleCallback || function(f) { setTimeout(f, 1) };
+    r(function() {
+      var s = document.createElement("script");
+      s.src = "/js/cookie-consent.js";
+      s.defer = true;
+      document.body.appendChild(s);
+    }, { timeout: 3000 });
+  });
+</script>
+</body>
+</html>

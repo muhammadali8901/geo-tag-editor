@@ -53,11 +53,6 @@
   ],
   "redirects": [
     {
-      "source": "/author/alex-rivers/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
       "source": "/about.html",
       "destination": "/about/",
       "permanent": true
