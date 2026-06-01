@@ -382,3 +382,4 @@ Commit on 2026-05-31T15:01:09: style: update color variables for dark mode contr
 Commit on 2026-05-31T11:22:55: docs: update sitemap generator comments
 Commit on 2026-05-31T12:37:07: fix: resolve edge case handling in location lookup
 Commit on 2026-05-31T09:01:50: perf: optimize web worker message passing
+Commit on 2026-06-01T13:34:51: chore: clean up internal log statements
