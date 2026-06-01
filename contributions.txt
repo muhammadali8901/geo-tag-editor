@@ -387,3 +387,4 @@ Commit on 2026-06-01T15:13:57: feat: improve metadata parsing efficiency
 Commit on 2026-06-01T14:00:45: style: update button hover effects
 Commit on 2026-06-01T13:33:28: style: tweak typography hierarchy for blog headings
 Commit on 2026-06-01T20:40:50: docs: clarify privacy policy points
+Commit on 2026-06-01T09:17:49: style: update button hover effects
