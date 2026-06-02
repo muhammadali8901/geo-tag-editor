@@ -390,3 +390,4 @@ Commit on 2026-06-01T20:40:50: docs: clarify privacy policy points
 Commit on 2026-06-01T09:17:49: style: update button hover effects
 Commit on 2026-06-02T11:03:13: fix: tooltip display glitch on mobile view
 Commit on 2026-06-02T17:45:42: feat: improve metadata parsing efficiency
+Commit on 2026-06-02T15:40:29: refactor: extract reusable modal components
