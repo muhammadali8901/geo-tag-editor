@@ -393,3 +393,4 @@ Commit on 2026-06-02T17:45:42: feat: improve metadata parsing efficiency
 Commit on 2026-06-02T15:40:29: refactor: extract reusable modal components
 Commit on 2026-06-02T21:29:42: refactor: optimize image loading routines
 Commit on 2026-06-02T16:14:02: refactor: modularize coordinate conversion utility
+Commit on 2026-06-02T19:03:58: docs: improve inline code documentation
