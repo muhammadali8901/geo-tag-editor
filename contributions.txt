@@ -397,3 +397,4 @@ Commit on 2026-06-02T19:03:58: docs: improve inline code documentation
 Commit on 2026-06-03T16:18:42: style: update color variables for dark mode contrast
 Commit on 2026-06-03T21:25:32: fix: resolve edge case handling in location lookup
 Commit on 2026-06-03T14:39:08: fix: scroll restoration on back navigation
+Commit on 2026-06-03T17:12:53: docs: expand metadata dictionary table descriptions
