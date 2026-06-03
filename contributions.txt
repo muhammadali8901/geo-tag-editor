@@ -400,3 +400,4 @@ Commit on 2026-06-03T14:39:08: fix: scroll restoration on back navigation
 Commit on 2026-06-03T17:12:53: docs: expand metadata dictionary table descriptions
 Commit on 2026-06-03T21:58:29: feat: add keyboard shortcut support for map zooming
 Commit on 2026-06-03T18:14:58: style: minor spacing adjustment in navigation bar
+Commit on 2026-06-03T16:00:42: docs: expand metadata dictionary table descriptions
