@@ -395,3 +395,4 @@ Commit on 2026-06-02T21:29:42: refactor: optimize image loading routines
 Commit on 2026-06-02T16:14:02: refactor: modularize coordinate conversion utility
 Commit on 2026-06-02T19:03:58: docs: improve inline code documentation
 Commit on 2026-06-03T16:18:42: style: update color variables for dark mode contrast
+Commit on 2026-06-03T21:25:32: fix: resolve edge case handling in location lookup
