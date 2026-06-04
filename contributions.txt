@@ -403,3 +403,4 @@ Commit on 2026-06-03T18:14:58: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-03T16:00:42: docs: expand metadata dictionary table descriptions
 Commit on 2026-06-03T11:48:39: feat: refine error message clarity for invalid coordinates
 Commit on 2026-06-04T12:20:20: docs: clarify privacy policy points
+Commit on 2026-06-04T14:23:03: refactor: clean up unused helper functions
