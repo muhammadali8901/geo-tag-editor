@@ -166,6 +166,16 @@
       "source": "/blog/website-optimization-complete-guide-2025/",
       "destination": "/blog/",
       "permanent": true
+    },
+    {
+      "source": "/blog/how-to-check-gps-location-of-photo/",
+      "destination": "/blog/how-to-check-where-picture-was-taken/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-check-gps-location-of-photo.html",
+      "destination": "/blog/how-to-check-where-picture-was-taken/",
+      "permanent": true
     }
   ]
 }
