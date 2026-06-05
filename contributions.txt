@@ -413,3 +413,4 @@ Commit on 2026-06-05T09:28:12: docs: update README with recent feature notes
 Commit on 2026-06-05T12:42:41: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-05T12:16:46: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-05T18:55:34: chore: audit and remove unused asset references
+Commit on 2026-06-05T09:37:32: feat: refine error message clarity for invalid coordinates
