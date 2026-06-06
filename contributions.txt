@@ -418,3 +418,4 @@ Commit on 2026-06-06T10:34:46: perf: optimize web worker message passing
 Commit on 2026-06-06T15:54:40: style: update color variables for dark mode contrast
 Commit on 2026-06-06T13:01:26: feat: add keyboard shortcut support for map zooming
 Commit on 2026-06-06T09:50:48: docs: update EXIF metadata guide section
+Commit on 2026-06-06T19:40:13: fix: tooltip display glitch on mobile view
