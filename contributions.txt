@@ -417,3 +417,4 @@ Commit on 2026-06-05T09:37:32: feat: refine error message clarity for invalid co
 Commit on 2026-06-06T10:34:46: perf: optimize web worker message passing
 Commit on 2026-06-06T15:54:40: style: update color variables for dark mode contrast
 Commit on 2026-06-06T13:01:26: feat: add keyboard shortcut support for map zooming
+Commit on 2026-06-06T09:50:48: docs: update EXIF metadata guide section
