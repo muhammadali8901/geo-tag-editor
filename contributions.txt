@@ -421,3 +421,4 @@ Commit on 2026-06-06T09:50:48: docs: update EXIF metadata guide section
 Commit on 2026-06-06T19:40:13: fix: tooltip display glitch on mobile view
 Commit on 2026-06-06T13:23:15: docs: update README with recent feature notes
 Commit on 2026-06-06T16:41:57: style: minor spacing adjustment in navigation bar
+Commit on 2026-06-07T11:10:52: chore: update dependencies and internal scripts
