@@ -425,3 +425,4 @@ Commit on 2026-06-07T11:10:52: chore: update dependencies and internal scripts
 Commit on 2026-06-07T10:46:42: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-07T10:33:46: docs: clarify privacy policy points
 Commit on 2026-06-07T15:10:06: fix: scroll restoration on back navigation
+Commit on 2026-06-07T13:29:02: docs: expand metadata dictionary table descriptions
