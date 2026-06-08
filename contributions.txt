@@ -432,3 +432,4 @@ Commit on 2026-06-07T14:17:02: perf: memoize expensive image transform operation
 Commit on 2026-06-08T15:18:32: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-08T17:18:11: perf: reduce DOM manipulation overhead
 Commit on 2026-06-08T12:17:38: style: tweak typography hierarchy for blog headings
+Commit on 2026-06-08T11:32:44: fix: prevent duplicate form submission on rapid clicks
