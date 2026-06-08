@@ -435,3 +435,4 @@ Commit on 2026-06-08T12:17:38: style: tweak typography hierarchy for blog headin
 Commit on 2026-06-08T11:32:44: fix: prevent duplicate form submission on rapid clicks
 Commit on 2026-06-08T17:49:08: refactor: optimize image loading routines
 Commit on 2026-06-08T21:40:33: fix: scroll restoration on back navigation
+Commit on 2026-06-08T12:24:01: style: update color variables for dark mode contrast
