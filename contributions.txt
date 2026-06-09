@@ -440,3 +440,4 @@ Commit on 2026-06-09T19:13:21: style: align footer navigation elements
 Commit on 2026-06-09T20:00:33: feat: refine error message clarity for invalid coordinates
 Commit on 2026-06-09T15:39:12: chore: clean up internal log statements
 Commit on 2026-06-09T19:39:29: docs: update sitemap generator comments
+Commit on 2026-06-09T19:56:16: style: update color variables for dark mode contrast
