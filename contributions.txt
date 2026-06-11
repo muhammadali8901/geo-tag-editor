@@ -446,3 +446,4 @@ Commit on 2026-06-10T10:57:31: perf: memoize expensive image transform operation
 Commit on 2026-06-10T09:29:50: chore: update dependencies and internal scripts
 Commit on 2026-06-10T19:15:06: docs: update EXIF metadata guide section
 Commit on 2026-06-10T16:46:31: fix: tooltip display glitch on mobile view
+Commit on 2026-06-11T21:27:48: docs: update sitemap generator comments
