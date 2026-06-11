@@ -450,3 +450,4 @@ Commit on 2026-06-11T21:27:48: docs: update sitemap generator comments
 Commit on 2026-06-11T15:08:32: docs: update README with recent feature notes
 Commit on 2026-06-11T13:41:25: chore: clean up internal log statements
 Commit on 2026-06-11T13:51:50: refactor: clean up unused helper functions
+Commit on 2026-06-11T15:18:55: docs: update README with recent feature notes
