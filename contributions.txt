@@ -455,3 +455,4 @@ Commit on 2026-06-11T11:03:58: refactor: extract reusable modal components
 Commit on 2026-06-12T14:16:46: style: update color variables for dark mode contrast
 Commit on 2026-06-12T16:57:04: feat: improve metadata parsing efficiency
 Commit on 2026-06-12T15:23:18: feat: add keyboard shortcut support for map zooming
+Commit on 2026-06-12T14:27:34: fix: tooltip display glitch on mobile view
