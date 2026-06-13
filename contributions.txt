@@ -461,3 +461,4 @@ Commit on 2026-06-13T19:35:31: refactor: modularize coordinate conversion utilit
 Commit on 2026-06-13T21:18:45: style: adjust card padding for mobile screens
 Commit on 2026-06-13T14:14:13: perf: memoize expensive image transform operations
 Commit on 2026-06-13T11:16:26: refactor: optimize image loading routines
+Commit on 2026-06-13T20:38:01: feat: add keyboard shortcut support for map zooming
