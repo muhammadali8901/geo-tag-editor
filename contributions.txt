@@ -468,3 +468,4 @@ Commit on 2026-06-13T11:22:00: docs: improve inline code documentation
 Commit on 2026-06-14T18:07:41: docs: improve inline code documentation
 Commit on 2026-06-14T10:31:42: perf: memoize expensive image transform operations
 Commit on 2026-06-14T10:24:49: chore: audit and remove unused asset references
+Commit on 2026-06-14T12:05:32: docs: expand metadata dictionary table descriptions
