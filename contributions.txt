@@ -470,3 +470,4 @@ Commit on 2026-06-14T10:31:42: perf: memoize expensive image transform operation
 Commit on 2026-06-14T10:24:49: chore: audit and remove unused asset references
 Commit on 2026-06-14T12:05:32: docs: expand metadata dictionary table descriptions
 Commit on 2026-06-14T19:18:56: perf: optimize web worker message passing
+Commit on 2026-06-15T09:42:34: chore: update dependencies and internal scripts
