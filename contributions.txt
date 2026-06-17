@@ -482,3 +482,4 @@ Commit on 2026-06-16T18:58:40: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-16T14:05:57: docs: expand metadata dictionary table descriptions
 Commit on 2026-06-16T09:49:57: chore: audit and remove unused asset references
 Commit on 2026-06-16T15:26:03: style: adjust card padding for mobile screens
+Commit on 2026-06-17T11:43:22: fix: handle missing geolocation permissions gracefully
