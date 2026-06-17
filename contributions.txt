@@ -486,3 +486,4 @@ Commit on 2026-06-17T11:43:22: fix: handle missing geolocation permissions grace
 Commit on 2026-06-17T16:46:20: fix: tooltip display glitch on mobile view
 Commit on 2026-06-17T10:53:38: docs: expand metadata dictionary table descriptions
 Commit on 2026-06-17T17:25:55: perf: optimize web worker message passing
+Commit on 2026-06-17T12:29:00: style: minor spacing adjustment in navigation bar
