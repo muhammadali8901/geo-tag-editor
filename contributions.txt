@@ -490,3 +490,4 @@ Commit on 2026-06-17T12:29:00: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-17T14:37:52: chore: clean up internal log statements
 Commit on 2026-06-18T20:12:09: feat: add keyboard shortcut support for map zooming
 Commit on 2026-06-18T18:35:08: style: update color variables for dark mode contrast
+Commit on 2026-06-18T12:29:02: chore: update dependencies and internal scripts
