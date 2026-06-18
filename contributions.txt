@@ -488,3 +488,4 @@ Commit on 2026-06-17T10:53:38: docs: expand metadata dictionary table descriptio
 Commit on 2026-06-17T17:25:55: perf: optimize web worker message passing
 Commit on 2026-06-17T12:29:00: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-17T14:37:52: chore: clean up internal log statements
+Commit on 2026-06-18T20:12:09: feat: add keyboard shortcut support for map zooming
