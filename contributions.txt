@@ -497,3 +497,4 @@ Commit on 2026-06-18T11:26:58: refactor: modularize coordinate conversion utilit
 Commit on 2026-06-18T20:19:17: docs: improve inline code documentation
 Commit on 2026-06-19T11:51:05: refactor: extract reusable modal components
 Commit on 2026-06-19T09:51:48: fix: tooltip display glitch on mobile view
+Commit on 2026-06-19T11:10:21: feat: add keyboard shortcut support for map zooming
