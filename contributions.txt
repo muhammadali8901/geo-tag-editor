@@ -495,3 +495,4 @@ Commit on 2026-06-18T11:25:20: feat: add keyboard shortcut support for map zoomi
 Commit on 2026-06-18T11:46:20: refactor: clean up unused helper functions
 Commit on 2026-06-18T11:26:58: refactor: modularize coordinate conversion utility
 Commit on 2026-06-18T20:19:17: docs: improve inline code documentation
+Commit on 2026-06-19T11:51:05: refactor: extract reusable modal components
