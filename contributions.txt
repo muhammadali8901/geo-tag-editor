@@ -501,3 +501,4 @@ Commit on 2026-06-19T11:10:21: feat: add keyboard shortcut support for map zoomi
 Commit on 2026-06-19T18:15:41: feat: add keyboard shortcut support for map zooming
 Commit on 2026-06-19T13:35:12: chore: update dependencies and internal scripts
 Commit on 2026-06-20T14:29:54: style: tweak typography hierarchy for blog headings
+Commit on 2026-06-20T20:48:28: docs: clarify privacy policy points
