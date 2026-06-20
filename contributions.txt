@@ -503,3 +503,4 @@ Commit on 2026-06-19T13:35:12: chore: update dependencies and internal scripts
 Commit on 2026-06-20T14:29:54: style: tweak typography hierarchy for blog headings
 Commit on 2026-06-20T20:48:28: docs: clarify privacy policy points
 Commit on 2026-06-20T12:47:06: docs: update README with recent feature notes
+Commit on 2026-06-20T13:54:27: style: update button hover effects
