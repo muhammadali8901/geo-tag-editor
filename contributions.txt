@@ -512,3 +512,4 @@ Commit on 2026-06-21T18:14:52: chore: audit and remove unused asset references
 Commit on 2026-06-21T14:47:40: refactor: extract reusable modal components
 Commit on 2026-06-21T18:35:17: fix: tooltip display glitch on mobile view
 Commit on 2026-06-21T20:47:57: refactor: clean up unused helper functions
+Commit on 2026-06-21T09:54:24: style: align footer navigation elements
