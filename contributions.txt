@@ -510,3 +510,4 @@ Commit on 2026-06-21T15:40:12: chore: audit and remove unused asset references
 Commit on 2026-06-21T14:50:28: fix: handle missing geolocation permissions gracefully
 Commit on 2026-06-21T18:14:52: chore: audit and remove unused asset references
 Commit on 2026-06-21T14:47:40: refactor: extract reusable modal components
+Commit on 2026-06-21T18:35:17: fix: tooltip display glitch on mobile view
