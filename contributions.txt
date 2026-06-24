@@ -532,3 +532,4 @@ Commit on 2026-06-24T14:38:35: docs: update EXIF metadata guide section
 Commit on 2026-06-24T21:48:35: refactor: clean up unused helper functions
 Commit on 2026-06-24T16:33:48: chore: update dependencies and internal scripts
 Commit on 2026-06-24T16:04:06: feat: refine error message clarity for invalid coordinates
+Commit on 2026-06-24T20:05:26: chore: audit and remove unused asset references
