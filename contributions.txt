@@ -528,3 +528,4 @@ Commit on 2026-06-23T12:03:10: perf: memoize expensive image transform operation
 Commit on 2026-06-23T11:34:13: perf: optimize web worker message passing
 Commit on 2026-06-23T12:07:15: feat: add keyboard shortcut support for map zooming
 Commit on 2026-06-24T18:20:49: fix: prevent duplicate form submission on rapid clicks
+Commit on 2026-06-24T14:38:35: docs: update EXIF metadata guide section
