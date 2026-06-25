@@ -538,3 +538,4 @@ Commit on 2026-06-24T18:26:25: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-25T16:18:26: style: update button hover effects
 Commit on 2026-06-25T17:27:47: docs: clarify privacy policy points
 Commit on 2026-06-25T11:37:15: chore: update dependencies and internal scripts
+Commit on 2026-06-25T12:42:57: feat: add keyboard shortcut support for map zooming
