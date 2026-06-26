@@ -545,3 +545,4 @@ Commit on 2026-06-25T19:57:25: refactor: optimize image loading routines
 Commit on 2026-06-26T20:12:30: docs: clarify privacy policy points
 Commit on 2026-06-26T21:07:45: feat: add keyboard shortcut support for map zooming
 Commit on 2026-06-26T10:03:51: docs: update sitemap generator comments
+Commit on 2026-06-26T19:43:00: fix: handle missing geolocation permissions gracefully
