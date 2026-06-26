@@ -543,3 +543,4 @@ Commit on 2026-06-25T17:00:34: docs: update EXIF metadata guide section
 Commit on 2026-06-25T19:26:43: refactor: extract reusable modal components
 Commit on 2026-06-25T19:57:25: refactor: optimize image loading routines
 Commit on 2026-06-26T20:12:30: docs: clarify privacy policy points
+Commit on 2026-06-26T21:07:45: feat: add keyboard shortcut support for map zooming
