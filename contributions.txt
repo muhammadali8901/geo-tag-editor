@@ -554,3 +554,4 @@ Commit on 2026-06-27T13:05:54: fix: handle missing geolocation permissions grace
 Commit on 2026-06-27T20:36:55: style: adjust card padding for mobile screens
 Commit on 2026-06-27T21:49:15: refactor: extract reusable modal components
 Commit on 2026-06-27T12:34:13: docs: update sitemap generator comments
+Commit on 2026-06-27T14:06:54: fix: tooltip display glitch on mobile view
