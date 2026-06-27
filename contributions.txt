@@ -550,3 +550,4 @@ Commit on 2026-06-26T11:45:58: feat: improve metadata parsing efficiency
 Commit on 2026-06-26T15:25:12: chore: audit and remove unused asset references
 Commit on 2026-06-27T16:33:06: fix: resolve edge case handling in location lookup
 Commit on 2026-06-27T13:14:32: perf: memoize expensive image transform operations
+Commit on 2026-06-27T13:05:54: fix: handle missing geolocation permissions gracefully
