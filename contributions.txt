@@ -560,3 +560,4 @@ Commit on 2026-06-28T10:32:58: perf: memoize expensive image transform operation
 Commit on 2026-06-28T10:34:08: chore: audit and remove unused asset references
 Commit on 2026-06-28T15:48:19: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-28T13:58:11: fix: handle missing geolocation permissions gracefully
+Commit on 2026-06-28T21:52:59: feat: improve metadata parsing efficiency
