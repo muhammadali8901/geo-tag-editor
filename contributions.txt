@@ -557,3 +557,4 @@ Commit on 2026-06-27T12:34:13: docs: update sitemap generator comments
 Commit on 2026-06-27T14:06:54: fix: tooltip display glitch on mobile view
 Commit on 2026-06-28T16:10:52: style: update button hover effects
 Commit on 2026-06-28T10:32:58: perf: memoize expensive image transform operations
+Commit on 2026-06-28T10:34:08: chore: audit and remove unused asset references
