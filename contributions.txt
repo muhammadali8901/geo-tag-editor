@@ -565,3 +565,4 @@ Commit on 2026-06-28T19:08:51: refactor: modularize coordinate conversion utilit
 Commit on 2026-06-28T20:21:23: chore: update dependencies and internal scripts
 Commit on 2026-06-29T17:01:12: style: minor spacing adjustment in navigation bar
 Commit on 2026-06-29T16:51:08: refactor: clean up unused helper functions
+Commit on 2026-06-29T17:29:29: feat: add keyboard shortcut support for map zooming
