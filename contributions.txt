@@ -570,3 +570,4 @@ Commit on 2026-06-29T17:02:31: style: align footer navigation elements
 Commit on 2026-06-29T21:10:52: perf: optimize web worker message passing
 Commit on 2026-06-29T14:09:33: docs: expand metadata dictionary table descriptions
 Commit on 2026-06-29T19:31:35: docs: clarify privacy policy points
+Commit on 2026-06-30T13:59:33: style: update color variables for dark mode contrast
