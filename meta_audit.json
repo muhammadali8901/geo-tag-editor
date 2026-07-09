@@ -1,158 +1,218 @@
 {
   "about\\index.html": {
-    "title": "About Geo Tags Editor — Our Mission &amp; Privacy-First Approach",
-    "description": "The story behind Geo Tags Editor — a free, privacy-first online GPS metadata tool trusted by photographers, real estate agents, and SEO professionals."
+    "title": "About Geo Tags Editor and Our Privacy First Approach",
+    "description": "Discover the story behind Geo Tags Editor. We provide a free privacy first online GPS metadata tool trusted by SEO professionals and photographers."
   },
   "add-gps-to-photo-online\\index.html": {
-    "title": "Add GPS Coordinates to Any Photo — Free Browser EXIF Editor",
-    "description": "Write GPS coordinates into any JPEG photo — pick a location on the map, click Apply, download. Nothing leaves your device. Free and instant."
+    "title": "Add GPS Coordinates to Any Photo with Browser Editor",
+    "description": "Write GPS coordinates into any JPEG photo. Pick a location on the map, click apply and download. Nothing leaves your device with our free tool."
   },
   "author\\alex-rivers\\index.html": {
-    "title": "Alex Rivers — Photography & EXIF Metadata Expert | Geo Tags Editor",
-    "description": "Meet Alex Rivers, a professional photographer and metadata specialist. Learn about Alex"
+    "title": "Alex Rivers - Photojournalist & EXIF Metadata Standards",
+    "description": "Meet Alex Rivers, Senior Technical Photojournalist and EXIF Metadata Consultant. Discover his professional contributions to digital asset securit"
   },
   "blog\\add-gps-to-photo-ultimate-guide\\index.html": {
-    "title": "Add GPS to Photos: Complete Geotagging Guide (2026)",
-    "description": "Learn how to add GPS location to photos with practical methods, tools, and best practices for clean EXIF metadata and reliable photo geotagging."
+    "title": "Complete Geotagging Guide to Add GPS to Photos Online",
+    "description": "Learn how to add GPS location to photos with practical methods, free tools, and best practices for clean EXIF metadata and reliable photo geotagging."
   },
   "blog\\add-location-photos-android-guide\\index.html": {
-    "title": "Add Location to Photos on Android — Pixel, Samsung & OnePlus (2026)",
-    "description": "Add GPS to photos on Pixel, Samsung One UI, and OnePlus — real menu paths for current Android versions, plus how to backfill missing GPS data."
+    "title": "Add Location to Photos on Android Pixel and Samsung",
+    "description": "Add GPS to photos on Pixel, Samsung One UI and OnePlus. Discover real menu paths for current Android versions and how to backfill missing GPS data."
   },
   "blog\\best-gps-photo-editing-software-comparison-2026\\index.html": {
     "title": "Best GPS Photo Editing Software Comparison Guide 2026",
-    "description": "Compare the best GPS photo editing software in 2026, including online and desktop tools, with feature, privacy, speed, and workflow breakdowns."
+    "description": "Compare the best GPS photo editing software in 2026 including online and desktop tools. Read our feature, privacy, speed and workflow breakdowns."
   },
   "blog\\best-practices-for-photo-geotagging-2026\\index.html": {
-    "title": "Photo Geotagging Best Practices (2026): SEO & Privacy",
-    "description": "Photo geotagging best practices for 2026 — when to add GPS for SEO, when to strip it for privacy, and how to organize a photo library by location."
+    "title": "Photo Geotagging Best Practices for SEO and Privacy",
+    "description": "Explore photo geotagging best practices for 2026. Learn when to add GPS for SEO, when to strip it for privacy and how to organize a photo library."
   },
   "blog\\exif-data-ultimate-guide\\index.html": {
-    "title": "EXIF Data Ultimate Guide (2026): What You Need to Know",
-    "description": "The ultimate guide to EXIF data in 2026. Learn what"
+    "title": "Ultimate Guide to EXIF Data and What You Need to Know",
+    "description": "Read the ultimate guide to EXIF data in 2026. Learn what EXIF data is, how it works, and why protecting your digital photo metadata is very important."
+  },
+  "blog\\exif-gps-editor-online-free\\index.html": {
+    "title": "Best Free EXIF GPS Editor Online in 2026 with No Downloads",
+    "description": "Compare the best free EXIF GPS editors available online in 2026. Find the fastest, most private option that works without installing software."
   },
   "blog\\exif-vs-metadata-whats-the-difference\\index.html": {
-    "title": "EXIF vs Metadata: What's the Difference? | Complete Guide 2026",
-    "description": "EXIF vs metadata — what is the difference? Learn what EXIF is, how it relates to IPTC and XMP, and why GPS data in your photos matters."
+    "title": "Difference Between EXIF and Metadata Complete Guide",
+    "description": "Understand the difference between EXIF and metadata. Learn what EXIF is, how it relates to IPTC and XMP, and why GPS data in your photos matters."
   },
-  "blog\\geo-tagging-seo-complete-guide-2025\\index.html": {
-    "title": "Geo Tagging SEO: Complete Local Rankings Guide 2025",
+  "blog\\free-geoimgr-alternative\\index.html": {
+    "title": "Free GeoImgr Alternative That Works Without Server Uploads",
+    "description": "GeoImgr requires uploading photos to their servers. This free alternative does all GPS editing in your browser. No upload, no account, unlimited file size."
+  },
+  "blog\\geo-tagging-seo-complete-guide-2026\\index.html": {
+    "title": "Does Geotagging Photos Help SEO? Local Ranking Guide",
     "description": "Master geotagging SEO with practical methods to optimize image GPS metadata, strengthen local relevance signals, and improve local search visibility."
   },
   "blog\\gps-photo-privacy-protection-guide\\index.html": {
-    "title": "GPS Photo Privacy Protection and Safety Guide (2026)",
-    "description": "Learn how to protect privacy by removing GPS data from photos, understanding location risks, and applying safer photo-sharing and metadata hygiene practices."
+    "title": "GPS Photo Privacy Protection and Safety Guide for 2026",
+    "description": "Learn how to protect privacy by removing GPS data from photos, understanding location risks, and applying safer photo sharing and metadata hygiene."
+  },
+  "blog\\how-geotagging-improves-local-seo-rankings\\index.html": {
+    "title": "How Geo Tagging Improves Local SEO Rankings 2026 Guide",
+    "description": "Discover how image geotagging and EXIF GPS metadata improve local pack visibility, Google Maps rankings, and search engine relevance in 2026."
+  },
+  "blog\\how-image-metadata-effects-web-performance\\index.html": {
+    "title": "How Image Metadata Affects Web Performance & Page Speed",
+    "description": "Explore how EXIF metadata affects page weight, Core Web Vitals, and load times. Learn best ways to optimize JPEGs while keeping GPS tags."
   },
   "blog\\how-journalists-use-geotagging-in-photos\\index.html": {
-    "title": "How Journalists Use Geotagging in Photos - Complete Guide",
-    "description": "Discover how journalists use geotagging for photo verification, source context, and story credibility, with practical metadata workflows and safety guidelines."
+    "title": "Complete Guide on How Journalists Use Photo Geotagging",
+    "description": "Discover how journalists use geotagging for photo verification, source context, and story credibility with practical metadata workflows and guidelines."
   },
   "blog\\how-to-add-geotag-to-existing-photos\\index.html": {
-    "title": "How to Add Geotag to Existing Photos (2026 Guide)",
-    "description": "How to add a geotag to existing photos that don"
+    "title": "Learn How to Add Geotags to Existing Photos in 2026",
+    "description": "Find out how to add a geotag to existing photos that are missing location data. Follow our complete guide to easily restore missing GPS coordinates."
+  },
+  "blog\\how-to-add-geotag-to-photo-on-iphone\\index.html": {
+    "title": "How to Add a Geotag to an iPhone Photo and Fix Missing GPS Data",
+    "description": "Fix missing GPS location on iPhone photos. Use this free browser tool to add accurate GPS coordinates to any JPEG photo - no app download needed."
   },
   "blog\\how-to-add-gps-location-to-photos\\index.html": {
-    "title": "How to Add GPS Location to Photos — Choosing the Right Method (2026)",
-    "description": "Compare every way to add GPS to a photo — phone, desktop, command line, browser tools — and pick the right method for your workflow."
+    "title": "How to Add GPS Location to Photos Using The Best Method",
+    "description": "Compare every way to add GPS to a photo using your phone, desktop, command line, or browser tools, and pick the right method for your workflow."
   },
   "blog\\how-to-add-location-to-photos-android-iphone\\index.html": {
-    "title": "Add Location to Photos on iPhone — iOS 17 / 18 Guide",
-    "description": "Make iPhone Camera save GPS, change a photo location after capture, and handle HEIC files when sharing geotagged photos with non-Apple devices."
+    "title": "Guide to Adding Location to Photos on iPhone and iOS",
+    "description": "Make your iPhone Camera save GPS coordinates, change a photo location after capture, and handle HEIC files when sharing geotagged photos online."
   },
   "blog\\how-to-change-photo-location-gps-coordinates\\index.html": {
-    "title": "How to Change Photo Location & GPS Coordinates (2026 Guide)",
-    "description": "Learn how to change photo location and edit GPS coordinates on any image. Step-by-step guide to modify, update, or correct geotag data on iPhone, Android, Windows & Mac."
+    "title": "Learn How to Change Photo Location and GPS Coordinates",
+    "description": "Find out how to change photo location and edit GPS coordinates on any image. Follow our guide to modify, update, or correct geotag data on any device."
   },
   "blog\\how-to-check-where-picture-was-taken\\index.html": {
-    "title": "How to Check Where a Picture Was Taken (GPS Guide)",
+    "title": "Check Where a Picture Was Taken With Our GPS Guide",
     "description": "Learn how to check where a picture was taken by reading GPS metadata, viewing coordinates, and verifying photo location details safely and accurately."
   },
+  "blog\\how-to-fake-geotag-gps-coordinates-in-photos\\index.html": {
+    "title": "How to Fake Geotag GPS Coordinates in Photos Online (2026)",
+    "description": "Learn how to fake geotag GPS coordinates in photos online. Spoof or change photo location metadata for privacy, app testing, or gaming securely."
+  },
+  "blog\\how-to-geotag-photos-for-google-business-profile\\index.html": {
+    "title": "How to Geotag Photos for Google Business Profile in 2026",
+    "description": "Step-by-step guide to geotagging photos before uploading them to Google Business Profile. Improve your local map pack rankings with properly geotagged photos."
+  },
   "blog\\how-to-geotag-photos-for-real-estate\\index.html": {
-    "title": "How to Geotag Real Estate Photos — Complete Guide for Agents (2026)",
-    "description": "Learn how to geotag real estate photos to boost local SEO, improve Google Business Profile rankings, and make property listings more discoverable online. Free tool included."
+    "title": "Complete Guide on How to Geotag Real Estate Photos",
+    "description": "Learn how to geotag real estate photos to boost local SEO, improve Google Business Profile rankings, and make property listings more discoverable."
   },
   "blog\\how-to-geotag-photos-on-mac\\index.html": {
-    "title": "How to Geotag Photos on Mac: A Complete Step-by-Step Guide (2026)",
-    "description": "Learn how to view, add, edit, and remove GPS location data from JPEG photos on macOS. Complete tutorial covering Preview, Photos app, and ExifTool."
+    "title": "How to Geotag Photos on Mac Complete 2026 Guide for Better",
+    "description": "Learn how to view, add, edit, and remove GPS location data from JPEG photos on macOS. Complete tutorial covering Preview, Photos app, and ExifToo"
   },
-  "blog\\how-to-protect-your-privacy-in-photos\\index.html": {
-    "title": "How to Protect Your Privacy in Photos (Complete Guide 2026)",
-    "description": "Learn essential techniques to protect your privacy in photos. Remove location data, manage EXIF metadata, and secure your digital images from unauthorized tracking."
-  },
-  "blog\\how-to-remove-gps-location-data-from-photos\\index.html": {
-    "title": "How to Remove GPS Location Data From Photos (Complete Guide)",
-    "description": "Learn how to remove GPS location data from photos and delete geotag metadata easily. Step-by-step guide for mobile, desktop, and online tools."
-  },
-  "blog\\how-to-remove-metadata-from-images\\index.html": {
-    "title": "Remove Metadata From Images - Privacy Protection Guide",
-    "description": "Learn how to remove image metadata to protect privacy, strip EXIF details, and prevent GPS location leaks before sharing photos online safely."
+  "blog\\how-to-remove-gps-exif-data-from-photos\\index.html": {
+    "title": "How to Remove GPS Location Data From Photos: EXIF Guide",
+    "description": "Learn how to remove GPS location data from photos and delete geotag metadata easily. Follow our guide for mobile and desktop tools."
   },
   "blog\\how-to-use-geotagging-to-rank-local-business-2026\\index.html": {
-    "title": "Use Geotagging to Rank a Local Business (2026 Guide)",
-    "description": "Learn practical geotagging strategies for local SEO, including image metadata, on-page signals, and workflows to improve local business visibility."
+    "title": "Use Geotagging to Rank a Local Business in Local Search",
+    "description": "Learn practical geotagging strategies for local SEO, including image metadata, on page signals, and workflows to improve local business visibility."
+  },
+  "blog\\image-optimization-for-local-seo-speed\\index.html": {
+    "title": "Image Performance for Local SEO: Balance Speed & GPS",
+    "description": "Improve local SEO load times and rankings. Learn how to optimize service images to pass Web Vitals while retaining search metadata tags."
   },
   "blog\\index.html": {
-    "title": "EXIF & Geotagging Guides | Geo Tags Editor Blog",
-    "description": "Step-by-step guides on GPS photo editing, EXIF metadata management, and photo privacy. Learn how to add or remove geotags on iPhone, Android, Windows, and Mac."
+    "title": "Geo Tags Editor Blog for EXIF and Geotagging Guides",
+    "description": "Read step by step guides on GPS photo editing, EXIF metadata management, and photo privacy. Learn how to add or remove geotags on any modern device."
   },
   "blog\\photo-metadata-security-guide-2026\\index.html": {
-    "title": "Photo Metadata Security Guide: Protect Privacy in 2026",
-    "description": "Learn how to protect your privacy by managing photo metadata. Complete guide to EXIF data, GPS geotags, and privacy protection for digital photos."
-  },
-  "blog\\remove-geotag-from-photo\\index.html": {
-    "title": "How to Remove Geotag From Photos: Complete Privacy Guide",
-    "description": "Learn how to remove GPS location data from photos on mobile, desktop, and web tools to protect privacy and share images safely without exposing metadata."
+    "title": "Photo Metadata Security Guide to Protect Your Privacy",
+    "description": "Learn how to protect your privacy by managing photo metadata. Read our complete guide to EXIF data, GPS geotags, and digital photo privacy protection."
   },
   "blog\\what-is-geotagging\\index.html": {
-    "title": "What is Geotagging? Complete Beginner's Guide to Photo GPS Data (2026)",
-    "description": "What is geotagging? Learn how geotagging works, what GPS data is stored in your photos, the privacy risks, the SEO benefits, and how to add or remove geotags for free."
+    "title": "Complete Beginners Guide to What Geotagging Is Today",
+    "description": "Learn what geotagging is, how it works, what GPS data is stored in your photos, the privacy risks, the SEO benefits, and how to add or remove geotags."
   },
   "blog\\why-geotagging-matters-for-local-seo\\index.html": {
-    "title": "Why Geotagging Boosts Local SEO: My Experience-Driven Guide",
-    "description": "Why geotagging for local SEO actually works. Alex Rivers explains how search engines read GPS metadata and how to implement a strategy that ranks."
+    "title": "Why Geotagging Matters for Local SEO: 2026 Insights",
+    "description": "Discover why geotagging for local SEO actually works. Learn how search engines read GPS metadata and how to implement a ranking strategy."
+  },
+  "changelog\\index.html": {
+    "title": "Changelog & Product Version History - Geo Tags Editor",
+    "description": "Stay up to date with active updates of our free online geo tag editor. Track feature releases, EXIF engine upgrades, and privacy audits."
   },
   "contact\\index.html": {
-    "title": "Contact Geo Tags Editor - Get Support & Send Feedback",
-    "description": "Get in touch with the Geo Tags Editor team. We welcome your questions, feedback, and feature suggestions for our free online geo tag editor tool."
+    "title": "Contact Geo Tags Editor to Get Support and Send Feedback",
+    "description": "Get in touch with the Geo Tags Editor team. We welcome your questions, feedback, and feature suggestions for our free online geo tag editor tool online."
+  },
+  "cookie-policy\\index.html": {
+    "title": "Geo Tags Editor Cookie Policy: User Tracking & Consent",
+    "description": "Review our Cookie Policy to learn how Geo Tags Editor uses cookies for analytics and advertising with full GDPR/CCPA user control."
   },
   "disclaimer\\index.html": {
-    "title": "Geo Tags Editor Disclaimer, Usage Notice, and Policies",
-    "description": "Read the Geo Tags Editor disclaimer for important usage, liability, and informational notices related to our photo metadata and geotag tools."
+    "title": "Geo Tags Editor Disclaimer Usage Notice and Policies",
+    "description": "Read the Geo Tags Editor disclaimer for important usage, liability, and informational notices related to our photo metadata and geotag editor tools."
+  },
+  "fake-geotag-photo-editor\\index.html": {
+    "title": "Fake Geo Tag Photo Editor Online - Spoof Photo GPS",
+    "description": "Spoof GPS coordinates and location metadata in JPEG photos online. Pin any fake location on the map, apply changes, and download safely for free."
   },
   "features\\index.html": {
-    "title": "Features of Geo Tags Editor: Complete GPS Photo Editor Toolkit",
-    "description": "Every Geo Tags Editor feature: add GPS, edit geotags, batch processing, interactive map picker, EXIF viewer, 100% private in-browser editing."
+    "title": "Explore Features of Geo Tags Editor Complete GPS Toolkit",
+    "description": "Discover every Geo Tags Editor feature, including adding GPS, editing geotags, batch processing, interactive map picker, and private in browser editing."
   },
   "geo-tag-editor\\index.html": {
-    "title": "Free Geo Tag Editor — Online Geo Tagging Editor for Photo GPS",
-    "description": "Free online geo tag editor — add, change, or remove GPS coordinates in JPEG photos right in your browser. No upload, no signup. Works on desktop and mobile."
+    "title": "Free Geo Tag Editor Online Tool for Photo GPS Metadata",
+    "description": "Use our free online geo tag editor to add, change, or remove GPS coordinates in JPEG photos right in your browser. Works safely on desktop and mobile."
+  },
+  "geoimgr-alternative\\index.html": {
+    "title": "Free GeoImgr Alternative to Edit Photo GPS Coordinates",
+    "description": "Looking for a free GeoImgr alternative? Geo Tags Editor adds or removes GPS coordinates from JPEG photos 100% in your browser without server uploads."
+  },
+  "geotag-photos-for-hvac\\index.html": {
+    "title": "Geotag HVAC Job Photos to Improve Local Search Rankings",
+    "description": "HVAC technicians - geotag your job site photos before uploading to Google Business Profile. Free GPS editor works in browser."
+  },
+  "geotag-photos-for-plumbers\\index.html": {
+    "title": "Geotag Plumbing Job Photos for Local Search Relevance",
+    "description": "Plumbers - add GPS to your job site photos before uploading to Google Business Profile. Free browser GPS editor. No upload, no account."
+  },
+  "geotag-photos-for-real-estate\\index.html": {
+    "title": "Geotag Photos for Real Estate Listings with a Free GPS Editor",
+    "description": "Add GPS coordinates to real estate photos before uploading to MLS, Zillow, or Realtor.com. Free browser tool - no account, no upload."
+  },
+  "geotag-photos-for-restaurants\\index.html": {
+    "title": "Geotag Restaurant Photos for Better Google Business Profile SEO",
+    "description": "Geotag your restaurant photos before uploading to Google Business Profile, Yelp, or TripAdvisor. Free GPS editor - no upload needed."
   },
   "geotag-photos-online\\index.html": {
-    "title": "Geotag Photos Online — Add GPS Location to JPEG Images",
-    "description": "Geotag photos online for free — add GPS location to JPEG images in your browser. Pick a point on the map or paste coordinates, then download with EXIF embedded."
+    "title": "Geotag Photos Online and Add GPS Location to JPEG Images",
+    "description": "Geotag photos online for free and add GPS location to JPEG images in your browser. Pick a point on the map or paste coordinates and download instantly."
+  },
+  "geotag-photos-without-uploading\\index.html": {
+    "title": "Geotag Photos Without Uploading Using a Local Browser Tool",
+    "description": "Geotag photos without uploading to any server. Our browser-based GPS editor processes everything locally. No cloud, no account, no privacy risks."
+  },
+  "geotag-world-alternative\\index.html": {
+    "title": "Free Geotag.world Alternative for Private GPS Photo Editing",
+    "description": "Need a Geotag.world alternative? Geo Tags Editor is 100% free, works without uploading photos, and has no account requirements. Try it now."
   },
   "how-to-remove-location-from-photos\\index.html": {
-    "title": "How to Remove Location from Photos — Strip GPS from EXIF",
-    "description": "Step-by-step guide to remove GPS from JPEG photos before sharing. Use our in-browser tool or native steps for iPhone, Android, Windows, and macOS."
+    "title": "How to Remove Location from Photos and Strip GPS Data",
+    "description": "Follow this guide to remove GPS from JPEG photos before sharing them online. Use our in browser tool or native steps for iPhone, Android, and Windows."
   },
   "index.html": {
-    "title": "Geo Tags Editor — Add or Remove GPS from Photos Free",
-    "description": "Add or remove GPS coordinates from JPEG photos — directly in your browser. No upload, no account, no software. Free EXIF editor for privacy-conscious photographers."
+    "title": "Free Online Geo Tag Editor - Add or Remove GPS from Photos",
+    "description": "Use the best free online geo tag editor to add, change, or remove GPS coordinates in JPEG photos right in your browser. Private, fast, and no uploads."
   },
   "privacy-policy\\index.html": {
-    "title": "Geo Tags Editor Privacy Policy, Security, and Data Practices",
-    "description": "Review Geo Tags Editor privacy practices, including local image processing, data handling, cookies, and security measures for our metadata tools."
+    "title": "Geo Tags Editor Privacy Policy Security and Data Rules",
+    "description": "Review Geo Tags Editor privacy practices, including local image processing, data handling, cookies, and security measures for our photo metadata tools."
   },
   "remove-geotag-from-photo-online\\index.html": {
-    "title": "Remove GPS from Photo Online — Free Privacy Tool",
-    "description": "Strip GPS coordinates and location metadata from JPEG photos — directly in your browser. No upload, no account, no software. Free and private."
+    "title": "Remove GPS from Photo Online With Our Free Privacy Tool",
+    "description": "Strip GPS coordinates and location metadata from JPEG photos directly in your internet browser. No upload, no account, no software, free and private."
   },
   "sitemap\\index.html": {
-    "title": "Geo Tags Editor HTML Sitemap Directory and Page Index",
-    "description": "Browse the Geo Tags Editor HTML sitemap with direct links to tool pages, guides, legal pages, and core resources across the site for fast navigation."
+    "title": "Geo Tags Editor HTML Sitemap Directory and Page Indexing",
+    "description": "Browse the Geo Tags Editor HTML sitemap with direct links to tool pages, comprehensive guides, legal pages, and core resources for fast navigation."
   },
   "terms\\index.html": {
-    "title": "Geo Tags Editor Terms, Conditions, and Acceptable Use",
-    "description": "Read the Geo Tags Editor terms and conditions covering acceptable use, service limitations, intellectual property, and legal responsibilities."
+    "title": "Geo Tags Editor Terms Conditions and Acceptable Use Policy",
+    "description": "Read the Geo Tags Editor terms and conditions covering acceptable use, service limitations, intellectual property rights, and legal responsibilities."
   }
 }

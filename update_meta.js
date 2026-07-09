@@ -34,8 +34,8 @@ const newMeta = {
     "title": "Difference Between EXIF and Metadata Complete Guide",
     "description": "Understand the difference between EXIF and metadata. Learn what EXIF is, how it relates to IPTC and XMP, and why GPS data in your photos matters."
   },
-  "blog\\geo-tagging-seo-complete-guide-2025\\index.html": {
-    "title": "Complete Local Search Rankings Guide for Geo Tagging",
+  "blog\\geo-tagging-seo-complete-guide-2026\\index.html": {
+    "title": "Does Geotagging Photos Help SEO? Local Ranking Guide",
     "description": "Master geotagging SEO with practical methods to optimize image GPS metadata, strengthen local relevance signals, and improve local search visibility."
   },
   "blog\\gps-photo-privacy-protection-guide\\index.html": {
@@ -103,8 +103,8 @@ const newMeta = {
     "description": "Learn what geotagging is, how it works, what GPS data is stored in your photos, the privacy risks, the SEO benefits, and how to add or remove geotags."
   },
   "blog\\why-geotagging-matters-for-local-seo\\index.html": {
-    "title": "Experience Driven Guide on Why Geotagging Boosts SEO",
-    "description": "Discover why geotagging for local SEO actually works. Find out how search engines read GPS metadata and how to implement a marketing strategy that ranks."
+    "title": "Why Geotagging Matters for Local SEO: 2026 Insights",
+    "description": "Discover why geotagging for local SEO actually works. Learn how search engines read GPS metadata and how to implement a ranking strategy."
   },
   "contact\\index.html": {
     "title": "Contact Geo Tags Editor to Get Support and Send Feedback",
@@ -131,8 +131,8 @@ const newMeta = {
     "description": "Follow this guide to remove GPS from JPEG photos before sharing them online. Use our in browser tool or native steps for iPhone, Android, and Windows."
   },
   "index.html": {
-    "title": "Geo Tags Editor to Add or Remove GPS from Photos Free",
-    "description": "Add or remove GPS coordinates from JPEG photos directly in your browser. There is no upload and no account needed with our free private EXIF editor."
+    "title": "Free Online Geo Tag Editor - Add or Remove GPS from Photos",
+    "description": "Use the best free online geo tag editor to add, change, or remove GPS coordinates in JPEG photos right in your browser. Private, fast, and no uploads."
   },
   "privacy-policy\\index.html": {
     "title": "Geo Tags Editor Privacy Policy Security and Data Rules",
@@ -149,6 +149,14 @@ const newMeta = {
   "terms\\index.html": {
     "title": "Geo Tags Editor Terms Conditions and Acceptable Use Policy",
     "description": "Read the Geo Tags Editor terms and conditions covering acceptable use, service limitations, intellectual property rights, and legal responsibilities."
+  },
+  "fake-geotag-photo-editor\\index.html": {
+    "title": "Fake Geo Tag Photo Editor Online - Spoof Photo GPS",
+    "description": "Spoof GPS coordinates and location metadata in JPEG photos online. Pin any fake location on the map, apply changes, and download safely for free."
+  },
+  "bulk-geotag\\index.html": {
+    "title": "Free Bulk Geotag Photos Online - Batch GPS Image Editor",
+    "description": "Geotag photos in bulk online for free. Add location coordinates and EXIF GPS data to multiple JPEG images simultaneously in your browser privately."
   }
 };
 
