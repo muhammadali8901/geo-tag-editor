@@ -690,13 +690,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer>
 
 <!-- Scripts -->
-<script src="/js/common.js" defer></script>
+<script src="/js/common.js?v=2.0.2" defer></script>
 <script>
 window.addEventListener('load', function() {
   var r = window.requestIdleCallback || function(f) { setTimeout(f, 1); };
   r(function() {
     var s = document.createElement('script');
-    s.src = '/js/cookie-consent.js'; s.defer = true;
+    s.src = '/js/cookie-consent.js?v=2.0.2'; s.defer = true;
     document.body.appendChild(s);
   }, { timeout: 3000 });
 });
