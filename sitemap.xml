@@ -540,4 +540,26 @@
       <image:caption>Geotag photos in bulk online for free. Add location coordinates and EXIF GPS data to multiple JPEG images simultaneously in your browser privately.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://geotagseditor.online/blog/how-to-geotag-photos-on-windows/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://geotagseditor.online/images/logo.webp</image:loc>
+      <image:title>How to Geotag Photos on Windows 10 and 11 Natively</image:title>
+      <image:caption>Learn how to geotag photos on Windows 10 and 11 natively. Add or change GPS coordinates in your JPEG photo EXIF metadata easily without installing software.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://geotagseditor.online/blog/check-if-photo-has-location/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://geotagseditor.online/images/logo.webp</image:loc>
+      <image:title>How to Check If a Photo Has GPS Location Data (EXIF Guide)</image:title>
+      <image:caption>Find out if your photos contain hidden location metadata. Step by step guide to check if a photo has GPS coordinates on iPhone, Android, Windows, and Mac.</image:caption>
+    </image:image>
+  </url>
 </urlset>
