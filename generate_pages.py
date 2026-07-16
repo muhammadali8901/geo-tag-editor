@@ -18,7 +18,7 @@ BRAND_BIO = """
     <span style="font-size:1.8rem;">✍️</span>
   </div>
   <div>
-    <h4 style="margin:0 0 4px;font-size:1.15rem;font-weight:700;color:var(--text,#0f172a);">Written by the <a href="/about/" style="color:var(--primary,#0284c7);text-decoration:none">GeoTagsEditor Editorial Team</a></h4>
+    <p style="margin:0 0 4px;font-size:1.15rem;font-weight:700;color:var(--text,#0f172a);">Written by the <a href="/about/" style="color:var(--primary,#0284c7);text-decoration:none">GeoTagsEditor Editorial Team</a></p>
     <p style="margin:0;color:var(--text-secondary,#475569);font-size:.9rem;line-height:1.5;">Our development and editorial team specializes in image metadata architecture, EXIF GPS standards, and digital privacy. Every tool and guide we publish is verified for technical accuracy and operates entirely client-side for absolute privacy.</p>
   </div>
 </div>
@@ -26,7 +26,7 @@ BRAND_BIO = """
 
 MIDDLE_CTA_BLOCK = """
 <div class="article-middle-cta" style="background: linear-gradient(135deg, #0b2545 0%, #134074 100%); color: #fff; padding: 28px; border-radius: var(--radius, 10px); margin: 36px 0; text-align: center; box-shadow: 0 4px 20px rgba(11,37,69,0.15);">
-  <h4 style="margin:0 0 8px; font-size:1.25rem; font-weight:700; color:#fff; font-family:var(--font,'Outfit',sans-serif);">Need to edit your photo locations instantly?</h4>
+  <p style="margin:0 0 8px; font-size:1.25rem; font-weight:700; color:#fff; font-family:var(--font,'Outfit',sans-serif);">Need to edit your photo locations instantly?</p>
   <p style="margin:0 0 20px; color:rgba(255,255,255,0.9); font-size:0.95rem; line-height:1.6;">Try our free browser-based GPS Photo Editor. Add coordinates, pick a spot on the map, or strip metadata right in your browser without uploading anything.</p>
   <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
     <a href="/add-gps-to-photo-online/" class="btn btn-primary" style="background:#0ab8a0; color:#fff; padding:10px 20px; border-radius:6px; font-weight:600; font-size:0.9rem; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; min-height:40px; border:none; transition:background .2s;">Add GPS to Photo</a>
@@ -37,7 +37,7 @@ MIDDLE_CTA_BLOCK = """
 
 RELATED_RESOURCES_BLOCK = """
 <div class="related-resources" style="border-top:1px solid var(--border,#e2e8f0); padding-top:24px; margin-top:36px; margin-bottom:24px;">
-  <h3 style="font-size:1.3rem; margin-bottom:16px; color:var(--text,#0f172a); font-weight:700; font-family:var(--font,'Outfit',sans-serif);">Try Our Free Location Tools</h3>
+  <p style="font-size:1.3rem; margin-bottom:16px; color:var(--text,#0f172a); font-weight:700; font-family:var(--font,'Outfit',sans-serif);">Try Our Free Location Tools</p>
   <ul style="list-style:none; padding-left:0; display:flex; flex-direction:column; gap:12px;">
     <li style="display:flex; align-items:baseline; gap:8px;">🗺️ <div><a href="/add-gps-to-photo-online/" style="color:var(--primary,#0284c7); font-weight:600; text-decoration:none; border-bottom:1px dashed var(--primary,#0284c7);">Add GPS to Photo Online</a> - Pick a location on the interactive map and write coordinates directly into your JPEG EXIF data.</div></li>
     <li style="display:flex; align-items:baseline; gap:8px;">🛡️ <div><a href="/remove-geotag-from-photo-online/" style="color:var(--primary,#0284c7); font-weight:600; text-decoration:none; border-bottom:1px dashed var(--primary,#0284c7);">Remove GPS Geotags from Photo</a> - Strip sensitive location metadata from your photos before sharing them online for privacy protection.</div></li>
