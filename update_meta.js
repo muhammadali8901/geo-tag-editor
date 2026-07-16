@@ -104,7 +104,7 @@ const newMeta = {
   },
   "blog\\why-geotagging-matters-for-local-seo\\index.html": {
     "title": "Why Geotagging Matters for Local SEO: 2026 Insights",
-    "description": "Discover why geotagging for local SEO actually works. Learn how search engines read GPS metadata and how to implement a ranking strategy."
+    "description": "Discover why geotagging for local SEO actually works. Learn how search engine crawlers read GPS metadata and how to implement your ranking strategy."
   },
   "contact\\index.html": {
     "title": "Contact Geo Tags Editor to Get Support and Send Feedback",
@@ -151,8 +151,8 @@ const newMeta = {
     "description": "Read the Geo Tags Editor terms and conditions covering acceptable use, service limitations, intellectual property rights, and legal responsibilities."
   },
   "fake-geotag-photo-editor\\index.html": {
-    "title": "Fake Geo Tag Photo Editor Online - Spoof Photo GPS",
-    "description": "Spoof GPS coordinates and location metadata in JPEG photos online. Pin any fake location on the map, apply changes, and download safely for free."
+    "title": "Fake Geo Tag Photo Editor - Spoof Photo GPS Online",
+    "description": "Fake GPS coordinates and location metadata in JPEG photos online. Pin any fake location on the map, apply coordinates, and download safely for free."
   },
   "bulk-geotag\\index.html": {
     "title": "Free Bulk Geotag Photos Online - Batch GPS Image Editor",

@@ -25,6 +25,10 @@ function rel(p) {
 const files = walk(root);
 const existingRoutes = new Set(files.map((f) => "/" + rel(f).replace(/index\.html$/i, "")));
 existingRoutes.add("/");
+existingRoutes.add("/sitemap.xml");
+existingRoutes.add("/robots.txt");
+existingRoutes.add("/ads.txt");
+existingRoutes.add("/site.webmanifest");
 
 const findings = {
   totalPages: files.length,
@@ -46,6 +50,7 @@ for (const file of files) {
     /<meta[^>]+name=["']robots["'][^>]+noindex/i.test(html);
   const isTemplateOrPartial =
     fileRel.startsWith("partials/") ||
+    fileRel.startsWith("components/") ||
     fileRel.includes("template") ||
     fileRel === "adsense-placements.html";
   const isLocalTestPage = fileRel === "test-coordinate-input.html";
