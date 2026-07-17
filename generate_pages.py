@@ -892,7 +892,7 @@ pages = [
     },
     {
         "path": "blog/check-if-photo-has-location/index.html",
-        "title":  If a Photo Has GPS Location Datide)",
+        "title": "How to Check If a Photo Has GPS Location Data (EXIF Guide)",
         "desc": "Find out if your photos contain hidden location metadata. Step-by-step guide to check if a photo has GPS coordinates on iPhone, Android, Windows, and Mac.",
         "canonical": "https://geotagseditor.online/blog/check-if-photo-has-location/",
         "pub_date": "2026-07-15",
