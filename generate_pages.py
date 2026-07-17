@@ -898,7 +898,7 @@ pages = [
         "pub_date": "2026-07-15",
         "mod_date": "2026-07-15",
         "content": '''
-        <h2>How to Check for GPS C</h2>
+        <h2>How to Check for GPS Coordinates in Photos</h2>
         <p>Every photo taken on a modern smartphone or GPS-enabled camera contains hidden metadata called EXIF (Exchangeable Image File Format) data. This metadata often includes the exact latitude and longitude where the picture was captured. Knowing how to check if a photo has location data is crucial for protecting your digital privacy.</p>
 
         <h3>Checking on Windows (File Explorer)</h3>
