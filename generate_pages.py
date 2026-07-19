@@ -224,7 +224,7 @@ pages = [
     {
         "path": "geotag-world-alternative/index.html",
         "title": "Free Geotag.world Alternative for Private GPS Photo Editing",
-        "desc": "Need a Geotag.world alternative? Geo Tags Editor is 100% free, works without uploading photos, and has no account requirements. Try it now.",
+        "desc": "Need a Geotag.world alternative? Geo Tags Editor is 100% free, works without uploading photos, and has no account requirements. Try it free.",
         "canonical": "https://geotagseditor.online/geotag-world-alternative/",
         "content": '''
         <section class="hero"><div class="container"><span class="section-label">100% Free Tool</span><h1>Free Geotag.world Alternative With No Upload Required</h1><p>A faster, private alternative to Geotag.world. Edit EXIF GPS data securely in your browser.</p><a href="/add-gps-to-photo-online/" class="btn btn-primary">Open Editor</a></div></section>
@@ -243,8 +243,8 @@ pages = [
     },
     {
         "path": "geotag-photos-for-real-estate/index.html",
-        "title": "Geotag Photos for Real Estate Listings with a Free GPS Editor",
-        "desc": "Add GPS coordinates to real estate photos before uploading to MLS, Zillow, or Realtor.com. Free browser tool - no account, no upload.",
+        "title": "Geotag Photos for Real Estate Listings - Free GPS Editor",
+        "desc": "Add GPS coordinates to real estate photos before uploading to MLS, Zillow, or Realtor.com. Free browser tool with no account or upload required.",
         "canonical": "https://geotagseditor.online/geotag-photos-for-real-estate/",
         "content": '''
         <section class="hero"><div class="container"><span class="section-label">Perfect for Real Estate Agents</span><h1>Geotag Real Estate Photos for Better MLS Listings</h1><p>Ensure your property photos have accurate GPS metadata before uploading to MLS, Zillow, or Redfin.</p><a href="/add-gps-to-photo-online/" class="btn btn-primary">Geotag Property Photos</a></div></section>
@@ -253,8 +253,8 @@ pages = [
     },
     {
         "path": "geotag-photos-for-restaurants/index.html",
-        "title": "Geotag Restaurant Photos for Better Google Business Profile SEO",
-        "desc": "Geotag your restaurant photos before uploading to Google Business Profile, Yelp, or TripAdvisor. Free GPS editor - no upload needed.",
+        "title": "Geotag Restaurant Photos for Google Business Profile SEO",
+        "desc": "Geotag your restaurant photos before uploading to Google Business Profile, Yelp, or TripAdvisor. Free GPS editor with no server uploads required.",
         "canonical": "https://geotagseditor.online/geotag-photos-for-restaurants/",
         "content": '''
         <section class="hero"><div class="container"><span class="section-label">Local SEO for Restaurants</span><h1>Geotag Restaurant Photos for Google Maps Rankings</h1><p>Optimize your food and interior photos with precise GPS data to boost your local pack visibility.</p><a href="/add-gps-to-photo-online/" class="btn btn-primary">Geotag Food Photos</a></div></section>
@@ -264,7 +264,7 @@ pages = [
     {
         "path": "geotag-photos-for-hvac/index.html",
         "title": "Geotag HVAC Job Photos to Improve Local Search Rankings",
-        "desc": "HVAC technicians - geotag your job site photos before uploading to Google Business Profile. Free GPS editor works in browser.",
+        "desc": "HVAC technicians - geotag your job site photos before uploading to Google Business Profile. Free client-side GPS editor works directly in your browser.",
         "canonical": "https://geotagseditor.online/geotag-photos-for-hvac/",
         "content": '''
         <section class="hero"><div class="container"><span class="section-label">For HVAC Pros</span><h1>Geotag HVAC Job Photos to Dominate Local Search</h1><p>Add GPS to your before-and-after job site photos to build service area relevance on Google Maps.</p><a href="/add-gps-to-photo-online/" class="btn btn-primary">Geotag HVAC Photos</a></div></section>
@@ -274,7 +274,7 @@ pages = [
     {
         "path": "geotag-photos-for-plumbers/index.html",
         "title": "Geotag Plumbing Job Photos for Local Search Relevance",
-        "desc": "Plumbers - add GPS to your job site photos before uploading to Google Business Profile. Free browser GPS editor. No upload, no account.",
+        "desc": "Plumbers - add GPS to your job site photos before uploading to Google Business Profile. Free browser GPS editor with no upload or account required.",
         "canonical": "https://geotagseditor.online/geotag-photos-for-plumbers/",
         "content": '''
         <section class="hero"><div class="container"><span class="section-label">For Plumbers</span><h1>Geotag Plumbing Job Photos to Win Local Customers</h1><p>Optimize your service call photos with accurate GPS EXIF data to rank higher in your service areas.</p><a href="/add-gps-to-photo-online/" class="btn btn-primary">Geotag Plumbing Photos</a></div></section>
@@ -316,7 +316,7 @@ pages = [
     },
     {
         "path": "blog/how-to-add-geotag-to-photo-on-iphone/index.html",
-        "title": "How to Add a Geotag to an iPhone Photo and Fix Missing GPS Data",
+        "title": "How to Add a Geotag to iPhone Photos and Fix GPS Data",
         "desc": "Fix missing GPS location on iPhone photos. Use this free browser tool to add accurate GPS coordinates to any JPEG photo - no app download needed.",
         "canonical": "https://geotagseditor.online/blog/how-to-add-geotag-to-photo-on-iphone/",
         "pub_date": "2026-04-20",
@@ -357,7 +357,7 @@ pages = [
     },
     {
         "path": "fake-geotag-photo-editor/index.html",
-        "title": "Fake Geo Tag Photo Editor Online - Spoof Photo GPS Coordinates",
+        "title": "Fake Geo Tag Photo Editor - Spoof Photo GPS Coordinates",
         "desc": "Fake GPS coordinates and location metadata in JPEG photos online. Pin any fake location on the map, apply coordinates, and download safely for free.",
         "canonical": "https://geotagseditor.online/fake-geotag-photo-editor/",
         "content": '''
@@ -859,7 +859,7 @@ pages = [
     },
     {
         "path": "blog/how-to-geotag-photos-on-windows/index.html",
-        "title": "How to Geotag Photos on Windows 10 & 11 Natively",
+        "title": "How to Geotag Photos on Windows 10 & 11 Natively Guide",
         "desc": "Learn how to geotag photos on Windows 10 and 11 natively. Add or change GPS coordinates in your JPEG photo EXIF metadata easily without installing software.",
         "canonical": "https://geotagseditor.online/blog/how-to-geotag-photos-on-windows/",
         "pub_date": "2026-07-15",
@@ -919,8 +919,8 @@ pages = [
     },
     {
         "path": "blog/does-social-media-strip-exif-gps-data/index.html",
-        "title": "Does Social Media Strip EXIF GPS Data? (Facebook, Instagram & X)",
-        "desc": "Do social media sites leak your photo location? Learn how Facebook, Instagram, Twitter (X), and WhatsApp handle EXIF GPS metadata and how to protect your privacy.",
+        "title": "Does Social Media Strip EXIF GPS Data? (Facebook & X)",
+        "desc": "Do social media sites leak photo location? Learn how Facebook, Instagram, X, and WhatsApp handle EXIF GPS metadata and how to protect your privacy.",
         "canonical": "https://geotagseditor.online/blog/does-social-media-strip-exif-gps-data/",
         "pub_date": "2026-07-19",
         "mod_date": "2026-07-19",
@@ -1000,7 +1000,7 @@ pages = [
     },
     {
         "path": "blog/how-to-bulk-geotag-photos-mac/index.html",
-        "title": "How to Bulk Geotag Photos on Mac: A Complete Step-by-Step Guide",
+        "title": "How to Bulk Geotag Photos on Mac: Step-by-Step Guide",
         "desc": "Learn how to bulk geotag photos on Mac. Complete guide to batch edit EXIF GPS metadata on macOS using Apple Photos, terminal commands, and free online tools.",
         "canonical": "https://geotagseditor.online/blog/how-to-bulk-geotag-photos-mac/",
         "pub_date": "2026-07-19",
