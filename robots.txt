@@ -1,5 +1,6 @@
 # robots.txt for geotagseditor.online (https://geotagseditor.online/)
-# AI Agent & Search Engine Crawler Policy
+# AI Agent & Search Engine Crawler Policy - Updated 2026
+# Grants full access to public tool pages, sitemap, and LLM metadata endpoints.
 
 User-agent: *
 Allow: /
