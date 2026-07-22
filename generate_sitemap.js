@@ -108,8 +108,12 @@ function generateSitemap() {
 
   sitemapContent += `</urlset>\n`;
 
-  fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemapContent, 'utf8');
-  console.log(`Sitemap compiled successfully! Total indexed pages: ${uniqueEntries.length}`);
+  try {
+    fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemapContent, 'utf8');
+    console.log(`Sitemap compiled successfully! Total indexed pages: ${uniqueEntries.length}`);
+  } catch (err) {
+    console.error(`Failed to write sitemap.xml:`, err.message);
+  }
 }
 
 generateSitemap();
