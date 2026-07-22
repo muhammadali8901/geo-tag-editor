@@ -1,4 +1,7 @@
-// Geo Tags Editor - Service Worker PWA Cache
+/**
+ * Geo Tags Editor - Service Worker PWA Cache Controller
+ * Implements cache-first strategy with network fallback for core offline functionality.
+ */
 const CACHE_NAME = 'geotagseditor-cache-v3';
 const ASSETS_TO_CACHE = [
   '/',
