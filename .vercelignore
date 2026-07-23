@@ -12,6 +12,8 @@ pnpm-lock.yaml
 
 # Development and temporary files
 attached_assets/
+scratch/
+.vscode/
 .indexnow-submitted.json
 .replit
 .git/
