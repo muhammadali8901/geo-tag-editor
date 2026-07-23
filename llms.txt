@@ -37,5 +37,6 @@ For headless browser agents (e.g., Puppeteer, Playwright, Stagehand, Chrome DevT
 ## Key Capabilities & Security Signals
 - **100% Free**: No signup, subscription, or paywalls required.
 - **Client-Side Execution**: Zero image data sent to backend servers.
-- **Exif Preservation**: Keeps camera model, timestamp, and exposure settings intact while updating GPS blocks.
+- **Exif Preservation**: Keeps camera model, timestamp, and exposure settings intact while updating GPS blocks (GPSLatitude, GPSLongitude, GPSAltitude, GPSProcessingMethod).
 - **Compatibility**: Works across desktop and mobile devices (Chrome, Safari, Firefox, Edge).
+
