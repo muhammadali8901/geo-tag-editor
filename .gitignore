@@ -17,6 +17,9 @@ npm-debug.log*
 node_modules/
 dist/
 .astro/
+.vercel/
+.env
+.env.local
 
 # Temporary files
 *.tmp
