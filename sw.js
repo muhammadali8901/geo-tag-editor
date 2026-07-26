@@ -1,4 +1,4 @@
-const CACHE_NAME = 'geotagseditor-cache-v2';
+const CACHE_NAME = 'geotagseditor-cache-v3';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -15,8 +15,7 @@ const ASSETS_TO_CACHE = [
   '/remove-geotag-from-photo-online/',
   '/remove-geotag-from-photo-online/index.html',
   '/css/style.css',
-  '/css/mobile.css',
-  '/css/landing.css',
+  '/css/critical.css',
   '/js/common.js',
   '/js/site.js',
   '/js/tool.js',
@@ -25,7 +24,9 @@ const ASSETS_TO_CACHE = [
   '/vendor/piexifjs-1.0.6.js',
   '/images/logo.webp',
   '/favicon.ico',
-  '/site.webmanifest'
+  '/site.webmanifest',
+  '/llms.txt',
+  '/.well-known/llms.txt'
 ];
 
 // Install Service Worker and cache all core assets
