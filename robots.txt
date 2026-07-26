@@ -1,36 +1,37 @@
 # robots.txt for geotagseditor.online
-# Updated: 2026-05-16
+# AI Agent & Search Engine Crawler Policy
 
 User-agent: *
 Allow: /
 
-# Block non-public paths
-Disallow: /.git/
-Disallow: /node_modules/
-Disallow: /attached_assets/
-Disallow: /lib/
-Disallow: /test-coordinate-input.html
-Disallow: /adsense-placements.html
-Disallow: /protection-template.html
-Disallow: /social-preview-template.html
-Disallow: /BLOG_POST_TEMPLATE.html
-Disallow: /partials/
-Disallow: /seo-qa.js
-Disallow: /server.js
+# Explicitly allow AI Agent Crawlers
+User-agent: GPTBot
+Allow: /
 
-# Allow all static assets
-Allow: /css/
-Allow: /js/
-Allow: /images/
-Allow: *.css
-Allow: *.js
-Allow: *.svg
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.ico
+User-agent: ChatGPT-User
+Allow: /
 
-# Explicitly allow Google AdSense + ad crawlers
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: ByteDance
+Allow: /
+
 User-agent: Mediapartners-Google
 Allow: /
 
@@ -40,5 +41,24 @@ Allow: /
 User-agent: AdsBot-Google-Mobile
 Allow: /
 
-# Sitemap
+# Block private build & system paths
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /partials/
+
+# Allow static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /vendor/
+Allow: *.css
+Allow: *.js
+Allow: *.svg
+Allow: *.png
+Allow: *.jpg
+Allow: *.webp
+Allow: *.ico
+
+# AI Agent Specification & Sitemap
+LLMS-Text: https://geotagseditor.online/llms.txt
 Sitemap: https://geotagseditor.online/sitemap.xml
