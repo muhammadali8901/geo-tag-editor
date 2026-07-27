@@ -1,3 +1,7 @@
+/**
+ * Automated XML Sitemap Generator Script
+ * Scans build directory and outputs updated sitemap.xml.
+ */
 const fs = require('fs');
 const path = require('path');
 
