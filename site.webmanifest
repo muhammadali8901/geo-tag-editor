@@ -1,7 +1,7 @@
 {
   "name": "Geo Tags Editor",
   "short_name": "GeoTagsEditor",
-  "description": "Free online GPS photo editor — add, edit, or remove geotag metadata from JPEG images directly in your browser. No upload, no signup.",
+  "description": "Free online GPS photo editor — add, edit, or remove geotag metadata from JPEG images directly in your browser. 100% private, no upload, no signup.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
