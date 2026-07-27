@@ -1,3 +1,4 @@
+// Geo Tags Editor - Service Worker PWA Cache
 const CACHE_NAME = 'geotagseditor-cache-v3';
 const ASSETS_TO_CACHE = [
   '/',
