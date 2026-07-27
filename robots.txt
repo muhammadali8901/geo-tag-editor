@@ -1,4 +1,4 @@
-# robots.txt for geotagseditor.online
+# robots.txt for geotagseditor.online (https://geotagseditor.online/)
 # AI Agent & Search Engine Crawler Policy
 
 User-agent: *
