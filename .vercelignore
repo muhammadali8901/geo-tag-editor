@@ -1,3 +1,4 @@
+# Vercel deployment ignore patterns for Geo Tags Editor
 # Node.js and build files
 server.js
 add_toc.js
