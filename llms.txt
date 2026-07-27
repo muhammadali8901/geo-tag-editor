@@ -1,6 +1,6 @@
 # Geo Tags Editor (llms.txt Specification)
 
-> Free, browser-based online EXIF metadata tool for JPEG images. Add GPS coordinates, edit location metadata, or strip geotags with 100% client-side privacy.
+> Free, browser-based, online EXIF metadata tool for JPEG images. Add GPS coordinates, edit location metadata, or strip geotags with 100% client-side privacy.
 
 ## Overview
 Geo Tags Editor (`https://geotagseditor.online/`) is a client-side web application designed to read, edit, and remove GPS location coordinates in JPEG/JPG image EXIF headers. No data or images are ever uploaded to any server; all binary EXIF header transformations are executed locally in the user's browser via HTML5 File API and JavaScript.
