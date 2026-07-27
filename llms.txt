@@ -1,4 +1,4 @@
-# Geo Tags Editor (llms.txt Specification)
+# Geo Tags Editor — llms.txt Agent Specification
 
 > Free, browser-based online EXIF metadata tool for JPEG images. Add GPS coordinates, edit location metadata, or strip geotags with 100% client-side privacy.
 
