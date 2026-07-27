@@ -59,6 +59,6 @@ Allow: *.jpg
 Allow: *.webp
 Allow: *.ico
 
-# AI Agent Specification & Sitemap
+# AI Agent Specification & Sitemap.
 LLMS-Text: https://geotagseditor.online/llms.txt
 Sitemap: https://geotagseditor.online/sitemap.xml
