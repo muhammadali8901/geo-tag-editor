@@ -1,4 +1,5 @@
-# ads.txt for geotagseditor.online
+# ads.txt for geotagseditor.online - Authorized Digital Sellers
+# Last verified: July 2026
 # Replace the placeholder line below with your actual Google AdSense publisher ID once approved.
 # Format example:
 # google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
