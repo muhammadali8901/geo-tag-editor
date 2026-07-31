@@ -1,4 +1,5 @@
 # Replit configuration for Geo Tags Editor project
+# Runtime: Node.js 20 ESM engine
 modules = ["nodejs-20"]
 [agent]
 expertMode = true
